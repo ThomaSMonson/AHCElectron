@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AHCElectron - Services électroniques</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #eaf7ff, #f4fff8);
+      color: #123;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0066cc, #00a86b);
+      color: white;
+      text-align: center;
+      padding: 35px 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #0066cc;
+      border: 7px solid #00d084;
+      box-shadow: 0 0 20px rgba(255,255,255,0.8);
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 18px;
+    }
+
+    .lights {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .light {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 0 12px white;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 25px 15px;
+    }
+
+    .intro {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+      margin-bottom: 25px;
+    }
+
+    .intro h2 {
+      color: #0066cc;
+      margin-bottom: 10px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+      transition: transform 0.25s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .service h3 {
+      color: #0066cc;
+      margin-bottom: 8px;
+    }
+
+    .world {
+      margin-top: 30px;
+      padding: 25px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #0066cc, #00a86b);
+      color: white;
+      text-align: center;
+    }
+
+    .contact {
+      background: white;
+      margin-top: 25px;
+      padding: 25px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    }
+
+    .contact h2 {
+      color: #0066cc;
+      margin-bottom: 12px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      background: #0066cc;
+    }
+
+    .btn.whatsapp {
+      background: #00a86b;
+    }
+
+    .btn.email {
+      background: #555;
+    }
+
+    .notice {
+      margin-top: 25px;
+      padding: 18px;
+      border-left: 5px solid #00a86b;
+      background: #eefaf5;
+      border-radius: 10px;
+    }
+
+    footer {
+      margin-top: 35px;
+      padding: 25px 15px;
+      background: #123;
+      color: white;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      .service img {
+        height: 170px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">AHC</div>
+
+  <h1>AHCElectron</h1>
+
+  <p>
+    Solutions électroniques, électriques et technologiques
+  </p>
+
+  <div class="lights">
+    <span class="light"></span>
+    <span class="light"></span>
+    <span class="light"></span>
+    <span class="light"></span>
+    <span class="light"></span>
+  </div>
+</header>
+
+<main>
+
+  <section class="intro">
+    <h2>Bienvenue chez AHCElectron</h2>
+
+    <p>
+      AHCElectron vous présente des services pratiques dans le domaine
+      de l'électricité, de l'électronique et des équipements technologiques.
+    </p>
+
+    <p>
+      Notre objectif est de proposer des solutions accessibles,
+      utiles et adaptées aux besoins de nos clients.
+    </p>
+  </section>
+
+  <section class="services">
+
+    <div class="service">
+      <img src="images/electricite.jpg" alt="Électricité">
+      <h3>Électricité</h3>
+      <p>
+        Installation, entretien et solutions pour vos besoins électriques.
+      </p>
+    </div>
+
+    <div class="service">
+      <img src="images/ventilateur.jpg" alt="Ventilateur">
+      <h3>Ventilateurs</h3>
+      <p>
+        Assistance et entretien de ventilateurs et petits équipements.
+      </p>
+    </div>
+
+    <div class="service">
+      <img src="images/television.jpg" alt="Télévision">
+      <h3>Télévisions</h3>
+      <p>
+        Assistance technique et entretien de téléviseurs.
+      </p>
+    </div>
+
+    <div class="service">
+      <img src="images/inverter.jpg" alt="Onduleur">
+      <h3>Inverters</h3>
+      <p>
+        Solutions d'alimentation et assistance pour systèmes inverter.
+      </p>
+    </div>
+
+    <div class="service">
+      <img src="images/panneau-solaire.jpg" alt="Panneau solaire">
+      <h3>Énergie solaire</h3>
+      <p>
+        Solutions et informations concernant les systèmes solaires.
+      </p>
+    </div>
+
+    <div class="service">
+      <img src="images/blender.jpg" alt="Petits appareils">
+      <h3>Petits appareils</h3>
+      <p>
+        Assistance pour différents appareils électriques domestiques.
+      </p>
+    </div>
+
+  </section>
+
+  <section class="world">
+    <h2>AHCElectron — une vision ouverte sur le monde</h2>
+
+    <p>
+      Nous souhaitons développer progressivement des solutions
+      technologiques utiles en Haïti et au-delà.
+    </p>
+
+    <p>
+      Merci de votre confiance et de votre intérêt pour AHCElectron.
+    </p>
+  </section>
+
+  <section class="contact">
+
+    <h2>Contactez-nous</h2>
+
+    <p>
+      Pour toute information, demande de service ou collaboration :
+    </p>
+
+    <p>
+      <strong>Téléphone :</strong> +509 3810 6763
+    </p>
+
+    <p>
+      <strong>Email :</strong> claudesonhenri@outlook.com
+    </p>
+
+    <div class="buttons">
+
+      <a class="btn" href="tel:+50938106763">
+        📞 Appeler
+      </a>
+
+      <a class="btn whatsapp"
+         href="https://wa.me/50938106763"
+         target="_blank">
+        💬 WhatsApp
+      </a>
+
+      <a class="btn email"
+         href="mailto:claudesonhenri@outlook.com">
+        ✉️ Email
+      </a>
+
+    </div>
+
+    <div class="notice">
+      <strong>Publicité AHCElectron</strong><br>
+      Une présentation musicale et animée pourra être ajoutée
+      prochainement à cette page.
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    © 2026 AHCElectron — Tous droits réservés.
+  </p>
+
+  <p>
+    Solutions électroniques et technologiques.
+  </p>
+</footer>
+
+</body>
+</html>
