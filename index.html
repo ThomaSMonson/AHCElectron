@@ -1,31 +1,387 @@
-/* MODE TEST NOËL — visible immédiatement */
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-const noel = document.getElementById("christmasLayer");
+<title>AHCElectron — Noël</title>
 
-noel.style.display = "block";
-
-/* Création de la neige */
-
-for(let i = 0; i < 45; i++){
-
-    const flocon = document.createElement("div");
-
-    flocon.className = "snow";
-
-    flocon.textContent =
-        Math.random() > 0.5 ? "❄" : "•";
-
-    flocon.style.left =
-        Math.random() * 100 + "%";
-
-    flocon.style.fontSize =
-        (8 + Math.random() * 14) + "px";
-
-    flocon.style.animationDuration =
-        (5 + Math.random() * 8) + "s";
-
-    flocon.style.animationDelay =
-        (-Math.random() * 10) + "s";
-
-    noel.appendChild(flocon);
+<style>
+* {
+  box-sizing: border-box;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  color: white;
+  background:
+    radial-gradient(circle at 50% 10%, #234d73 0%, #10243c 38%, #050b15 100%);
+}
+
+/* ===== NEIGE ===== */
+.snow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.snow span {
+  position: absolute;
+  top: -30px;
+  width: 7px;
+  height: 7px;
+  background: white;
+  border-radius: 50%;
+  opacity: .85;
+  animation: fall linear infinite;
+}
+
+.snow span:nth-child(1) { left: 5%; animation-duration: 8s; }
+.snow span:nth-child(2) { left: 12%; animation-duration: 11s; animation-delay: 2s; }
+.snow span:nth-child(3) { left: 20%; animation-duration: 7s; animation-delay: 1s; }
+.snow span:nth-child(4) { left: 29%; animation-duration: 13s; }
+.snow span:nth-child(5) { left: 38%; animation-duration: 9s; animation-delay: 3s; }
+.snow span:nth-child(6) { left: 47%; animation-duration: 12s; }
+.snow span:nth-child(7) { left: 56%; animation-duration: 8s; animation-delay: 2s; }
+.snow span:nth-child(8) { left: 65%; animation-duration: 10s; }
+.snow span:nth-child(9) { left: 74%; animation-duration: 14s; animation-delay: 1s; }
+.snow span:nth-child(10) { left: 83%; animation-duration: 9s; }
+.snow span:nth-child(11) { left: 92%; animation-duration: 12s; animation-delay: 3s; }
+
+@keyframes fall {
+  from {
+    transform: translateY(-30px) translateX(0);
+  }
+  to {
+    transform: translateY(110vh) translateX(45px);
+  }
+}
+
+/* ===== EN-TÊTE ===== */
+header {
+  position: relative;
+  z-index: 5;
+  padding: 18px 20px;
+  text-align: center;
+  background: rgba(0,0,0,.18);
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.logo {
+  font-size: clamp(30px, 8vw, 52px);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 8px #fff,
+    0 0 20px rgba(255,255,255,.6);
+}
+
+.logo span {
+  color: #ffd34d;
+}
+
+.tagline {
+  margin-top: 5px;
+  font-size: 14px;
+  opacity: .9;
+}
+
+/* ===== CONTENU PRINCIPAL ===== */
+.hero {
+  position: relative;
+  z-index: 4;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 18px 55px;
+  text-align: center;
+}
+
+.card {
+  width: min(850px, 100%);
+  padding: clamp(25px, 6vw, 55px) 22px;
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.16),
+      rgba(255,255,255,.06)
+    );
+
+  border: 1px solid rgba(255,255,255,.28);
+
+  box-shadow:
+    0 20px 70px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.25);
+
+  backdrop-filter: blur(8px);
+}
+
+/* ===== PÈRE NOËL ===== */
+.santa {
+  font-size: clamp(65px, 18vw, 125px);
+  line-height: 1;
+  animation: santaFloat 3s ease-in-out infinite;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,.35));
+}
+
+@keyframes santaFloat {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ===== TITRES ===== */
+.christmas {
+  margin: 15px 0 5px;
+  font-size: clamp(30px, 8vw, 62px);
+  font-weight: 900;
+  line-height: 1.05;
+  text-shadow: 0 4px 18px rgba(0,0,0,.45);
+}
+
+.christmas span {
+  color: #ffd34d;
+}
+
+.subtitle {
+  max-width: 650px;
+  margin: 16px auto;
+  font-size: clamp(16px, 4vw, 22px);
+  line-height: 1.55;
+  opacity: .95;
+}
+
+/* ===== ÉTOILES ===== */
+.stars {
+  margin: 20px 0;
+  font-size: 22px;
+  letter-spacing: 8px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    opacity: .55;
+    text-shadow: none;
+  }
+  to {
+    opacity: 1;
+    text-shadow: 0 0 18px #fff;
+  }
+}
+
+/* ===== BLOC CONFIANCE ===== */
+.trust {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 650px;
+  margin: 28px auto;
+}
+
+.trust div {
+  padding: 15px 8px;
+  border-radius: 16px;
+  background: rgba(0,0,0,.22);
+  border: 1px solid rgba(255,255,255,.15);
+}
+
+.trust strong {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.trust small {
+  font-size: 12px;
+  opacity: .85;
+}
+
+/* ===== BOUTON ===== */
+.action {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 17px 32px;
+  border-radius: 50px;
+
+  color: #08111d;
+  background: linear-gradient(135deg, #ffe58a, #ffc52e);
+
+  font-size: 17px;
+  font-weight: 900;
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.35),
+    0 0 25px rgba(255,213,65,.35);
+
+  transition: transform .2s, box-shadow .2s;
+}
+
+.action:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.4),
+    0 0 35px rgba(255,213,65,.6);
+}
+
+.action:active {
+  transform: scale(.97);
+}
+
+/* ===== MESSAGE ===== */
+.message {
+  margin: 25px auto 0;
+  max-width: 650px;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: .8;
+}
+
+/* ===== PIED DE PAGE ===== */
+footer {
+  position: relative;
+  z-index: 5;
+  padding: 18px;
+  text-align: center;
+  font-size: 12px;
+  background: rgba(0,0,0,.25);
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+
+  .hero {
+    padding-top: 25px;
+  }
+
+  .card {
+    border-radius: 24px;
+  }
+
+  .trust {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+
+  .trust div {
+    padding: 12px;
+  }
+
+  .action {
+    width: 90%;
+    max-width: 330px;
+  }
+}
+
+/* ===== ACCESSIBILITÉ ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NEIGE -->
+<div class="snow" aria-hidden="true">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- EN-TÊTE -->
+<header>
+  <div class="logo">AHC<span>Electron</span></div>
+  <div class="tagline">
+    Innovation • Technologie • Créativité
+  </div>
+</header>
+
+<!-- ACCUEIL -->
+<main class="hero">
+
+  <section class="card">
+
+    <div class="santa">🎅</div>
+
+    <div class="stars">✦ ✧ ✦ ✧ ✦</div>
+
+    <h1 class="christmas">
+      Joyeux <span>Noël</span> !
+    </h1>
+
+    <p class="subtitle">
+      Bienvenue chez <strong>AHCElectron</strong> —
+      une expérience technologique pensée pour vous,
+      avec une touche de magie pour les fêtes.
+    </p>
+
+    <div class="trust">
+
+      <div>
+        <strong>⚡</strong>
+        <small>Innovation</small>
+      </div>
+
+      <div>
+        <strong>🛡️</strong>
+        <small>Confiance</small>
+      </div>
+
+      <div>
+        <strong>💡</strong>
+        <small>Créativité</small>
+      </div>
+
+    </div>
+
+    <a class="action" href="#decouvrir">
+      🎁 Découvrir AHCElectron
+    </a>
+
+    <p class="message" id="decouvrir">
+      Merci de votre visite.
+      Prenez le temps de découvrir notre univers
+      et les possibilités qu'AHCElectron peut vous offrir.
+    </p>
+
+  </section>
+
+</main>
+
+<footer>
+  © 2026 AHCElectron — Édition spéciale Noël
+</footer>
+
+</body>
+</html>
