@@ -1,387 +1,540 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AHCElectron — Noël</title>
+  <title>AHCElectron | Technologie & Services</title>
 
-<style>
-* {
-  box-sizing: border-box;
-}
+  <meta name="description"
+        content="AHCElectron - Technologie, produits et services électroniques.">
 
-html, body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  font-family: Arial, sans-serif;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-  overflow-x: hidden;
-  color: white;
-  background:
-    radial-gradient(circle at 50% 10%, #234d73 0%, #10243c 38%, #050b15 100%);
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* ===== NEIGE ===== */
-.snow {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 20;
-  overflow: hidden;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+      line-height: 1.6;
+    }
 
-.snow span {
-  position: absolute;
-  top: -30px;
-  width: 7px;
-  height: 7px;
-  background: white;
-  border-radius: 50%;
-  opacity: .85;
-  animation: fall linear infinite;
-}
+    /* ================= HEADER ================= */
 
-.snow span:nth-child(1) { left: 5%; animation-duration: 8s; }
-.snow span:nth-child(2) { left: 12%; animation-duration: 11s; animation-delay: 2s; }
-.snow span:nth-child(3) { left: 20%; animation-duration: 7s; animation-delay: 1s; }
-.snow span:nth-child(4) { left: 29%; animation-duration: 13s; }
-.snow span:nth-child(5) { left: 38%; animation-duration: 9s; animation-delay: 3s; }
-.snow span:nth-child(6) { left: 47%; animation-duration: 12s; }
-.snow span:nth-child(7) { left: 56%; animation-duration: 8s; animation-delay: 2s; }
-.snow span:nth-child(8) { left: 65%; animation-duration: 10s; }
-.snow span:nth-child(9) { left: 74%; animation-duration: 14s; animation-delay: 1s; }
-.snow span:nth-child(10) { left: 83%; animation-duration: 9s; }
-.snow span:nth-child(11) { left: 92%; animation-duration: 12s; animation-delay: 3s; }
+    header {
+      background: #111827;
+      color: white;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-@keyframes fall {
-  from {
-    transform: translateY(-30px) translateX(0);
-  }
-  to {
-    transform: translateY(110vh) translateX(45px);
-  }
-}
+    .header-content {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-/* ===== EN-TÊTE ===== */
-header {
-  position: relative;
-  z-index: 5;
-  padding: 18px 20px;
-  text-align: center;
-  background: rgba(0,0,0,.18);
-  border-bottom: 1px solid rgba(255,255,255,.15);
-}
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
 
-.logo {
-  font-size: clamp(30px, 8vw, 52px);
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-shadow:
-    0 0 8px #fff,
-    0 0 20px rgba(255,255,255,.6);
-}
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-.logo span {
-  color: #ffd34d;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 7px 10px;
+      border-radius: 5px;
+    }
 
-.tagline {
-  margin-top: 5px;
-  font-size: 14px;
-  opacity: .9;
-}
+    nav a:hover {
+      background: #2563eb;
+    }
 
-/* ===== CONTENU PRINCIPAL ===== */
-.hero {
-  position: relative;
-  z-index: 4;
-  min-height: calc(100vh - 100px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 35px 18px 55px;
-  text-align: center;
-}
+    /* ================= HERO ================= */
 
-.card {
-  width: min(850px, 100%);
-  padding: clamp(25px, 6vw, 55px) 22px;
-  border-radius: 30px;
+    .hero {
+      min-height: 430px;
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: white;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 50px 20px;
+    }
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,.16),
-      rgba(255,255,255,.06)
-    );
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+    }
 
-  border: 1px solid rgba(255,255,255,.28);
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
 
-  box-shadow:
-    0 20px 70px rgba(0,0,0,.45),
-    inset 0 1px 0 rgba(255,255,255,.25);
+    .hero p {
+      font-size: 19px;
+      margin-bottom: 25px;
+    }
 
-  backdrop-filter: blur(8px);
-}
+    .button {
+      display: inline-block;
+      background: #38bdf8;
+      color: #082f49;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 12px 22px;
+      border-radius: 7px;
+      margin: 5px;
+    }
 
-/* ===== PÈRE NOËL ===== */
-.santa {
-  font-size: clamp(65px, 18vw, 125px);
-  line-height: 1;
-  animation: santaFloat 3s ease-in-out infinite;
-  filter: drop-shadow(0 10px 15px rgba(0,0,0,.35));
-}
+    .button:hover {
+      opacity: 0.85;
+    }
 
-@keyframes santaFloat {
-  0%,100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
+    /* ================= PUBLICITÉ ================= */
 
-/* ===== TITRES ===== */
-.christmas {
-  margin: 15px 0 5px;
-  font-size: clamp(30px, 8vw, 62px);
-  font-weight: 900;
-  line-height: 1.05;
-  text-shadow: 0 4px 18px rgba(0,0,0,.45);
-}
+    .advertisement {
+      max-width: 1050px;
+      margin: 30px auto;
+      padding: 30px 20px;
+      background: white;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
 
-.christmas span {
-  color: #ffd34d;
-}
+    .advertisement h2 {
+      color: #1d4ed8;
+      margin-bottom: 10px;
+    }
 
-.subtitle {
-  max-width: 650px;
-  margin: 16px auto;
-  font-size: clamp(16px, 4vw, 22px);
-  line-height: 1.55;
-  opacity: .95;
-}
+    /* ================= SECTIONS ================= */
 
-/* ===== ÉTOILES ===== */
-.stars {
-  margin: 20px 0;
-  font-size: 22px;
-  letter-spacing: 8px;
-  animation: glow 2s ease-in-out infinite alternate;
-}
+    section {
+      padding: 60px 20px;
+    }
 
-@keyframes glow {
-  from {
-    opacity: .55;
-    text-shadow: none;
-  }
-  to {
-    opacity: 1;
-    text-shadow: 0 0 18px #fff;
-  }
-}
+    .container {
+      max-width: 1050px;
+      margin: auto;
+    }
 
-/* ===== BLOC CONFIANCE ===== */
-.trust {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  max-width: 650px;
-  margin: 28px auto;
-}
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+      color: #111827;
+    }
 
-.trust div {
-  padding: 15px 8px;
-  border-radius: 16px;
-  background: rgba(0,0,0,.22);
-  border: 1px solid rgba(255,255,255,.15);
-}
+    /* ================= CARTES ================= */
 
-.trust strong {
-  display: block;
-  font-size: 24px;
-  margin-bottom: 5px;
-}
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
 
-.trust small {
-  font-size: 12px;
-  opacity: .85;
-}
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
 
-/* ===== BOUTON ===== */
-.action {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 17px 32px;
-  border-radius: 50px;
+    .card h3 {
+      color: #1d4ed8;
+      margin-bottom: 10px;
+    }
 
-  color: #08111d;
-  background: linear-gradient(135deg, #ffe58a, #ffc52e);
+    /* ================= À PROPOS ================= */
 
-  font-size: 17px;
-  font-weight: 900;
-  text-decoration: none;
+    #apropos {
+      background: white;
+    }
 
-  box-shadow:
-    0 8px 25px rgba(0,0,0,.35),
-    0 0 25px rgba(255,213,65,.35);
+    /* ================= CONTACT ================= */
 
-  transition: transform .2s, box-shadow .2s;
-}
+    .contact-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: auto;
+    }
 
-.action:hover {
-  transform: scale(1.05);
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.4),
-    0 0 35px rgba(255,213,65,.6);
-}
+    .contact-box input,
+    .contact-box textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
 
-.action:active {
-  transform: scale(.97);
-}
+    .contact-box textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
 
-/* ===== MESSAGE ===== */
-.message {
-  margin: 25px auto 0;
-  max-width: 650px;
-  font-size: 14px;
-  line-height: 1.6;
-  opacity: .8;
-}
+    .submit-button {
+      border: none;
+      cursor: pointer;
+      background: #1d4ed8;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
 
-/* ===== PIED DE PAGE ===== */
-footer {
-  position: relative;
-  z-index: 5;
-  padding: 18px;
-  text-align: center;
-  font-size: 12px;
-  background: rgba(0,0,0,.25);
-  border-top: 1px solid rgba(255,255,255,.12);
-}
+    /* ================= FOOTER ================= */
 
-/* ===== MOBILE ===== */
-@media (max-width: 600px) {
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
 
-  .hero {
-    padding-top: 25px;
-  }
+    footer a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
 
-  .card {
-    border-radius: 24px;
-  }
+    /* ================= MOBILE ================= */
 
-  .trust {
-    grid-template-columns: 1fr;
-    max-width: 300px;
-  }
+    @media (max-width: 700px) {
 
-  .trust div {
-    padding: 12px;
-  }
+      .header-content {
+        flex-direction: column;
+      }
 
-  .action {
-    width: 90%;
-    max-width: 330px;
-  }
-}
+      nav {
+        justify-content: center;
+      }
 
-/* ===== ACCESSIBILITÉ ===== */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-  }
-}
-</style>
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 45px 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NEIGE -->
-<div class="snow" aria-hidden="true">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+  <!-- ================= HEADER ================= -->
 
-<!-- EN-TÊTE -->
-<header>
-  <div class="logo">AHC<span>Electron</span></div>
-  <div class="tagline">
-    Innovation • Technologie • Créativité
-  </div>
-</header>
+  <header>
+    <div class="header-content">
 
-<!-- ACCUEIL -->
-<main class="hero">
-
-  <section class="card">
-
-    <div class="santa">🎅</div>
-
-    <div class="stars">✦ ✧ ✦ ✧ ✦</div>
-
-    <h1 class="christmas">
-      Joyeux <span>Noël</span> !
-    </h1>
-
-    <p class="subtitle">
-      Bienvenue chez <strong>AHCElectron</strong> —
-      une expérience technologique pensée pour vous,
-      avec une touche de magie pour les fêtes.
-    </p>
-
-    <div class="trust">
-
-      <div>
-        <strong>⚡</strong>
-        <small>Innovation</small>
+      <div class="logo">
+        AHCElectron
       </div>
 
-      <div>
-        <strong>🛡️</strong>
-        <small>Confiance</small>
-      </div>
-
-      <div>
-        <strong>💡</strong>
-        <small>Créativité</small>
-      </div>
+      <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#services">Services</a>
+        <a href="#produits">Produits</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
     </div>
+  </header>
 
-    <a class="action" href="#decouvrir">
-      🎁 Découvrir AHCElectron
-    </a>
 
-    <p class="message" id="decouvrir">
-      Merci de votre visite.
-      Prenez le temps de découvrir notre univers
-      et les possibilités qu'AHCElectron peut vous offrir.
+  <!-- ================= ACCUEIL ================= -->
+
+  <main>
+
+    <section id="accueil" class="hero">
+
+      <div class="hero-content">
+
+        <h1>Bienvenue sur AHCElectron</h1>
+
+        <p>
+          Votre espace dédié à la technologie,
+          aux produits électroniques et aux services numériques.
+        </p>
+
+        <a href="#produits" class="button">
+          Découvrir
+        </a>
+
+        <a href="#contact" class="button">
+          Nous contacter
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PUBLICITÉ ================= -->
+
+    <section class="advertisement">
+
+      <h2>📢 AHCElectron</h2>
+
+      <p>
+        Découvrez nos nouveautés, nos produits et
+        nos services technologiques.
+      </p>
+
+      <br>
+
+      <a href="#services" class="button">
+        En savoir plus
+      </a>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Nos services
+        </h2>
+
+        <div class="cards">
+
+          <div class="card">
+            <h3>💻 Technologie</h3>
+            <p>
+              Solutions et informations dans le domaine
+              de la technologie et du numérique.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>🔧 Électronique</h3>
+            <p>
+              Présentation de produits et solutions
+              électroniques.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>🌐 Services numériques</h3>
+            <p>
+              Services destinés à faciliter l'utilisation
+              des technologies modernes.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PRODUITS ================= -->
+
+    <section id="produits">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Produits
+        </h2>
+
+        <div class="cards">
+
+          <div class="card">
+            <h3>Produit 01</h3>
+            <p>
+              Espace réservé à la présentation
+              d'un produit.
+            </p>
+
+            <br>
+
+            <a href="#contact" class="button">
+              Informations
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>Produit 02</h3>
+            <p>
+              Espace réservé à la présentation
+              d'un produit.
+            </p>
+
+            <br>
+
+            <a href="#contact" class="button">
+              Informations
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>Produit 03</h3>
+            <p>
+              Espace réservé à la présentation
+              d'un produit.
+            </p>
+
+            <br>
+
+            <a href="#contact" class="button">
+              Informations
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= À PROPOS ================= -->
+
+    <section id="apropos">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          À propos de AHCElectron
+        </h2>
+
+        <p>
+          AHCElectron est un projet orienté vers la
+          technologie, l'électronique et les services
+          numériques.
+
+          Cette plateforme pourra progressivement évoluer
+          avec de nouvelles fonctionnalités, produits,
+          services et informations.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Contact
+        </h2>
+
+        <div class="contact-box">
+
+          <form>
+
+            <input
+              type="text"
+              placeholder="Votre nom"
+              required
+            >
+
+            <input
+              type="email"
+              placeholder="Votre adresse e-mail"
+              required
+            >
+
+            <textarea
+              placeholder="Votre message"
+              required
+            ></textarea>
+
+            <button
+              type="submit"
+              class="submit-button">
+              Envoyer
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <p>
+      © 2026 AHCElectron — Tous droits réservés.
     </p>
 
-  </section>
+    <p>
+      Technologie • Électronique • Services numériques
+    </p>
 
-</main>
+  </footer>
 
-<footer>
-  © 2026 AHCElectron — Édition spéciale Noël
-</footer>
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    document.querySelector("form").addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+        alert(
+          "Merci pour votre message. " +
+          "Le système de réception des messages sera ajouté prochainement."
+        );
+
+      }
+    );
+
+  </script>
 
 </body>
 </html>
