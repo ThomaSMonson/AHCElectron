@@ -1949,4 +1949,1955 @@ function adminLogin() {
 
 
 </body>
+</html><!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="AHCElectron — Électricité, réparation, électronique et services technologiques.">
+
+<meta name="theme-color" content="#07111f">
+
+<title>AHCElectron — Électricité • Réparation • Technologie</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  color: white;
+  background:
+    linear-gradient(135deg, #061a35, #0879c9, #f4b400);
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   NEIGE
+========================= */
+
+.snow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.snow span {
+  position: absolute;
+  top: -20px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+  opacity: .8;
+  animation: fall linear infinite;
+}
+
+.snow span:nth-child(1){left:5%;animation-duration:8s}
+.snow span:nth-child(2){left:13%;animation-duration:11s}
+.snow span:nth-child(3){left:22%;animation-duration:7s}
+.snow span:nth-child(4){left:31%;animation-duration:13s}
+.snow span:nth-child(5){left:42%;animation-duration:9s}
+.snow span:nth-child(6){left:53%;animation-duration:12s}
+.snow span:nth-child(7){left:64%;animation-duration:8s}
+.snow span:nth-child(8){left:75%;animation-duration:10s}
+.snow span:nth-child(9){left:86%;animation-duration:14s}
+.snow span:nth-child(10){left:94%;animation-duration:9s}
+
+@keyframes fall {
+  from {
+    transform: translateY(-30px);
+  }
+
+  to {
+    transform: translateY(110vh) translateX(45px);
+  }
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+
+  background: rgba(5,13,25,.95);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.navbar {
+  width: min(1150px, 94%);
+  min-height: 70px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #ffd34d;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: #ffd34d;
+}
+
+.nav-button {
+  padding: 10px 17px;
+  border-radius: 25px;
+  background: #ffd34d;
+  color: #07111f !important;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  scroll-margin-top: 85px;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: auto;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 6vw, 44px);
+}
+
+.section-title p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
+  opacity: .78;
+}
+
+
+/* =========================
+   ACCUEIL
+========================= */
+
+.hero {
+  min-height: calc(100vh - 70px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 18px;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      #285b85 0%,
+      #122c47 38%,
+      #07111f 85%
+    );
+}
+
+.hero-card {
+  width: min(900px,100%);
+  padding: 45px 25px;
+
+  text-align: center;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.15),
+      rgba(255,255,255,.04)
+    );
+
+  border: 1px solid rgba(255,255,255,.25);
+
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.5),
+    inset 0 1px 0 rgba(255,255,255,.2);
+
+  backdrop-filter: blur(9px);
+}
+
+.logo-electric {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f4b400;
+
+  font-size: 48px;
+}
+
+.santa {
+  font-size: clamp(65px,18vw,120px);
+  animation: santaFloat 3s ease-in-out infinite;
+}
+
+@keyframes santaFloat {
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.stars {
+  margin: 15px 0;
+  font-size: 23px;
+  letter-spacing: 8px;
+}
+
+.hero h1 {
+  font-size: clamp(35px,9vw,65px);
+  margin: 10px 0;
+}
+
+.hero h1 span {
+  color: #ffd34d;
+}
+
+.hero-subtitle {
+  max-width: 700px;
+  margin: 20px auto;
+
+  font-size: clamp(16px,4vw,21px);
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+}
+
+.action {
+  display: inline-block;
+
+  padding: 15px 25px;
+  margin: 6px;
+
+  border-radius: 50px;
+
+  background: #ffd34d;
+  color: #07111f;
+
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.action-green {
+  background: #18a558;
+  color: white;
+}
+
+
+/* =========================
+   PUBLICITÉ
+========================= */
+
+.publicite {
+  width: min(950px,92%);
+  margin: 25px auto;
+
+  padding: 28px;
+
+  text-align: center;
+
+  border: 3px solid #f4b400;
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff8d9,
+      #ffffff
+    );
+
+  color: #17212b;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.pub-icon {
+  font-size: 45px;
+}
+
+.publicite h2 {
+  color: #063b73;
+}
+
+.publicite p {
+  line-height: 1.7;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+  background:
+    linear-gradient(
+      180deg,
+      #07111f,
+      #0c1d31
+    );
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit,minmax(210px,1fr));
+
+  gap: 15px;
+}
+
+.service {
+  padding: 20px;
+
+  border-radius: 17px;
+
+  background: rgba(255,255,255,.07);
+
+  border-left: 6px solid #0879c9;
+
+  line-height: 1.5;
+
+  font-weight: bold;
+}
+
+.service:hover {
+  background: rgba(255,255,255,.12);
+}
+
+
+/* =========================
+   FORMULAIRE CLIENT
+========================= */
+
+.client-form-section {
+  background: #f4f6f8;
+  color: #17212b;
+}
+
+.form-box {
+  width: min(850px,100%);
+  margin: auto;
+
+  padding: 30px;
+
+  background: white;
+
+  border-radius: 22px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+
+.form-box h2 {
+  text-align: center;
+  color: #063b73;
+}
+
+.form-note {
+  text-align: center;
+  color: #66717c;
+  line-height: 1.6;
+}
+
+.form-group {
+  margin-bottom: 17px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  padding: 13px;
+
+  border: 1px solid #ccd3da;
+
+  border-radius: 9px;
+
+  font-size: 15px;
+
+  font-family: Arial,sans-serif;
+}
+
+.form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 2px solid #0879c9;
+}
+
+.submit-button {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #063b73;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #0879c9;
+}
+
+.security-note {
+  margin-top: 15px;
+
+  padding: 12px;
+
+  border-radius: 8px;
+
+  background: #fff8d9;
+
+  color: #665000;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   RÉALISATIONS
+========================= */
+
+.projects {
+  background: #091625;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit,minmax(210px,1fr));
+
+  gap: 18px;
+}
+
+.project-box {
+  min-height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.1),
+      rgba(255,255,255,.03)
+    );
+
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.project-box span {
+  font-size: 45px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  background:
+    radial-gradient(
+      circle at center,
+      #173858,
+      #07111f 70%
+    );
+}
+
+.contact-box {
+  max-width: 750px;
+  margin: auto;
+
+  text-align: center;
+}
+
+.contact-buttons {
+  margin-top: 25px;
+}
+
+.contact-button {
+  display: inline-block;
+
+  margin: 7px;
+
+  padding: 15px 25px;
+
+  border-radius: 40px;
+
+  background: #f4b400;
+
+  color: #17212b;
+
+  text-decoration: none;
+
+  font-weight: 900;
+}
+
+.contact-button-green {
+  background: #18a558;
+  color: white;
+}
+
+
+/* =========================
+   MOYENS DE PAIEMENT
+========================= */
+
+.payment-section {
+  background:
+    linear-gradient(
+      135deg,
+      #0a1c30,
+      #063b73
+    );
+}
+
+.payment-box {
+  width: min(950px, 100%);
+  margin: auto;
+
+  padding: 30px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.12),
+      rgba(255,255,255,.04)
+    );
+
+  border: 1px solid rgba(255,255,255,.18);
+
+  box-shadow:
+    0 15px 45px rgba(0,0,0,.35);
+
+  backdrop-filter: blur(8px);
+}
+
+.payment-intro {
+  text-align: center;
+
+  max-width: 700px;
+
+  margin: 0 auto 30px;
+
+  line-height: 1.7;
+
+  opacity: .85;
+}
+
+.payment-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(210px,1fr));
+
+  gap: 18px;
+}
+
+.payment-card {
+  padding: 22px;
+
+  border-radius: 17px;
+
+  background: rgba(255,255,255,.08);
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  text-align: center;
+
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+
+  background: rgba(255,255,255,.14);
+}
+
+.payment-icon {
+  font-size: 42px;
+
+  margin-bottom: 10px;
+}
+
+.payment-card h3 {
+  margin: 8px 0;
+
+  color: #ffd34d;
+}
+
+.payment-card p {
+  margin: 0;
+
+  line-height: 1.6;
+
+  font-size: 14px;
+
+  opacity: .82;
+}
+
+.payment-note {
+  margin-top: 25px;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  background: rgba(244,180,0,.12);
+
+  border: 1px solid rgba(244,180,0,.3);
+
+  line-height: 1.6;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   ADMINISTRATION
+========================= */
+
+.admin-section {
+  background: #020812;
+}
+
+.admin-box {
+  width: min(650px,100%);
+  margin: auto;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,.06);
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  text-align: center;
+}
+
+.admin-box input {
+  width: 100%;
+
+  padding: 13px;
+
+  margin: 12px 0;
+
+  border-radius: 8px;
+
+  border: 1px solid #ccc;
+}
+
+.admin-button {
+  padding: 13px 25px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #ffd34d;
+
+  color: #07111f;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+#adminMessage {
+  margin-top: 15px;
+}
+
+.admin-warning {
+  margin-top: 20px;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  background: rgba(255,255,255,.07);
+
+  line-height: 1.6;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 40px 20px;
+
+  background: #040a12;
+
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.footer-content {
+  width: min(1100px,92%);
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    2fr 1fr 1fr;
+
+  gap: 35px;
+}
+
+footer h3 {
+  margin-top: 0;
+}
+
+footer p,
+footer a {
+  color: rgba(255,255,255,.65);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+footer a {
+  display: block;
+
+  text-decoration: none;
+
+  margin: 5px 0;
+}
+
+footer a:hover {
+  color: #ffd34d;
+}
+
+.copyright {
+  width: min(1100px,92%);
+
+  margin: 30px auto 0;
+
+  padding-top: 20px;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(255,255,255,.08);
+
+  font-size: 12px;
+
+  opacity: .55;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:750px) {
+
+  .navbar {
+    flex-direction: column;
+    padding: 14px 0;
+  }
+
+  nav {
+    gap: 11px;
+  }
+
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero-card {
+    padding: 35px 18px;
+  }
+
+  .form-box {
+    padding: 22px 16px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NEIGE
+========================= -->
+
+<div class="snow" aria-hidden="true">
+
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+  <div class="navbar">
+
+    <div class="logo">
+      AHC<span>Electron</span>
+    </div>
+
+    <nav>
+
+      <a href="#accueil">
+        Accueil
+      </a>
+
+      <a href="#apropos">
+        À propos
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#demande">
+        Demande
+      </a>
+
+      <a href="#realisations">
+        Réalisations
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+      <a href="#paiement">
+        Paiement
+      </a>
+
+      <a class="nav-button" href="#demande">
+        Demander un service
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     ACCUEIL
+========================= -->
+
+<main>
+
+<section id="accueil" class="hero">
+
+  <div class="hero-card">
+
+    <div class="logo-electric">
+      ⚡
+    </div>
+
+    <div class="santa">
+      🎅
+    </div>
+
+    <div class="stars">
+      ✦ ✧ ✦ ✧ ✦
+    </div>
+
+    <h1>
+      AHCElectron
+      <span>Website</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Électricité domestique • Réparation •
+      Électronique • Technologie
+    </p>
+
+    <p>
+      Bienvenue dans l'univers AHCElectron.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a class="action" href="#demande">
+        🛠️ Faire une demande
+      </a>
+
+      <a class="action action-green"
+         href="tel:+50938106763">
+        📱 Appeler
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PUBLICITÉ
+========================= -->
+
+<section class="publicite">
+
+  <div class="pub-icon">
+    📢
+  </div>
+
+  <h2>
+    PUBLICITÉ AHCElectron
+  </h2>
+
+  <p>
+    Besoin d'une intervention électrique ou
+    d'une réparation d'appareil ?
+  </p>
+
+  <p>
+    AHCElectron met ses connaissances et son
+    expérience à votre service.
+  </p>
+
+  <p>
+    <strong>
+      Un problème électrique ? Pensez AHCElectron !
+    </strong>
+  </p>
+
+</section>
+
+
+<!-- =========================
+     À PROPOS
+========================= -->
+
+<section id="apropos" class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        À propos d'AHCElectron
+      </h2>
+
+      <p>
+        Innovation • Technologie • Créativité
+      </p>
+
+    </div>
+
+    <div class="project-box">
+
+      <p style="max-width:750px;padding:25px;line-height:1.8">
+
+        AHCElectron est un projet orienté vers
+        l'électricité, la réparation d'appareils,
+        l'électronique et les technologies modernes.
+
+        Cette plateforme est destinée à permettre
+        aux clients de présenter leurs besoins
+        et de contacter directement AHCElectron.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services" class="section services">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Nos services
+      </h2>
+
+      <p>
+        Sélectionnez le service correspondant
+        à votre besoin dans le formulaire.
+      </p>
+
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service">
+        ⚡ Électricité domestique
+      </div>
+
+      <div class="service">
+        🔧 Réparation d'appareils électriques
+      </div>
+
+      <div class="service">
+        🌀 Ventilateurs
+      </div>
+
+      <div class="service">
+        📺 Téléviseurs Flat Screen
+      </div>
+
+      <div class="service">
+        ☀️ Panneaux photovoltaïques
+      </div>
+
+      <div class="service">
+        🔋 Inverter et alimentation
+      </div>
+
+      <div class="service">
+        🔌 Blender et petits appareils
+      </div>
+
+      <div class="service">
+        🛠️ Dépannage électrique
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FORMULAIRE CLIENT
+========================= -->
+
+<section id="demande"
+         class="section client-form-section">
+
+  <div class="container">
+
+    <div class="form-box">
+
+      <h2>
+        📋 Formulaire de demande
+      </h2>
+
+      <p class="form-note">
+        Remplissez les informations ci-dessous
+        afin qu'AHCElectron puisse traiter votre demande.
+      </p>
+
+
+      <form id="clientForm">
+
+
+        <!-- NOM -->
+
+        <div class="form-group">
+
+          <label for="nom">
+            Nom complet *
+          </label>
+
+          <input
+            id="nom"
+            name="nom"
+            type="text"
+            autocomplete="name"
+            required
+            placeholder="Votre nom complet">
+
+        </div>
+
+
+        <!-- TÉLÉPHONE -->
+
+        <div class="form-group">
+
+          <label for="telephone">
+            Téléphone / WhatsApp *
+          </label>
+
+          <input
+            id="telephone"
+            name="telephone"
+            type="tel"
+            autocomplete="tel"
+            required
+            placeholder="+509...">
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="form-group">
+
+          <label for="email">
+            Adresse e-mail *
+          </label>
+
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+            placeholder="exemple@email.com">
+
+        </div>
+
+
+        <!-- PAYS -->
+
+        <div class="form-group">
+
+          <label for="pays">
+            Pays *
+          </label>
+
+          <input
+            id="pays"
+            name="pays"
+            type="text"
+            autocomplete="country-name"
+            required
+            placeholder="Votre pays">
+
+        </div>
+
+
+        <!-- VILLE -->
+
+        <div class="form-group">
+
+          <label for="ville">
+            Ville / commune *
+          </label>
+
+          <input
+            id="ville"
+            name="ville"
+            type="text"
+            required
+            placeholder="Votre ville ou commune">
+
+        </div>
+
+
+        <!-- ADRESSE -->
+
+        <div class="form-group">
+
+          <label for="adresse">
+            Adresse ou zone d'intervention
+          </label>
+
+          <input
+            id="adresse"
+            name="adresse"
+            type="text"
+            autocomplete="street-address"
+            placeholder="Adresse ou zone">
+
+        </div>
+
+
+        <!-- TYPE DE DEMANDE -->
+
+        <div class="form-group">
+
+          <label for="service">
+            Type de demande *
+          </label>
+
+          <select
+            id="service"
+            name="service"
+            required>
+
+            <option value="">
+              -- Sélectionnez un service --
+            </option>
+
+            <option>
+              Électricité domestique
+            </option>
+
+            <option>
+              Réparation d'appareil
+            </option>
+
+            <option>
+              Ventilateur
+            </option>
+
+            <option>
+              Téléviseur Flat Screen
+            </option>
+
+            <option>
+              Panneau photovoltaïque
+            </option>
+
+            <option>
+              Inverter / alimentation
+            </option>
+
+            <option>
+              Blender / petit appareil
+            </option>
+
+            <option>
+              Dépannage électrique
+            </option>
+
+            <option>
+              Autre
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- DESCRIPTION -->
+
+        <div class="form-group">
+
+          <label for="description">
+            Description complète du problème *
+          </label>
+
+          <textarea
+            id="description"
+            name="description"
+            required
+            placeholder="Décrivez précisément votre problème ou votre demande..."></textarea>
+
+        </div>
+
+
+        <!-- APPAREIL -->
+
+        <div class="form-group">
+
+          <label for="appareil">
+            Appareil concerné
+          </label>
+
+          <input
+            id="appareil"
+            name="appareil"
+            type="text"
+            placeholder="Ex. Téléviseur, ventilateur, inverter...">
+
+        </div>
+
+
+        <!-- MARQUE / MODÈLE -->
+
+        <div class="form-group">
+
+          <label for="modele">
+            Marque / modèle
+          </label>
+
+          <input
+            id="modele"
+            name="modele"
+            type="text"
+            placeholder="Marque et modèle">
+
+        </div>
+
+
+        <!-- DATE -->
+
+        <div class="form-group">
+
+          <label for="dateIntervention">
+            Date souhaitée d'intervention
+          </label>
+
+          <input
+            id="dateIntervention"
+            name="dateIntervention"
+            type="date">
+
+        </div>
+
+
+        <!-- MODE DE CONTACT -->
+
+        <div class="form-group">
+
+          <label for="contactPrefere">
+            Mode de contact préféré *
+          </label>
+
+          <select
+            id="contactPrefere"
+            name="contactPrefere"
+            required>
+
+            <option value="">
+              -- Choisissez --
+            </option>
+
+            <option>
+              Téléphone
+            </option>
+
+            <option>
+              WhatsApp
+            </option>
+
+            <option>
+              E-mail
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- PHOTO -->
+
+        <div class="form-group">
+
+          <label for="photo">
+            Photo de l'appareil ou du problème
+          </label>
+
+          <input
+            id="photo"
+            name="photo"
+            type="file"
+            accept="image/*">
+
+        </div>
+
+
+        <button
+          class="submit-button"
+          type="submit">
+
+          📤 Envoyer ma demande
+
+        </button>
+
+      </form>
+
+
+      <div class="security-note">
+
+        🔒 <strong>Confidentialité :</strong>
+        les informations envoyées sont destinées
+        au traitement de votre demande.
+
+        La connexion à un système sécurisé de stockage
+        sera ajoutée avant la mise en production.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     RÉALISATIONS
+========================= -->
+
+<section id="realisations"
+         class="section projects">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Réalisations
+      </h2>
+
+      <p>
+        Espace réservé aux projets et travaux
+        d'AHCElectron.
+      </p>
+
+    </div>
+
+    <div class="project-grid">
+
+      <div class="project-box">
+        <span>⚡</span>
+      </div>
+
+      <div class="project-box">
+        <span>🔧</span>
+      </div>
+
+      <div class="project-box">
+        <span>☀️</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact"
+         class="section contact">
+
+  <div class="container">
+
+    <div class="contact-box">
+
+      <div class="section-title">
+
+        <h2>
+          📞 Contactez AHCElectron
+        </h2>
+
+        <p>
+          Pour une information, une réparation
+          ou une intervention, contactez-nous directement.
+        </p>
+
+      </div>
+
+      <div class="contact-buttons">
+
+        <a
+          class="contact-button"
+          href="tel:+50938106763">
+
+          📱 Appeler
+
+        </a>
+
+
+        <a
+          class="contact-button contact-button-green"
+          href="mailto:claudesonhenri@outlook.com">
+
+          ✉️ Envoyer un e-mail
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     MOYENS DE PAIEMENT
+========================= -->
+
+<section id="paiement"
+         class="section payment-section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        💳 Moyens de paiement
+      </h2>
+
+      <p>
+        Plusieurs possibilités de règlement peuvent
+        être proposées selon le service demandé,
+        la situation du client et le lieu d'intervention.
+      </p>
+
+    </div>
+
+
+    <div class="payment-box">
+
+      <p class="payment-intro">
+
+        Avant tout paiement, le montant et les
+        instructions de règlement seront confirmés
+        directement avec le client.
+
+      </p>
+
+
+      <div class="payment-grid">
+
+
+        <!-- MONCASH -->
+
+        <div class="payment-card">
+
+          <div class="payment-icon">
+            📱
+          </div>
+
+          <h3>
+            MonCash
+          </h3>
+
+          <p>
+            Paiement mobile pour les clients
+            en Haïti.
+          </p>
+
+        </div>
+
+
+        <!-- VIREMENT -->
+
+        <div class="payment-card">
+
+          <div class="payment-icon">
+            🏦
+          </div>
+
+          <h3>
+            Virement bancaire
+          </h3>
+
+          <p>
+            Les coordonnées bancaires seront
+            communiquées au client après
+            confirmation du service.
+          </p>
+
+        </div>
+
+
+        <!-- ESPÈCES -->
+
+        <div class="payment-card">
+
+          <div class="payment-icon">
+            💵
+          </div>
+
+          <h3>
+            Paiement en espèces
+          </h3>
+
+          <p>
+            Disponible selon le type d'intervention
+            et la zone de service.
+          </p>
+
+        </div>
+
+
+        <!-- CLIENTS À L'ÉTRANGER -->
+
+        <div class="payment-card">
+
+          <div class="payment-icon">
+            🌎
+          </div>
+
+          <h3>
+            Paiement à distance
+          </h3>
+
+          <p>
+            Pour les clients situés à l'étranger,
+            les modalités de paiement seront
+            confirmées directement avec AHCElectron.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="payment-note">
+
+        🔐 <strong>Sécurité du paiement :</strong>
+        ne transmettez jamais votre mot de passe,
+        votre code PIN ou votre code de sécurité.
+
+        AHCElectron ne vous demandera jamais
+        votre code personnel MonCash ou bancaire.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ADMINISTRATION
+========================= -->
+
+<section id="administration"
+         class="section admin-section">
+
+  <div class="container">
+
+    <div class="admin-box">
+
+      <h2>
+        🔐 Espace administrateur
+      </h2>
+
+      <p>
+        Cette zone est réservée à l'administration
+        d'AHCElectron.
+      </p>
+
+      <input
+        id="adminPassword"
+        type="password"
+        placeholder="Code personnel">
+
+      <button
+        class="admin-button"
+        onclick="adminLogin()">
+
+        🔑 Accéder
+
+      </button>
+
+      <div id="adminMessage"></div>
+
+      <div class="admin-warning">
+
+        ⚠️ <strong>Important :</strong>
+        cette connexion est uniquement une
+        démonstration locale.
+
+        Ne placez pas votre véritable mot de passe
+        dans ce fichier HTML.
+
+        Pour protéger réellement les informations
+        confidentielles des clients, une authentification
+        côté serveur et une base de données sécurisée
+        seront nécessaires.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="footer-content">
+
+
+    <!-- AHC ELECTRON -->
+
+    <div>
+
+      <h3>
+        AHC<span style="color:#ffd34d">Electron</span>
+      </h3>
+
+      <p>
+        Électricité • Réparation •
+        Électronique • Technologie
+      </p>
+
+      <p>
+        Service destiné aux clients en Haïti
+        et à l'étranger.
+      </p>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <div>
+
+      <h3>
+        Navigation
+      </h3>
+
+      <a href="#accueil">
+        Accueil
+      </a>
+
+      <a href="#apropos">
+        À propos
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#demande">
+        Faire une demande
+      </a>
+
+      <a href="#realisations">
+        Réalisations
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+      <a href="#paiement">
+        💳 Moyens de paiement
+      </a>
+
+    </div>
+
+
+    <!-- CONTACT -->
+
+    <div>
+
+      <h3>
+        Contact
+      </h3>
+
+      <a href="tel:+50938106763">
+        📱 +509 3810-6763
+      </a>
+
+      <a href="mailto:claudesonhenri@outlook.com">
+        ✉️ E-mail
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="copyright">
+
+    © 2026 AHCElectron —
+    Tous droits réservés.
+
+  </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+/*
+=================================================
+FORMULAIRE
+=================================================
+
+Cette partie empêche actuellement le navigateur
+de recharger la page.
+
+IMPORTANT :
+elle ne sauvegarde PAS encore les données
+sur un serveur.
+
+La connexion sécurisée sera ajoutée ultérieurement.
+*/
+
+document
+  .getElementById("clientForm")
+  .addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    alert(
+      "Votre formulaire est prêt à être envoyé. " +
+      "La connexion au système sécurisé de réception " +
+      "des demandes doit encore être configurée."
+    );
+
+  });
+
+
+/*
+=================================================
+ADMINISTRATION — DÉMONSTRATION UNIQUEMENT
+=================================================
+
+NE PAS utiliser ceci comme véritable sécurité.
+
+Le véritable système devra vérifier
+le mot de passe sur un serveur.
+*/
+
+function adminLogin() {
+
+  const password =
+    document.getElementById("adminPassword").value;
+
+  const message =
+    document.getElementById("adminMessage");
+
+  if (password === "") {
+
+    message.textContent =
+      "Veuillez entrer votre code personnel.";
+
+    return;
+  }
+
+  message.textContent =
+    "La zone administrateur sera connectée " +
+    "à votre système sécurisé lors de la prochaine étape.";
+
+}
+
+</script>
+
+
+</body>
 </html>
