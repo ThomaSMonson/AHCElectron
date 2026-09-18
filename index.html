@@ -5,615 +5,613 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="AHCElectron — Électricité, réparation, électronique et technologie en Haïti et à l'international.">
+content="AHCElectron — Électricité, réparation, électronique, maintenance et technologie en Haïti et à l'international.">
 
 <meta name="theme-color" content="#07111f">
+
+<meta property="og:title"
+content="AHCElectron — Électricité • Réparation • Technologie">
+
+<meta property="og:description"
+content="Services d'électricité, réparation électronique, maintenance et solutions technologiques en Haïti et à l'international.">
+
+<meta property="og:type" content="website">
 
 <title>AHCElectron — Électricité • Réparation • Technologie</title>
 
 <style>
 
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#07111f;
-    color:#f4f7fb;
-    line-height:1.6;
+font-family:Arial,Helvetica,sans-serif;
+background:#07111f;
+color:#f4f7fb;
+line-height:1.6;
 }
 
 a{
-    color:inherit;
-    text-decoration:none;
+color:inherit;
+text-decoration:none;
 }
 
 button,
 input,
 select,
 textarea{
-    font:inherit;
+font:inherit;
 }
 
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(7,17,31,.97);
-    border-bottom:1px solid #1e344d;
-    backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(7,17,31,.97);
+border-bottom:1px solid #1e344d;
+backdrop-filter:blur(10px);
 }
 
 .navbar{
-    max-width:1250px;
-    margin:auto;
-    padding:14px 18px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
+max-width:1250px;
+margin:auto;
+padding:14px 18px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
 }
 
 .logo{
-    font-size:1.45rem;
-    font-weight:800;
-    color:#00d9ff;
+font-size:1.45rem;
+font-weight:800;
+color:#00d9ff;
 }
 
 .logo span{
-    color:#fff;
+color:#fff;
 }
 
 nav{
-    display:flex;
-    gap:6px;
-    flex-wrap:wrap;
-    justify-content:center;
+display:flex;
+gap:6px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 nav a{
-    padding:8px 10px;
-    border-radius:8px;
+padding:8px 10px;
+border-radius:8px;
 }
 
 nav a:hover{
-    background:#12304a;
-    color:#00d9ff;
+background:#12304a;
+color:#00d9ff;
 }
 
 .hero{
-    min-height:78vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:70px 20px;
-    background:
-    radial-gradient(circle at top,#12385a 0,#07111f 58%);
+min-height:78vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:70px 20px;
+background:
+radial-gradient(circle at top,#12385a 0,#07111f 58%);
 }
 
 .hero-content{
-    max-width:950px;
-    width:100%;
+max-width:950px;
+width:100%;
 }
 
 .hero h1{
-    font-size:clamp(2.3rem,7vw,5rem);
-    margin-bottom:15px;
+font-size:clamp(2.3rem,7vw,5rem);
+margin-bottom:15px;
 }
 
 .hero h1 span{
-    color:#00d9ff;
+color:#00d9ff;
 }
 
 .hero p{
-    max-width:780px;
-    margin:0 auto 25px;
-    color:#cbd7e4;
-    font-size:1.1rem;
+max-width:780px;
+margin:0 auto 25px;
+color:#cbd7e4;
+font-size:1.1rem;
 }
 
 .badges{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:10px;
-    margin:25px 0;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+margin:25px 0;
 }
 
 .badge{
-    border:1px solid #28506e;
-    background:#0d2033;
-    padding:8px 13px;
-    border-radius:30px;
+border:1px solid #28506e;
+background:#0d2033;
+padding:8px 13px;
+border-radius:30px;
 }
 
 .btn{
-    display:inline-block;
-    border:0;
-    cursor:pointer;
-    padding:12px 20px;
-    border-radius:10px;
-    background:#00bfe8;
-    color:#00131d;
-    font-weight:700;
-    transition:.25s;
-    margin:4px;
+display:inline-block;
+border:0;
+cursor:pointer;
+padding:12px 20px;
+border-radius:10px;
+background:#00bfe8;
+color:#00131d;
+font-weight:700;
+transition:.25s;
+margin:4px;
 }
 
 .btn:hover{
-    transform:translateY(-2px);
-    background:#38ddff;
+transform:translateY(-2px);
+background:#38ddff;
 }
 
 .btn.secondary{
-    background:#142b42;
-    color:#fff;
-    border:1px solid #2c4e69;
+background:#142b42;
+color:#fff;
+border:1px solid #2c4e69;
 }
 
 .btn.whatsapp{
-    background:#20c56b;
-    color:#fff;
+background:#20c56b;
+color:#fff;
 }
 
 section{
-    max-width:1250px;
-    margin:auto;
-    padding:70px 20px;
+max-width:1250px;
+margin:auto;
+padding:70px 20px;
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:35px;
+text-align:center;
+margin-bottom:35px;
 }
 
 .section-title h2{
-    font-size:2rem;
-    color:#00d9ff;
+font-size:2rem;
+color:#00d9ff;
 }
 
 .section-title p{
-    color:#b7c6d5;
+color:#b7c6d5;
 }
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
 }
 
 .card{
-    background:#0c1b2b;
-    border:1px solid #203b55;
-    border-radius:16px;
-    padding:25px;
-    transition:.25s;
+background:#0c1b2b;
+border:1px solid #203b55;
+border-radius:16px;
+padding:25px;
+transition:.25s;
 }
 
 .card:hover{
-    transform:translateY(-4px);
-    border-color:#00bfe8;
+transform:translateY(-4px);
+border-color:#00bfe8;
 }
 
 .icon{
-    font-size:2.5rem;
-    margin-bottom:12px;
+font-size:2.5rem;
+margin-bottom:12px;
 }
 
 .card p{
-    color:#b9c7d5;
+color:#b9c7d5;
 }
 
 .service-details,
 .package-area,
 .project-details{
-    display:none;
-    margin-top:18px;
-    padding:18px;
-    border-radius:12px;
-    background:#071522;
-    border:1px solid #24465f;
+display:none;
+margin-top:18px;
+padding:18px;
+border-radius:12px;
+background:#071522;
+border:1px solid #24465f;
 }
 
 .service-details.active,
 .package-area.active,
 .project-details.active{
-    display:block;
+display:block;
 }
 
 .package{
-    margin-top:14px;
-    padding:16px;
-    background:#0d2133;
-    border:1px solid #294b64;
-    border-radius:12px;
+margin-top:14px;
+padding:16px;
+background:#0d2133;
+border:1px solid #294b64;
+border-radius:12px;
 }
 
 .package h4{
-    color:#00d9ff;
-    margin-bottom:8px;
+color:#00d9ff;
+margin-bottom:8px;
 }
 
 .package ul{
-    margin:10px 0 15px 20px;
-    color:#cbd7e4;
+margin:10px 0 15px 20px;
+color:#cbd7e4;
 }
 
 .package li{
-    margin-bottom:5px;
+margin-bottom:5px;
 }
 
 .price{
-    color:#fff;
-    font-weight:bold;
-    margin:10px 0;
+color:#fff;
+font-weight:bold;
+margin:10px 0;
 }
 
 .coverage{
-    max-width:none;
-    background:#091827;
-    border-top:1px solid #18324a;
-    border-bottom:1px solid #18324a;
+max-width:none;
+background:#091827;
+border-top:1px solid #18324a;
+border-bottom:1px solid #18324a;
 }
 
 .coverage-inner{
-    max-width:1250px;
-    margin:auto;
-    padding:0 20px;
+max-width:1250px;
+margin:auto;
+padding:0 20px;
 }
 
 .zone-selector{
-    max-width:800px;
-    margin:0 auto 35px;
-    padding:25px;
-    background:#0c1b2b;
-    border:1px solid #294b64;
-    border-radius:16px;
+max-width:800px;
+margin:0 auto 35px;
+padding:25px;
+background:#0c1b2b;
+border:1px solid #294b64;
+border-radius:16px;
 }
 
 .form-group{
-    margin-bottom:15px;
+margin-bottom:15px;
 }
 
 .form-group label{
-    display:block;
-    margin-bottom:6px;
-    font-weight:700;
+display:block;
+margin-bottom:6px;
+font-weight:700;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea{
-    width:100%;
-    padding:12px;
-    border-radius:8px;
-    border:1px solid #36546b;
-    background:#0d2033;
-    color:#fff;
-    outline:none;
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #36546b;
+background:#0d2033;
+color:#fff;
+outline:none;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus{
-    border-color:#00d9ff;
+border-color:#00d9ff;
 }
 
 #haitiDepartments,
 #internationalCountries{
-    display:none;
+display:none;
 }
 
 #haitiDepartments.active,
 #internationalCountries.active{
-    display:block;
+display:block;
 }
 
 .department-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
-    gap:10px;
-    margin-top:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:10px;
+margin-top:20px;
 }
 
 .department{
-    background:#0d2133;
-    border:1px solid #26465f;
-    padding:13px;
-    border-radius:10px;
-    text-align:center;
-    cursor:pointer;
-    transition:.2s;
+background:#0d2133;
+border:1px solid #26465f;
+padding:13px;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+transition:.2s;
 }
 
 .department:hover{
-    border-color:#00d9ff;
-    background:#12304a;
+border-color:#00d9ff;
+background:#12304a;
 }
 
 .international-box{
-    margin-top:25px;
-    padding:25px;
-    background:#0d2133;
-    border:1px solid #26465f;
-    border-radius:15px;
+margin-top:25px;
+padding:25px;
+background:#0d2133;
+border:1px solid #26465f;
+border-radius:15px;
 }
 
 .international-box h3{
-    color:#00d9ff;
-    margin-bottom:10px;
+color:#00d9ff;
+margin-bottom:10px;
 }
 
 .package-selector{
-    margin-top:35px;
+margin-top:35px;
 }
 
 .package-option{
-    margin-bottom:20px;
+margin-bottom:20px;
 }
 
 .package-option button{
-    width:100%;
-    text-align:left;
-    background:#0d2133;
-    color:#fff;
-    border:1px solid #2b4d65;
-    padding:18px;
-    border-radius:12px;
-    cursor:pointer;
+width:100%;
+text-align:left;
+background:#0d2133;
+color:#fff;
+border:1px solid #2b4d65;
+padding:18px;
+border-radius:12px;
+cursor:pointer;
 }
 
 .package-option button:hover{
-    border-color:#00d9ff;
+border-color:#00d9ff;
 }
 
 .package-content{
-    display:none;
-    padding:18px;
-    background:#071522;
-    border:1px solid #24465f;
-    border-top:0;
-    border-radius:0 0 12px 12px;
+display:none;
+padding:18px;
+background:#071522;
+border:1px solid #24465f;
+border-top:0;
+border-radius:0 0 12px 12px;
 }
 
 .package-content.active{
-    display:block;
+display:block;
 }
 
 .check-item{
-    display:flex;
-    gap:10px;
-    align-items:flex-start;
-    margin:9px 0;
+display:flex;
+gap:10px;
+align-items:flex-start;
+margin:9px 0;
 }
 
 .check-item input{
-    width:auto;
-    margin-top:5px;
+width:auto;
+margin-top:5px;
 }
 
 .summary{
-    margin-top:30px;
-    padding:25px;
-    background:#0c1b2b;
-    border:1px solid #00bfe8;
-    border-radius:16px;
+margin-top:30px;
+padding:25px;
+background:#0c1b2b;
+border:1px solid #00bfe8;
+border-radius:16px;
 }
 
 .summary h3{
-    color:#00d9ff;
-    margin-bottom:15px;
+color:#00d9ff;
+margin-bottom:15px;
 }
 
 .summary-line{
-    padding:7px 0;
-    border-bottom:1px solid #203b55;
+padding:7px 0;
+border-bottom:1px solid #203b55;
 }
 
 footer{
-    background:#040b13;
-    border-top:1px solid #1c3348;
-    padding:35px 20px;
-    text-align:center;
-    color:#9eb1c2;
+background:#040b13;
+border-top:1px solid #1c3348;
+padding:35px 20px;
+text-align:center;
+color:#9eb1c2;
 }
 
 .footer-logo{
-    color:#00d9ff;
-    font-weight:800;
-    font-size:1.3rem;
-    margin-bottom:8px;
+color:#00d9ff;
+font-weight:800;
+font-size:1.3rem;
+margin-bottom:8px;
 }
 
 .small{
-    font-size:.88rem;
-    color:#8ea4b7;
+font-size:.88rem;
+color:#8ea4b7;
 }
 
 .phone{
-    display:inline-block;
-    margin:15px 0;
-    font-size:1.5rem;
-    color:#00d9ff;
-    font-weight:800;
+display:inline-block;
+margin:15px 0;
+font-size:1.5rem;
+color:#00d9ff;
+font-weight:800;
 }
 
 .contact-box{
-    max-width:850px;
-    margin:auto;
-    text-align:center;
+max-width:850px;
+margin:auto;
+text-align:center;
 }
 
 .contact-form{
-    margin-top:30px;
-    text-align:left;
-    padding:25px;
-    background:#0c1b2b;
-    border:1px solid #203b55;
-    border-radius:16px;
+margin-top:30px;
+text-align:left;
+padding:25px;
+background:#0c1b2b;
+border:1px solid #203b55;
+border-radius:16px;
 }
 
 .message{
-    display:none;
-    margin-top:15px;
-    padding:12px;
-    border-radius:8px;
-    background:#12351f;
-    border:1px solid #267044;
-    color:#b9ffd0;
+display:none;
+margin-top:15px;
+padding:12px;
+border-radius:8px;
+background:#12351f;
+border:1px solid #267044;
+color:#b9ffd0;
 }
 
-
-/* ==================================================
-   RECHERCHE AHCElectron
-================================================== */
-
 .search-box{
-    max-width:850px;
-    margin:35px auto 0;
-    padding:20px;
-    background:#0c1b2b;
-    border:1px solid #294b64;
-    border-radius:16px;
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
+max-width:850px;
+margin:35px auto 0;
+padding:20px;
+background:#0c1b2b;
+border:1px solid #294b64;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
 .search-title{
-    color:#00d9ff;
-    font-weight:800;
-    margin-bottom:12px;
-    font-size:1.15rem;
+color:#00d9ff;
+font-weight:800;
+margin-bottom:12px;
+font-size:1.15rem;
 }
 
 .search-row{
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
+display:flex;
+gap:8px;
+flex-wrap:wrap;
 }
 
 .search-input{
-    flex:1;
-    min-width:220px;
-    padding:13px;
-    border-radius:9px;
-    border:1px solid #36546b;
-    background:#071522;
-    color:#fff;
-    outline:none;
+flex:1;
+min-width:220px;
+padding:13px;
+border-radius:9px;
+border:1px solid #36546b;
+background:#071522;
+color:#fff;
+outline:none;
 }
 
 .search-input:focus{
-    border-color:#00d9ff;
+border-color:#00d9ff;
 }
 
 .search-results{
-    display:none;
-    margin-top:15px;
-    text-align:left;
+display:none;
+margin-top:15px;
+text-align:left;
 }
 
 .search-results.active{
-    display:block;
+display:block;
 }
 
 .search-result{
-    display:block;
-    margin:8px 0;
-    padding:13px;
-    border:1px solid #294b64;
-    background:#0d2133;
-    border-radius:10px;
-    cursor:pointer;
+display:block;
+margin:8px 0;
+padding:13px;
+border:1px solid #294b64;
+background:#0d2133;
+border-radius:10px;
+cursor:pointer;
 }
 
 .search-result:hover{
-    border-color:#00d9ff;
-    background:#12304a;
+border-color:#00d9ff;
+background:#12304a;
 }
 
 .search-result strong{
-    color:#00d9ff;
+color:#00d9ff;
 }
 
 .search-result small{
-    display:block;
-    color:#aebdca;
-    margin-top:3px;
+display:block;
+color:#aebdca;
+margin-top:3px;
 }
 
 .search-empty{
-    padding:12px;
-    color:#cbd7e4;
+padding:12px;
+color:#cbd7e4;
 }
 
 .search-external{
-    margin-top:15px;
-    padding-top:15px;
-    border-top:1px solid #294b64;
+margin-top:15px;
+padding-top:15px;
+border-top:1px solid #294b64;
 }
 
 .search-mode{
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
-    margin-top:12px;
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+margin-top:12px;
 }
 
 .search-mode button{
-    flex:1;
-    min-width:150px;
+flex:1;
+min-width:150px;
 }
 
 .search-note{
-    margin-top:10px;
-    font-size:.85rem;
-    color:#8ea4b7;
+margin-top:10px;
+font-size:.85rem;
+color:#8ea4b7;
 }
-
-
-/* ==================================================
-   RESPONSIVE
-================================================== */
 
 @media(max-width:750px){
 
-    .navbar{
-        flex-direction:column;
-    }
+.navbar{
+flex-direction:column;
+}
 
-    nav{
-        width:100%;
-    }
+nav{
+width:100%;
+}
 
-    nav a{
-        font-size:.82rem;
-    }
+nav a{
+font-size:.82rem;
+}
 
-    .hero{
-        min-height:70vh;
-    }
+.hero{
+min-height:70vh;
+}
 
-    .search-row{
-        flex-direction:column;
-    }
+.search-row{
+flex-direction:column;
+}
 
-    .search-input{
-        width:100%;
-        min-width:0;
-    }
+.search-input{
+width:100%;
+min-width:0;
+}
 
-    .search-row .btn{
-        width:100%;
-        margin:4px 0;
-    }
+.search-row .btn{
+width:100%;
+margin:4px 0;
+}
 
 }
 
@@ -621,9 +619,6 @@ footer{
 </head>
 
 <body>
-
-
-<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -648,9 +643,6 @@ AHC<span>Electron</span>
 
 </header>
 
-
-<!-- ================= ACCUEIL ================= -->
-
 <section id="accueil" class="hero">
 
 <div class="hero-content">
@@ -658,13 +650,9 @@ AHC<span>Electron</span>
 <div class="badges">
 
 <div class="badge">🇭🇹 Haïti</div>
-
 <div class="badge">🌎 International</div>
-
 <div class="badge">⚡ Électricité</div>
-
 <div class="badge">🔧 Réparation</div>
-
 <div class="badge">💻 Technologie</div>
 
 </div>
@@ -687,9 +675,6 @@ Découvrir les services
 Préparer ma demande
 </a>
 
-
-<!-- ================= RECHERCHE ================= -->
-
 <div class="search-box">
 
 <div class="search-title">
@@ -703,17 +688,13 @@ id="siteSearch"
 class="search-input"
 type="search"
 placeholder="Service, produit, réparation, pays, département..."
-autocomplete="off"
-oninput="searchAHCElectron()"
->
+autocomplete="off">
 
 <button
 class="btn"
 type="button"
 onclick="searchAHCElectron()">
-
 🔎 Rechercher
-
 </button>
 
 </div>
@@ -724,49 +705,37 @@ onclick="searchAHCElectron()">
 class="btn secondary"
 type="button"
 onclick="searchInternal()">
-
 🔎 Dans AHCElectron
-
 </button>
 
 <button
 class="btn secondary"
 type="button"
 onclick="searchInternet()">
-
 🌐 Sur Internet
-
 </button>
 
 <button
 class="btn"
 type="button"
 onclick="searchEverywhere()">
-
 🔎🌐 Partout
-
 </button>
 
 </div>
 
 <div class="search-note">
-La recherche interne consulte les informations intégrées
-au site. La recherche Internet ouvre une recherche externe.
+La recherche interne consulte les informations intégrées au site.
+La recherche Internet utilise un moteur externe.
 </div>
 
-<div
-id="searchResults"
-class="search-results">
-</div>
+<div id="searchResults" class="search-results"></div>
 
 </div>
 
 </div>
 
 </section>
-
-
-<!-- ================= SERVICES ================= -->
 
 <section id="services">
 
@@ -782,9 +751,6 @@ Chaque service peut être consulté avant de préparer une demande.
 
 <div class="grid">
 
-
-<!-- ELECTRICITE -->
-
 <div class="card">
 
 <div class="icon">⚡</div>
@@ -797,9 +763,7 @@ Installation, diagnostic et maintenance électrique.
 
 <button class="btn"
 onclick="openPackage('electricitePackages')">
-
 Voir les packages
-
 </button>
 
 <div id="electricitePackages" class="package-area">
@@ -809,56 +773,37 @@ Voir les packages
 <h4>⚡ Package Diagnostic électrique</h4>
 
 <ul>
-
 <li>Inspection de l'installation</li>
-
 <li>Recherche de panne</li>
-
 <li>Vérification des connexions</li>
-
 <li>Rapport de diagnostic</li>
-
 </ul>
 
-<div class="price">
-Prix : sur devis
-</div>
+<div class="price">Prix : sur devis</div>
 
 <button class="btn"
 onclick="choosePackage('Diagnostic électrique')">
-
 Choisir ce package
-
 </button>
 
 </div>
-
 
 <div class="package">
 
 <h4>⚡ Package Installation / Maintenance</h4>
 
 <ul>
-
 <li>Évaluation du besoin</li>
-
 <li>Préparation de l'intervention</li>
-
 <li>Installation ou entretien</li>
-
 <li>Contrôle final</li>
-
 </ul>
 
-<div class="price">
-Prix : sur devis
-</div>
+<div class="price">Prix : sur devis</div>
 
 <button class="btn"
 onclick="choosePackage('Installation / Maintenance électrique')">
-
 Choisir ce package
-
 </button>
 
 </div>
@@ -866,9 +811,6 @@ Choisir ce package
 </div>
 
 </div>
-
-
-<!-- ELECTRONIQUE -->
 
 <div class="card">
 
@@ -882,9 +824,7 @@ Diagnostic et réparation d'équipements électroniques.
 
 <button class="btn"
 onclick="openPackage('electroniquePackages')">
-
 Voir les packages
-
 </button>
 
 <div id="electroniquePackages" class="package-area">
@@ -894,56 +834,37 @@ Voir les packages
 <h4>🔧 Package Diagnostic électronique</h4>
 
 <ul>
-
 <li>Examen de l'appareil</li>
-
 <li>Recherche de panne</li>
-
 <li>Contrôle de l'alimentation</li>
-
 <li>Identification des composants concernés</li>
-
 </ul>
 
-<div class="price">
-Prix : sur devis
-</div>
+<div class="price">Prix : sur devis</div>
 
 <button class="btn"
 onclick="choosePackage('Diagnostic électronique')">
-
 Choisir ce package
-
 </button>
 
 </div>
-
 
 <div class="package">
 
 <h4>🔧 Package Réparation</h4>
 
 <ul>
-
 <li>Diagnostic préalable</li>
-
 <li>Réparation ou remplacement de composants</li>
-
 <li>Tests de fonctionnement</li>
-
 <li>Compte rendu de l'intervention</li>
-
 </ul>
 
-<div class="price">
-Prix : sur devis
-</div>
+<div class="price">Prix : sur devis</div>
 
 <button class="btn"
 onclick="choosePackage('Réparation électronique')">
-
 Choisir ce package
-
 </button>
 
 </div>
@@ -951,9 +872,6 @@ Choisir ce package
 </div>
 
 </div>
-
-
-<!-- TECHNOLOGIE -->
 
 <div class="card">
 
@@ -967,9 +885,7 @@ Assistance informatique et solutions numériques.
 
 <button class="btn"
 onclick="openPackage('technologiePackages')">
-
 Voir les packages
-
 </button>
 
 <div id="technologiePackages" class="package-area">
@@ -979,56 +895,37 @@ Voir les packages
 <h4>💻 Package Assistance technologique</h4>
 
 <ul>
-
 <li>Analyse du problème</li>
-
 <li>Configuration de l'appareil</li>
-
 <li>Assistance utilisateur</li>
-
 <li>Tests et vérification</li>
-
 </ul>
 
-<div class="price">
-Prix : sur devis
-</div>
+<div class="price">Prix : sur devis</div>
 
 <button class="btn"
 onclick="choosePackage('Assistance technologique')">
-
 Choisir ce package
-
 </button>
 
 </div>
-
 
 <div class="package">
 
 <h4>💻 Package Solution numérique</h4>
 
 <ul>
-
 <li>Analyse du besoin</li>
-
 <li>Choix de la solution</li>
-
 <li>Configuration</li>
-
 <li>Accompagnement</li>
-
 </ul>
 
-<div class="price">
-Prix : sur devis
-</div>
+<div class="price">Prix : sur devis</div>
 
 <button class="btn"
 onclick="choosePackage('Solution numérique')">
-
 Choisir ce package
-
 </button>
 
 </div>
@@ -1036,9 +933,6 @@ Choisir ce package
 </div>
 
 </div>
-
-
-<!-- MAINTENANCE -->
 
 <div class="card">
 
@@ -1052,9 +946,7 @@ Entretien, diagnostic et suivi des équipements.
 
 <button class="btn"
 onclick="openPackage('maintenancePackages')">
-
 Voir les packages
-
 </button>
 
 <div id="maintenancePackages" class="package-area">
@@ -1064,58 +956,38 @@ Voir les packages
 <h4>🛠️ Package Maintenance préventive</h4>
 
 <ul>
-
 <li>Inspection</li>
-
 <li>Nettoyage technique selon équipement</li>
-
 <li>Contrôle des composants</li>
-
 <li>Recommandations</li>
-
 </ul>
 
-<div class="price">
-Prix : sur devis
-</div>
+<div class="price">Prix : sur devis</div>
 
 <button class="btn"
 onclick="choosePackage('Maintenance préventive')">
-
 Choisir ce package
-
 </button>
 
 </div>
-
 
 <div class="package">
 
 <h4>🛠️ Package Maintenance complète</h4>
 
 <ul>
-
 <li>Diagnostic</li>
-
 <li>Entretien</li>
-
 <li>Contrôle général</li>
-
 <li>Tests de fonctionnement</li>
-
 <li>Rapport de service</li>
-
 </ul>
 
-<div class="price">
-Prix : sur devis
-</div>
+<div class="price">Prix : sur devis</div>
 
 <button class="btn"
 onclick="choosePackage('Maintenance complète')">
-
 Choisir ce package
-
 </button>
 
 </div>
@@ -1127,9 +999,6 @@ Choisir ce package
 </div>
 
 </section>
-
-
-<!-- ================= PRODUITS ================= -->
 
 <section id="produits">
 
@@ -1158,13 +1027,10 @@ et de continuité énergétique.
 
 <button class="btn"
 onclick="choosePackage('Solution d alimentation')">
-
 Demander une solution
-
 </button>
 
 </div>
-
 
 <div class="card">
 
@@ -1178,13 +1044,10 @@ Solutions d'éclairage pour différents environnements.
 
 <button class="btn"
 onclick="choosePackage('Solution éclairage')">
-
 Demander une solution
-
 </button>
 
 </div>
-
 
 <div class="card">
 
@@ -1198,13 +1061,10 @@ Appareils et solutions technologiques selon disponibilité.
 
 <button class="btn"
 onclick="choosePackage('Produit technologique')">
-
 Demander une solution
-
 </button>
 
 </div>
-
 
 <div class="card">
 
@@ -1218,9 +1078,7 @@ Composants et accessoires pour réparation et maintenance.
 
 <button class="btn"
 onclick="choosePackage('Composants / accessoires')">
-
 Demander une solution
-
 </button>
 
 </div>
@@ -1228,9 +1086,6 @@ Demander une solution
 </div>
 
 </section>
-
-
-<!-- ================= REALISATIONS ================= -->
 
 <section id="realisations">
 
@@ -1259,9 +1114,7 @@ Diagnostic et intervention sur équipement électronique.
 
 <button class="btn"
 onclick="toggleProject('project1')">
-
 Voir la référence
-
 </button>
 
 <div id="project1" class="project-details">
@@ -1278,7 +1131,6 @@ test final.
 
 </div>
 
-
 <div class="card">
 
 <div class="icon">🔊</div>
@@ -1291,9 +1143,7 @@ Diagnostic et maintenance d'équipements audio.
 
 <button class="btn"
 onclick="toggleProject('project2')">
-
 Voir la référence
-
 </button>
 
 <div id="project2" class="project-details">
@@ -1309,7 +1159,6 @@ vérification des composants et test audio.
 
 </div>
 
-
 <div class="card">
 
 <div class="icon">⚡</div>
@@ -1322,9 +1171,7 @@ Travaux d'installation et de maintenance électrique.
 
 <button class="btn"
 onclick="toggleProject('project3')">
-
 Voir la référence
-
 </button>
 
 <div id="project3" class="project-details">
@@ -1340,7 +1187,6 @@ contrôle → remise au client.
 
 </div>
 
-
 <div class="card">
 
 <div class="icon">💻</div>
@@ -1353,9 +1199,7 @@ Assistance et configuration technologique.
 
 <button class="btn"
 onclick="toggleProject('project4')">
-
 Voir la référence
-
 </button>
 
 <div id="project4" class="project-details">
@@ -1375,9 +1219,6 @@ tests → explication au client.
 
 </section>
 
-
-<!-- ================= HAITI + INTERNATIONAL ================= -->
-
 <section id="zone" class="coverage">
 
 <div class="coverage-inner">
@@ -1392,7 +1233,6 @@ Sélectionnez votre zone pour afficher les possibilités correspondantes.
 
 </div>
 
-
 <div class="zone-selector">
 
 <div class="form-group">
@@ -1401,8 +1241,7 @@ Sélectionnez votre zone pour afficher les possibilités correspondantes.
 🌍 Où se trouve le client ?
 </label>
 
-<select id="zoneSelect"
-onchange="changeZone()">
+<select id="zoneSelect" onchange="changeZone()">
 
 <option value="">
 -- Sélectionner --
@@ -1420,9 +1259,6 @@ onchange="changeZone()">
 
 </div>
 
-
-<!-- HAITI -->
-
 <div id="haitiDepartments">
 
 <h3 style="color:#00d9ff;">
@@ -1431,62 +1267,20 @@ onchange="changeZone()">
 
 <div class="department-grid">
 
-<div class="department"
-onclick="selectLocation('Ouest')">
-Ouest
-</div>
-
-<div class="department"
-onclick="selectLocation('Nord')">
-Nord
-</div>
-
-<div class="department"
-onclick="selectLocation('Nord-Est')">
-Nord-Est
-</div>
-
-<div class="department"
-onclick="selectLocation('Nord-Ouest')">
-Nord-Ouest
-</div>
-
-<div class="department"
-onclick="selectLocation('Artibonite')">
-Artibonite
-</div>
-
-<div class="department"
-onclick="selectLocation('Centre')">
-Centre
-</div>
-
-<div class="department"
-onclick="selectLocation('Sud')">
-Sud
-</div>
-
-<div class="department"
-onclick="selectLocation('Sud-Est')">
-Sud-Est
-</div>
-
-<div class="department"
-onclick="selectLocation('Grand’Anse')">
-Grand’Anse
-</div>
-
-<div class="department"
-onclick="selectLocation('Nippes')">
-Nippes
-</div>
+<div class="department" onclick="selectLocation('Ouest')">Ouest</div>
+<div class="department" onclick="selectLocation('Nord')">Nord</div>
+<div class="department" onclick="selectLocation('Nord-Est')">Nord-Est</div>
+<div class="department" onclick="selectLocation('Nord-Ouest')">Nord-Ouest</div>
+<div class="department" onclick="selectLocation('Artibonite')">Artibonite</div>
+<div class="department" onclick="selectLocation('Centre')">Centre</div>
+<div class="department" onclick="selectLocation('Sud')">Sud</div>
+<div class="department" onclick="selectLocation('Sud-Est')">Sud-Est</div>
+<div class="department" onclick="selectLocation('Grand’Anse')">Grand’Anse</div>
+<div class="department" onclick="selectLocation('Nippes')">Nippes</div>
 
 </div>
 
 </div>
-
-
-<!-- INTERNATIONAL -->
 
 <div id="internationalCountries">
 
@@ -1500,8 +1294,7 @@ Nippes
 Pays
 </label>
 
-<select id="countrySelect"
-onchange="selectLocation(this.value)">
+<select id="countrySelect" onchange="selectLocation(this.value)">
 
 <option value="">
 -- Sélectionner un pays --
@@ -1514,7 +1307,6 @@ onchange="selectLocation(this.value)">
 </div>
 
 </div>
-
 
 <div class="international-box">
 
@@ -1534,9 +1326,6 @@ sélectionnez votre département.
 
 </section>
 
-
-<!-- ================= DEMANDE / PACKAGE ================= -->
-
 <section id="demande">
 
 <div class="section-title">
@@ -1549,12 +1338,11 @@ Vérifiez les informations avant de les soumettre au propriétaire du site.
 
 </div>
 
-
 <div class="contact-form">
 
 <div class="form-group">
 
-<label>
+<label for="clientName">
 Nom complet
 </label>
 
@@ -1564,10 +1352,9 @@ placeholder="Votre nom complet">
 
 </div>
 
-
 <div class="form-group">
 
-<label>
+<label for="clientPhone">
 Téléphone / WhatsApp
 </label>
 
@@ -1577,10 +1364,9 @@ placeholder="+509..., +1..., +33...">
 
 </div>
 
-
 <div class="form-group">
 
-<label>
+<label for="clientCity">
 Ville
 </label>
 
@@ -1590,10 +1376,9 @@ placeholder="Votre ville">
 
 </div>
 
-
 <div class="form-group">
 
-<label>
+<label for="selectedPackage">
 Service ou package sélectionné
 </label>
 
@@ -1604,10 +1389,9 @@ placeholder="Choisissez un package dans les services">
 
 </div>
 
-
 <div class="form-group">
 
-<label>
+<label for="quantity">
 Quantité / nombre d'équipements
 </label>
 
@@ -1618,10 +1402,9 @@ value="1">
 
 </div>
 
-
 <div class="form-group">
 
-<label>
+<label for="clientBudget">
 Budget ou montant proposé — facultatif
 </label>
 
@@ -1631,10 +1414,9 @@ placeholder="Ex. 150 USD / à déterminer">
 
 </div>
 
-
 <div class="form-group">
 
-<label>
+<label for="clientDescription">
 Description supplémentaire
 </label>
 
@@ -1643,7 +1425,6 @@ rows="5"
 placeholder="Décrivez votre besoin, l'appareil, le problème ou les détails du projet."></textarea>
 
 </div>
-
 
 <div class="summary">
 
@@ -1686,25 +1467,19 @@ et non une confirmation automatique de prix.
 
 </div>
 
-
 <button class="btn whatsapp"
+type="button"
 onclick="sendRequest()">
 
 📲 Soumettre au propriétaire
 
 </button>
 
-
-<div id="requestMessage"
-class="message">
-</div>
+<div id="requestMessage" class="message"></div>
 
 </div>
 
 </section>
-
-
-<!-- ================= PAIEMENT ================= -->
 
 <section id="paiement">
 
@@ -1713,15 +1488,14 @@ class="message">
 <h2>💳 Moyens de paiement</h2>
 
 <p>
-Les formulaires ci-dessous préparent la demande de paiement.
-Une connexion officielle à une passerelle est nécessaire
-pour effectuer réellement une transaction.
+Les options ci-dessous permettent de préparer une demande de paiement.
+Une connexion officielle à une passerelle de paiement est nécessaire
+pour effectuer automatiquement une transaction en ligne.
 </p>
 
 </div>
 
 <div class="grid">
-
 
 <div class="card">
 
@@ -1735,13 +1509,10 @@ Pour les clients utilisant MonCash.
 
 <button class="btn"
 onclick="choosePackage('Paiement MonCash')">
-
 Préparer le paiement
-
 </button>
 
 </div>
-
 
 <div class="card">
 
@@ -1755,13 +1526,10 @@ Pour les clients utilisant NatCash.
 
 <button class="btn"
 onclick="choosePackage('Paiement NatCash')">
-
 Préparer le paiement
-
 </button>
 
 </div>
-
 
 <div class="card">
 
@@ -1775,13 +1543,10 @@ Pour les clients en Haïti ou à l'étranger.
 
 <button class="btn"
 onclick="choosePackage('Paiement par carte bancaire')">
-
 Préparer le paiement
-
 </button>
 
 </div>
-
 
 <div class="card">
 
@@ -1795,9 +1560,7 @@ Une autre méthode doit-elle être utilisée ?
 
 <button class="btn"
 onclick="choosePackage('Autre moyen de paiement')">
-
 Faire une demande
-
 </button>
 
 </div>
@@ -1805,9 +1568,6 @@ Faire une demande
 </div>
 
 </section>
-
-
-<!-- ================= CONTACT ================= -->
 
 <section id="contact">
 
@@ -1824,12 +1584,9 @@ un devis ou une information.
 
 </div>
 
-
 <a class="phone"
 href="tel:+50938106763">
-
 📞 +509 3810 6763
-
 </a>
 
 <p>
@@ -1840,25 +1597,19 @@ href="tel:+50938106763">
 
 <a class="btn"
 href="tel:+50938106763">
-
 Appeler AHCElectron
-
 </a>
 
 <a class="btn whatsapp"
 href="https://wa.me/50938106763"
-target="_blank">
-
+target="_blank"
+rel="noopener noreferrer">
 WhatsApp
-
 </a>
 
 </div>
 
 </section>
-
-
-<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1884,7 +1635,6 @@ AHCElectron
 
 </footer>
 
-
 <script>
 
 /* ==================================================
@@ -1893,233 +1643,48 @@ AHCElectron
 
 const countries = [
 
-"Afghanistan",
-"Afrique du Sud",
-"Albanie",
-"Algérie",
-"Allemagne",
-"Andorre",
-"Angola",
-"Antigua-et-Barbuda",
-"Arabie saoudite",
-"Argentine",
-"Arménie",
-"Australie",
-"Autriche",
-"Azerbaïdjan",
-
-"Bahamas",
-"Bahreïn",
-"Bangladesh",
-"Barbade",
-"Belgique",
-"Belize",
-"Bénin",
-"Bhoutan",
-"Biélorussie",
-"Birmanie",
-"Bolivie",
-"Bosnie-Herzégovine",
-"Botswana",
-"Brésil",
-"Brunei",
-"Bulgarie",
-"Burkina Faso",
-"Burundi",
-
-"Cabo Verde",
-"Cambodge",
-"Cameroun",
-"Canada",
-"Chili",
-"Chine",
-"Chypre",
-"Colombie",
-"Comores",
-"Congo",
-"Corée du Nord",
-"Corée du Sud",
-"Costa Rica",
-"Côte d'Ivoire",
-"Croatie",
-"Cuba",
-
-"Danemark",
-"Djibouti",
-"Dominique",
-"République dominicaine",
-
-"Égypte",
-"Émirats arabes unis",
-"Équateur",
-"Érythrée",
-"Espagne",
-"Estonie",
-"Eswatini",
-"Éthiopie",
-
-"Fidji",
-"Finlande",
-"France",
-
-"Gabon",
-"Gambie",
-"Géorgie",
-"Ghana",
-"Grèce",
-"Grenade",
-"Guatemala",
-"Guinée",
-"Guinée-Bissau",
-"Guinée équatoriale",
-"Guyana",
-
-"Honduras",
-"Hongrie",
-
-"Inde",
-"Indonésie",
-"Irak",
-"Iran",
-"Irlande",
-"Islande",
-"Israël",
-"Italie",
-
-"Jamaïque",
-"Japon",
-"Jordanie",
-
-"Kenya",
-"Kiribati",
-"Koweït",
-
-"Laos",
-"Lettonie",
-"Liban",
-"Lesotho",
-"Libéria",
-"Libye",
-"Liechtenstein",
-"Lituanie",
-"Luxembourg",
-
-"Macédoine du Nord",
-"Madagascar",
-"Malaisie",
-"Malawi",
-"Maldives",
-"Mali",
-"Malte",
-"Maroc",
-"Marshall",
-"Maurice",
-"Mauritanie",
-"Mexique",
-"Micronésie",
-"Moldavie",
-"Monaco",
-"Mongolie",
-"Monténégro",
-"Mozambique",
-
-"Namibie",
-"Nauru",
-"Népal",
-"Nicaragua",
-"Niger",
-"Nigeria",
-"Norvège",
-"Nouvelle-Zélande",
-
-"Oman",
-"Ouganda",
-"Ouzbékistan",
-
-"Pakistan",
-"Palau",
-"Panama",
-"Papouasie-Nouvelle-Guinée",
-"Paraguay",
-"Pays-Bas",
-"Pérou",
-"Philippines",
-"Pologne",
-"Portugal",
-
-"Qatar",
-
-"République centrafricaine",
-"République démocratique du Congo",
-"Roumanie",
-"Royaume-Uni",
-"Russie",
-"Rwanda",
-
-"Saint-Christophe-et-Niévès",
-"Sainte-Lucie",
-"Saint-Marin",
-"Saint-Vincent-et-les-Grenadines",
-"Salomon",
-"Salvador",
-"Samoa",
-"Sao Tomé-et-Principe",
-"Serbie",
-"Seychelles",
-"Sénégal",
-"Sierra Leone",
-"Singapour",
-"Slovaquie",
-"Slovénie",
-"Somalie",
-"Soudan",
-"Soudan du Sud",
-"Suriname",
-"Suède",
-"Suisse",
-"Syrie",
-
-"Tadjikistan",
-"Tanzanie",
-"Tchad",
-"Thaïlande",
-"Timor oriental",
-"Togo",
-"Tonga",
-"Trinité-et-Tobago",
-"Tunisie",
-"Turkménistan",
-"Tuvalu",
-"Türkiye",
-
-"Ukraine",
-"Uruguay",
-
-"Vanuatu",
-"Vatican",
-"Venezuela",
-"Vietnam",
-
-"Yémen",
-
-"Zambie",
-"Zimbabwe",
-
+"Afghanistan","Afrique du Sud","Albanie","Algérie","Allemagne",
+"Andorre","Angola","Antigua-et-Barbuda","Arabie saoudite","Argentine",
+"Arménie","Australie","Autriche","Azerbaïdjan","Bahamas","Bahreïn",
+"Bangladesh","Barbade","Belgique","Belize","Bénin","Bhoutan",
+"Biélorussie","Birmanie","Bolivie","Bosnie-Herzégovine","Botswana",
+"Brésil","Brunei","Bulgarie","Burkina Faso","Burundi","Cabo Verde",
+"Cambodge","Cameroun","Canada","Chili","Chine","Chypre","Colombie",
+"Comores","Congo","Corée du Nord","Corée du Sud","Costa Rica",
+"Côte d'Ivoire","Croatie","Cuba","Danemark","Djibouti","Dominique",
+"République dominicaine","Égypte","Émirats arabes unis","Équateur",
+"Érythrée","Espagne","Estonie","Eswatini","Éthiopie","Fidji",
+"Finlande","France","Gabon","Gambie","Géorgie","Ghana","Grèce",
+"Grenade","Guatemala","Guinée","Guinée-Bissau","Guinée équatoriale",
+"Guyana","Honduras","Hongrie","Inde","Indonésie","Irak","Iran",
+"Irlande","Islande","Israël","Italie","Jamaïque","Japon","Jordanie",
+"Kenya","Kiribati","Koweït","Laos","Lettonie","Liban","Lesotho",
+"Libéria","Libye","Liechtenstein","Lituanie","Luxembourg",
+"Macédoine du Nord","Madagascar","Malaisie","Malawi","Maldives",
+"Mali","Malte","Maroc","Marshall","Maurice","Mauritanie","Mexique",
+"Micronésie","Moldavie","Monaco","Mongolie","Monténégro","Mozambique",
+"Namibie","Nauru","Népal","Nicaragua","Niger","Nigeria","Norvège",
+"Nouvelle-Zélande","Oman","Ouganda","Ouzbékistan","Pakistan","Palau",
+"Panama","Papouasie-Nouvelle-Guinée","Paraguay","Pays-Bas","Pérou",
+"Philippines","Pologne","Portugal","Qatar","République centrafricaine",
+"République démocratique du Congo","Roumanie","Royaume-Uni","Russie",
+"Rwanda","Saint-Christophe-et-Niévès","Sainte-Lucie","Saint-Marin",
+"Saint-Vincent-et-les-Grenadines","Salomon","Salvador","Samoa",
+"Sao Tomé-et-Principe","Serbie","Seychelles","Sénégal","Sierra Leone",
+"Singapour","Slovaquie","Slovénie","Somalie","Soudan","Soudan du Sud",
+"Suriname","Suède","Suisse","Syrie","Tadjikistan","Tanzanie","Tchad",
+"Thaïlande","Timor oriental","Togo","Tonga","Trinité-et-Tobago",
+"Tunisie","Turkménistan","Tuvalu","Türkiye","Ukraine","Uruguay",
+"Vanuatu","Vatican","Venezuela","Vietnam","Yémen","Zambie","Zimbabwe",
 "États-Unis"
 
 ];
 
+const countrySelect=document.getElementById("countrySelect");
 
-/* ==================================================
-   REMPLIR AUTOMATIQUEMENT LA LISTE DES PAYS
-================================================== */
+countries.sort((a,b)=>a.localeCompare(b,"fr"));
 
-const countrySelect =
-document.getElementById("countrySelect");
-
-countries.sort((a,b)=>a.localeCompare(b,'fr'));
-
-countries.forEach(function(country){
+countries.forEach(country=>{
 
 const option=document.createElement("option");
 
@@ -2132,26 +1697,21 @@ countrySelect.appendChild(option);
 
 
 /* ==================================================
-   ZONE HAITI / INTERNATIONAL
+   ZONE
 ================================================== */
 
 let selectedLocation="";
 
 function changeZone(){
 
-const zone=
-document.getElementById("zoneSelect").value;
+const zone=document.getElementById("zoneSelect").value;
 
-const haiti=
-document.getElementById("haitiDepartments");
-
-const international=
-document.getElementById("internationalCountries");
+const haiti=document.getElementById("haitiDepartments");
+const international=document.getElementById("internationalCountries");
 
 if(zone==="haiti"){
 
 haiti.classList.add("active");
-
 international.classList.remove("active");
 
 selectedLocation="Haïti";
@@ -2161,7 +1721,6 @@ selectedLocation="Haïti";
 else if(zone==="international"){
 
 haiti.classList.remove("active");
-
 international.classList.add("active");
 
 selectedLocation="International";
@@ -2171,7 +1730,6 @@ selectedLocation="International";
 else{
 
 haiti.classList.remove("active");
-
 international.classList.remove("active");
 
 selectedLocation="";
@@ -2184,22 +1742,18 @@ updateSummary();
 
 
 /* ==================================================
-   SELECTION DEPARTEMENT / PAYS
+   DEPARTEMENT / PAYS
 ================================================== */
 
 function selectLocation(location){
 
-if(!location){
-return;
-}
+if(!location)return;
 
 selectedLocation=location;
 
-document.getElementById("summaryZone")
-.textContent=location;
+document.getElementById("summaryZone").textContent=location;
 
-document.getElementById("demande")
-.scrollIntoView({
+document.getElementById("demande").scrollIntoView({
 behavior:"smooth"
 });
 
@@ -2209,13 +1763,12 @@ updateSummary();
 
 
 /* ==================================================
-   OUVRIR LES PACKAGES
+   PACKAGES
 ================================================== */
 
 function openPackage(id){
 
-const element=
-document.getElementById(id);
+const element=document.getElementById(id);
 
 if(element){
 element.classList.toggle("active");
@@ -2223,21 +1776,13 @@ element.classList.toggle("active");
 
 }
 
-
-/* ==================================================
-   CHOISIR UN PACKAGE
-================================================== */
-
 function choosePackage(packageName){
 
-document.getElementById("selectedPackage")
-.value=packageName;
+document.getElementById("selectedPackage").value=packageName;
 
-document.getElementById("summaryPackage")
-.textContent=packageName;
+document.getElementById("summaryPackage").textContent=packageName;
 
-document.getElementById("demande")
-.scrollIntoView({
+document.getElementById("demande").scrollIntoView({
 behavior:"smooth"
 });
 
@@ -2247,13 +1792,12 @@ updateSummary();
 
 
 /* ==================================================
-   REFERENCES DES REALISATIONS
+   REALISATIONS
 ================================================== */
 
 function toggleProject(id){
 
-const element=
-document.getElementById(id);
+const element=document.getElementById(id);
 
 if(element){
 element.classList.toggle("active");
@@ -2263,98 +1807,77 @@ element.classList.toggle("active");
 
 
 /* ==================================================
-   MISE A JOUR DU RECAPITULATIF
+   RECAPITULATIF
 ================================================== */
 
 function updateSummary(){
 
-const name=
-document.getElementById("clientName").value
-||"Non renseigné";
+const name=document.getElementById("clientName").value.trim() || "Non renseigné";
 
-const packageName=
-document.getElementById("selectedPackage").value
-||"Non sélectionné";
+const packageName=document.getElementById("selectedPackage").value.trim() || "Non sélectionné";
 
-const quantity=
-document.getElementById("quantity").value
-||"1";
+const quantity=document.getElementById("quantity").value || "1";
 
-const budget=
-document.getElementById("clientBudget").value
-||"Non renseigné";
+const budget=document.getElementById("clientBudget").value.trim() || "Non renseigné";
 
-document.getElementById("summaryName")
-.textContent=name;
-
-document.getElementById("summaryPackage")
-.textContent=packageName;
-
-document.getElementById("summaryQuantity")
-.textContent=quantity;
-
-document.getElementById("summaryBudget")
-.textContent=budget;
-
-document.getElementById("summaryZone")
-.textContent=
-selectedLocation || "Non sélectionnée";
+document.getElementById("summaryName").textContent=name;
+document.getElementById("summaryPackage").textContent=packageName;
+document.getElementById("summaryQuantity").textContent=quantity;
+document.getElementById("summaryBudget").textContent=budget;
+document.getElementById("summaryZone").textContent=selectedLocation || "Non sélectionnée";
 
 }
 
 
 /* ==================================================
-   ECOUTER LES CHANGEMENTS
+   CHANGEMENTS DU FORMULAIRE
 ================================================== */
 
-document.getElementById("clientName")
-.addEventListener("input",updateSummary);
+[
+"clientName",
+"clientPhone",
+"clientCity",
+"selectedPackage",
+"quantity",
+"clientBudget",
+"clientDescription"
+].forEach(id=>{
 
-document.getElementById("selectedPackage")
-.addEventListener("input",updateSummary);
+const element=document.getElementById(id);
 
-document.getElementById("quantity")
-.addEventListener("input",updateSummary);
+if(element){
+element.addEventListener("input",updateSummary);
+}
 
-document.getElementById("clientBudget")
-.addEventListener("input",updateSummary);
+});
 
 
 /* ==================================================
-   SOUMISSION AU PROPRIETAIRE
+   ENVOI WHATSAPP
 ================================================== */
 
 function sendRequest(){
 
-const name=
-document.getElementById("clientName").value.trim();
+const name=document.getElementById("clientName").value.trim();
 
-const phone=
-document.getElementById("clientPhone").value.trim();
+const phone=document.getElementById("clientPhone").value.trim();
 
-const city=
-document.getElementById("clientCity").value.trim();
+const city=document.getElementById("clientCity").value.trim();
 
-const packageName=
-document.getElementById("selectedPackage").value.trim();
+const packageName=document.getElementById("selectedPackage").value.trim();
 
-const quantity=
-document.getElementById("quantity").value;
+const quantity=document.getElementById("quantity").value || "1";
 
-const budget=
-document.getElementById("clientBudget").value.trim();
+const budget=document.getElementById("clientBudget").value.trim();
 
-const description=
-document.getElementById("clientDescription").value.trim();
+const description=document.getElementById("clientDescription").value.trim();
 
+const message=document.getElementById("requestMessage");
 
 if(!name || !phone || !city || !packageName){
 
-const message=
-document.getElementById("requestMessage");
-
 message.textContent=
-"Veuillez remplir au minimum le nom, le téléphone, la ville et le package.";
+"Veuillez remplir au minimum le nom, le téléphone, la ville et le service/package.";
 
 message.style.display="block";
 
@@ -2362,64 +1885,46 @@ return;
 
 }
 
-
 const text=
 
-"DEMANDE AHCElectron%0A%0A"
+"DEMANDE AHCElectron\n\n"+
 
-+"Client : "
-+encodeURIComponent(name)
-+"%0A"
+"Client : "+name+"\n"+
 
-+"Téléphone : "
-+encodeURIComponent(phone)
-+"%0A"
+"Téléphone : "+phone+"\n"+
 
-+"Localisation : "
-+encodeURIComponent(selectedLocation || "Non précisée")
-+"%0A"
+"Localisation : "+(selectedLocation || "Non précisée")+"\n"+
 
-+"Ville : "
-+encodeURIComponent(city)
-+"%0A"
+"Ville : "+city+"\n"+
 
-+"Service / Package : "
-+encodeURIComponent(packageName)
-+"%0A"
+"Service / Package : "+packageName+"\n"+
 
-+"Quantité : "
-+encodeURIComponent(quantity)
-+"%0A"
+"Quantité : "+quantity+"\n"+
 
-+"Budget : "
-+encodeURIComponent(budget || "Non renseigné")
-+"%0A"
+"Budget : "+(budget || "Non renseigné")+"\n"+
 
-+"Description : "
-+encodeURIComponent(description || "Aucune description supplémentaire")
-+"%0A%0A"
+"Description : "+(description || "Aucune description supplémentaire")+"\n\n"+
 
-+"Demande envoyée depuis le site AHCElectron.";
-
+"Demande envoyée depuis le site AHCElectron.";
 
 const whatsappURL=
-"https://wa.me/50938106763?text="
-+text;
-
+"https://wa.me/50938106763?text="+
+encodeURIComponent(text);
 
 window.open(
 whatsappURL,
-"_blank"
+"_blank",
+"noopener,noreferrer"
 );
 
 }
 
 
 /* ==================================================
-   RECHERCHE AHCElectron
+   INDEX DE RECHERCHE
 ================================================== */
 
-const searchIndex = [
+const searchIndex=[
 
 {
 title:"⚡ Électricité",
@@ -2689,14 +2194,11 @@ return text
 
 function searchInternal(){
 
-const input=
-document.getElementById("siteSearch");
+const input=document.getElementById("siteSearch");
 
-const resultsBox=
-document.getElementById("searchResults");
+const resultsBox=document.getElementById("searchResults");
 
-const query=
-normalizeSearch(input.value.trim());
+const query=normalizeSearch(input.value.trim());
 
 resultsBox.innerHTML="";
 
@@ -2706,39 +2208,31 @@ resultsBox.classList.add("active");
 
 resultsBox.innerHTML=
 "<div class='search-empty'>"+
-"Entrez un mot ou une expression à rechercher."
-+"</div>";
+"Entrez un mot ou une expression à rechercher."+
+"</div>";
 
 return;
 
 }
 
-const results=
-searchIndex.filter(function(item){
+const results=searchIndex.filter(item=>{
 
-const searchable=
-normalizeSearch(
-item.title+" "+
-item.description+" "+
-item.keywords
+const searchable=normalizeSearch(
+item.title+" "+item.description+" "+item.keywords
 );
 
 return searchable.includes(query);
 
 });
 
-
 resultsBox.classList.add("active");
-
 
 if(results.length===0){
 
 resultsBox.innerHTML=
-
 "<div class='search-empty'>"+
-"❌ Aucun résultat trouvé dans AHCElectron."
-+"</div>"+
-
+"❌ Aucun résultat trouvé dans AHCElectron."+
+"</div>"+
 "<div class='search-external'>"+
 "<button class='btn' type='button' onclick='searchInternet()'>"+
 "🌐 Rechercher cette information sur Internet"+
@@ -2749,43 +2243,29 @@ return;
 
 }
 
-
-let html="";
-
-html+=
+let html=
 "<div class='search-empty'>"+
 "✅ Résultats AHCElectron : "+
 "<strong>"+results.length+"</strong>"+
 "</div>";
 
-
-results.forEach(function(item){
+results.forEach(item=>{
 
 html+=
-
-"<a class='search-result' "+
-"href='"+item.target+"' "+
+"<a class='search-result' href='"+item.target+"' "+
 "onclick=\"openSearchResult(event,'"+item.target+"')\">"+
-
 "<strong>"+item.title+"</strong>"+
-
-"<small>"+
-item.description+
-"</small>"+
-
+"<small>"+item.description+"</small>"+
 "</a>";
 
 });
 
-
 html+=
-
 "<div class='search-external'>"+
 "<button class='btn secondary' type='button' onclick='searchInternet()'>"+
 "🌐 Poursuivre cette recherche sur Internet"+
 "</button>"+
 "</div>";
-
 
 resultsBox.innerHTML=html;
 
@@ -2793,7 +2273,7 @@ resultsBox.innerHTML=html;
 
 
 /* ==================================================
-   RECHERCHE AUTOMATIQUE
+   RECHERCHE PRINCIPALE
 ================================================== */
 
 function searchAHCElectron(){
@@ -2804,52 +2284,41 @@ searchInternal();
 
 
 /* ==================================================
-   OUVRIR RESULTAT INTERNE
+   RESULTAT INTERNE
 ================================================== */
 
 function openSearchResult(event,target){
 
 event.preventDefault();
 
-const element=
-document.querySelector(target);
+const element=document.querySelector(target);
 
-if(element){
+if(!element)return;
+
+if(
+element.classList.contains("package-area") ||
+element.classList.contains("project-details")
+){
+element.classList.add("active");
+}
 
 element.scrollIntoView({
 behavior:"smooth",
 block:"center"
 });
 
-
-if(element.classList.contains("package-area")){
-
-element.classList.add("active");
-
-}
-
-if(element.classList.contains("project-details")){
-
-element.classList.add("active");
-
-}
-
-}
-
 }
 
 
 /* ==================================================
-   RECHERCHE INTERNET
+   INTERNET
 ================================================== */
 
 function searchInternet(){
 
-const input=
-document.getElementById("siteSearch");
+const input=document.getElementById("siteSearch");
 
-const query=
-input.value.trim();
+const query=input.value.trim();
 
 if(!query){
 
@@ -2859,33 +2328,28 @@ return;
 
 }
 
-
 const googleURL=
 "https://www.google.com/search?q="+
 encodeURIComponent(query);
 
-
 window.open(
 googleURL,
-"_blank"
+"_blank",
+"noopener,noreferrer"
 );
 
 }
 
 
 /* ==================================================
-   RECHERCHE PARTOUT
+   PARTOUT
 ================================================== */
 
 function searchEverywhere(){
 
-searchInternal();
+const input=document.getElementById("siteSearch");
 
-const input=
-document.getElementById("siteSearch");
-
-const query=
-input.value.trim();
+const query=input.value.trim();
 
 if(!query){
 
@@ -2895,28 +2359,13 @@ return;
 
 }
 
+searchInternal();
 
-/*
-   La recherche interne reste visible.
-   Le bouton Internet permet ensuite
-   de poursuivre la même recherche.
-*/
+setTimeout(function(){
 
-}
+searchInternet();
 
-
-/* ==================================================
-   PROTECTION HTML
-================================================== */
-
-function escapeHTML(text){
-
-return text
-.replace(/&/g,"&amp;")
-.replace(/</g,"&lt;")
-.replace(/>/g,"&gt;")
-.replace(/"/g,"&quot;")
-.replace(/'/g,"&#039;");
+},150);
 
 }
 
