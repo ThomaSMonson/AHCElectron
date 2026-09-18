@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
 content="AHCElectron Sales and Repairs Services — AHCElectronSRS. Électricité, réparation, électronique, maintenance et technologie en Haïti et à l'international.">
@@ -74,8 +77,7 @@ gap:15px;
 }
 
 /* ==================================================
-   LOGO AHCElectronSRS
-   BLEU • BLANC • ROUGE
+   LOGO
 ================================================== */
 
 .logo{
@@ -406,7 +408,7 @@ padding:0 20px;
 }
 
 .zone-selector{
-max-width:800px;
+max-width:900px;
 margin:0 auto 35px;
 padding:25px;
 background:#0c1b2b;
@@ -488,2597 +490,97 @@ margin-bottom:10px;
 }
 
 /* ==================================================
-   PACKAGES
+   LOCALISATION AVANCÉE
 ================================================== */
 
-.package-selector{
-margin-top:35px;
-}
-
-.package-option{
-margin-bottom:20px;
-}
-
-.package-option button{
-width:100%;
-text-align:left;
-background:#0d2133;
-color:#fff;
-border:1px solid #2b4d65;
-padding:18px;
-border-radius:12px;
-cursor:pointer;
-}
-
-.package-option button:hover{
-border-color:#00d9ff;
-}
-
-.package-content{
-display:none;
-padding:18px;
+.location-panel{
+margin-top:25px;
+padding:22px;
 background:#071522;
-border:1px solid #24465f;
-border-top:0;
-border-radius:0 0 12px 12px;
+border:1px solid #31546d;
+border-radius:15px;
 }
 
-.package-content.active{
+.location-panel h3{
+color:#00d9ff;
+margin-bottom:10px;
+}
+
+.location-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin:15px 0;
+}
+
+.location-status{
+display:none;
+margin-top:15px;
+padding:15px;
+border-radius:10px;
+background:#0d2133;
+border:1px solid #294b64;
+}
+
+.location-status.active{
 display:block;
 }
 
-.check-item{
-display:flex;
-gap:10px;
-align-items:flex-start;
-margin:9px 0;
+.location-success{
+border-color:#267044;
+background:#12351f;
 }
 
-.check-item input{
-width:auto;
-margin-top:5px;
+.location-warning{
+border-color:#826a25;
+background:#302b13;
 }
 
-/* ==================================================
-   RÉCAPITULATIF
-================================================== */
-
-.summary{
-margin-top:30px;
-padding:25px;
-background:#0c1b2b;
-border:1px solid #00bfe8;
-border-radius:16px;
+.location-error{
+border-color:#713838;
+background:#321515;
 }
 
-.summary h3{
-color:#00d9ff;
-margin-bottom:15px;
-}
-
-.summary-line{
+.location-line{
 padding:7px 0;
 border-bottom:1px solid #203b55;
 }
 
-/* ==================================================
-   RECHERCHE
-================================================== */
-
-.search-box{
-max-width:850px;
-margin:35px auto 0;
-padding:20px;
-background:#0c1b2b;
-border:1px solid #294b64;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
+.location-line:last-child{
+border-bottom:0;
 }
 
-.search-title{
-color:#00d9ff;
-font-weight:800;
-margin-bottom:12px;
-font-size:1.15rem;
-}
-
-.search-row{
-display:flex;
-gap:8px;
-flex-wrap:wrap;
-}
-
-.search-input{
-flex:1;
-min-width:220px;
-padding:13px;
-border-radius:9px;
-border:1px solid #36546b;
-background:#071522;
-color:#fff;
-outline:none;
-}
-
-.search-input:focus{
-border-color:#00d9ff;
-}
-
-.search-results{
-display:none;
-margin-top:15px;
-text-align:left;
-}
-
-.search-results.active{
-display:block;
-}
-
-.search-result{
-display:block;
-margin:8px 0;
-padding:13px;
-border:1px solid #294b64;
-background:#0d2133;
-border-radius:10px;
-cursor:pointer;
-}
-
-.search-result:hover{
-border-color:#00d9ff;
-background:#12304a;
-}
-
-.search-result strong{
-color:#00d9ff;
-}
-
-.search-result small{
-display:block;
-color:#aebdca;
-margin-top:3px;
-}
-
-.search-empty{
-padding:12px;
-color:#cbd7e4;
-}
-
-.search-external{
-margin-top:15px;
-padding-top:15px;
-border-top:1px solid #294b64;
-}
-
-.search-mode{
-display:flex;
-gap:8px;
-flex-wrap:wrap;
+.location-map{
+display:inline-block;
 margin-top:12px;
-}
-
-.search-mode button{
-flex:1;
-min-width:150px;
-}
-
-.search-note{
-margin-top:10px;
-font-size:.85rem;
-color:#8ea4b7;
-}
-
-/* ==================================================
-   CONTACT / FOOTER
-================================================== */
-
-footer{
-background:#040b13;
-border-top:1px solid #1c3348;
-padding:35px 20px;
-text-align:center;
-color:#9eb1c2;
-}
-
-.footer-logo{
-font-weight:900;
-font-size:1.5rem;
-background:linear-gradient(
-90deg,
-#0057b8,
-#ffffff,
-#d90429
-);
--webkit-background-clip:text;
-background-clip:text;
-color:transparent;
-margin-bottom:8px;
-}
-
-.small{
-font-size:.88rem;
-color:#8ea4b7;
-}
-
-.phone{
-display:inline-block;
-margin:15px 0;
-font-size:1.5rem;
-color:#00d9ff;
-font-weight:800;
-}
-
-.contact-box{
-max-width:850px;
-margin:auto;
-text-align:center;
-}
-
-.contact-form{
-margin-top:30px;
-text-align:left;
-padding:25px;
-background:#0c1b2b;
-border:1px solid #203b55;
-border-radius:16px;
-}
-
-.message{
-display:none;
-margin-top:15px;
-padding:12px;
+padding:10px 14px;
 border-radius:8px;
-background:#12351f;
-border:1px solid #267044;
-color:#b9ffd0;
-}
-
-/* ==================================================
-   VERSION MOBILE
-================================================== */
-
-@media(max-width:750px){
-
-.navbar{
-flex-direction:column;
-}
-
-.logo{
-align-items:center;
-min-width:0;
-width:100%;
-}
-
-.logo-main{
-font-size:clamp(1.8rem,9vw,2.5rem);
-}
-
-.logo-full{
-font-size:.61rem;
-text-align:center;
-white-space:normal;
-}
-
-nav{
-width:100%;
-}
-
-nav a{
-font-size:.82rem;
-}
-
-.hero{
-min-height:70vh;
-}
-
-.search-row{
-flex-direction:column;
-}
-
-.search-input{
-width:100%;
-min-width:0;
-}
-
-.search-row .btn{
-width:100%;
-margin:4px 0;
-}
-
-}
-
-/* ==================================================
-   RESPECT DES PRÉFÉRENCES D'ANIMATION
-================================================== */
-
-@media(prefers-reduced-motion:reduce){
-
-.logo,
-.hero h1 span,
-.brand-subtitle{
-animation:none;
-}
-
-html{
-scroll-behavior:auto;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-
-<div class="navbar">
-
-<a href="#accueil" class="logo"
-aria-label="AHCElectron Sales and Repairs Services">
-
-<div class="logo-main">
-AHCElectronSRS
-</div>
-
-<div class="logo-full">
-AHCElectron Sales and Repairs Services
-</div>
-
-</a>
-
-<nav>
-<a href="#accueil">Accueil</a>
-<a href="#services">Services</a>
-<a href="#produits">Produits</a>
-<a href="#realisations">Réalisations</a>
-<a href="#zone">🌎 Zone</a>
-<a href="#demande">📋 Demande</a>
-<a href="#paiement">Paiement</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</div>
-
-</header>
-
-<section id="accueil" class="hero">
-
-<div class="hero-content">
-
-<div class="badges">
-
-<div class="badge">🇭🇹 Haïti</div>
-<div class="badge">🌎 International</div>
-<div class="badge">⚡ Électricité</div>
-<div class="badge">🔧 Réparation</div>
-<div class="badge">💻 Technologie</div>
-
-</div>
-
-<h1>
-Bienvenue chez <span>AHCElectronSRS</span>
-</h1>
-
-<div class="brand-subtitle">
-AHCElectron Sales and Repairs Services
-</div>
-
-<p>
-Électricité, réparation électronique, technologie,
-maintenance et solutions techniques pour les particuliers,
-entreprises et partenaires en Haïti et à l'international.
-</p>
-
-<a href="#services" class="btn">
-Découvrir les services
-</a>
-
-<a href="#demande" class="btn secondary">
-Préparer ma demande
-</a>
-
-<div class="search-box">
-
-<div class="search-title">
-🔎 Recherche intelligente AHCElectronSRS
-</div>
-
-<div class="search-row">
-
-<input
-id="siteSearch"
-class="search-input"
-type="search"
-placeholder="Service, produit, réparation, pays, département..."
-autocomplete="off">
-
-<button
-class="btn"
-type="button"
-onclick="searchAHCElectron()">
-🔎 Rechercher
-</button>
-
-</div>
-
-<div class="search-mode">
-
-<button
-class="btn secondary"
-type="button"
-onclick="searchInternal()">
-🔎 Dans AHCElectronSRS
-</button>
-
-<button
-class="btn secondary"
-type="button"
-onclick="searchInternet()">
-🌐 Sur Internet
-</button>
-
-<button
-class="btn"
-type="button"
-onclick="searchEverywhere()">
-🔎🌐 Partout
-</button>
-
-</div>
-
-<div class="search-note">
-La recherche interne consulte les informations intégrées au site.
-La recherche Internet utilise un moteur externe.
-</div>
-
-<div id="searchResults" class="search-results"></div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="services">
-
-<div class="section-title">
-
-<h2>Nos services</h2>
-
-<p>
-Chaque service peut être consulté avant de préparer une demande.
-</p>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<div class="icon">⚡</div>
-
-<h3>Électricité</h3>
-
-<p>
-Installation, diagnostic et maintenance électrique.
-</p>
-
-<button class="btn"
-onclick="openPackage('electricitePackages')">
-Voir les packages
-</button>
-
-<div id="electricitePackages" class="package-area">
-
-<div class="package">
-
-<h4>⚡ Package Diagnostic électrique</h4>
-
-<ul>
-<li>Inspection de l'installation</li>
-<li>Recherche de panne</li>
-<li>Vérification des connexions</li>
-<li>Rapport de diagnostic</li>
-</ul>
-
-<div class="price">Prix : sur devis</div>
-
-<button class="btn"
-onclick="choosePackage('Diagnostic électrique')">
-Choisir ce package
-</button>
-
-</div>
-
-<div class="package">
-
-<h4>⚡ Package Installation / Maintenance</h4>
-
-<ul>
-<li>Évaluation du besoin</li>
-<li>Préparation de l'intervention</li>
-<li>Installation ou entretien</li>
-<li>Contrôle final</li>
-</ul>
-
-<div class="price">Prix : sur devis</div>
-
-<button class="btn"
-onclick="choosePackage('Installation / Maintenance électrique')">
-Choisir ce package
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="icon">🔧</div>
-
-<h3>Réparation électronique</h3>
-
-<p>
-Diagnostic et réparation d'équipements électroniques.
-</p>
-
-<button class="btn"
-onclick="openPackage('electroniquePackages')">
-Voir les packages
-</button>
-
-<div id="electroniquePackages" class="package-area">
-
-<div class="package">
-
-<h4>🔧 Package Diagnostic électronique</h4>
-
-<ul>
-<li>Examen de l'appareil</li>
-<li>Recherche de panne</li>
-<li>Contrôle de l'alimentation</li>
-<li>Identification des composants concernés</li>
-</ul>
-
-<div class="price">Prix : sur devis</div>
-
-<button class="btn"
-onclick="choosePackage('Diagnostic électronique')">
-Choisir ce package
-</button>
-
-</div>
-
-<div class="package">
-
-<h4>🔧 Package Réparation</h4>
-
-<ul>
-<li>Diagnostic préalable</li>
-<li>Réparation ou remplacement de composants</li>
-<li>Tests de fonctionnement</li>
-<li>Compte rendu de l'intervention</li>
-</ul>
-
-<div class="price">Prix : sur devis</div>
-
-<button class="btn"
-onclick="choosePackage('Réparation électronique')">
-Choisir ce package
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="icon">💻</div>
-
-<h3>Technologie</h3>
-
-<p>
-Assistance informatique et solutions numériques.
-</p>
-
-<button class="btn"
-onclick="openPackage('technologiePackages')">
-Voir les packages
-</button>
-
-<div id="technologiePackages" class="package-area">
-
-<div class="package">
-
-<h4>💻 Package Assistance technologique</h4>
-
-<ul>
-<li>Analyse du problème</li>
-<li>Configuration de l'appareil</li>
-<li>Assistance utilisateur</li>
-<li>Tests et vérification</li>
-</ul>
-
-<div class="price">Prix : sur devis</div>
-
-<button class="btn"
-onclick="choosePackage('Assistance technologique')">
-Choisir ce package
-</button>
-
-</div>
-
-<div class="package">
-
-<h4>💻 Package Solution numérique</h4>
-
-<ul>
-<li>Analyse du besoin</li>
-<li>Choix de la solution</li>
-<li>Configuration</li>
-<li>Accompagnement</li>
-</ul>
-
-<div class="price">Prix : sur devis</div>
-
-<button class="btn"
-onclick="choosePackage('Solution numérique')">
-Choisir ce package
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="icon">🛠️</div>
-
-<h3>Maintenance</h3>
-
-<p>
-Entretien, diagnostic et suivi des équipements.
-</p>
-
-<button class="btn"
-onclick="openPackage('maintenancePackages')">
-Voir les packages
-</button>
-
-<div id="maintenancePackages" class="package-area">
-
-<div class="package">
-
-<h4>🛠️ Package Maintenance préventive</h4>
-
-<ul>
-<li>Inspection</li>
-<li>Nettoyage technique selon équipement</li>
-<li>Contrôle des composants</li>
-<li>Recommandations</li>
-</ul>
-
-<div class="price">Prix : sur devis</div>
-
-<button class="btn"
-onclick="choosePackage('Maintenance préventive')">
-Choisir ce package
-</button>
-
-</div>
-
-<div class="package">
-
-<h4>🛠️ Package Maintenance complète</h4>
-
-<ul>
-<li>Diagnostic</li>
-<li>Entretien</li>
-<li>Contrôle général</li>
-<li>Tests de fonctionnement</li>
-<li>Rapport de service</li>
-</ul>
-
-<div class="price">Prix : sur devis</div>
-
-<button class="btn"
-onclick="choosePackage('Maintenance complète')">
-Choisir ce package
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="produits">
-
-<div class="section-title">
-
-<h2>Produits & solutions</h2>
-
-<p>
-Solutions et équipements selon les besoins et disponibilités.
-</p>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<div class="icon">🔋</div>
-
-<h3>Solutions d'alimentation</h3>
-
-<p>
-Solutions adaptées aux besoins d'alimentation
-et de continuité énergétique.
-</p>
-
-<button class="btn"
-onclick="choosePackage('Solution d alimentation')">
-Demander une solution
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="icon">💡</div>
-
-<h3>Éclairage</h3>
-
-<p>
-Solutions d'éclairage pour différents environnements.
-</p>
-
-<button class="btn"
-onclick="choosePackage('Solution éclairage')">
-Demander une solution
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="icon">📱</div>
-
-<h3>Technologie</h3>
-
-<p>
-Appareils et solutions technologiques selon disponibilité.
-</p>
-
-<button class="btn"
-onclick="choosePackage('Produit technologique')">
-Demander une solution
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="icon">⚙️</div>
-
-<h3>Composants</h3>
-
-<p>
-Composants et accessoires pour réparation et maintenance.
-</p>
-
-<button class="btn"
-onclick="choosePackage('Composants / accessoires')">
-Demander une solution
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="realisations">
-
-<div class="section-title">
-
-<h2>Réalisations</h2>
-
-<p>
-Des exemples de travaux permettant au client de comprendre
-le type d'intervention proposé.
-</p>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<div class="icon">📺</div>
-
-<h3>Réparation électronique</h3>
-
-<p>
-Diagnostic et intervention sur équipement électronique.
-</p>
-
-<button class="btn"
-onclick="toggleProject('project1')">
-Voir la référence
-</button>
-
-<div id="project1" class="project-details">
-
-<strong>Référence de service :</strong>
-
-<p>
-Diagnostic → identification de la panne →
-contrôle des composants → réparation →
-test final.
-</p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="icon">🔊</div>
-
-<h3>Audio & équipements</h3>
-
-<p>
-Diagnostic et maintenance d'équipements audio.
-</p>
-
-<button class="btn"
-onclick="toggleProject('project2')">
-Voir la référence
-</button>
-
-<div id="project2" class="project-details">
-
-<strong>Référence de service :</strong>
-
-<p>
-Recherche de parasites, contrôle du câblage,
-vérification des composants et test audio.
-</p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="icon">⚡</div>
-
-<h3>Installation électrique</h3>
-
-<p>
-Travaux d'installation et de maintenance électrique.
-</p>
-
-<button class="btn"
-onclick="toggleProject('project3')">
-Voir la référence
-</button>
-
-<div id="project3" class="project-details">
-
-<strong>Référence de service :</strong>
-
-<p>
-Évaluation → préparation → installation →
-contrôle → remise au client.
-</p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="icon">💻</div>
-
-<h3>Solution technologique</h3>
-
-<p>
-Assistance et configuration technologique.
-</p>
-
-<button class="btn"
-onclick="toggleProject('project4')">
-Voir la référence
-</button>
-
-<div id="project4" class="project-details">
-
-<strong>Référence de service :</strong>
-
-<p>
-Analyse du besoin → configuration →
-tests → explication au client.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="zone" class="coverage">
-
-<div class="coverage-inner">
-
-<div class="section-title">
-
-<h2>🇭🇹 Haïti + 🌎 International</h2>
-
-<p>
-Sélectionnez votre zone pour afficher les possibilités correspondantes.
-</p>
-
-</div>
-
-<div class="zone-selector">
-
-<div class="form-group">
-
-<label for="zoneSelect">
-🌍 Où se trouve le client ?
-</label>
-
-<select id="zoneSelect" onchange="changeZone()">
-
-<option value="">
--- Sélectionner --
-</option>
-
-<option value="haiti">
-🇭🇹 Haïti
-</option>
-
-<option value="international">
-🌎 International
-</option>
-
-</select>
-
-</div>
-
-<div id="haitiDepartments">
-
-<h3 style="color:#00d9ff;">
-🇭🇹 Sélectionnez votre département
-</h3>
-
-<div class="department-grid">
-
-<div class="department" onclick="selectLocation('Ouest')">Ouest</div>
-<div class="department" onclick="selectLocation('Nord')">Nord</div>
-<div class="department" onclick="selectLocation('Nord-Est')">Nord-Est</div>
-<div class="department" onclick="selectLocation('Nord-Ouest')">Nord-Ouest</div>
-<div class="department" onclick="selectLocation('Artibonite')">Artibonite</div>
-<div class="department" onclick="selectLocation('Centre')">Centre</div>
-<div class="department" onclick="selectLocation('Sud')">Sud</div>
-<div class="department" onclick="selectLocation('Sud-Est')">Sud-Est</div>
-<div class="department" onclick="selectLocation('Grand’Anse')">Grand’Anse</div>
-<div class="department" onclick="selectLocation('Nippes')">Nippes</div>
-
-</div>
-
-</div>
-
-<div id="internationalCountries">
-
-<h3 style="color:#00d9ff;">
-🌎 Sélectionnez votre pays
-</h3>
-
-<div class="form-group">
-
-<label for="countrySelect">
-Pays
-</label>
-
-<select id="countrySelect" onchange="selectLocation(this.value)">
-
-<option value="">
--- Sélectionner un pays --
-</option>
-
-</select>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="international-box">
-
-<h3>
-🌎 Service local et international
-</h3>
-
-<p>
-Pour une demande depuis l'étranger, indiquez votre pays,
-votre ville et votre besoin. Pour une demande en Haïti,
-sélectionnez votre département.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="demande">
-
-<div class="section-title">
-
-<h2>📋 Préparer votre demande</h2>
-
-<p>
-Vérifiez les informations avant de les soumettre au propriétaire du site.
-</p>
-
-</div>
-
-<div class="contact-form">
-
-<div class="form-group">
-
-<label for="clientName">
-Nom complet
-</label>
-
-<input id="clientName"
-type="text"
-placeholder="Votre nom complet">
-
-</div>
-
-<div class="form-group">
-
-<label for="clientPhone">
-Téléphone / WhatsApp
-</label>
-
-<input id="clientPhone"
-type="tel"
-placeholder="+509..., +1..., +33...">
-
-</div>
-
-<div class="form-group">
-
-<label for="clientCity">
-Ville
-</label>
-
-<input id="clientCity"
-type="text"
-placeholder="Votre ville">
-
-</div>
-
-<div class="form-group">
-
-<label for="selectedPackage">
-Service ou package sélectionné
-</label>
-
-<input id="selectedPackage"
-type="text"
-readonly
-placeholder="Choisissez un package dans les services">
-
-</div>
-
-<div class="form-group">
-
-<label for="quantity">
-Quantité / nombre d'équipements
-</label>
-
-<input id="quantity"
-type="number"
-min="1"
-value="1">
-
-</div>
-
-<div class="form-group">
-
-<label for="clientBudget">
-Budget ou montant proposé — facultatif
-</label>
-
-<input id="clientBudget"
-type="text"
-placeholder="Ex. 150 USD / à déterminer">
-
-</div>
-
-<div class="form-group">
-
-<label for="clientDescription">
-Description supplémentaire
-</label>
-
-<textarea id="clientDescription"
-rows="5"
-placeholder="Décrivez votre besoin, l'appareil, le problème ou les détails du projet."></textarea>
-
-</div>
-
-<div class="summary">
-
-<h3>
-🧾 Récapitulatif
-</h3>
-
-<div class="summary-line">
-<strong>Zone :</strong>
-<span id="summaryZone">Non sélectionnée</span>
-</div>
-
-<div class="summary-line">
-<strong>Client :</strong>
-<span id="summaryName">Non renseigné</span>
-</div>
-
-<div class="summary-line">
-<strong>Service :</strong>
-<span id="summaryPackage">Non sélectionné</span>
-</div>
-
-<div class="summary-line">
-<strong>Quantité :</strong>
-<span id="summaryQuantity">1</span>
-</div>
-
-<div class="summary-line">
-<strong>Budget :</strong>
-<span id="summaryBudget">Non renseigné</span>
-</div>
-
-<br>
-
-<p class="small">
-Le prix définitif est à confirmer par AHCElectronSRS.
-La demande constitue une demande de service/devis,
-et non une confirmation automatique de prix.
-</p>
-
-</div>
-
-<button class="btn whatsapp"
-type="button"
-onclick="sendRequest()">
-
-📲 Soumettre au propriétaire
-
-</button>
-
-<div id="requestMessage" class="message"></div>
-
-</div>
-
-</section>
-
-<section id="paiement">
-
-<div class="section-title">
-
-<h2>💳 Moyens de paiement</h2>
-
-<p>
-Les options ci-dessous permettent de préparer une demande de paiement.
-Une connexion officielle à une passerelle de paiement est nécessaire
-pour effectuer automatiquement une transaction en ligne.
-</p>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<div class="icon">📱</div>
-
-<h3>MonCash — Haïti</h3>
-
-<p>
-Pour les clients utilisant MonCash.
-</p>
-
-<button class="btn"
-onclick="choosePackage('Paiement MonCash')">
-Préparer le paiement
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="icon">💳</div>
-
-<h3>NatCash — Haïti</h3>
-
-<p>
-Pour les clients utilisant NatCash.
-</p>
-
-<button class="btn"
-onclick="choosePackage('Paiement NatCash')">
-Préparer le paiement
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="icon">🌎💳</div>
-
-<h3>Carte bancaire — International</h3>
-
-<p>
-Pour les clients en Haïti ou à l'étranger.
-</p>
-
-<button class="btn"
-onclick="choosePackage('Paiement par carte bancaire')">
-Préparer le paiement
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="icon">🧾</div>
-
-<h3>Autre moyen</h3>
-
-<p>
-Une autre méthode doit-elle être utilisée ?
-</p>
-
-<button class="btn"
-onclick="choosePackage('Autre moyen de paiement')">
-Faire une demande
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<div class="contact-box">
-
-<div class="section-title">
-
-<h2>📞 Contact AHCElectronSRS</h2>
-
-<p>
-AHCElectron Sales and Repairs Services
-</p>
-
-<p>
-Pour une demande de service, une réparation,
-un devis ou une information.
-</p>
-
-</div>
-
-<a class="phone"
-href="tel:+50938106763">
-📞 +509 3810 6763
-</a>
-
-<p>
-🇭🇹 Haïti • 🌎 International
-</p>
-
-<br>
-
-<a class="btn"
-href="tel:+50938106763">
-Appeler AHCElectronSRS
-</a>
-
-<a class="btn whatsapp"
-href="https://wa.me/50938106763"
-target="_blank"
-rel="noopener noreferrer">
-WhatsApp
-</a>
-
-</div>
-
-</section>
-
-<footer>
-
-<div class="footer-logo">
-AHCElectronSRS
-</div>
-
-<p>
-AHCElectron Sales and Repairs Services
-</p>
-
-<p>
-Électricité • Réparation • Électronique • Technologie
-</p>
-
-<p>
-🇭🇹 Les 10 départements d'Haïti • 🌎 International
-</p>
-
-<p>
-📞 +509 3810 6763
-</p>
-
-<p class="small">
-© 2026 AHCElectron Sales and Repairs Services — AHCElectronSRS.
-Tous droits réservés.
-</p>
-
-</footer>
-
-<script>
-
-/* ==================================================
-   LISTE DES PAYS
-================================================== */
-
-const countries = [
-
-"Afghanistan","Afrique du Sud","Albanie","Algérie","Allemagne",
-"Andorre","Angola","Antigua-et-Barbuda","Arabie saoudite","Argentine",
-"Arménie","Australie","Autriche","Azerbaïdjan","Bahamas","Bahreïn",
-"Bangladesh","Barbade","Belgique","Belize","Bénin","Bhoutan",
-"Biélorussie","Birmanie","Bolivie","Bosnie-Herzégovine","Botswana",
-"Brésil","Brunei","Bulgarie","Burkina Faso","Burundi","Cabo Verde",
-"Cambodge","Cameroun","Canada","Chili","Chine","Chypre","Colombie",
-"Comores","Congo","Corée du Nord","Corée du Sud","Costa Rica",
-"Côte d'Ivoire","Croatie","Cuba","Danemark","Djibouti","Dominique",
-"République dominicaine","Égypte","Émirats arabes unis","Équateur",
-"Érythrée","Espagne","Estonie","Eswatini","Éthiopie","Fidji",
-"Finlande","France","Gabon","Gambie","Géorgie","Ghana","Grèce",
-"Grenade","Guatemala","Guinée","Guinée-Bissau","Guinée équatoriale",
-"Guyana","Honduras","Hongrie","Inde","Indonésie","Irak","Iran",
-"Irlande","Islande","Israël","Italie","Jamaïque","Japon","Jordanie",
-"Kenya","Kiribati","Koweït","Laos","Lettonie","Liban","Lesotho",
-"Libéria","Libye","Liechtenstein","Lituanie","Luxembourg",
-"Macédoine du Nord","Madagascar","Malaisie","Malawi","Maldives",
-"Mali","Malte","Maroc","Marshall","Maurice","Mauritanie","Mexique",
-"Micronésie","Moldavie","Monaco","Mongolie","Monténégro","Mozambique",
-"Namibie","Nauru","Népal","Nicaragua","Niger","Nigeria","Norvège",
-"Nouvelle-Zélande","Oman","Ouganda","Ouzbékistan","Pakistan","Palau",
-"Panama","Papouasie-Nouvelle-Guinée","Paraguay","Pays-Bas","Pérou",
-"Philippines","Pologne","Portugal","Qatar","République centrafricaine",
-"République démocratique du Congo","Roumanie","Royaume-Uni","Russie",
-"Rwanda","Saint-Christophe-et-Niévès","Sainte-Lucie","Saint-Marin",
-"Saint-Vincent-et-les-Grenadines","Salomon","Salvador","Samoa",
-"Sao Tomé-et-Principe","Serbie","Seychelles","Sénégal","Sierra Leone",
-"Singapour","Slovaquie","Slovénie","Somalie","Soudan","Soudan du Sud",
-"Suriname","Suède","Suisse","Syrie","Tadjikistan","Tanzanie","Tchad",
-"Thaïlande","Timor oriental","Togo","Tonga","Trinité-et-Tobago",
-"Tunisie","Turkménistan","Tuvalu","Türkiye","Ukraine","Uruguay",
-"Vanuatu","Vatican","Venezuela","Vietnam","Yémen","Zambie","Zimbabwe",
-"États-Unis"
-
-];
-
-const countrySelect=document.getElementById("countrySelect");
-
-countries.sort((a,b)=>a.localeCompare(b,"fr"));
-
-countries.forEach(country=>{
-
-const option=document.createElement("option");
-
-option.value=country;
-option.textContent=country;
-
-countrySelect.appendChild(option);
-
-});
-
-
-/* ==================================================
-   ZONE
-================================================== */
-
-let selectedLocation="";
-
-function changeZone(){
-
-const zone=document.getElementById("zoneSelect").value;
-
-const haiti=document.getElementById("haitiDepartments");
-const international=document.getElementById("internationalCountries");
-
-if(zone==="haiti"){
-
-haiti.classList.add("active");
-international.classList.remove("active");
-
-selectedLocation="Haïti";
-
-}
-
-else if(zone==="international"){
-
-haiti.classList.remove("active");
-international.classList.add("active");
-
-selectedLocation="International";
-
-}
-
-else{
-
-haiti.classList.remove("active");
-international.classList.remove("active");
-
-selectedLocation="";
-
-}
-
-updateSummary();
-
-}
-
-
-/* ==================================================
-   DEPARTEMENT / PAYS
-================================================== */
-
-function selectLocation(location){
-
-if(!location)return;
-
-selectedLocation=location;
-
-document.getElementById("summaryZone").textContent=location;
-
-document.getElementById("demande").scrollIntoView({
-behavior:"smooth"
-});
-
-updateSummary();
-
-}
-
-
-/* ==================================================
-   PACKAGES
-================================================== */
-
-function openPackage(id){
-
-const element=document.getElementById(id);
-
-if(element){
-element.classList.toggle("active");
-}
-
-}
-
-function choosePackage(packageName){
-
-document.getElementById("selectedPackage").value=packageName;
-
-document.getElementById("summaryPackage").textContent=packageName;
-
-document.getElementById("demande").scrollIntoView({
-behavior:"smooth"
-});
-
-updateSummary();
-
-}
-
-
-/* ==================================================
-   REALISATIONS
-================================================== */
-
-function toggleProject(id){
-
-const element=document.getElementById(id);
-
-if(element){
-element.classList.toggle("active");
-}
-
-}
-
-
-/* ==================================================
-   RECAPITULATIF
-================================================== */
-
-function updateSummary(){
-
-const name=document.getElementById("clientName").value.trim() || "Non renseigné";
-
-const packageName=document.getElementById("selectedPackage").value.trim() || "Non sélectionné";
-
-const quantity=document.getElementById("quantity").value || "1";
-
-const budget=document.getElementById("clientBudget").value.trim() || "Non renseigné";
-
-document.getElementById("summaryName").textContent=name;
-document.getElementById("summaryPackage").textContent=packageName;
-document.getElementById("summaryQuantity").textContent=quantity;
-document.getElementById("summaryBudget").textContent=budget;
-document.getElementById("summaryZone").textContent=selectedLocation || "Non sélectionnée";
-
-}
-
-
-/* ==================================================
-   CHANGEMENTS DU FORMULAIRE
-================================================== */
-
-[
-"clientName",
-"clientPhone",
-"clientCity",
-"selectedPackage",
-"quantity",
-"clientBudget",
-"clientDescription"
-].forEach(id=>{
-
-const element=document.getElementById(id);
-
-if(element){
-element.addEventListener("input",updateSummary);
-}
-
-});
-
-
-/* ==================================================
-   ENVOI WHATSAPP
-================================================== */
-
-function sendRequest(){
-
-const name=document.getElementById("clientName").value.trim();
-
-const phone=document.getElementById("clientPhone").value.trim();
-
-const city=document.getElementById("clientCity").value.trim();
-
-const packageName=document.getElementById("selectedPackage").value.trim();
-
-const quantity=document.getElementById("quantity").value || "1";
-
-const budget=document.getElementById("clientBudget").value.trim();
-
-const description=document.getElementById("clientDescription").value.trim();
-
-const message=document.getElementById("requestMessage");
-
-if(!name || !phone || !city || !packageName){
-
-message.textContent=
-"Veuillez remplir au minimum le nom, le téléphone, la ville et le service/package.";
-
-message.style.display="block";
-
-return;
-
-}
-
-const text=
-
-"DEMANDE AHCElectronSRS\n\n"+
-
-"AHCElectron Sales and Repairs Services\n\n"+
-
-"Client : "+name+"\n"+
-
-"Téléphone : "+phone+"\n"+
-
-"Localisation : "+(selectedLocation || "Non précisée")+"\n"+
-
-"Ville : "+city+"\n"+
-
-"Service / Package : "+packageName+"\n"+
-
-"Quantité : "+quantity+"\n"+
-
-"Budget : "+(budget || "Non renseigné")+"\n"+
-
-"Description : "+(description || "Aucune description supplémentaire")+"\n\n"+
-
-"Demande envoyée depuis le site AHCElectronSRS.";
-
-const whatsappURL=
-"https://wa.me/50938106763?text="+
-encodeURIComponent(text);
-
-window.open(
-whatsappURL,
-"_blank",
-"noopener,noreferrer"
-);
-
-}
-
-
-/* ==================================================
-   INDEX DE RECHERCHE
-================================================== */
-
-const searchIndex=[
-
-{
-title:"⚡ Électricité",
-description:"Installation, diagnostic et maintenance électrique.",
-target:"#services",
-keywords:"electricite électricité installation diagnostic maintenance panne courant"
-},
-
-{
-title:"⚡ Diagnostic électrique",
-description:"Inspection, recherche de panne, connexions et rapport.",
-target:"#electricitePackages",
-keywords:"diagnostic électrique panne installation connexion"
-},
-
-{
-title:"⚡ Installation / Maintenance électrique",
-description:"Évaluation, installation, entretien et contrôle final.",
-target:"#electricitePackages",
-keywords:"installation maintenance électrique entretien"
-},
-
-{
-title:"🔧 Réparation électronique",
-description:"Diagnostic et réparation d'équipements électroniques.",
-target:"#services",
-keywords:"réparation électronique appareil panne composant"
-},
-
-{
-title:"🔧 Diagnostic électronique",
-description:"Examen, recherche de panne et contrôle de l'alimentation.",
-target:"#electroniquePackages",
-keywords:"diagnostic électronique alimentation panne"
-},
-
-{
-title:"🔧 Réparation électronique — Package",
-description:"Diagnostic, remplacement de composants et tests.",
-target:"#electroniquePackages",
-keywords:"réparation remplacement composant test"
-},
-
-{
-title:"💻 Technologie",
-description:"Assistance informatique et solutions numériques.",
-target:"#services",
-keywords:"technologie informatique ordinateur numérique assistance"
-},
-
-{
-title:"💻 Assistance technologique",
-description:"Analyse, configuration, assistance et vérification.",
-target:"#technologiePackages",
-keywords:"assistance technologie configuration appareil"
-},
-
-{
-title:"💻 Solution numérique",
-description:"Analyse du besoin, choix, configuration et accompagnement.",
-target:"#technologiePackages",
-keywords:"solution numérique technologie configuration"
-},
-
-{
-title:"🛠️ Maintenance",
-description:"Entretien, diagnostic et suivi des équipements.",
-target:"#services",
-keywords:"maintenance entretien diagnostic équipement"
-},
-
-{
-title:"🛠️ Maintenance préventive",
-description:"Inspection, nettoyage technique, contrôle et recommandations.",
-target:"#maintenancePackages",
-keywords:"maintenance préventive inspection nettoyage contrôle"
-},
-
-{
-title:"🛠️ Maintenance complète",
-description:"Diagnostic, entretien, contrôle général et tests.",
-target:"#maintenancePackages",
-keywords:"maintenance complète diagnostic entretien test"
-},
-
-{
-title:"🔋 Solutions d'alimentation",
-description:"Solutions d'alimentation et de continuité énergétique.",
-target:"#produits",
-keywords:"batterie alimentation énergie courant continuité solaire"
-},
-
-{
-title:"💡 Éclairage",
-description:"Solutions d'éclairage pour différents environnements.",
-target:"#produits",
-keywords:"éclairage lampe lumière installation"
-},
-
-{
-title:"📱 Technologie — Produits",
-description:"Appareils et solutions technologiques selon disponibilité.",
-target:"#produits",
-keywords:"produit téléphone appareil technologie informatique"
-},
-
-{
-title:"⚙️ Composants",
-description:"Composants et accessoires pour réparation et maintenance.",
-target:"#produits",
-keywords:"composant accessoire électronique réparation"
-},
-
-{
-title:"📺 Réparation électronique — Réalisation",
-description:"Diagnostic, identification de panne, réparation et test final.",
-target:"#project1",
-keywords:"réalisation télévision tv réparation électronique"
-},
-
-{
-title:"🔊 Audio & équipements — Réalisation",
-description:"Recherche de parasites, câblage, composants et test audio.",
-target:"#project2",
-keywords:"audio haut-parleur enceinte parasite son réparation"
-},
-
-{
-title:"⚡ Installation électrique — Réalisation",
-description:"Évaluation, préparation, installation et contrôle.",
-target:"#project3",
-keywords:"réalisation installation électrique"
-},
-
-{
-title:"💻 Solution technologique — Réalisation",
-description:"Analyse du besoin, configuration, tests et explication.",
-target:"#project4",
-keywords:"réalisation informatique technologie configuration"
-},
-
-{
-title:"🇭🇹 Haïti",
-description:"Services dans les 10 départements d'Haïti.",
-target:"#zone",
-keywords:"haiti haïti département ouest nord sud centre artibonite"
-},
-
-{
-title:"📍 Ouest",
-description:"Département d'Haïti.",
-target:"#zone",
-keywords:"ouest port au prince pétion ville"
-},
-
-{
-title:"📍 Nord",
-description:"Département d'Haïti.",
-target:"#zone",
-keywords:"nord cap haitien"
-},
-
-{
-title:"📍 Nord-Est",
-description:"Département d'Haïti.",
-target:"#zone",
-keywords:"nord est"
-},
-
-{
-title:"📍 Nord-Ouest",
-description:"Département d'Haïti.",
-target:"#zone",
-keywords:"nord ouest"
-},
-
-{
-title:"📍 Artibonite",
-description:"Département d'Haïti.",
-target:"#zone",
-keywords:"artibonite"
-},
-
-{
-title:"📍 Centre",
-description:"Département d'Haïti.",
-target:"#zone",
-keywords:"centre"
-},
-
-{
-title:"📍 Sud",
-description:"Département d'Haïti.",
-target:"#zone",
-keywords:"sud"
-},
-
-{
-title:"📍 Sud-Est",
-description:"Département d'Haïti.",
-target:"#zone",
-keywords:"sud est"
-},
-
-{
-title:"📍 Grand'Anse",
-description:"Département d'Haïti.",
-target:"#zone",
-keywords:"grand anse"
-},
-
-{
-title:"📍 Nippes",
-description:"Département d'Haïti.",
-target:"#zone",
-keywords:"nippes"
-},
-
-{
-title:"🌎 International",
-description:"Possibilités de demande depuis l'étranger.",
-target:"#zone",
-keywords:"international étranger pays"
-},
-
-{
-title:"📋 Préparer une demande",
-description:"Formulaire permettant de préparer et soumettre une demande.",
-target:"#demande",
-keywords:"demande devis formulaire client service package"
-},
-
-{
-title:"💳 Paiement",
-description:"MonCash, NatCash, carte bancaire et autres moyens.",
-target:"#paiement",
-keywords:"paiement moncash natcash carte bancaire argent"
-},
-
-{
-title:"📞 Contact AHCElectronSRS",
-description:"Contacter AHCElectron Sales and Repairs Services par téléphone ou WhatsApp.",
-target:"#contact",
-keywords:"contact téléphone whatsapp appel AHCElectronSRS"
-}
-
-];
-
-
-/* ==================================================
-   NORMALISATION
-================================================== */
-
-function normalizeSearch(text){
-
-return text
-.toLowerCase()
-.normalize("NFD")
-.replace(/[\u0300-\u036f]/g,"");
-
-}
-
-
-/* ==================================================
-   RECHERCHE INTERNE
-================================================== */
-
-function searchInternal(){
-
-const input=document.getElementById("siteSearch");
-
-const resultsBox=document.getElementById("searchResults");
-
-const query=normalizeSearch(input.value.trim());
-
-resultsBox.innerHTML="";
-
-if(!query){
-
-resultsBox.classList.add("active");
-
-resultsBox.innerHTML=
-"<div class='search-empty'>"+
-"Entrez un mot ou une expression à rechercher."+
-"</div>";
-
-return;
-
-}
-
-const results=searchIndex.filter(item=>{
-
-const searchable=normalizeSearch(
-item.title+" "+item.description+" "+item.keywords
-);
-
-return searchable.includes(query);
-
-});
-
-resultsBox.classList.add("active");
-
-if(results.length===0){
-
-resultsBox.innerHTML=
-"<div class='search-empty'>"+
-"❌ Aucun résultat trouvé dans AHCElectronSRS."+
-"</div>"+
-"<div class='search-external'>"+
-"<button class='btn' type='button' onclick='searchInternet()'>"+
-"🌐 Rechercher cette information sur Internet"+
-"</button>"+
-"</div>";
-
-return;
-
-}
-
-let html=
-"<div class='search-empty'>"+
-"✅ Résultats AHCElectronSRS : "+
-"<strong>"+results.length+"</strong>"+
-"</div>";
-
-results.forEach(item=>{
-
-html+=
-"<a class='search-result' href='"+item.target+"' "+
-"onclick=\"openSearchResult(event,'"+item.target+"')\">"+
-"<strong>"+item.title+"</strong>"+
-"<small>"+item.description+"</small>"+
-"</a>";
-
-});
-
-html+=
-"<div class='search-external'>"+
-"<button class='btn secondary' type='button' onclick='searchInternet()'>"+
-"🌐 Poursuivre cette recherche sur Internet"+
-"</button>"+
-"</div>";
-
-resultsBox.innerHTML=html;
-
-}
-
-
-/* ==================================================
-   RECHERCHE PRINCIPALE
-================================================== */
-
-function searchAHCElectron(){
-
-searchInternal();
-
-}
-
-
-/* ==================================================
-   RESULTAT INTERNE
-================================================== */
-
-function openSearchResult(event,target){
-
-event.preventDefault();
-
-const element=document.querySelector(target);
-
-if(!element)return;
-
-if(
-element.classList.contains("package-area") ||
-element.classList.contains("project-details")
-){
-element.classList.add("active");
-}
-
-element.scrollIntoView({
-behavior:"smooth",
-block:"center"
-});
-
-}
-
-
-/* ==================================================
-   INTERNET
-================================================== */
-
-function searchInternet(){
-
-const input=document.getElementById("siteSearch");
-
-const query=input.value.trim();
-
-if(!query){
-
-input.focus();
-
-return;
-
-}
-
-const googleURL=
-"https://www.google.com/search?q="+
-encodeURIComponent(query);
-
-window.open(
-googleURL,
-"_blank",
-"noopener,noreferrer"
-);
-
-}
-
-
-/* ==================================================
-   PARTOUT
-================================================== */
-
-function searchEverywhere(){
-
-const input=document.getElementById("siteSearch");
-
-const query=input.value.trim();
-
-if(!query){
-
-input.focus();
-
-return;
-
-}
-
-searchInternal();
-
-setTimeout(function(){
-
-searchInternet();
-
-},150);
-
-}
-
-
-/* ==================================================
-   INITIALISATION
-================================================== */
-
-updateSummary();
-
-</script>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description"
-content="AHCElectron Sales and Repairs Services — AHCElectronSRS. Électricité, réparation, électronique, maintenance et technologie en Haïti et à l'international.">
-
-<meta name="theme-color" content="#07111f">
-
-<meta property="og:title"
-content="AHCElectronSRS — AHCElectron Sales and Repairs Services">
-
-<meta property="og:description"
-content="Électricité, réparation électronique, maintenance et solutions technologiques en Haïti et à l'international.">
-
-<meta property="og:type" content="website">
-
-<title>AHCElectronSRS — AHCElectron Sales and Repairs Services</title>
-
-<style>
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#07111f;
-color:#f4f7fb;
-line-height:1.6;
-}
-
-a{
-color:inherit;
-text-decoration:none;
-}
-
-button,
-input,
-select,
-textarea{
-font:inherit;
-}
-
-/* ==================================================
-   EN-TÊTE
-================================================== */
-
-header{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(7,17,31,.97);
-border-bottom:1px solid #1e344d;
-backdrop-filter:blur(10px);
-}
-
-.navbar{
-max-width:1250px;
-margin:auto;
-padding:14px 18px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:15px;
-}
-
-/* ==================================================
-   LOGO AHCElectronSRS
-   BLEU • BLANC • ROUGE
-================================================== */
-
-.logo{
-display:flex;
-flex-direction:column;
-align-items:flex-start;
-justify-content:center;
-min-width:280px;
-line-height:1.05;
-animation:logoMove 5s ease-in-out infinite;
-transform-origin:center;
-}
-
-.logo-main{
-font-size:clamp(1.8rem,5vw,2.8rem);
-font-weight:900;
-letter-spacing:1px;
-white-space:nowrap;
-background:linear-gradient(
-90deg,
-#0057b8 0%,
-#ffffff 48%,
-#d90429 100%
-);
--webkit-background-clip:text;
-background-clip:text;
-color:transparent;
-text-shadow:0 0 14px rgba(0,217,255,.18);
-}
-
-.logo-full{
-font-size:.68rem;
-font-weight:700;
-letter-spacing:.7px;
-color:#ffffff;
-margin-top:6px;
-white-space:nowrap;
-}
-
-.logo-short{
-color:#d90429;
-}
-
-@keyframes logoMove{
-
-0%,100%{
-transform:translateX(0);
-}
-
-20%{
-transform:translateX(-7px);
-}
-
-40%{
-transform:translateX(7px);
-}
-
-60%{
-transform:translateX(-5px);
-}
-
-80%{
-transform:translateX(5px);
-}
-
-}
-
-/* ==================================================
-   NAVIGATION
-================================================== */
-
-nav{
-display:flex;
-gap:6px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-nav a{
-padding:8px 10px;
-border-radius:8px;
-}
-
-nav a:hover{
-background:#12304a;
-color:#00d9ff;
-}
-
-/* ==================================================
-   HERO
-================================================== */
-
-.hero{
-min-height:78vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:70px 20px;
-background:
-radial-gradient(circle at top,#12385a 0,#07111f 58%);
-}
-
-.hero-content{
-max-width:950px;
-width:100%;
-}
-
-.hero h1{
-font-size:clamp(2.3rem,7vw,5rem);
-margin-bottom:15px;
-}
-
-.hero h1 span{
-background:linear-gradient(
-90deg,
-#0057b8,
-#ffffff,
-#d90429
-);
--webkit-background-clip:text;
-background-clip:text;
-color:transparent;
-animation:brandTextMove 5s ease-in-out infinite;
-}
-
-.brand-subtitle{
-font-size:clamp(1rem,3vw,1.45rem);
-font-weight:800;
-letter-spacing:1.5px;
-margin-top:-5px;
-margin-bottom:18px;
-background:linear-gradient(
-90deg,
-#0057b8,
-#ffffff,
-#d90429
-);
--webkit-background-clip:text;
-background-clip:text;
-color:transparent;
-animation:brandTextMove 5s ease-in-out infinite;
-}
-
-@keyframes brandTextMove{
-
-0%,100%{
-transform:translateX(0);
-}
-
-25%{
-transform:translateX(-8px);
-}
-
-50%{
-transform:translateX(8px);
-}
-
-75%{
-transform:translateX(-5px);
-}
-
-}
-
-.hero p{
-max-width:780px;
-margin:0 auto 25px;
-color:#cbd7e4;
-font-size:1.1rem;
-}
-
-.badges{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:10px;
-margin:25px 0;
-}
-
-.badge{
-border:1px solid #28506e;
-background:#0d2033;
-padding:8px 13px;
-border-radius:30px;
-}
-
-.btn{
-display:inline-block;
-border:0;
-cursor:pointer;
-padding:12px 20px;
-border-radius:10px;
-background:#00bfe8;
-color:#00131d;
-font-weight:700;
-transition:.25s;
-margin:4px;
-}
-
-.btn:hover{
-transform:translateY(-2px);
-background:#38ddff;
-}
-
-.btn.secondary{
 background:#142b42;
 color:#fff;
 border:1px solid #2c4e69;
 }
 
-.btn.whatsapp{
-background:#20c56b;
-color:#fff;
-}
-
-/* ==================================================
-   SECTIONS
-================================================== */
-
-section{
-max-width:1250px;
-margin:auto;
-padding:70px 20px;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:35px;
-}
-
-.section-title h2{
-font-size:2rem;
+.location-map:hover{
+background:#123b59;
 color:#00d9ff;
 }
 
-.section-title p{
-color:#b7c6d5;
+.location-privacy{
+margin-top:15px;
+font-size:.85rem;
+color:#8ea4b7;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:20px;
-}
-
-.card{
-background:#0c1b2b;
-border:1px solid #203b55;
-border-radius:16px;
-padding:25px;
-transition:.25s;
-}
-
-.card:hover{
-transform:translateY(-4px);
-border-color:#00bfe8;
-}
-
-.icon{
-font-size:2.5rem;
-margin-bottom:12px;
-}
-
-.card p{
-color:#b9c7d5;
-}
-
-.service-details,
-.package-area,
-.project-details{
-display:none;
-margin-top:18px;
+.location-history{
+margin-top:20px;
 padding:18px;
-border-radius:12px;
-background:#071522;
-border:1px solid #24465f;
-}
-
-.service-details.active,
-.package-area.active,
-.project-details.active{
-display:block;
-}
-
-.package{
-margin-top:14px;
-padding:16px;
-background:#0d2133;
-border:1px solid #294b64;
+border:1px dashed #36546b;
 border-radius:12px;
 }
 
-.package h4{
+.location-history h4{
 color:#00d9ff;
 margin-bottom:8px;
-}
-
-.package ul{
-margin:10px 0 15px 20px;
-color:#cbd7e4;
-}
-
-.package li{
-margin-bottom:5px;
-}
-
-.price{
-color:#fff;
-font-weight:bold;
-margin:10px 0;
-}
-
-/* ==================================================
-   ZONE
-================================================== */
-
-.coverage{
-max-width:none;
-background:#091827;
-border-top:1px solid #18324a;
-border-bottom:1px solid #18324a;
-}
-
-.coverage-inner{
-max-width:1250px;
-margin:auto;
-padding:0 20px;
-}
-
-.zone-selector{
-max-width:800px;
-margin:0 auto 35px;
-padding:25px;
-background:#0c1b2b;
-border:1px solid #294b64;
-border-radius:16px;
-}
-
-.form-group{
-margin-bottom:15px;
-}
-
-.form-group label{
-display:block;
-margin-bottom:6px;
-font-weight:700;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea{
-width:100%;
-padding:12px;
-border-radius:8px;
-border:1px solid #36546b;
-background:#0d2033;
-color:#fff;
-outline:none;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{
-border-color:#00d9ff;
-}
-
-#haitiDepartments,
-#internationalCountries{
-display:none;
-}
-
-#haitiDepartments.active,
-#internationalCountries.active{
-display:block;
-}
-
-.department-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
-gap:10px;
-margin-top:20px;
-}
-
-.department{
-background:#0d2133;
-border:1px solid #26465f;
-padding:13px;
-border-radius:10px;
-text-align:center;
-cursor:pointer;
-transition:.2s;
-}
-
-.department:hover{
-border-color:#00d9ff;
-background:#12304a;
-}
-
-.international-box{
-margin-top:25px;
-padding:25px;
-background:#0d2133;
-border:1px solid #26465f;
-border-radius:15px;
-}
-
-.international-box h3{
-color:#00d9ff;
-margin-bottom:10px;
 }
 
 /* ==================================================
@@ -3153,6 +655,7 @@ margin-bottom:15px;
 .summary-line{
 padding:7px 0;
 border-bottom:1px solid #203b55;
+word-break:break-word;
 }
 
 /* ==================================================
@@ -3378,10 +881,19 @@ width:100%;
 margin:4px 0;
 }
 
+.location-buttons{
+flex-direction:column;
+}
+
+.location-buttons .btn{
+width:100%;
+margin:3px 0;
+}
+
 }
 
 /* ==================================================
-   RESPECT DES PRÉFÉRENCES D'ANIMATION
+   ACCESSIBILITÉ / ANIMATION
 ================================================== */
 
 @media(prefers-reduced-motion:reduce){
@@ -3407,7 +919,8 @@ scroll-behavior:auto;
 
 <div class="navbar">
 
-<a href="#accueil" class="logo"
+<a href="#accueil"
+class="logo"
 aria-label="AHCElectron Sales and Repairs Services">
 
 <div class="logo-main">
@@ -3525,7 +1038,9 @@ La recherche interne consulte les informations intégrées au site.
 La recherche Internet utilise un moteur externe.
 </div>
 
-<div id="searchResults" class="search-results"></div>
+<div id="searchResults"
+class="search-results">
+</div>
 
 </div>
 
@@ -3562,7 +1077,8 @@ onclick="openPackage('electricitePackages')">
 Voir les packages
 </button>
 
-<div id="electricitePackages" class="package-area">
+<div id="electricitePackages"
+class="package-area">
 
 <div class="package">
 
@@ -3575,7 +1091,9 @@ Voir les packages
 <li>Rapport de diagnostic</li>
 </ul>
 
-<div class="price">Prix : sur devis</div>
+<div class="price">
+Prix : sur devis
+</div>
 
 <button class="btn"
 onclick="choosePackage('Diagnostic électrique')">
@@ -3595,7 +1113,9 @@ Choisir ce package
 <li>Contrôle final</li>
 </ul>
 
-<div class="price">Prix : sur devis</div>
+<div class="price">
+Prix : sur devis
+</div>
 
 <button class="btn"
 onclick="choosePackage('Installation / Maintenance électrique')">
@@ -3623,7 +1143,8 @@ onclick="openPackage('electroniquePackages')">
 Voir les packages
 </button>
 
-<div id="electroniquePackages" class="package-area">
+<div id="electroniquePackages"
+class="package-area">
 
 <div class="package">
 
@@ -3636,7 +1157,9 @@ Voir les packages
 <li>Identification des composants concernés</li>
 </ul>
 
-<div class="price">Prix : sur devis</div>
+<div class="price">
+Prix : sur devis
+</div>
 
 <button class="btn"
 onclick="choosePackage('Diagnostic électronique')">
@@ -3656,7 +1179,9 @@ Choisir ce package
 <li>Compte rendu de l'intervention</li>
 </ul>
 
-<div class="price">Prix : sur devis</div>
+<div class="price">
+Prix : sur devis
+</div>
 
 <button class="btn"
 onclick="choosePackage('Réparation électronique')">
@@ -3684,7 +1209,8 @@ onclick="openPackage('technologiePackages')">
 Voir les packages
 </button>
 
-<div id="technologiePackages" class="package-area">
+<div id="technologiePackages"
+class="package-area">
 
 <div class="package">
 
@@ -3697,7 +1223,9 @@ Voir les packages
 <li>Tests et vérification</li>
 </ul>
 
-<div class="price">Prix : sur devis</div>
+<div class="price">
+Prix : sur devis
+</div>
 
 <button class="btn"
 onclick="choosePackage('Assistance technologique')">
@@ -3717,7 +1245,9 @@ Choisir ce package
 <li>Accompagnement</li>
 </ul>
 
-<div class="price">Prix : sur devis</div>
+<div class="price">
+Prix : sur devis
+</div>
 
 <button class="btn"
 onclick="choosePackage('Solution numérique')">
@@ -3745,7 +1275,8 @@ onclick="openPackage('maintenancePackages')">
 Voir les packages
 </button>
 
-<div id="maintenancePackages" class="package-area">
+<div id="maintenancePackages"
+class="package-area">
 
 <div class="package">
 
@@ -3758,7 +1289,9 @@ Voir les packages
 <li>Recommandations</li>
 </ul>
 
-<div class="price">Prix : sur devis</div>
+<div class="price">
+Prix : sur devis
+</div>
 
 <button class="btn"
 onclick="choosePackage('Maintenance préventive')">
@@ -3779,7 +1312,9 @@ Choisir ce package
 <li>Rapport de service</li>
 </ul>
 
-<div class="price">Prix : sur devis</div>
+<div class="price">
+Prix : sur devis
+</div>
 
 <button class="btn"
 onclick="choosePackage('Maintenance complète')">
@@ -3913,7 +1448,8 @@ onclick="toggleProject('project1')">
 Voir la référence
 </button>
 
-<div id="project1" class="project-details">
+<div id="project1"
+class="project-details">
 
 <strong>Référence de service :</strong>
 
@@ -3942,7 +1478,8 @@ onclick="toggleProject('project2')">
 Voir la référence
 </button>
 
-<div id="project2" class="project-details">
+<div id="project2"
+class="project-details">
 
 <strong>Référence de service :</strong>
 
@@ -3970,7 +1507,8 @@ onclick="toggleProject('project3')">
 Voir la référence
 </button>
 
-<div id="project3" class="project-details">
+<div id="project3"
+class="project-details">
 
 <strong>Référence de service :</strong>
 
@@ -3998,7 +1536,8 @@ onclick="toggleProject('project4')">
 Voir la référence
 </button>
 
-<div id="project4" class="project-details">
+<div id="project4"
+class="project-details">
 
 <strong>Référence de service :</strong>
 
@@ -4015,7 +1554,8 @@ tests → explication au client.
 
 </section>
 
-<section id="zone" class="coverage">
+<section id="zone"
+class="coverage">
 
 <div class="coverage-inner">
 
@@ -4037,7 +1577,8 @@ Sélectionnez votre zone pour afficher les possibilités correspondantes.
 🌍 Où se trouve le client ?
 </label>
 
-<select id="zoneSelect" onchange="changeZone()">
+<select id="zoneSelect"
+onchange="changeZone()">
 
 <option value="">
 -- Sélectionner --
@@ -4063,16 +1604,55 @@ Sélectionnez votre zone pour afficher les possibilités correspondantes.
 
 <div class="department-grid">
 
-<div class="department" onclick="selectLocation('Ouest')">Ouest</div>
-<div class="department" onclick="selectLocation('Nord')">Nord</div>
-<div class="department" onclick="selectLocation('Nord-Est')">Nord-Est</div>
-<div class="department" onclick="selectLocation('Nord-Ouest')">Nord-Ouest</div>
-<div class="department" onclick="selectLocation('Artibonite')">Artibonite</div>
-<div class="department" onclick="selectLocation('Centre')">Centre</div>
-<div class="department" onclick="selectLocation('Sud')">Sud</div>
-<div class="department" onclick="selectLocation('Sud-Est')">Sud-Est</div>
-<div class="department" onclick="selectLocation('Grand’Anse')">Grand’Anse</div>
-<div class="department" onclick="selectLocation('Nippes')">Nippes</div>
+<div class="department"
+onclick="selectLocation('Ouest')">
+Ouest
+</div>
+
+<div class="department"
+onclick="selectLocation('Nord')">
+Nord
+</div>
+
+<div class="department"
+onclick="selectLocation('Nord-Est')">
+Nord-Est
+</div>
+
+<div class="department"
+onclick="selectLocation('Nord-Ouest')">
+Nord-Ouest
+</div>
+
+<div class="department"
+onclick="selectLocation('Artibonite')">
+Artibonite
+</div>
+
+<div class="department"
+onclick="selectLocation('Centre')">
+Centre
+</div>
+
+<div class="department"
+onclick="selectLocation('Sud')">
+Sud
+</div>
+
+<div class="department"
+onclick="selectLocation('Sud-Est')">
+Sud-Est
+</div>
+
+<div class="department"
+onclick="selectLocation('Grand’Anse')">
+Grand’Anse
+</div>
+
+<div class="department"
+onclick="selectLocation('Nippes')">
+Nippes
+</div>
 
 </div>
 
@@ -4090,7 +1670,8 @@ Sélectionnez votre zone pour afficher les possibilités correspondantes.
 Pays
 </label>
 
-<select id="countrySelect" onchange="selectLocation(this.value)">
+<select id="countrySelect"
+onchange="selectLocation(this.value)">
 
 <option value="">
 -- Sélectionner un pays --
@@ -4099,6 +1680,203 @@ Pays
 </select>
 
 </div>
+
+</div>
+
+<!-- ==================================================
+     NOUVEAU : LOCALISATION VÉRIFIABLE
+================================================== -->
+
+<div class="location-panel">
+
+<h3>
+📍 Identification géographique de la demande
+</h3>
+
+<p>
+Pour améliorer l'identification du milieu, vous pouvez
+vérifier votre localisation actuelle ou rechercher
+manuellement une adresse.
+</p>
+
+<div class="location-buttons">
+
+<button class="btn"
+type="button"
+onclick="getCurrentLocation()">
+📍 Vérifier ma position actuelle
+</button>
+
+<button class="btn secondary"
+type="button"
+onclick="useManualLocation()">
+🔎 Rechercher une adresse
+</button>
+
+</div>
+
+<div id="manualLocationBox"
+style="display:none;margin-top:15px;">
+
+<div class="form-group">
+
+<label for="manualAddress">
+Adresse actuelle ou lieu à rechercher
+</label>
+
+<input
+id="manualAddress"
+type="text"
+placeholder="Rue, ruelle, numéro, ville, commune, département, code postal...">
+
+</div>
+
+<button
+class="btn"
+type="button"
+onclick="searchManualLocation()">
+🔎 Vérifier cette adresse
+</button>
+
+</div>
+
+<div id="locationStatus"
+class="location-status">
+
+<div class="location-line">
+<strong>Statut :</strong>
+<span id="locationStatusText">
+Non vérifié
+</span>
+</div>
+
+<div class="location-line">
+<strong>Adresse reconnue :</strong>
+<span id="locationAddress">
+Non disponible
+</span>
+</div>
+
+<div class="location-line">
+<strong>Rue / voie :</strong>
+<span id="locationRoad">
+Non disponible
+</span>
+</div>
+
+<div class="location-line">
+<strong>Quartier / zone :</strong>
+<span id="locationNeighbourhood">
+Non disponible
+</span>
+</div>
+
+<div class="location-line">
+<strong>Ville :</strong>
+<span id="locationCity">
+Non disponible
+</span>
+</div>
+
+<div class="location-line">
+<strong>Commune :</strong>
+<span id="locationMunicipality">
+Non disponible
+</span>
+</div>
+
+<div class="location-line">
+<strong>Département / région :</strong>
+<span id="locationState">
+Non disponible
+</span>
+</div>
+
+<div class="location-line">
+<strong>Pays :</strong>
+<span id="locationCountry">
+Non disponible
+</span>
+</div>
+
+<div class="location-line">
+<strong>Code postal :</strong>
+<span id="locationPostcode">
+Non confirmé
+</span>
+</div>
+
+<div class="location-line">
+<strong>Latitude :</strong>
+<span id="locationLatitude">
+Non disponible
+</span>
+</div>
+
+<div class="location-line">
+<strong>Longitude :</strong>
+<span id="locationLongitude">
+Non disponible
+</span>
+</div>
+
+<div class="location-line">
+<strong>Date / heure de vérification :</strong>
+<span id="locationTime">
+Non disponible
+</span>
+</div>
+
+<a
+id="locationMapLink"
+class="location-map"
+href="#"
+target="_blank"
+rel="noopener noreferrer"
+style="display:none;">
+🗺️ Vérifier sur la carte
+</a>
+
+</div>
+
+<div class="location-history">
+
+<h4>
+🕘 Ancienne adresse / ancienne localisation
+</h4>
+
+<p class="small">
+Si le client souhaite préciser une ancienne adresse,
+une ancienne ville, une ancienne rue ou une ancienne zone,
+elle peut être indiquée séparément. Elle ne remplacera
+jamais automatiquement la localisation actuelle.
+</p>
+
+<div class="form-group"
+style="margin-top:12px;">
+
+<label for="oldAddress">
+Ancienne adresse — facultatif
+</label>
+
+<textarea
+id="oldAddress"
+rows="3"
+placeholder="Ancienne rue/ruelle, ancienne ville, ancienne zone, ancien code postal, etc."></textarea>
+
+</div>
+
+</div>
+
+<div class="location-privacy">
+
+🔐 <strong>Protection :</strong>
+la position GPS n'est pas demandée automatiquement.
+Le navigateur doit obtenir l'autorisation du client.
+La localisation vérifiée reste dans la page tant que
+le client ne soumet pas volontairement sa demande.
+Ne fournissez pas une adresse privée si elle n'est pas
+nécessaire à votre demande.
 
 </div>
 
@@ -4142,7 +1920,8 @@ Vérifiez les informations avant de les soumettre au propriétaire du site.
 Nom complet
 </label>
 
-<input id="clientName"
+<input
+id="clientName"
 type="text"
 placeholder="Votre nom complet">
 
@@ -4154,7 +1933,8 @@ placeholder="Votre nom complet">
 Téléphone / WhatsApp
 </label>
 
-<input id="clientPhone"
+<input
+id="clientPhone"
 type="tel"
 placeholder="+509..., +1..., +33...">
 
@@ -4166,7 +1946,8 @@ placeholder="+509..., +1..., +33...">
 Ville
 </label>
 
-<input id="clientCity"
+<input
+id="clientCity"
 type="text"
 placeholder="Votre ville">
 
@@ -4178,7 +1959,8 @@ placeholder="Votre ville">
 Service ou package sélectionné
 </label>
 
-<input id="selectedPackage"
+<input
+id="selectedPackage"
 type="text"
 readonly
 placeholder="Choisissez un package dans les services">
@@ -4191,7 +1973,8 @@ placeholder="Choisissez un package dans les services">
 Quantité / nombre d'équipements
 </label>
 
-<input id="quantity"
+<input
+id="quantity"
 type="number"
 min="1"
 value="1">
@@ -4204,7 +1987,8 @@ value="1">
 Budget ou montant proposé — facultatif
 </label>
 
-<input id="clientBudget"
+<input
+id="clientBudget"
 type="text"
 placeholder="Ex. 150 USD / à déterminer">
 
@@ -4216,7 +2000,8 @@ placeholder="Ex. 150 USD / à déterminer">
 Description supplémentaire
 </label>
 
-<textarea id="clientDescription"
+<textarea
+id="clientDescription"
 rows="5"
 placeholder="Décrivez votre besoin, l'appareil, le problème ou les détails du projet."></textarea>
 
@@ -4230,27 +2015,58 @@ placeholder="Décrivez votre besoin, l'appareil, le problème ou les détails du
 
 <div class="summary-line">
 <strong>Zone :</strong>
-<span id="summaryZone">Non sélectionnée</span>
+<span id="summaryZone">
+Non sélectionnée
+</span>
 </div>
 
 <div class="summary-line">
 <strong>Client :</strong>
-<span id="summaryName">Non renseigné</span>
+<span id="summaryName">
+Non renseigné
+</span>
 </div>
 
 <div class="summary-line">
 <strong>Service :</strong>
-<span id="summaryPackage">Non sélectionné</span>
+<span id="summaryPackage">
+Non sélectionné
+</span>
 </div>
 
 <div class="summary-line">
 <strong>Quantité :</strong>
-<span id="summaryQuantity">1</span>
+<span id="summaryQuantity">
+1
+</span>
 </div>
 
 <div class="summary-line">
 <strong>Budget :</strong>
-<span id="summaryBudget">Non renseigné</span>
+<span id="summaryBudget">
+Non renseigné
+</span>
+</div>
+
+<div class="summary-line">
+<strong>Localisation vérifiée :</strong>
+<span id="summaryVerifiedLocation">
+Non vérifiée
+</span>
+</div>
+
+<div class="summary-line">
+<strong>Ancienne adresse :</strong>
+<span id="summaryOldAddress">
+Non renseignée
+</span>
+</div>
+
+<div class="summary-line">
+<strong>Date / heure :</strong>
+<span id="summaryLocationTime">
+Non disponible
+</span>
 </div>
 
 <br>
@@ -4263,7 +2079,8 @@ et non une confirmation automatique de prix.
 
 </div>
 
-<button class="btn whatsapp"
+<button
+class="btn whatsapp"
 type="button"
 onclick="sendRequest()">
 
@@ -4271,7 +2088,9 @@ onclick="sendRequest()">
 
 </button>
 
-<div id="requestMessage" class="message"></div>
+<div id="requestMessage"
+class="message">
+</div>
 
 </div>
 
@@ -4400,7 +2219,8 @@ href="tel:+50938106763">
 Appeler AHCElectronSRS
 </a>
 
-<a class="btn whatsapp"
+<a
+class="btn whatsapp"
 href="https://wa.me/50938106763"
 target="_blank"
 rel="noopener noreferrer">
@@ -4446,7 +2266,7 @@ Tous droits réservés.
    LISTE DES PAYS
 ================================================== */
 
-const countries = [
+const countries=[
 
 "Afghanistan","Afrique du Sud","Albanie","Algérie","Allemagne",
 "Andorre","Angola","Antigua-et-Barbuda","Arabie saoudite","Argentine",
@@ -4502,21 +2322,34 @@ countrySelect.appendChild(option);
 
 
 /* ==================================================
-   ZONE
+   VARIABLES DE LOCALISATION
 ================================================== */
 
 let selectedLocation="";
+
+let verifiedLocationData=null;
+
+let locationVerificationTime="";
+
+let locationCoordinates=null;
+
+
+/* ==================================================
+   ZONE
+================================================== */
 
 function changeZone(){
 
 const zone=document.getElementById("zoneSelect").value;
 
 const haiti=document.getElementById("haitiDepartments");
+
 const international=document.getElementById("internationalCountries");
 
 if(zone==="haiti"){
 
 haiti.classList.add("active");
+
 international.classList.remove("active");
 
 selectedLocation="Haïti";
@@ -4526,6 +2359,7 @@ selectedLocation="Haïti";
 else if(zone==="international"){
 
 haiti.classList.remove("active");
+
 international.classList.add("active");
 
 selectedLocation="International";
@@ -4535,6 +2369,7 @@ selectedLocation="International";
 else{
 
 haiti.classList.remove("active");
+
 international.classList.remove("active");
 
 selectedLocation="";
@@ -4547,7 +2382,7 @@ updateSummary();
 
 
 /* ==================================================
-   DEPARTEMENT / PAYS
+   DÉPARTEMENT / PAYS
 ================================================== */
 
 function selectLocation(location){
@@ -4568,6 +2403,491 @@ updateSummary();
 
 
 /* ==================================================
+   LOCALISATION : AFFICHAGE
+================================================== */
+
+function showLocationStatus(type,message){
+
+const box=document.getElementById("locationStatus");
+
+box.className="location-status active";
+
+if(type==="success"){
+box.classList.add("location-success");
+}
+
+if(type==="warning"){
+box.classList.add("location-warning");
+}
+
+if(type==="error"){
+box.classList.add("location-error");
+}
+
+document.getElementById("locationStatusText").textContent=message;
+
+}
+
+
+/* ==================================================
+   LOCALISATION : POSITION GPS
+================================================== */
+
+function getCurrentLocation(){
+
+if(!navigator.geolocation){
+
+showLocationStatus(
+"error",
+"Ce navigateur ne permet pas la géolocalisation."
+);
+
+return;
+
+}
+
+showLocationStatus(
+"warning",
+"Demande d'autorisation de localisation en cours..."
+);
+
+navigator.geolocation.getCurrentPosition(
+
+function(position){
+
+const latitude=position.coords.latitude;
+
+const longitude=position.coords.longitude;
+
+locationCoordinates={
+latitude:latitude,
+longitude:longitude
+};
+
+reverseGeocode(latitude,longitude);
+
+},
+
+function(error){
+
+let message="La localisation n'a pas pu être obtenue.";
+
+if(error.code===1){
+
+message=
+"Localisation refusée. Vous pouvez utiliser la recherche manuelle.";
+
+}
+
+else if(error.code===2){
+
+message=
+"Position indisponible. Vérifiez votre GPS ou votre connexion.";
+
+}
+
+else if(error.code===3){
+
+message=
+"Le délai de localisation est dépassé. Réessayez.";
+
+}
+
+showLocationStatus(
+"error",
+message
+);
+
+},
+
+{
+enableHighAccuracy:true,
+timeout:15000,
+maximumAge:60000
+}
+
+);
+
+}
+
+
+/* ==================================================
+   LOCALISATION : RECHERCHE MANUELLE
+================================================== */
+
+function useManualLocation(){
+
+const box=document.getElementById("manualLocationBox");
+
+box.style.display=
+box.style.display==="none"
+?"block"
+:"none";
+
+}
+
+
+/* ==================================================
+   GÉOCODAGE D'UNE ADRESSE
+================================================== */
+
+async function searchManualLocation(){
+
+const input=document.getElementById("manualAddress");
+
+const query=input.value.trim();
+
+if(!query){
+
+showLocationStatus(
+"warning",
+"Veuillez saisir une adresse ou un lieu à rechercher."
+);
+
+return;
+
+}
+
+showLocationStatus(
+"warning",
+"Recherche géographique en cours..."
+);
+
+try{
+
+const url=
+"https://nominatim.openstreetmap.org/search?"+
+"format=jsonv2"+
+"&addressdetails=1"+
+"&limit=1"+
+"&accept-language=fr"+
+"&q="+encodeURIComponent(query);
+
+const response=await fetch(url,{
+headers:{
+"Accept":"application/json"
+}
+});
+
+if(!response.ok){
+
+throw new Error("Service géographique indisponible.");
+
+}
+
+const results=await response.json();
+
+if(!results.length){
+
+showLocationStatus(
+"error",
+"Aucune localisation suffisamment identifiable n'a été trouvée."
+);
+
+return;
+
+}
+
+const result=results[0];
+
+const latitude=parseFloat(result.lat);
+
+const longitude=parseFloat(result.lon);
+
+locationCoordinates={
+latitude:latitude,
+longitude:longitude
+};
+
+processGeocodedAddress(
+result,
+"Adresse recherchée manuellement"
+);
+
+}
+
+catch(error){
+
+showLocationStatus(
+"error",
+"Impossible de vérifier cette adresse pour le moment."
+);
+
+}
+
+}
+
+
+/* ==================================================
+   GÉOCODAGE INVERSE GPS
+================================================== */
+
+async function reverseGeocode(latitude,longitude){
+
+showLocationStatus(
+"warning",
+"Position obtenue. Identification de l'adresse en cours..."
+);
+
+try{
+
+const url=
+"https://nominatim.openstreetmap.org/reverse?"+
+"format=jsonv2"+
+"&addressdetails=1"+
+"&zoom=18"+
+"&accept-language=fr"+
+"&lat="+encodeURIComponent(latitude)+
+"&lon="+encodeURIComponent(longitude);
+
+const response=await fetch(url,{
+headers:{
+"Accept":"application/json"
+}
+});
+
+if(!response.ok){
+
+throw new Error("Service de géocodage indisponible.");
+
+}
+
+const result=await response.json();
+
+processGeocodedAddress(
+result,
+"Position GPS actuelle vérifiée"
+);
+
+}
+
+catch(error){
+
+showLocationStatus(
+"warning",
+"Position GPS obtenue, mais l'adresse détaillée n'a pas pu être identifiée. Les coordonnées restent disponibles."
+);
+
+const now=new Date();
+
+locationVerificationTime=now.toLocaleString(
+"fr-FR",
+{
+dateStyle:"short",
+timeStyle:"medium"
+}
+);
+
+document.getElementById("locationLatitude").textContent=
+latitude.toFixed(6);
+
+document.getElementById("locationLongitude").textContent=
+longitude.toFixed(6);
+
+document.getElementById("locationTime").textContent=
+locationVerificationTime;
+
+const mapLink=document.getElementById("locationMapLink");
+
+mapLink.href=
+"https://www.openstreetmap.org/?mlat="+
+latitude+
+"&mlon="+
+longitude+
+"#map=18/"+
+latitude+
+"/"+
+longitude;
+
+mapLink.style.display="inline-block";
+
+updateSummary();
+
+}
+
+}
+
+
+/* ==================================================
+   TRAITEMENT DES INFORMATIONS GÉOGRAPHIQUES
+================================================== */
+
+function processGeocodedAddress(result,source){
+
+const address=result.address || {};
+
+const road=
+address.road ||
+address.pedestrian ||
+address.footway ||
+address.path ||
+address.cycleway ||
+"Non identifié";
+
+const neighbourhood=
+address.neighbourhood ||
+address.suburb ||
+address.quarter ||
+address.hamlet ||
+"Non identifié";
+
+const city=
+address.city ||
+address.town ||
+address.village ||
+address.municipality ||
+"Non identifié";
+
+const municipality=
+address.municipality ||
+address.city_district ||
+address.county ||
+"Non identifié";
+
+const state=
+address.state ||
+address.region ||
+address.province ||
+"Non identifié";
+
+const country=
+address.country ||
+"Non identifié";
+
+const postcode=
+address.postcode ||
+"Non confirmé";
+
+const displayAddress=
+result.display_name ||
+"Adresse non disponible";
+
+const latitude=
+parseFloat(result.lat);
+
+const longitude=
+parseFloat(result.lon);
+
+locationCoordinates={
+latitude:latitude,
+longitude:longitude
+};
+
+locationVerificationTime=
+new Date().toLocaleString(
+"fr-FR",
+{
+dateStyle:"short",
+timeStyle:"medium"
+}
+);
+
+verifiedLocationData={
+
+source:source,
+
+displayAddress:displayAddress,
+
+road:road,
+
+neighbourhood:neighbourhood,
+
+city:city,
+
+municipality:municipality,
+
+state:state,
+
+country:country,
+
+postcode:postcode,
+
+latitude:latitude,
+
+longitude:longitude,
+
+time:locationVerificationTime
+
+};
+
+document.getElementById("locationAddress").textContent=
+displayAddress;
+
+document.getElementById("locationRoad").textContent=
+road;
+
+document.getElementById("locationNeighbourhood").textContent=
+neighbourhood;
+
+document.getElementById("locationCity").textContent=
+city;
+
+document.getElementById("locationMunicipality").textContent=
+municipality;
+
+document.getElementById("locationState").textContent=
+state;
+
+document.getElementById("locationCountry").textContent=
+country;
+
+document.getElementById("locationPostcode").textContent=
+postcode;
+
+document.getElementById("locationLatitude").textContent=
+latitude.toFixed(6);
+
+document.getElementById("locationLongitude").textContent=
+longitude.toFixed(6);
+
+document.getElementById("locationTime").textContent=
+locationVerificationTime;
+
+document.getElementById("locationStatusText").textContent=
+source;
+
+const mapLink=document.getElementById("locationMapLink");
+
+mapLink.href=
+"https://www.openstreetmap.org/?mlat="+
+latitude+
+"&mlon="+
+longitude+
+"#map=18/"+
+latitude+
+"/"+
+longitude;
+
+mapLink.style.display="inline-block";
+
+showLocationStatus(
+"success",
+"Localisation identifiée. Vérifiez les informations affichées avant de soumettre votre demande."
+);
+
+updateSummary();
+
+}
+
+
+/* ==================================================
+   RÉSUMÉ DE LOCALISATION
+================================================== */
+
+function getLocationSummary(){
+
+if(!verifiedLocationData){
+
+return "Non vérifiée";
+
+}
+
+return verifiedLocationData.displayAddress;
+
+}
+
+
+/* ==================================================
    PACKAGES
 ================================================== */
 
@@ -4576,16 +2896,20 @@ function openPackage(id){
 const element=document.getElementById(id);
 
 if(element){
+
 element.classList.toggle("active");
+
 }
 
 }
 
 function choosePackage(packageName){
 
-document.getElementById("selectedPackage").value=packageName;
+document.getElementById("selectedPackage").value=
+packageName;
 
-document.getElementById("summaryPackage").textContent=packageName;
+document.getElementById("summaryPackage").textContent=
+packageName;
 
 document.getElementById("demande").scrollIntoView({
 behavior:"smooth"
@@ -4597,7 +2921,7 @@ updateSummary();
 
 
 /* ==================================================
-   REALISATIONS
+   RÉALISATIONS
 ================================================== */
 
 function toggleProject(id){
@@ -4605,31 +2929,70 @@ function toggleProject(id){
 const element=document.getElementById(id);
 
 if(element){
+
 element.classList.toggle("active");
+
 }
 
 }
 
 
 /* ==================================================
-   RECAPITULATIF
+   RÉCAPITULATIF
 ================================================== */
 
 function updateSummary(){
 
-const name=document.getElementById("clientName").value.trim() || "Non renseigné";
+const name=
+document.getElementById("clientName").value.trim()
+||
+"Non renseigné";
 
-const packageName=document.getElementById("selectedPackage").value.trim() || "Non sélectionné";
+const packageName=
+document.getElementById("selectedPackage").value.trim()
+||
+"Non sélectionné";
 
-const quantity=document.getElementById("quantity").value || "1";
+const quantity=
+document.getElementById("quantity").value
+||
+"1";
 
-const budget=document.getElementById("clientBudget").value.trim() || "Non renseigné";
+const budget=
+document.getElementById("clientBudget").value.trim()
+||
+"Non renseigné";
 
-document.getElementById("summaryName").textContent=name;
-document.getElementById("summaryPackage").textContent=packageName;
-document.getElementById("summaryQuantity").textContent=quantity;
-document.getElementById("summaryBudget").textContent=budget;
-document.getElementById("summaryZone").textContent=selectedLocation || "Non sélectionnée";
+const oldAddress=
+document.getElementById("oldAddress").value.trim()
+||
+"Non renseignée";
+
+document.getElementById("summaryName").textContent=
+name;
+
+document.getElementById("summaryPackage").textContent=
+packageName;
+
+document.getElementById("summaryQuantity").textContent=
+quantity;
+
+document.getElementById("summaryBudget").textContent=
+budget;
+
+document.getElementById("summaryZone").textContent=
+selectedLocation ||
+"Non sélectionnée";
+
+document.getElementById("summaryVerifiedLocation").textContent=
+getLocationSummary();
+
+document.getElementById("summaryOldAddress").textContent=
+oldAddress;
+
+document.getElementById("summaryLocationTime").textContent=
+locationVerificationTime ||
+"Non disponible";
 
 }
 
@@ -4645,13 +3008,19 @@ document.getElementById("summaryZone").textContent=selectedLocation || "Non sél
 "selectedPackage",
 "quantity",
 "clientBudget",
-"clientDescription"
+"clientDescription",
+"oldAddress"
 ].forEach(id=>{
 
 const element=document.getElementById(id);
 
 if(element){
-element.addEventListener("input",updateSummary);
+
+element.addEventListener(
+"input",
+updateSummary
+);
+
 }
 
 });
@@ -4663,23 +3032,40 @@ element.addEventListener("input",updateSummary);
 
 function sendRequest(){
 
-const name=document.getElementById("clientName").value.trim();
+const name=
+document.getElementById("clientName").value.trim();
 
-const phone=document.getElementById("clientPhone").value.trim();
+const phone=
+document.getElementById("clientPhone").value.trim();
 
-const city=document.getElementById("clientCity").value.trim();
+const city=
+document.getElementById("clientCity").value.trim();
 
-const packageName=document.getElementById("selectedPackage").value.trim();
+const packageName=
+document.getElementById("selectedPackage").value.trim();
 
-const quantity=document.getElementById("quantity").value || "1";
+const quantity=
+document.getElementById("quantity").value ||
+"1";
 
-const budget=document.getElementById("clientBudget").value.trim();
+const budget=
+document.getElementById("clientBudget").value.trim();
 
-const description=document.getElementById("clientDescription").value.trim();
+const description=
+document.getElementById("clientDescription").value.trim();
 
-const message=document.getElementById("requestMessage");
+const oldAddress=
+document.getElementById("oldAddress").value.trim();
 
-if(!name || !phone || !city || !packageName){
+const message=
+document.getElementById("requestMessage");
+
+if(
+!name ||
+!phone ||
+!city ||
+!packageName
+){
 
 message.textContent=
 "Veuillez remplir au minimum le nom, le téléphone, la ville et le service/package.";
@@ -4690,27 +3076,111 @@ return;
 
 }
 
+
+/*
+==================================================
+LOCALISATION :
+
+La localisation vérifiée est ajoutée seulement si
+le client l'a volontairement obtenue sur cette page.
+==================================================
+*/
+
+let locationText=
+"Localisation vérifiée : Non fournie";
+
+if(verifiedLocationData){
+
+locationText=
+"Localisation vérifiée :\n"+
+verifiedLocationData.displayAddress+
+"\n"+
+"Rue/voie : "+
+verifiedLocationData.road+
+"\n"+
+"Quartier/zone : "+
+verifiedLocationData.neighbourhood+
+"\n"+
+"Ville : "+
+verifiedLocationData.city+
+"\n"+
+"Commune : "+
+verifiedLocationData.municipality+
+"\n"+
+"Département/région : "+
+verifiedLocationData.state+
+"\n"+
+"Pays : "+
+verifiedLocationData.country+
+"\n"+
+"Code postal : "+
+verifiedLocationData.postcode+
+"\n"+
+"Latitude : "+
+verifiedLocationData.latitude.toFixed(6)+
+"\n"+
+"Longitude : "+
+verifiedLocationData.longitude.toFixed(6)+
+"\n"+
+"Vérifiée le : "+
+verifiedLocationData.time+
+"\n"+
+"Carte : "+
+"https://www.openstreetmap.org/?mlat="+
+verifiedLocationData.latitude+
+"&mlon="+
+verifiedLocationData.longitude+
+"#map=18/"+
+verifiedLocationData.latitude+
+"/"+
+verifiedLocationData.longitude;
+
+}
+
 const text=
 
 "DEMANDE AHCElectronSRS\n\n"+
 
 "AHCElectron Sales and Repairs Services\n\n"+
 
-"Client : "+name+"\n"+
+"Client : "+
+name+
+"\n"+
 
-"Téléphone : "+phone+"\n"+
+"Téléphone : "+
+phone+
+"\n"+
 
-"Localisation : "+(selectedLocation || "Non précisée")+"\n"+
+"Localisation sélectionnée : "+
+(selectedLocation || "Non précisée")+
+"\n"+
 
-"Ville : "+city+"\n"+
+"Ville déclarée : "+
+city+
+"\n\n"+
 
-"Service / Package : "+packageName+"\n"+
+locationText+
+"\n\n"+
 
-"Quantité : "+quantity+"\n"+
+"Ancienne adresse : "+
+(oldAddress || "Non renseignée")+
+"\n"+
 
-"Budget : "+(budget || "Non renseigné")+"\n"+
+"Service / Package : "+
+packageName+
+"\n"+
 
-"Description : "+(description || "Aucune description supplémentaire")+"\n\n"+
+"Quantité : "+
+quantity+
+"\n"+
+
+"Budget : "+
+(budget || "Non renseigné")+
+"\n"+
+
+"Description : "+
+(description || "Aucune description supplémentaire")+
+"\n\n"+
 
 "Demande envoyée depuis le site AHCElectronSRS.";
 
@@ -4881,6 +3351,20 @@ keywords:"haiti haïti département ouest nord sud centre artibonite"
 },
 
 {
+title:"📍 Localisation actuelle",
+description:"Vérification GPS, adresse, rue, ville, commune et coordonnées.",
+target:"#zone",
+keywords:"localisation position gps adresse actuelle rue ruelle ville commune coordonnées latitude longitude"
+},
+
+{
+title:"🕘 Ancienne adresse",
+description:"Possibilité d'indiquer une ancienne adresse ou ancienne zone.",
+target:"#demande",
+keywords:"ancienne adresse ancienne ville ancienne rue ancienne zone historique"
+},
+
+{
 title:"📍 Ouest",
 description:"Département d'Haïti.",
 target:"#zone",
@@ -5001,11 +3485,14 @@ return text
 
 function searchInternal(){
 
-const input=document.getElementById("siteSearch");
+const input=
+document.getElementById("siteSearch");
 
-const resultsBox=document.getElementById("searchResults");
+const resultsBox=
+document.getElementById("searchResults");
 
-const query=normalizeSearch(input.value.trim());
+const query=
+normalizeSearch(input.value.trim());
 
 resultsBox.innerHTML="";
 
@@ -5022,10 +3509,16 @@ return;
 
 }
 
-const results=searchIndex.filter(item=>{
+const results=
+searchIndex.filter(item=>{
 
-const searchable=normalizeSearch(
-item.title+" "+item.description+" "+item.keywords
+const searchable=
+normalizeSearch(
+item.title+
+" "+
+item.description+
+" "+
+item.keywords
 );
 
 return searchable.includes(query);
@@ -5053,16 +3546,24 @@ return;
 let html=
 "<div class='search-empty'>"+
 "✅ Résultats AHCElectronSRS : "+
-"<strong>"+results.length+"</strong>"+
+"<strong>"+
+results.length+
+"</strong>"+
 "</div>";
 
 results.forEach(item=>{
 
 html+=
 "<a class='search-result' href='"+item.target+"' "+
-"onclick=\"openSearchResult(event,'"+item.target+"')\">"+
-"<strong>"+item.title+"</strong>"+
-"<small>"+item.description+"</small>"+
+"onclick=\"openSearchResult(event,'"+
+item.target+
+"')\">"+
+"<strong>"+
+item.title+
+"</strong>"+
+"<small>"+
+item.description+
+"</small>"+
 "</a>";
 
 });
@@ -5098,7 +3599,8 @@ function openSearchResult(event,target){
 
 event.preventDefault();
 
-const element=document.querySelector(target);
+const element=
+document.querySelector(target);
 
 if(!element)return;
 
@@ -5106,7 +3608,9 @@ if(
 element.classList.contains("package-area") ||
 element.classList.contains("project-details")
 ){
+
 element.classList.add("active");
+
 }
 
 element.scrollIntoView({
@@ -5123,9 +3627,11 @@ block:"center"
 
 function searchInternet(){
 
-const input=document.getElementById("siteSearch");
+const input=
+document.getElementById("siteSearch");
 
-const query=input.value.trim();
+const query=
+input.value.trim();
 
 if(!query){
 
@@ -5154,9 +3660,11 @@ googleURL,
 
 function searchEverywhere(){
 
-const input=document.getElementById("siteSearch");
+const input=
+document.getElementById("siteSearch");
 
-const query=input.value.trim();
+const query=
+input.value.trim();
 
 if(!query){
 
