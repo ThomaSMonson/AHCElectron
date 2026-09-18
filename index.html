@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="AHCElectron — Électricité, réparation, électronique, maintenance et technologie en Haïti et à l'international.">
+content="AHCElectron Sales and Repairs Services — AHCElectronSRS. Électricité, réparation, électronique, maintenance et technologie en Haïti et à l'international.">
 
 <meta name="theme-color" content="#07111f">
 
 <meta property="og:title"
-content="AHCElectron — Électricité • Réparation • Technologie">
+content="AHCElectronSRS — AHCElectron Sales and Repairs Services">
 
 <meta property="og:description"
-content="Services d'électricité, réparation électronique, maintenance et solutions technologiques en Haïti et à l'international.">
+content="Électricité, réparation électronique, maintenance et solutions technologiques en Haïti et à l'international.">
 
 <meta property="og:type" content="website">
 
-<title>AHCElectron — Électricité • Réparation • Technologie</title>
+<title>AHCElectronSRS — AHCElectron Sales and Repairs Services</title>
 
 <style>
 
@@ -50,6 +50,10 @@ textarea{
 font:inherit;
 }
 
+/* ==================================================
+   EN-TÊTE
+================================================== */
+
 header{
 position:sticky;
 top:0;
@@ -69,15 +73,79 @@ justify-content:space-between;
 gap:15px;
 }
 
+/* ==================================================
+   LOGO AHCElectronSRS
+   BLEU • BLANC • ROUGE
+================================================== */
+
 .logo{
-font-size:1.45rem;
-font-weight:800;
-color:#00d9ff;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:center;
+min-width:280px;
+line-height:1.05;
+animation:logoMove 5s ease-in-out infinite;
+transform-origin:center;
 }
 
-.logo span{
-color:#fff;
+.logo-main{
+font-size:clamp(1.8rem,5vw,2.8rem);
+font-weight:900;
+letter-spacing:1px;
+white-space:nowrap;
+background:linear-gradient(
+90deg,
+#0057b8 0%,
+#ffffff 48%,
+#d90429 100%
+);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+text-shadow:0 0 14px rgba(0,217,255,.18);
 }
+
+.logo-full{
+font-size:.68rem;
+font-weight:700;
+letter-spacing:.7px;
+color:#ffffff;
+margin-top:6px;
+white-space:nowrap;
+}
+
+.logo-short{
+color:#d90429;
+}
+
+@keyframes logoMove{
+
+0%,100%{
+transform:translateX(0);
+}
+
+20%{
+transform:translateX(-7px);
+}
+
+40%{
+transform:translateX(7px);
+}
+
+60%{
+transform:translateX(-5px);
+}
+
+80%{
+transform:translateX(5px);
+}
+
+}
+
+/* ==================================================
+   NAVIGATION
+================================================== */
 
 nav{
 display:flex;
@@ -95,6 +163,10 @@ nav a:hover{
 background:#12304a;
 color:#00d9ff;
 }
+
+/* ==================================================
+   HERO
+================================================== */
 
 .hero{
 min-height:78vh;
@@ -118,7 +190,54 @@ margin-bottom:15px;
 }
 
 .hero h1 span{
-color:#00d9ff;
+background:linear-gradient(
+90deg,
+#0057b8,
+#ffffff,
+#d90429
+);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+animation:brandTextMove 5s ease-in-out infinite;
+}
+
+.brand-subtitle{
+font-size:clamp(1rem,3vw,1.45rem);
+font-weight:800;
+letter-spacing:1.5px;
+margin-top:-5px;
+margin-bottom:18px;
+background:linear-gradient(
+90deg,
+#0057b8,
+#ffffff,
+#d90429
+);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+animation:brandTextMove 5s ease-in-out infinite;
+}
+
+@keyframes brandTextMove{
+
+0%,100%{
+transform:translateX(0);
+}
+
+25%{
+transform:translateX(-8px);
+}
+
+50%{
+transform:translateX(8px);
+}
+
+75%{
+transform:translateX(-5px);
+}
+
 }
 
 .hero p{
@@ -171,6 +290,10 @@ border:1px solid #2c4e69;
 background:#20c56b;
 color:#fff;
 }
+
+/* ==================================================
+   SECTIONS
+================================================== */
 
 section{
 max-width:1250px;
@@ -264,6 +387,10 @@ color:#fff;
 font-weight:bold;
 margin:10px 0;
 }
+
+/* ==================================================
+   ZONE
+================================================== */
 
 .coverage{
 max-width:none;
@@ -360,6 +487,10 @@ color:#00d9ff;
 margin-bottom:10px;
 }
 
+/* ==================================================
+   PACKAGES
+================================================== */
+
 .package-selector{
 margin-top:35px;
 }
@@ -408,6 +539,10 @@ width:auto;
 margin-top:5px;
 }
 
+/* ==================================================
+   RÉCAPITULATIF
+================================================== */
+
 .summary{
 margin-top:30px;
 padding:25px;
@@ -426,58 +561,9 @@ padding:7px 0;
 border-bottom:1px solid #203b55;
 }
 
-footer{
-background:#040b13;
-border-top:1px solid #1c3348;
-padding:35px 20px;
-text-align:center;
-color:#9eb1c2;
-}
-
-.footer-logo{
-color:#00d9ff;
-font-weight:800;
-font-size:1.3rem;
-margin-bottom:8px;
-}
-
-.small{
-font-size:.88rem;
-color:#8ea4b7;
-}
-
-.phone{
-display:inline-block;
-margin:15px 0;
-font-size:1.5rem;
-color:#00d9ff;
-font-weight:800;
-}
-
-.contact-box{
-max-width:850px;
-margin:auto;
-text-align:center;
-}
-
-.contact-form{
-margin-top:30px;
-text-align:left;
-padding:25px;
-background:#0c1b2b;
-border:1px solid #203b55;
-border-radius:16px;
-}
-
-.message{
-display:none;
-margin-top:15px;
-padding:12px;
-border-radius:8px;
-background:#12351f;
-border:1px solid #267044;
-color:#b9ffd0;
-}
+/* ==================================================
+   RECHERCHE
+================================================== */
 
 .search-box{
 max-width:850px;
@@ -581,10 +667,95 @@ font-size:.85rem;
 color:#8ea4b7;
 }
 
+/* ==================================================
+   CONTACT / FOOTER
+================================================== */
+
+footer{
+background:#040b13;
+border-top:1px solid #1c3348;
+padding:35px 20px;
+text-align:center;
+color:#9eb1c2;
+}
+
+.footer-logo{
+font-weight:900;
+font-size:1.5rem;
+background:linear-gradient(
+90deg,
+#0057b8,
+#ffffff,
+#d90429
+);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+margin-bottom:8px;
+}
+
+.small{
+font-size:.88rem;
+color:#8ea4b7;
+}
+
+.phone{
+display:inline-block;
+margin:15px 0;
+font-size:1.5rem;
+color:#00d9ff;
+font-weight:800;
+}
+
+.contact-box{
+max-width:850px;
+margin:auto;
+text-align:center;
+}
+
+.contact-form{
+margin-top:30px;
+text-align:left;
+padding:25px;
+background:#0c1b2b;
+border:1px solid #203b55;
+border-radius:16px;
+}
+
+.message{
+display:none;
+margin-top:15px;
+padding:12px;
+border-radius:8px;
+background:#12351f;
+border:1px solid #267044;
+color:#b9ffd0;
+}
+
+/* ==================================================
+   VERSION MOBILE
+================================================== */
+
 @media(max-width:750px){
 
 .navbar{
 flex-direction:column;
+}
+
+.logo{
+align-items:center;
+min-width:0;
+width:100%;
+}
+
+.logo-main{
+font-size:clamp(1.8rem,9vw,2.5rem);
+}
+
+.logo-full{
+font-size:.61rem;
+text-align:center;
+white-space:normal;
 }
 
 nav{
@@ -615,6 +786,24 @@ margin:4px 0;
 
 }
 
+/* ==================================================
+   RESPECT DES PRÉFÉRENCES D'ANIMATION
+================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+.logo,
+.hero h1 span,
+.brand-subtitle{
+animation:none;
+}
+
+html{
+scroll-behavior:auto;
+}
+
+}
+
 </style>
 </head>
 
@@ -624,8 +813,17 @@ margin:4px 0;
 
 <div class="navbar">
 
-<a href="#accueil" class="logo">
-AHC<span>Electron</span>
+<a href="#accueil" class="logo"
+aria-label="AHCElectron Sales and Repairs Services">
+
+<div class="logo-main">
+AHCElectronSRS
+</div>
+
+<div class="logo-full">
+AHCElectron Sales and Repairs Services
+</div>
+
 </a>
 
 <nav>
@@ -658,8 +856,12 @@ AHC<span>Electron</span>
 </div>
 
 <h1>
-Bienvenue chez <span>AHCElectron</span>
+Bienvenue chez <span>AHCElectronSRS</span>
 </h1>
+
+<div class="brand-subtitle">
+AHCElectron Sales and Repairs Services
+</div>
 
 <p>
 Électricité, réparation électronique, technologie,
@@ -678,7 +880,7 @@ Préparer ma demande
 <div class="search-box">
 
 <div class="search-title">
-🔎 Recherche intelligente AHCElectron
+🔎 Recherche intelligente AHCElectronSRS
 </div>
 
 <div class="search-row">
@@ -705,7 +907,7 @@ onclick="searchAHCElectron()">
 class="btn secondary"
 type="button"
 onclick="searchInternal()">
-🔎 Dans AHCElectron
+🔎 Dans AHCElectronSRS
 </button>
 
 <button
@@ -1460,7 +1662,7 @@ placeholder="Décrivez votre besoin, l'appareil, le problème ou les détails du
 <br>
 
 <p class="small">
-Le prix définitif est à confirmer par AHCElectron.
+Le prix définitif est à confirmer par AHCElectronSRS.
 La demande constitue une demande de service/devis,
 et non une confirmation automatique de prix.
 </p>
@@ -1575,7 +1777,11 @@ Faire une demande
 
 <div class="section-title">
 
-<h2>📞 Contact AHCElectron</h2>
+<h2>📞 Contact AHCElectronSRS</h2>
+
+<p>
+AHCElectron Sales and Repairs Services
+</p>
 
 <p>
 Pour une demande de service, une réparation,
@@ -1597,7 +1803,7 @@ href="tel:+50938106763">
 
 <a class="btn"
 href="tel:+50938106763">
-Appeler AHCElectron
+Appeler AHCElectronSRS
 </a>
 
 <a class="btn whatsapp"
@@ -1614,8 +1820,12 @@ WhatsApp
 <footer>
 
 <div class="footer-logo">
-AHCElectron
+AHCElectronSRS
 </div>
+
+<p>
+AHCElectron Sales and Repairs Services
+</p>
 
 <p>
 Électricité • Réparation • Électronique • Technologie
@@ -1630,7 +1840,8 @@ AHCElectron
 </p>
 
 <p class="small">
-© 2026 AHCElectron — Tous droits réservés.
+© 2026 AHCElectron Sales and Repairs Services — AHCElectronSRS.
+Tous droits réservés.
 </p>
 
 </footer>
@@ -1887,7 +2098,9 @@ return;
 
 const text=
 
-"DEMANDE AHCElectron\n\n"+
+"DEMANDE AHCElectronSRS\n\n"+
+
+"AHCElectron Sales and Repairs Services\n\n"+
 
 "Client : "+name+"\n"+
 
@@ -1905,7 +2118,7 @@ const text=
 
 "Description : "+(description || "Aucune description supplémentaire")+"\n\n"+
 
-"Demande envoyée depuis le site AHCElectron.";
+"Demande envoyée depuis le site AHCElectronSRS.";
 
 const whatsappURL=
 "https://wa.me/50938106763?text="+
@@ -2165,10 +2378,10 @@ keywords:"paiement moncash natcash carte bancaire argent"
 },
 
 {
-title:"📞 Contact AHCElectron",
-description:"Contacter AHCElectron par téléphone ou WhatsApp.",
+title:"📞 Contact AHCElectronSRS",
+description:"Contacter AHCElectron Sales and Repairs Services par téléphone ou WhatsApp.",
 target:"#contact",
-keywords:"contact téléphone whatsapp appel"
+keywords:"contact téléphone whatsapp appel AHCElectronSRS"
 }
 
 ];
@@ -2231,7 +2444,7 @@ if(results.length===0){
 
 resultsBox.innerHTML=
 "<div class='search-empty'>"+
-"❌ Aucun résultat trouvé dans AHCElectron."+
+"❌ Aucun résultat trouvé dans AHCElectronSRS."+
 "</div>"+
 "<div class='search-external'>"+
 "<button class='btn' type='button' onclick='searchInternet()'>"+
@@ -2245,7 +2458,7 @@ return;
 
 let html=
 "<div class='search-empty'>"+
-"✅ Résultats AHCElectron : "+
+"✅ Résultats AHCElectronSRS : "+
 "<strong>"+results.length+"</strong>"+
 "</div>";
 
