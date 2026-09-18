@@ -1846,4 +1846,1852 @@ document.getElementById("year").textContent =
 </script>
 
 </body>
+</html><!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="AHCElectron — Électricité, réparation, électronique et services technologiques.">
+
+<meta name="theme-color" content="#07111f">
+
+<title>AHCElectron — Électricité • Réparation • Technologie</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07111f;
+    color: #f4f7fb;
+    line-height: 1.6;
+}
+
+/* =========================
+   NEIGE
+========================= */
+
+.snow {
+    position: fixed;
+    top: -20px;
+    color: white;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 9999;
+    animation: snowfall linear infinite;
+    opacity: .8;
+}
+
+@keyframes snowfall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(4, 12, 24, .96);
+    border-bottom: 1px solid #24364d;
+    backdrop-filter: blur(8px);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #42d9ff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 7px;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    background: #12304d;
+    color: #42d9ff;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+    background:
+        radial-gradient(circle at top, #12385b, transparent 45%),
+        linear-gradient(135deg, #07111f, #0b2035);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-icon {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.santa {
+    font-size: 58px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 72px);
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: clamp(17px, 3vw, 23px);
+    color: #c9d8e8;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: #42d9ff;
+    color: #03101b;
+}
+
+.btn-secondary {
+    background: #162b43;
+    color: white;
+    border: 1px solid #38516d;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: .9;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 75px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: #42d9ff;
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    color: #aebed0;
+}
+
+/* =========================
+   PUBLICITE
+========================= */
+
+.advertising {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px 20px;
+}
+
+.ad-box {
+    padding: 35px 20px;
+    border: 1px solid #315273;
+    border-radius: 15px;
+    text-align: center;
+    background: linear-gradient(135deg, #0b1d30, #102b45);
+}
+
+.ad-box h2 {
+    color: #42d9ff;
+    margin-bottom: 10px;
+}
+
+.ad-box p {
+    color: #c6d4e3;
+}
+
+/* =========================
+   A PROPOS
+========================= */
+
+.about-box {
+    background: #0b1b2c;
+    border: 1px solid #263e58;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.about-box p {
+    color: #c6d4e3;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.service-card {
+    background: #0b1b2c;
+    border: 1px solid #263e58;
+    border-radius: 15px;
+    padding: 25px 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: #42d9ff;
+    background: #102941;
+}
+
+.service-icon {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.service-card h3 {
+    color: #fff;
+    font-size: 18px;
+}
+
+.service-card p {
+    color: #8fa5bb;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.click-hint {
+    color: #42d9ff;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+/* =========================
+   PANNEAU INTERACTIF
+========================= */
+
+.detail-panel {
+    display: none;
+    margin-top: 25px;
+    background: #102941;
+    border: 1px solid #42d9ff;
+    border-radius: 15px;
+    padding: 28px;
+    animation: appear .3s ease;
+}
+
+.detail-panel.active {
+    display: block;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.detail-panel h3 {
+    color: #42d9ff;
+    margin-bottom: 12px;
+}
+
+.detail-panel p {
+    color: #d2dfeb;
+}
+
+.detail-panel ul {
+    margin: 15px 0 20px 22px;
+    color: #d2dfeb;
+}
+
+.close-detail {
+    background: #263e58;
+    color: white;
+    border: 1px solid #48637e;
+    padding: 9px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.close-detail:hover {
+    background: #42d9ff;
+    color: #03101b;
+}
+
+/* =========================
+   DEMANDE CLIENT
+========================= */
+
+.form-box {
+    background: #0b1b2c;
+    border: 1px solid #263e58;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    margin-bottom: 6px;
+    color: #c9d8e8;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #38516d;
+    background: #071522;
+    color: white;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #42d9ff;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.form-submit {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.security-note {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #101f2f;
+    color: #9eb2c7;
+    font-size: 13px;
+}
+
+/* =========================
+   REALISATIONS
+========================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: #0b1b2c;
+    border: 1px solid #263e58;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #42d9ff;
+    background: #102941;
+}
+
+.project-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    color: #aebed0;
+    font-size: 14px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box {
+    text-align: center;
+    background: #0b1b2c;
+    border: 1px solid #263e58;
+    border-radius: 15px;
+    padding: 35px 20px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* =========================
+   PAIEMENT
+========================= */
+
+.payment-section {
+    text-align: center;
+}
+
+.payment-intro {
+    max-width: 850px;
+    margin: 0 auto 30px;
+    color: #c6d4e3;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.payment-card {
+    background: #0b1b2c;
+    border: 1px solid #263e58;
+    border-radius: 15px;
+    padding: 25px 15px;
+}
+
+.payment-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.payment-card h3 {
+    color: #42d9ff;
+    margin-bottom: 8px;
+}
+
+.payment-card p {
+    color: #b5c5d5;
+    font-size: 14px;
+}
+
+.payment-note {
+    margin-top: 25px;
+    padding: 18px;
+    background: #101f2f;
+    border-radius: 10px;
+    color: #aebed0;
+    font-size: 14px;
+}
+
+/* =========================
+   ADMINISTRATION
+========================= */
+
+.admin-box {
+    max-width: 600px;
+    margin: auto;
+    background: #0b1b2c;
+    border: 1px solid #263e58;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+}
+
+.admin-box input {
+    margin: 15px 0;
+}
+
+.admin-warning {
+    margin-top: 15px;
+    color: #aebed0;
+    font-size: 13px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #040b14;
+    border-top: 1px solid #24364d;
+    padding: 45px 20px 20px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+footer h3 {
+    color: #42d9ff;
+    margin-bottom: 12px;
+}
+
+footer p,
+footer a {
+    color: #9eb2c7;
+    font-size: 14px;
+}
+
+footer a {
+    display: block;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+footer a:hover {
+    color: #42d9ff;
+}
+
+.copyright {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #1d2c3d;
+    text-align: center;
+    color: #70859a;
+    font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .payment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 650px) {
+    .services-grid,
+    .payment-grid,
+    .form-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    nav {
+        gap: 3px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    section {
+        padding: 55px 15px;
+    }
+
+    .hero {
+        min-height: 530px;
+    }
+
+    .form-box {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NEIGE
+========================= -->
+
+<div class="snow" style="left:5%;animation-duration:9s;">❄</div>
+<div class="snow" style="left:15%;animation-duration:12s;">❄</div>
+<div class="snow" style="left:25%;animation-duration:8s;">❄</div>
+<div class="snow" style="left:38%;animation-duration:13s;">❄</div>
+<div class="snow" style="left:50%;animation-duration:10s;">❄</div>
+<div class="snow" style="left:63%;animation-duration:14s;">❄</div>
+<div class="snow" style="left:75%;animation-duration:9s;">❄</div>
+<div class="snow" style="left:88%;animation-duration:11s;">❄</div>
+<div class="snow" style="left:95%;animation-duration:15s;">❄</div>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+    <div class="header-container">
+
+        <a href="#accueil" class="logo">
+            ⚡ AHC<span>Electron</span>
+        </a>
+
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#services">Services</a>
+            <a href="#demande">Demande</a>
+            <a href="#realisations">Réalisations</a>
+            <a href="#contact">Contact</a>
+            <a href="#paiement">Paiement</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- =========================
+     ACCUEIL
+========================= -->
+
+<main>
+
+<section class="hero" id="accueil">
+
+    <div class="hero-content">
+
+        <div class="hero-icon">⚡</div>
+        <div class="santa">🎅</div>
+
+        <h1>AHCElectron Website</h1>
+
+        <p>
+            Électricité domestique • Réparation • Électronique • Technologie
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#demande" class="btn btn-primary">
+                🔧 Demander un service
+            </a>
+
+            <a href="tel:+50900000000" class="btn btn-secondary">
+                📞 Appeler AHCElectron
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     PUBLICITE
+========================= -->
+
+<div class="advertising">
+
+    <div class="ad-box">
+
+        <h2>⚡ AHCElectron — Votre solution technique</h2>
+
+        <p>
+            Électricité, réparation d'appareils, électronique,
+            alimentation électrique et solutions technologiques.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     A PROPOS
+========================= -->
+
+<section id="apropos">
+
+    <div class="section-title">
+
+        <h2>À propos d'AHCElectron</h2>
+
+        <p>
+            Des solutions pratiques pour vos besoins électriques,
+            électroniques et technologiques.
+        </p>
+
+    </div>
+
+    <div class="about-box">
+
+        <p>
+            AHCElectron propose des services orientés vers le dépannage,
+            la réparation, l'installation et l'accompagnement technique.
+            L'objectif est de fournir aux clients des solutions adaptées
+            à leurs besoins, avec une attention particulière portée au
+            diagnostic et à la sécurité.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+    <div class="section-title">
+
+        <h2>Nos services</h2>
+
+        <p>
+            Cliquez sur un service pour découvrir des exemples concrets.
+        </p>
+
+    </div>
+
+    <div class="services-grid">
+
+        <div class="service-card"
+             onclick="showDetail('electricite')">
+
+            <div class="service-icon">⚡</div>
+
+            <h3>Électricité domestique</h3>
+
+            <p>Installations et dépannage électrique.</p>
+
+            <div class="click-hint">👆 Cliquer pour voir</div>
+
+        </div>
+
+        <div class="service-card"
+             onclick="showDetail('reparation')">
+
+            <div class="service-icon">🔧</div>
+
+            <h3>Réparation d'appareils électriques</h3>
+
+            <p>Diagnostic et réparation.</p>
+
+            <div class="click-hint">👆 Cliquer pour voir</div>
+
+        </div>
+
+        <div class="service-card"
+             onclick="showDetail('ventilateurs')">
+
+            <div class="service-icon">💨</div>
+
+            <h3>Ventilateurs</h3>
+
+            <p>Diagnostic et réparation.</p>
+
+            <div class="click-hint">👆 Cliquer pour voir</div>
+
+        </div>
+
+        <div class="service-card"
+             onclick="showDetail('televisions')">
+
+            <div class="service-icon">📺</div>
+
+            <h3>Téléviseurs Flat Screen</h3>
+
+            <p>Réparation et diagnostic.</p>
+
+            <div class="click-hint">👆 Cliquer pour voir</div>
+
+        </div>
+
+        <div class="service-card"
+             onclick="showDetail('solaire')">
+
+            <div class="service-icon">☀️</div>
+
+            <h3>Panneaux photovoltaïques</h3>
+
+            <p>Solutions solaires et alimentation.</p>
+
+            <div class="click-hint">👆 Cliquer pour voir</div>
+
+        </div>
+
+        <div class="service-card"
+             onclick="showDetail('inverter')">
+
+            <div class="service-icon">🔋</div>
+
+            <h3>Inverter et alimentation</h3>
+
+            <p>Diagnostic, installation et alimentation.</p>
+
+            <div class="click-hint">👆 Cliquer pour voir</div>
+
+        </div>
+
+        <div class="service-card"
+             onclick="showDetail('blender')">
+
+            <div class="service-icon">🥤</div>
+
+            <h3>Blender et petits appareils</h3>
+
+            <p>Réparation de petits appareils.</p>
+
+            <div class="click-hint">👆 Cliquer pour voir</div>
+
+        </div>
+
+        <div class="service-card"
+             onclick="showDetail('depannage')">
+
+            <div class="service-icon">🛠️</div>
+
+            <h3>Dépannage électrique</h3>
+
+            <p>Recherche et résolution de pannes.</p>
+
+            <div class="click-hint">👆 Cliquer pour voir</div>
+
+        </div>
+
+    </div>
+
+    <!-- PANNEAU DETAILS SERVICES -->
+
+    <div id="serviceDetail" class="detail-panel">
+
+        <h3 id="detailTitle"></h3>
+
+        <p id="detailDescription"></p>
+
+        <ul id="detailList"></ul>
+
+        <button class="close-detail"
+                onclick="closeDetail()">
+            ✕ Fermer
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     DEMANDE CLIENT
+========================= -->
+
+<section id="demande">
+
+    <div class="section-title">
+
+        <h2>Demander un service</h2>
+
+        <p>
+            Décrivez votre besoin afin de faciliter le diagnostic.
+        </p>
+
+    </div>
+
+    <div class="form-box">
+
+        <form id="clientForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Nom complet</label>
+                    <input type="text"
+                           name="nom"
+                           placeholder="Votre nom"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label>Téléphone / WhatsApp</label>
+                    <input type="tel"
+                           name="telephone"
+                           placeholder="Votre numéro"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email"
+                           name="email"
+                           placeholder="Votre adresse email">
+                </div>
+
+                <div class="form-group">
+                    <label>Pays</label>
+                    <input type="text"
+                           name="pays"
+                           placeholder="Ex.: Haïti">
+                </div>
+
+                <div class="form-group">
+                    <label>Ville</label>
+                    <input type="text"
+                           name="ville"
+                           placeholder="Votre ville">
+                </div>
+
+                <div class="form-group">
+                    <label>Adresse / zone</label>
+                    <input type="text"
+                           name="adresse"
+                           placeholder="Votre zone ou adresse">
+                </div>
+
+                <div class="form-group">
+                    <label>Type de service</label>
+
+                    <select name="service" required>
+
+                        <option value="">
+                            Sélectionner
+                        </option>
+
+                        <option>
+                            Électricité domestique
+                        </option>
+
+                        <option>
+                            Réparation d'appareils électriques
+                        </option>
+
+                        <option>
+                            Ventilateurs
+                        </option>
+
+                        <option>
+                            Téléviseur Flat Screen
+                        </option>
+
+                        <option>
+                            Panneaux photovoltaïques
+                        </option>
+
+                        <option>
+                            Inverter et alimentation
+                        </option>
+
+                        <option>
+                            Blender et petits appareils
+                        </option>
+
+                        <option>
+                            Dépannage électrique
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Appareil concerné</label>
+
+                    <input type="text"
+                           name="appareil"
+                           placeholder="Ex.: TV, ventilateur...">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Marque / modèle</label>
+
+                    <input type="text"
+                           name="modele"
+                           placeholder="Si connu">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Date souhaitée</label>
+
+                    <input type="date"
+                           name="date">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Contact préféré</label>
+
+                    <select name="contact">
+
+                        <option>
+                            WhatsApp
+                        </option>
+
+                        <option>
+                            Appel téléphonique
+                        </option>
+
+                        <option>
+                            Email
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group full">
+
+                    <label>Description du problème</label>
+
+                    <textarea name="description"
+                              placeholder="Décrivez le problème ou le service recherché..."
+                              required></textarea>
+
+                </div>
+
+                <div class="form-group full">
+
+                    <label>Photo de l'appareil (facultatif)</label>
+
+                    <input type="file"
+                           accept="image/*">
+
+                </div>
+
+            </div>
+
+            <div class="form-submit">
+
+                <button type="submit"
+                        class="btn btn-primary">
+                    📩 Envoyer la demande
+                </button>
+
+            </div>
+
+            <div class="security-note">
+
+                🔒 Vos informations doivent être traitées de manière
+                confidentielle. Le système sécurisé de réception des
+                demandes devra être configuré avant une utilisation
+                commerciale complète.
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     REALISATIONS
+========================= -->
+
+<section id="realisations">
+
+    <div class="section-title">
+
+        <h2>Réalisations</h2>
+
+        <p>
+            Cliquez sur une réalisation pour découvrir des exemples
+            concrets de travaux.
+        </p>
+
+    </div>
+
+    <div class="projects-grid">
+
+        <div class="project-card"
+             onclick="showProject('installation')">
+
+            <div class="project-icon">🏠⚡</div>
+
+            <h3>Installation électrique</h3>
+
+            <p>
+                Exemples d'installation et de mise en sécurité.
+            </p>
+
+            <div class="click-hint">👆 Voir les détails</div>
+
+        </div>
+
+        <div class="project-card"
+             onclick="showProject('electronique')">
+
+            <div class="project-icon">📺🔧</div>
+
+            <h3>Réparation électronique</h3>
+
+            <p>
+                Exemples de diagnostic et de réparation.
+            </p>
+
+            <div class="click-hint">👆 Voir les détails</div>
+
+        </div>
+
+        <div class="project-card"
+             onclick="showProject('energie')">
+
+            <div class="project-icon">☀️🔋</div>
+
+            <h3>Énergie et alimentation</h3>
+
+            <p>
+                Exemples de solutions solaires et inverter.
+            </p>
+
+            <div class="click-hint">👆 Voir les détails</div>
+
+        </div>
+
+    </div>
+
+    <!-- PANNEAU DETAILS REALISATIONS -->
+
+    <div id="projectDetail" class="detail-panel">
+
+        <h3 id="projectTitle"></h3>
+
+        <p id="projectDescription"></p>
+
+        <ul id="projectList"></ul>
+
+        <button class="close-detail"
+                onclick="closeProject()">
+            ✕ Fermer
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+    <div class="section-title">
+
+        <h2>Contact</h2>
+
+        <p>
+            Pour une demande ou une information, contactez AHCElectron.
+        </p>
+
+    </div>
+
+    <div class="contact-box">
+
+        <p>
+            📞 Téléphone / WhatsApp : à renseigner
+        </p>
+
+        <p>
+            📧 Email : à renseigner
+        </p>
+
+        <div class="contact-buttons">
+
+            <a href="tel:+50900000000"
+               class="btn btn-primary">
+                📞 Appeler
+            </a>
+
+            <a href="#demande"
+               class="btn btn-secondary">
+                📝 Faire une demande
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     PAIEMENT
+========================= -->
+
+<section id="paiement" class="payment-section">
+
+    <div class="section-title">
+
+        <h2>💳 Moyens de paiement</h2>
+
+        <p>
+            Plusieurs possibilités peuvent être proposées selon
+            le service et la situation du client.
+        </p>
+
+    </div>
+
+    <p class="payment-intro">
+
+        Les modalités exactes de paiement sont confirmées directement
+        avec le client avant la prestation.
+
+    </p>
+
+    <div class="payment-grid">
+
+        <div class="payment-card">
+
+            <div class="payment-icon">📱</div>
+
+            <h3>MonCash</h3>
+
+            <p>
+                Paiement mobile pour les clients en Haïti.
+            </p>
+
+        </div>
+
+        <div class="payment-card">
+
+            <div class="payment-icon">🏦</div>
+
+            <h3>Virement bancaire</h3>
+
+            <p>
+                Les coordonnées bancaires peuvent être communiquées
+                après confirmation du service.
+            </p>
+
+        </div>
+
+        <div class="payment-card">
+
+            <div class="payment-icon">💵</div>
+
+            <h3>Paiement en espèces</h3>
+
+            <p>
+                Selon la prestation, la zone et les modalités convenues
+                avec le client.
+            </p>
+
+        </div>
+
+        <div class="payment-card">
+
+            <div class="payment-icon">🌎</div>
+
+            <h3>Paiement à distance</h3>
+
+            <p>
+                Pour les clients situés à l'étranger, les modalités
+                peuvent être confirmées directement avec AHCElectron.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="payment-note">
+
+        🔐 <strong>Sécurité :</strong>
+        ne communiquez jamais votre mot de passe, votre PIN ou
+        votre code de sécurité bancaire/mobile à une autre personne.
+        AHCElectron ne vous demandera jamais votre code personnel
+        MonCash ou bancaire.
+
+    </div>
+
+</section>
+
+<!-- =========================
+     ADMINISTRATION
+========================= -->
+
+<section id="administration">
+
+    <div class="section-title">
+
+        <h2>Administration</h2>
+
+        <p>
+            Espace réservé à la gestion du site.
+        </p>
+
+    </div>
+
+    <div class="admin-box">
+
+        <h3>🔐 Accès administrateur</h3>
+
+        <input type="password"
+               id="adminPassword"
+               placeholder="Mot de passe">
+
+        <button class="btn btn-primary"
+                onclick="adminLogin()">
+            Se connecter
+        </button>
+
+        <div class="admin-warning">
+
+            ⚠️ Cette connexion est actuellement une démonstration
+            locale. Une véritable authentification sécurisée avec
+            serveur et base de données sera nécessaire pour une
+            utilisation professionnelle.
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>⚡ AHCElectron</h3>
+
+            <p>
+                Électricité, réparation, électronique et technologie.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Navigation</h3>
+
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#services">Services</a>
+            <a href="#demande">Demande</a>
+            <a href="#realisations">Réalisations</a>
+            <a href="#contact">Contact</a>
+            <a href="#paiement">💳 Moyens de paiement</a>
+
+        </div>
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>📞 Téléphone / WhatsApp</p>
+            <p>📧 Email</p>
+            <p>📍 Haïti</p>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © <span id="year"></span> AHCElectron — Tous droits réservés.
+
+    </div>
+
+</footer>
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+/* =========================
+   DETAILS DES SERVICES
+========================= */
+
+const services = {
+
+    electricite: {
+
+        title: "⚡ Électricité domestique",
+
+        description:
+        "Exemples de travaux pouvant être réalisés ou étudiés :",
+
+        list: [
+            "Installation ou remplacement de prises électriques",
+            "Installation d'interrupteurs et points lumineux",
+            "Recherche de panne électrique",
+            "Vérification de câblage",
+            "Diagnostic de coupures ou problèmes de circuit",
+            "Amélioration ou remise en ordre d'une installation"
+        ]
+
+    },
+
+    reparation: {
+
+        title: "🔧 Réparation d'appareils électriques",
+
+        description:
+        "Diagnostic et recherche de panne sur différents appareils.",
+
+        list: [
+            "Recherche de panne d'alimentation",
+            "Contrôle des composants",
+            "Vérification du câblage",
+            "Remplacement de composants défectueux",
+            "Diagnostic avant réparation",
+            "Test de fonctionnement après intervention"
+        ]
+
+    },
+
+    ventilateurs: {
+
+        title: "💨 Ventilateurs",
+
+        description:
+        "Exemples de problèmes pouvant être diagnostiqués :",
+
+        list: [
+            "Ventilateur qui ne démarre plus",
+            "Moteur qui chauffe",
+            "Problème de condensateur",
+            "Problème de vitesse",
+            "Interrupteur ou commande défectueuse",
+            "Câblage à vérifier"
+        ]
+
+    },
+
+    televisions: {
+
+        title: "📺 Téléviseurs Flat Screen",
+
+        description:
+        "Exemples de pannes électroniques pouvant être examinées :",
+
+        list: [
+            "Téléviseur qui ne s'allume pas",
+            "Absence d'image",
+            "Écran blanc",
+            "Problème de rétroéclairage",
+            "Problème d'alimentation",
+            "Recherche de composants défectueux"
+        ]
+
+    },
+
+    solaire: {
+
+        title: "☀️ Panneaux photovoltaïques",
+
+        description:
+        "Exemples de solutions liées à l'énergie solaire :",
+
+        list: [
+            "Étude d'une installation solaire",
+            "Branchement de panneaux",
+            "Contrôle du câblage",
+            "Vérification de la charge",
+            "Connexion avec batterie et contrôleur",
+            "Diagnostic d'une installation existante"
+        ]
+
+    },
+
+    inverter: {
+
+        title: "🔋 Inverter et alimentation",
+
+        description:
+        "Exemples de travaux liés à l'alimentation de secours :",
+
+        list: [
+            "Diagnostic d'un inverter",
+            "Contrôle de batterie",
+            "Vérification de la charge",
+            "Contrôle des connexions",
+            "Recherche de panne d'alimentation",
+            "Étude d'une solution de secours"
+        ]
+
+    },
+
+    blender: {
+
+        title: "🥤 Blender et petits appareils",
+
+        description:
+        "Exemples de problèmes pouvant être examinés :",
+
+        list: [
+            "Appareil qui ne démarre plus",
+            "Moteur qui ne fonctionne pas correctement",
+            "Interrupteur défectueux",
+            "Problème de câblage",
+            "Contrôle du condensateur",
+            "Diagnostic général de l'appareil"
+        ]
+
+    },
+
+    depannage: {
+
+        title: "🛠️ Dépannage électrique",
+
+        description:
+        "Exemples de situations pouvant nécessiter un diagnostic :",
+
+        list: [
+            "Coupure électrique dans une partie du logement",
+            "Disjoncteur qui déclenche",
+            "Prise ou interrupteur qui ne fonctionne plus",
+            "Recherche de court-circuit",
+            "Problème de câblage",
+            "Diagnostic de sécurité de l'installation"
+        ]
+
+    }
+
+};
+
+
+/* =========================
+   AFFICHER SERVICE
+========================= */
+
+function showDetail(serviceName) {
+
+    const service = services[serviceName];
+
+    if (!service) return;
+
+    document.getElementById("detailTitle").textContent =
+        service.title;
+
+    document.getElementById("detailDescription").textContent =
+        service.description;
+
+    const list =
+        document.getElementById("detailList");
+
+    list.innerHTML = "";
+
+    service.list.forEach(function(item) {
+
+        const li = document.createElement("li");
+
+        li.textContent = item;
+
+        list.appendChild(li);
+
+    });
+
+    const panel =
+        document.getElementById("serviceDetail");
+
+    panel.classList.add("active");
+
+    panel.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    });
+
+}
+
+
+/* =========================
+   FERMER SERVICE
+========================= */
+
+function closeDetail() {
+
+    document
+        .getElementById("serviceDetail")
+        .classList.remove("active");
+
+}
+
+
+/* =========================
+   REALISATIONS
+========================= */
+
+const projects = {
+
+    installation: {
+
+        title: "🏠⚡ Installation électrique",
+
+        description:
+        "Exemples de réalisations pouvant être présentées au client :",
+
+        list: [
+            "Installation de prises et interrupteurs",
+            "Mise en place de points d'éclairage",
+            "Organisation et vérification du câblage",
+            "Recherche d'une anomalie électrique",
+            "Amélioration d'une installation existante"
+        ]
+
+    },
+
+    electronique: {
+
+        title: "📺🔧 Réparation électronique",
+
+        description:
+        "Exemples de réparations électroniques pouvant être documentées :",
+
+        list: [
+            "Diagnostic d'un téléviseur en panne",
+            "Recherche d'un défaut d'alimentation",
+            "Contrôle de composants électroniques",
+            "Réparation d'un appareil électrique",
+            "Tests avant et après réparation"
+        ]
+
+    },
+
+    energie: {
+
+        title: "☀️🔋 Énergie et alimentation",
+
+        description:
+        "Exemples de solutions énergétiques pouvant être présentées :",
+
+        list: [
+            "Installation ou configuration d'une solution solaire",
+            "Connexion panneau / contrôleur / batterie",
+            "Diagnostic d'un système inverter",
+            "Vérification de l'alimentation de secours",
+            "Entretien et contrôle d'une installation existante"
+        ]
+
+    }
+
+};
+
+
+/* =========================
+   AFFICHER REALISATION
+========================= */
+
+function showProject(projectName) {
+
+    const project = projects[projectName];
+
+    if (!project) return;
+
+    document.getElementById("projectTitle").textContent =
+        project.title;
+
+    document.getElementById("projectDescription").textContent =
+        project.description;
+
+    const list =
+        document.getElementById("projectList");
+
+    list.innerHTML = "";
+
+    project.list.forEach(function(item) {
+
+        const li = document.createElement("li");
+
+        li.textContent = item;
+
+        list.appendChild(li);
+
+    });
+
+    const panel =
+        document.getElementById("projectDetail");
+
+    panel.classList.add("active");
+
+    panel.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    });
+
+}
+
+
+/* =========================
+   FERMER REALISATION
+========================= */
+
+function closeProject() {
+
+    document
+        .getElementById("projectDetail")
+        .classList.remove("active");
+
+}
+
+
+/* =========================
+   FORMULAIRE
+========================= */
+
+document
+    .getElementById("clientForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        alert(
+            "Votre demande est préparée, mais le système sécurisé de réception doit encore être configuré avant l'envoi réel."
+        );
+
+    });
+
+
+/* =========================
+   ADMINISTRATION DEMO
+========================= */
+
+function adminLogin() {
+
+    const password =
+        document.getElementById("adminPassword").value;
+
+    if (!password) {
+
+        alert("Veuillez entrer le mot de passe.");
+
+        return;
+
+    }
+
+    alert(
+        "La connexion administrateur est actuellement une démonstration. Une authentification sécurisée côté serveur doit être configurée."
+    );
+
+}
+
+
+/* =========================
+   ANNEE AUTOMATIQUE
+========================= */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+</body>
 </html>
