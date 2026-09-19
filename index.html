@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- AHCElectronSRS -->
 <html lang="fr">
 <head>
 
@@ -14,16 +13,15 @@ content="AHCElectron Sales and Repairs Services — AHCElectronSRS. Électricit�
 <meta name="theme-color" content="#07111f">
 
 <meta property="og:title"
-content="AHCElectronSRS — AHCElectron Sales and Repairs Services">
+content="AHCElectron — Sales and Repairs Services">
 
 <meta property="og:description"
-content="Électricité, réparation électronique, maintenance et solutions technologiques en Haïti et à l'international.">
+content="Électricité, réparation, électronique, maintenance, technologie et vente de produits.">
 
-<meta property="og:type" content="website">
-
-<title>AHCElectronSRS — AHCElectron Sales and Repairs Services</title>
+<title>AHCElectron — Sales • Repairs • Technology</title>
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -41,2747 +39,1687 @@ body{
     line-height:1.6;
 }
 
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
 a{
     color:inherit;
     text-decoration:none;
 }
 
-button,input,select,textarea{
-    font:inherit;
-}
+/* TOPBAR */
 
-/* =========================================================
-   BARRE PRINCIPALE
-========================================================= */
-
-header{
+.topbar{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(7,17,31,.97);
-    border-bottom:1px solid #1e344d;
-    backdrop-filter:blur(10px);
-}
-
-.navbar{
-    max-width:1250px;
-    margin:auto;
-    padding:14px 18px;
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    gap:15px;
+    gap:12px;
+    padding:12px 16px;
+    background:#091827;
+    border-bottom:1px solid #20344d;
+    box-shadow:0 4px 20px rgba(0,0,0,.25);
 }
 
 .logo{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    justify-content:center;
-    min-width:280px;
-    line-height:1.05;
-    animation:logoMove 5s ease-in-out infinite;
-    transform-origin:center;
-}
-
-.logo-main{
-    font-size:clamp(1.8rem,5vw,2.8rem);
+    font-size:22px;
     font-weight:900;
-    letter-spacing:1px;
-    white-space:nowrap;
-    background:linear-gradient(90deg,#0057b8 0%,#ffffff 48%,#d90429 100%);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    text-shadow:0 0 14px rgba(0,217,255,.18);
-}
-
-.logo-full{
-    font-size:.68rem;
-    font-weight:700;
-    letter-spacing:.7px;
-    color:#ffffff;
-    margin-top:6px;
     white-space:nowrap;
 }
 
-.logo-short{
-    color:#d90429;
+.logo span,
+.hero h1 span{
+    color:#ff9f1c;
 }
 
-@keyframes logoMove{
-    0%,100%{transform:translateX(0);}
-    20%{transform:translateX(-7px);}
-    40%{transform:translateX(7px);}
-    60%{transform:translateX(-5px);}
-    80%{transform:translateX(5px);}
+.searchBox{
+    flex:1;
+    min-width:100px;
 }
 
-nav{
-    display:flex;
-    gap:6px;
-    flex-wrap:wrap;
-    justify-content:center;
+.searchBox input{
+    width:100%;
+    padding:11px 14px;
+    border:1px solid #304761;
+    border-radius:10px;
+    background:#101f31;
+    color:white;
+    outline:none;
 }
 
-nav a{
-    padding:8px 10px;
-    border-radius:8px;
+.searchBox input:focus{
+    border-color:#ff9f1c;
 }
 
-nav a:hover{
-    background:#12304a;
-    color:#00d9ff;
+.topButton{
+    border:1px solid #304761;
+    background:#102238;
+    color:white;
+    padding:10px 13px;
+    border-radius:10px;
 }
 
-/* =========================================================
-   BARRE D'OUTILS MULTITÂCHES
-========================================================= */
-
-.task-bar{
-    position:sticky;
-    top:92px;
-    z-index:990;
-    background:#091827;
-    border-bottom:1px solid #294b64;
-    box-shadow:0 5px 18px rgba(0,0,0,.25);
+.topButton:hover{
+    background:#17304d;
 }
 
-.task-bar-inner{
-    max-width:1250px;
-    margin:auto;
-    padding:8px 15px;
-    display:flex;
-    align-items:center;
-    gap:8px;
-    overflow-x:auto;
-    scrollbar-width:thin;
+.cartButton{
+    position:relative;
 }
 
-.task-title{
-    flex:0 0 auto;
-    color:#00d9ff;
-    font-weight:900;
-    padding:7px 10px;
-    border-right:1px solid #294b64;
+.cartCount{
+    position:absolute;
+    top:-8px;
+    right:-8px;
+    min-width:21px;
+    height:21px;
+    padding:2px 5px;
+    border-radius:50%;
+    background:#ff9f1c;
+    color:#07111f;
+    font-size:12px;
+    font-weight:bold;
 }
 
-.task-button{
-    flex:0 0 auto;
-    min-width:65px;
-    padding:7px 9px;
-    border:1px solid #294b64;
-    border-radius:9px;
-    background:#0d2133;
-    color:#fff;
-    cursor:pointer;
-    text-align:center;
-    transition:.2s;
-}
-
-.task-button:hover{
-    background:#123b59;
-    border-color:#00d9ff;
-    transform:translateY(-1px);
-}
-
-.task-icon{
-    display:block;
-    font-size:1.25rem;
-}
-
-.task-label{
-    display:block;
-    font-size:.68rem;
-    margin-top:2px;
-}
-
-/* =========================================================
-   HERO
-========================================================= */
+/* HERO */
 
 .hero{
-    min-height:78vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
     text-align:center;
-    padding:70px 20px;
-    background:radial-gradient(circle at top,#12385a 0,#07111f 58%);
-}
-
-.hero-content{
-    max-width:950px;
-    width:100%;
+    padding:80px 20px;
+    background:
+        radial-gradient(circle at top,#173453 0%,#07111f 65%);
 }
 
 .hero h1{
-    font-size:clamp(2.3rem,7vw,5rem);
+    font-size:clamp(34px,7vw,64px);
+    margin-bottom:12px;
+}
+
+.hero h2{
+    font-size:clamp(18px,4vw,28px);
+    color:#c7d4e3;
     margin-bottom:15px;
-}
-
-.hero h1 span{
-    background:linear-gradient(90deg,#0057b8,#ffffff,#d90429);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    animation:brandTextMove 5s ease-in-out infinite;
-}
-
-.brand-subtitle{
-    font-size:clamp(1rem,3vw,1.45rem);
-    font-weight:800;
-    letter-spacing:1.5px;
-    margin-top:-5px;
-    margin-bottom:18px;
-    background:linear-gradient(90deg,#0057b8,#ffffff,#d90429);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    animation:brandTextMove 5s ease-in-out infinite;
-}
-
-@keyframes brandTextMove{
-    0%,100%{transform:translateX(0);}
-    25%{transform:translateX(-8px);}
-    50%{transform:translateX(8px);}
-    75%{transform:translateX(-5px);}
 }
 
 .hero p{
-    max-width:780px;
+    max-width:760px;
     margin:0 auto 25px;
-    color:#cbd7e4;
-    font-size:1.1rem;
+    color:#b9c6d5;
 }
 
-.badges{
+.heroButtons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.primaryButton,
+.secondaryButton{
+    border:none;
+    padding:13px 20px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.primaryButton{
+    background:#ff9f1c;
+    color:#07111f;
+}
+
+.secondaryButton{
+    background:#172b42;
+    color:white;
+    border:1px solid #34506c;
+}
+
+.primaryButton:hover{
+    background:#ffb64d;
+}
+
+/* SECTIONS */
+
+section{
+    padding:55px 18px;
+}
+
+.sectionTitle{
+    text-align:center;
+    margin-bottom:28px;
+}
+
+.sectionTitle h2{
+    font-size:30px;
+    margin-bottom:7px;
+}
+
+.sectionTitle p{
+    color:#aebdce;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.service{
+    background:#0d1d2f;
+    border:1px solid #213951;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+}
+
+.serviceIcon{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.service h3{
+    margin-bottom:8px;
+}
+
+.service p{
+    color:#afbdcd;
+    font-size:14px;
+}
+
+/* BLOG */
+
+.blogGrid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.blogCard{
+    overflow:hidden;
+    border-radius:15px;
+    background:#0d1d2f;
+    border:1px solid #213951;
+}
+
+.blogCard img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+}
+
+.blogCardContent{
+    padding:18px;
+}
+
+.blogCard p{
+    color:#b5c3d2;
+    margin-top:7px;
+}
+
+/* CATEGORIES */
+
+.categories{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:10px;
-    margin:25px 0;
+    gap:9px;
+    margin-bottom:28px;
 }
 
-.badge{
-    border:1px solid #28506e;
-    background:#0d2033;
-    padding:8px 13px;
-    border-radius:30px;
+.categoryButton{
+    padding:9px 14px;
+    border-radius:20px;
+    border:1px solid #304961;
+    background:#102238;
+    color:#dbe7f3;
 }
 
-.btn{
-    display:inline-block;
-    border:0;
-    cursor:pointer;
-    padding:12px 20px;
-    border-radius:10px;
-    background:#00bfe8;
-    color:#00131d;
-    font-weight:700;
-    transition:.25s;
-    margin:4px;
+.categoryButton.active,
+.categoryButton:hover{
+    background:#ff9f1c;
+    color:#07111f;
+    border-color:#ff9f1c;
 }
 
-.btn:hover{
-    transform:translateY(-2px);
-    background:#38ddff;
-}
+/* SHOP */
 
-.btn.secondary{
-    background:#142b42;
-    color:#fff;
-    border:1px solid #2c4e69;
-}
-
-.btn.whatsapp{
-    background:#20c56b;
-    color:#fff;
-}
-
-/* =========================================================
-   SECTIONS
-========================================================= */
-
-section{
+.shopContainer{
     max-width:1250px;
     margin:auto;
-    padding:70px 20px;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:35px;
-}
-
-.section-title h2{
-    font-size:2rem;
-    color:#00d9ff;
-}
-
-.section-title p{
-    color:#b7c6d5;
-}
-
-.grid{
+.productGrid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
 }
 
-.card{
-    background:#0c1b2b;
-    border:1px solid #203b55;
-    border-radius:16px;
-    padding:25px;
-    transition:.25s;
+.productCard{
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    background:#0d1d2f;
+    border:1px solid #213951;
+    border-radius:15px;
 }
 
-.card:hover{
-    transform:translateY(-4px);
-    border-color:#00bfe8;
+.productImage{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    background:#12243a;
 }
 
-.icon{
-    font-size:2.5rem;
-    margin-bottom:12px;
+.productImagePlaceholder{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:210px;
+    font-size:50px;
+    background:#12243a;
 }
 
-.card p{
-    color:#b9c7d5;
-}
-
-.service-details,
-.package-area,
-.project-details{
-    display:none;
-    margin-top:18px;
-    padding:18px;
-    border-radius:12px;
-    background:#071522;
-    border:1px solid #24465f;
-}
-
-.service-details.active,
-.package-area.active,
-.project-details.active{
-    display:block;
-}
-
-.package{
-    margin-top:14px;
+.productInfo{
+    display:flex;
+    flex-direction:column;
+    flex:1;
     padding:16px;
-    background:#0d2133;
-    border:1px solid #294b64;
-    border-radius:12px;
 }
 
-.package h4{
-    color:#00d9ff;
-    margin-bottom:8px;
+.productInfo h3{
+    margin-bottom:4px;
 }
 
-.package ul{
-    margin:10px 0 15px 20px;
-    color:#cbd7e4;
+.reference{
+    color:#8295aa;
+    font-size:12px;
 }
 
-.package li{
-    margin-bottom:5px;
+.brand{
+    color:#c0ccda;
+    font-size:13px;
+    margin:5px 0;
+}
+
+.description{
+    color:#aebdcd;
+    font-size:13px;
+    margin:7px 0 12px;
 }
 
 .price{
-    color:#fff;
+    font-size:18px;
     font-weight:bold;
-    margin:10px 0;
+    color:#ffb13b;
 }
 
-/* =========================================================
-   ZONE / LOCALISATION
-========================================================= */
-
-.coverage{
-    max-width:none;
-    background:#091827;
-    border-top:1px solid #18324a;
-    border-bottom:1px solid #18324a;
+.usdPrice{
+    color:#aebdcd;
+    font-size:13px;
 }
 
-.coverage-inner{
-    max-width:1250px;
-    margin:auto;
-    padding:0 20px;
+.stock{
+    margin:8px 0;
+    font-size:13px;
 }
 
-.zone-selector{
-    max-width:900px;
-    margin:0 auto 35px;
-    padding:25px;
-    background:#0c1b2b;
-    border:1px solid #294b64;
-    border-radius:16px;
+.stock.available{
+    color:#63d98b;
 }
 
-.form-group{
-    margin-bottom:15px;
+.stock.unavailable{
+    color:#ff7474;
 }
 
-.form-group label{
-    display:block;
-    margin-bottom:6px;
-    font-weight:700;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea{
-    width:100%;
-    padding:12px;
-    border-radius:8px;
-    border:1px solid #36546b;
-    background:#0d2033;
-    color:#fff;
-    outline:none;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{
-    border-color:#00d9ff;
-}
-
-#haitiDepartments,
-#internationalCountries{
-    display:none;
-}
-
-#haitiDepartments.active,
-#internationalCountries.active{
-    display:block;
-}
-
-.department-grid{
+.productActions{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
-    gap:10px;
-    margin-top:20px;
-}
-
-.department{
-    background:#0d2133;
-    border:1px solid #26465f;
-    padding:13px;
-    border-radius:10px;
-    text-align:center;
-    cursor:pointer;
-    transition:.2s;
-}
-
-.department:hover{
-    border-color:#00d9ff;
-    background:#12304a;
-}
-
-.international-box{
-    margin-top:25px;
-    padding:25px;
-    background:#0d2133;
-    border:1px solid #26465f;
-    border-radius:15px;
-}
-
-.international-box h3{
-    color:#00d9ff;
-    margin-bottom:10px;
-}
-
-.location-panel{
-    margin-top:25px;
-    padding:22px;
-    background:#071522;
-    border:1px solid #31546d;
-    border-radius:15px;
-}
-
-.location-panel h3{
-    color:#00d9ff;
-    margin-bottom:10px;
-}
-
-.location-buttons{
-    display:flex;
-    flex-wrap:wrap;
+    grid-template-columns:1fr 1fr;
     gap:8px;
-    margin:15px 0;
+    margin-top:auto;
 }
 
-.location-status{
-    display:none;
-    margin-top:15px;
+.productActions button{
+    padding:9px;
+    border-radius:8px;
+    border:1px solid #38536c;
+    background:#13283f;
+    color:white;
+}
+
+.productActions .addButton{
+    background:#ff9f1c;
+    color:#07111f;
+    border-color:#ff9f1c;
+    font-weight:bold;
+}
+
+.productActions button:disabled{
+    opacity:.45;
+    cursor:not-allowed;
+}
+
+.loading,
+.errorBox{
+    max-width:700px;
+    margin:20px auto;
     padding:15px;
     border-radius:10px;
-    background:#0d2133;
-    border:1px solid #294b64;
+    text-align:center;
 }
 
-.location-status.active{
-    display:block;
+.loading{
+    background:#102238;
+    color:#bdcbd9;
 }
 
-.location-success{
-    border-color:#267044;
-    background:#12351f;
-}
-
-.location-warning{
-    border-color:#826a25;
-    background:#302b13;
-}
-
-.location-error{
-    border-color:#713838;
-    background:#321515;
-}
-
-.location-line{
-    padding:7px 0;
-    border-bottom:1px solid #203b55;
-}
-
-.location-line:last-child{
-    border-bottom:0;
-}
-
-.location-map{
-    display:inline-block;
-    margin-top:12px;
-    padding:10px 14px;
-    border-radius:8px;
-    background:#142b42;
-    color:#fff;
-    border:1px solid #2c4e69;
-}
-
-.location-map:hover{
-    background:#123b59;
-    color:#00d9ff;
-}
-
-.location-privacy{
-    margin-top:15px;
-    font-size:.85rem;
-    color:#8ea4b7;
-}
-
-.location-history{
-    margin-top:20px;
-    padding:18px;
-    border:1px dashed #36546b;
-    border-radius:12px;
-}
-
-.location-history h4{
-    color:#00d9ff;
-    margin-bottom:8px;
-}
-
-.manual-location{
+.errorBox{
+    background:#321c20;
+    border:1px solid #704049;
+    color:#ffb8bd;
     display:none;
-    margin-top:15px;
 }
 
-.manual-location.active{
-    display:block;
+/* EXPERTS */
+
+.experts{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    max-width:1200px;
+    margin:auto;
 }
 
-/* =========================================================
-   DEMANDE
-========================================================= */
-
-.package-selector{
-    margin-top:35px;
+.expert{
+    text-align:center;
+    background:#0d1d2f;
+    border:1px solid #213951;
+    border-radius:15px;
+    padding:18px;
 }
 
-.package-option{
-    margin-bottom:20px;
-}
-
-.package-option button{
+.expert img{
     width:100%;
-    text-align:left;
-    background:#0d2133;
-    color:#fff;
-    border:1px solid #2b4d65;
-    padding:18px;
-    border-radius:12px;
-    cursor:pointer;
+    height:190px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:10px;
 }
 
-.package-option button:hover{
-    border-color:#00d9ff;
+.expert p{
+    color:#aebdcd;
+    font-size:13px;
 }
 
-.package-content{
-    display:none;
-    padding:18px;
-    background:#071522;
-    border:1px solid #24465f;
-    border-top:0;
-    border-radius:0 0 12px 12px;
-}
+/* ACCOUNT */
 
-.package-content.active{
-    display:block;
-}
-
-.check-item{
-    display:flex;
-    gap:10px;
-    align-items:flex-start;
-    margin:9px 0;
-}
-
-.check-item input{
-    width:auto;
-    margin-top:5px;
-}
-
-.summary{
-    margin-top:30px;
+.accountBox{
+    max-width:700px;
+    margin:auto;
     padding:25px;
-    background:#0c1b2b;
-    border:1px solid #00bfe8;
-    border-radius:16px;
+    border-radius:15px;
+    background:#0d1d2f;
+    border:1px solid #213951;
+    text-align:center;
 }
 
-.summary h3{
-    color:#00d9ff;
+.accountBox p{
+    color:#b9c7d5;
     margin-bottom:15px;
 }
 
-.summary-line{
-    padding:7px 0;
-    border-bottom:1px solid #203b55;
-    word-break:break-word;
-}
-
-.message{
-    display:none;
-    margin-top:15px;
-    padding:12px;
-    border-radius:8px;
-    background:#12351f;
-    border:1px solid #267044;
-    color:#b9ffd0;
-}
-
-/* =========================================================
-   RECHERCHE
-========================================================= */
-
-.search-box{
-    max-width:850px;
-    margin:35px auto 0;
+.profileInfo{
+    max-width:700px;
+    margin:20px auto 0;
     padding:20px;
+    background:#0b1929;
+    border:1px solid #213951;
+    border-radius:12px;
+}
+
+.profileInfo p{
+    margin:7px 0;
+    color:#c6d2df;
+}
+
+/* MODALS */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    padding:20px;
+    background:rgba(0,0,0,.78);
+    overflow:auto;
+}
+
+.modalContent{
+    position:relative;
+    width:min(700px,100%);
+    margin:40px auto;
     background:#0c1b2b;
-    border:1px solid #294b64;
+    border:1px solid #304961;
     border-radius:16px;
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    padding:25px;
+    box-shadow:0 20px 70px rgba(0,0,0,.5);
 }
 
-.search-title{
-    color:#00d9ff;
-    font-weight:800;
-    margin-bottom:12px;
-    font-size:1.15rem;
+.closeModal{
+    position:absolute;
+    top:10px;
+    right:14px;
+    border:none;
+    background:transparent;
+    color:white;
+    font-size:28px;
 }
 
-.search-row{
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
+.modal h2{
+    margin-bottom:18px;
 }
 
-.search-input{
-    flex:1;
-    min-width:220px;
-    padding:13px;
+.formGroup{
+    margin-bottom:13px;
+}
+
+.formGroup label{
+    display:block;
+    margin-bottom:5px;
+    color:#c7d3df;
+    font-size:13px;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea{
+    width:100%;
+    padding:11px;
     border-radius:9px;
-    border:1px solid #36546b;
-    background:#071522;
-    color:#fff;
+    border:1px solid #344d65;
+    background:#101f31;
+    color:white;
     outline:none;
 }
 
-.search-input:focus{
-    border-color:#00d9ff;
+.formGroup textarea{
+    min-height:90px;
+    resize:vertical;
 }
 
-.search-results{
-    display:none;
-    margin-top:15px;
-    text-align:left;
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus{
+    border-color:#ff9f1c;
 }
 
-.search-results.active{
-    display:block;
-}
-
-.search-result{
-    display:block;
-    margin:8px 0;
-    padding:13px;
-    border:1px solid #294b64;
-    background:#0d2133;
-    border-radius:10px;
-    cursor:pointer;
-}
-
-.search-result:hover{
-    border-color:#00d9ff;
-    background:#12304a;
-}
-
-.search-result strong{
-    color:#00d9ff;
-}
-
-.search-result small{
-    display:block;
-    color:#aebdca;
-    margin-top:3px;
-}
-
-.search-empty{
-    padding:12px;
-    color:#cbd7e4;
-}
-
-.search-external{
-    margin-top:15px;
-    padding-top:15px;
-    border-top:1px solid #294b64;
-}
-
-.search-mode{
+.modalActions{
     display:flex;
-    gap:8px;
+    gap:9px;
     flex-wrap:wrap;
-    margin-top:12px;
+    margin-top:15px;
 }
 
-.search-mode button{
-    flex:1;
-    min-width:150px;
+.modalActions button{
+    padding:10px 14px;
+    border-radius:9px;
+    border:1px solid #38536c;
+    background:#142a42;
+    color:white;
 }
 
-.search-note{
-    margin-top:10px;
-    font-size:.85rem;
-    color:#8ea4b7;
+.modalActions .primary{
+    background:#ff9f1c;
+    color:#07111f;
+    border-color:#ff9f1c;
+    font-weight:bold;
 }
 
-/* =========================================================
-   TRADUCTION
-========================================================= */
+/* CART */
 
-.language-panel{
-    position:fixed;
-    right:12px;
-    top:135px;
-    z-index:2000;
-    display:none;
-    width:min(340px,calc(100vw - 24px));
-    padding:18px;
-    background:#0c1b2b;
-    border:1px solid #00bfe8;
-    border-radius:14px;
-    box-shadow:0 15px 40px rgba(0,0,0,.45);
+.cartItem{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:10px;
+    padding:12px 0;
+    border-bottom:1px solid #263c52;
 }
 
-.language-panel.active{
-    display:block;
+.cartItem h4{
+    margin-bottom:3px;
 }
 
-.language-panel h3{
-    color:#00d9ff;
+.cartItem small{
+    color:#93a5b8;
+}
+
+.cartControls{
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+.cartControls button{
+    border:1px solid #3a536b;
+    background:#12263d;
+    color:white;
+    border-radius:6px;
+    padding:5px 9px;
+}
+
+.removeButton{
+    color:#ff8d8d !important;
+}
+
+.cartTotal{
+    text-align:right;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:18px;
+    color:#ffb13b;
+}
+
+.securityNotice{
+    margin:15px 0;
+    padding:12px;
+    border-radius:9px;
+    background:#102238;
+    border:1px solid #2a4660;
+    color:#bdcbd8;
+    font-size:13px;
+}
+
+/* ORDERS */
+
+.orderCard{
+    padding:15px;
     margin-bottom:12px;
+    border:1px solid #29435b;
+    border-radius:10px;
+    background:#102238;
 }
 
-.language-panel select{
-    width:100%;
-    padding:11px;
-    background:#071522;
-    color:#fff;
-    border:1px solid #36546b;
-    border-radius:8px;
+.orderCard p{
+    margin:4px 0;
+    color:#bdcad7;
 }
 
-.translation-note{
-    margin-top:10px;
-    font-size:.8rem;
-    color:#8ea4b7;
+.orderStatus{
+    display:inline-block;
+    margin-top:5px;
+    padding:4px 9px;
+    border-radius:15px;
+    background:#17344c;
+    color:#ffd08a;
+    font-size:12px;
 }
 
-.task-result{
+/* NOTIFICATION */
+
+.notification{
     display:none;
     position:fixed;
-    left:50%;
-    bottom:20px;
-    transform:translateX(-50%);
-    z-index:2500;
-    width:min(650px,calc(100vw - 30px));
-    padding:14px 18px;
-    background:#0c1b2b;
-    border:1px solid #00bfe8;
-    border-radius:12px;
-    box-shadow:0 10px 35px rgba(0,0,0,.4);
+    right:15px;
+    bottom:15px;
+    z-index:5000;
+    max-width:350px;
+    padding:14px 17px;
+    border-radius:10px;
+    background:#10283e;
+    border:1px solid #38536c;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 
-.task-result.active{
-    display:block;
-}
-
-.task-result strong{
-    color:#00d9ff;
-}
-
-/* =========================================================
-   FOOTER / CONTACT
-========================================================= */
+/* FOOTER */
 
 footer{
-    background:#040b13;
-    border-top:1px solid #1c3348;
-    padding:35px 20px;
+    padding:35px 18px;
     text-align:center;
-    color:#9eb1c2;
+    background:#050d17;
+    border-top:1px solid #20344d;
+    color:#8fa1b4;
 }
 
-.footer-logo{
-    font-weight:900;
-    font-size:1.5rem;
-    background:linear-gradient(90deg,#0057b8,#ffffff,#d90429);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    margin-bottom:8px;
+footer strong{
+    color:#dce7f2;
 }
 
-.small{
-    font-size:.88rem;
-    color:#8ea4b7;
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .services,
+    .experts{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .blogGrid{
+        grid-template-columns:1fr;
+    }
+
+    .productGrid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
 }
 
-.phone{
-    display:inline-block;
-    margin:15px 0;
-    font-size:1.5rem;
-    color:#00d9ff;
-    font-weight:800;
-}
+@media(max-width:650px){
 
-.contact-box{
-    max-width:850px;
-    margin:auto;
-    text-align:center;
-}
-
-.contact-form{
-    margin-top:30px;
-    text-align:left;
-    padding:25px;
-    background:#0c1b2b;
-    border:1px solid #203b55;
-    border-radius:16px;
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:750px){
-
-    .navbar{
-        flex-direction:column;
+    .topbar{
+        flex-wrap:wrap;
     }
 
     .logo{
-        align-items:center;
-        min-width:0;
-        width:100%;
+        width:auto;
     }
 
-    .logo-main{
-        font-size:clamp(1.8rem,9vw,2.5rem);
+    .searchBox{
+        order:5;
+        flex-basis:100%;
     }
 
-    .logo-full{
-        font-size:.61rem;
-        text-align:center;
-        white-space:normal;
+    .services,
+    .experts,
+    .productGrid{
+        grid-template-columns:1fr;
     }
 
-    nav{
-        width:100%;
-    }
-
-    nav a{
-        font-size:.82rem;
-    }
-
-    .task-bar{
-        top:143px;
-    }
-
-    .task-title{
-        display:none;
+    section{
+        padding:42px 14px;
     }
 
     .hero{
-        min-height:70vh;
+        padding:60px 16px;
     }
 
-    .search-row{
-        flex-direction:column;
+    .productImage,
+    .productImagePlaceholder{
+        height:220px;
     }
 
-    .search-input{
-        width:100%;
-        min-width:0;
-    }
-
-    .search-row .btn{
-        width:100%;
-        margin:4px 0;
-    }
-
-    .location-buttons{
-        flex-direction:column;
-    }
-
-    .location-buttons .btn{
-        width:100%;
-        margin:3px 0;
-    }
-
-    .language-panel{
-        top:190px;
-    }
 }
 
-@media(prefers-reduced-motion:reduce){
-
-    .logo,
-    .hero h1 span,
-    .brand-subtitle{
-        animation:none;
-    }
-
-    html{
-        scroll-behavior:auto;
-    }
-}
 </style>
 </head>
 
 <body>
 
-<!-- =====================================================
-     EN-TÊTE
-===================================================== -->
+<header class="topbar">
 
-<header>
+    <div class="logo">
+        AHC<span>Electron</span>
+    </div>
 
-<div class="navbar">
+    <div class="searchBox">
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Rechercher produit, marque ou référence..."
+            autocomplete="off">
+    </div>
 
-<a href="#accueil"
-class="logo"
-aria-label="AHCElectron Sales and Repairs Services">
+    <button
+        class="topButton"
+        onclick="openAccount()">
+        👤 Compte
+    </button>
 
-<div class="logo-main">AHCElectronSRS</div>
-
-<div class="logo-full">
-AHCElectron Sales and Repairs Services
-</div>
-
-</a>
-
-<nav>
-
-<a href="#accueil" data-i18n="nav.home">Accueil</a>
-<a href="#services" data-i18n="nav.services">Services</a>
-<a href="#produits" data-i18n="nav.products">Produits</a>
-<a href="#realisations" data-i18n="nav.projects">Réalisations</a>
-<a href="#zone">🌎 <span data-i18n="nav.zone">Zone</span></a>
-<a href="#demande">📋 <span data-i18n="nav.request">Demande</span></a>
-<a href="#paiement" data-i18n="nav.payment">Paiement</a>
-<a href="#contact" data-i18n="nav.contact">Contact</a>
-
-</nav>
-
-</div>
+    <button
+        class="topButton cartButton"
+        onclick="openCart()">
+        🛒 Panier
+        <span
+            class="cartCount"
+            id="cartCount">0</span>
+    </button>
 
 </header>
 
-<!-- =====================================================
-     BARRE SUPÉRIEURE MULTITÂCHES
-===================================================== -->
 
-<div class="task-bar">
+<main>
 
-<div class="task-bar-inner">
+<section class="hero">
 
-<div class="task-title">
-AHCElectronSRS
-</div>
+    <h1>
+        AHC<span>Electron</span>
+    </h1>
 
-<button class="task-button"
-onclick="focusSearch()"
-title="Recherche">
+    <h2>
+        Sales and Repairs Services
+    </h2>
 
-<span class="task-icon">🔎</span>
-<span class="task-label" data-i18n="task.search">Recherche</span>
+    <p>
+        Électricité • Réparation • Électronique • Maintenance •
+        Informatique • Technologie • Vente de produits
+    </p>
 
-</button>
+    <div class="heroButtons">
 
-<button class="task-button"
-onclick="searchInternet()"
-title="Recherche Internet">
+        <a
+            class="primaryButton"
+            href="#shop">
+            🛒 Voir la boutique
+        </a>
 
-<span class="task-icon">🌐</span>
-<span class="task-label" data-i18n="task.web">Internet</span>
+        <a
+            class="secondaryButton"
+            href="#services">
+            🔧 Nos services
+        </a>
 
-</button>
-
-<button class="task-button"
-onclick="toggleLanguagePanel()"
-title="Langues">
-
-<span class="task-icon">🌍</span>
-<span class="task-label" data-i18n="task.language">Langue</span>
-
-</button>
-
-<button class="task-button"
-onclick="window.location.href='#services'"
-title="Services">
-
-<span class="task-icon">🛠️</span>
-<span class="task-label" data-i18n="task.services">Services</span>
-
-</button>
-
-<button class="task-button"
-onclick="window.location.href='#zone'"
-title="Localisation">
-
-<span class="task-icon">📍</span>
-<span class="task-label" data-i18n="task.location">Localisation</span>
-
-</button>
-
-<button class="task-button"
-onclick="getCurrentLocation()"
-title="Vérifier ma position">
-
-<span class="task-icon">🛰️</span>
-<span class="task-label" data-i18n="task.gps">GPS</span>
-
-</button>
-
-<button class="task-button"
-onclick="window.location.href='#demande'"
-title="Demande">
-
-<span class="task-icon">📋</span>
-<span class="task-label" data-i18n="task.request">Demande</span>
-
-</button>
-
-<button class="task-button"
-onclick="window.location.href='#paiement'"
-title="Paiement">
-
-<span class="task-icon">💳</span>
-<span class="task-label" data-i18n="task.payment">Paiement</span>
-
-</button>
-
-<button class="task-button"
-onclick="window.print()"
-title="Imprimer">
-
-<span class="task-icon">🖨️</span>
-<span class="task-label" data-i18n="task.print">Imprimer</span>
-
-</button>
-
-<button class="task-button"
-onclick="shareSite()"
-title="Partager">
-
-<span class="task-icon">📤</span>
-<span class="task-label" data-i18n="task.share">Partager</span>
-
-</button>
-
-<button class="task-button"
-onclick="window.location.href='#contact'"
-title="Contact">
-
-<span class="task-icon">📞</span>
-<span class="task-label" data-i18n="task.contact">Contact</span>
-
-</button>
-
-</div>
-
-</div>
-
-<!-- =====================================================
-     PANNEAU LANGUES
-===================================================== -->
-
-<div id="languagePanel" class="language-panel">
-
-<h3>🌍 <span data-i18n="language.title">Langue de l'interface</span></h3>
-
-<select id="languageSelect"
-onchange="changeLanguage(this.value)">
-
-<option value="fr">🇫🇷 Français</option>
-<option value="en">🇺🇸 English</option>
-<option value="ht">🇭🇹 Kreyòl Ayisyen</option>
-<option value="kea">🇨🇻 Kriolu — Cabo Verde</option>
-<option value="mfe">🇲🇺 Kreol Morisien</option>
-
-</select>
-
-<div class="translation-note">
-La traduction intégrée concerne les textes configurés dans cette interface.
-Pour traduire automatiquement des pages Internet externes, un service/API
-de traduction externe peut être ajouté ultérieurement.
-</div>
-
-</div>
-
-<!-- =====================================================
-     ACCUEIL
-===================================================== -->
-
-<section id="accueil" class="hero">
-
-<div class="hero-content">
-
-<div class="badges">
-
-<div class="badge">🇭🇹 Haïti</div>
-<div class="badge">🌎 International</div>
-<div class="badge">⚡ Électricité</div>
-<div class="badge">🔧 Réparation</div>
-<div class="badge">💻 Technologie</div>
-
-</div>
-
-<h1>
-<span data-i18n="hero.welcome">Bienvenue chez AHCElectronSRS</span>
-</h1>
-
-<div class="brand-subtitle">
-AHCElectron Sales and Repairs Services
-</div>
-
-<p data-i18n="hero.description">
-Électricité, réparation électronique, technologie, maintenance et solutions techniques pour les particuliers, entreprises et partenaires en Haïti et à l'international.
-</p>
-
-<a href="#services"
-class="btn"
-data-i18n="hero.services">
-Découvrir les services
-</a>
-
-<a href="#demande"
-class="btn secondary"
-data-i18n="hero.request">
-Préparer ma demande
-</a>
-
-<!-- RECHERCHE -->
-
-<div class="search-box">
-
-<div class="search-title">
-🔎 <span data-i18n="search.title">
-Recherche intelligente AHCElectronSRS
-</span>
-</div>
-
-<div class="search-row">
-
-<input
-id="siteSearch"
-class="search-input"
-type="search"
-placeholder="Service, produit, réparation, pays, département..."
-autocomplete="off"
-data-i18n-placeholder="search.placeholder"
->
-
-<button
-class="btn"
-type="button"
-onclick="searchAHCElectron()">
-🔎 <span data-i18n="search.button">Rechercher</span>
-</button>
-
-</div>
-
-<div class="search-mode">
-
-<button
-class="btn secondary"
-type="button"
-onclick="searchInternal()">
-🔎 <span data-i18n="search.internal">Dans AHCElectronSRS</span>
-</button>
-
-<button
-class="btn secondary"
-type="button"
-onclick="searchInternet()">
-🌐 <span data-i18n="search.internet">Sur Internet</span>
-</button>
-
-<button
-class="btn"
-type="button"
-onclick="searchEverywhere()">
-🔎🌐 <span data-i18n="search.everywhere">Partout</span>
-</button>
-
-</div>
-
-<div class="search-note"
-data-i18n="search.note">
-La recherche interne consulte les informations intégrées au site. La recherche Internet utilise un moteur externe.
-</div>
-
-<div id="searchResults"
-class="search-results">
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =====================================================
-     SERVICES
-===================================================== -->
 
 <section id="services">
 
-<div class="section-title">
+    <div class="sectionTitle">
 
-<h2 data-i18n="services.title">
-Nos services
-</h2>
+        <h2>Nos services</h2>
 
-<p data-i18n="services.subtitle">
-Chaque service peut être consulté avant de préparer une demande.
-</p>
+        <p>
+            Solutions techniques pour particuliers,
+            entreprises et professionnels.
+        </p>
 
-</div>
+    </div>
 
-<div class="grid">
+    <div class="services">
 
-<!-- ÉLECTRICITÉ -->
+        <div class="service">
 
-<div class="card">
+            <div class="serviceIcon">🔧</div>
 
-<div class="icon">⚡</div>
+            <h3>Réparation</h3>
 
-<h3 data-i18n="service.electricity">
-Électricité
-</h3>
+            <p>
+                Diagnostic et réparation de matériels
+                électroniques et technologiques.
+            </p>
 
-<p data-i18n="service.electricity.desc">
-Installation, diagnostic et maintenance électrique.
-</p>
+        </div>
 
-<button
-class="btn"
-type="button"
-onclick="openPackage('electricitePackages')">
 
-Voir les détails
-</button>
+        <div class="service">
 
-<div
-id="electricitePackages"
-class="service-details">
+            <div class="serviceIcon">⚡</div>
 
-<div class="package">
+            <h3>Électricité</h3>
 
-<h4>
-Diagnostic électrique
-</h4>
+            <p>
+                Installation, maintenance et dépannage
+                électrique.
+            </p>
 
-<ul>
-<li>Inspection de l'installation</li>
-<li>Recherche de panne</li>
-<li>Vérification des connexions</li>
-<li>Rapport de diagnostic</li>
-</ul>
+        </div>
 
-<div class="price">
-Prix : sur devis
-</div>
 
-<button
-class="btn"
-onclick="choosePackage('Diagnostic électrique')">
-Choisir
-</button>
+        <div class="service">
 
-</div>
+            <div class="serviceIcon">💻</div>
 
-<div class="package">
+            <h3>Informatique</h3>
 
-<h4>
-Installation / Maintenance électrique
-</h4>
+            <p>
+                Assistance informatique, maintenance,
+                configuration et dépannage.
+            </p>
 
-<ul>
-<li>Évaluation du besoin</li>
-<li>Préparation de l'intervention</li>
-<li>Installation ou entretien</li>
-<li>Contrôle final</li>
-</ul>
+        </div>
 
-<div class="price">
-Prix : sur devis
-</div>
 
-<button
-class="btn"
-onclick="choosePackage('Installation / Maintenance électrique')">
-Choisir
-</button>
+        <div class="service">
 
-</div>
+            <div class="serviceIcon">📡</div>
 
-</div>
+            <h3>Technologie</h3>
 
-</div>
+            <p>
+                Solutions technologiques, équipements,
+                composants et systèmes.
+            </p>
 
-<!-- RÉPARATION -->
+        </div>
 
-<div class="card">
-
-<div class="icon">🔧</div>
-
-<h3 data-i18n="service.repair">
-Réparation électronique
-</h3>
-
-<p data-i18n="service.repair.desc">
-Diagnostic et réparation d'équipements électroniques.
-</p>
-
-<button
-class="btn"
-onclick="openPackage('electroniquePackages')">
-Voir les détails
-</button>
-
-<div
-id="electroniquePackages"
-class="service-details">
-
-<div class="package">
-
-<h4>
-Diagnostic électronique
-</h4>
-
-<ul>
-<li>Examen de l'appareil</li>
-<li>Recherche de panne</li>
-<li>Contrôle de l'alimentation</li>
-<li>Identification des composants concernés</li>
-</ul>
-
-<button
-class="btn"
-onclick="choosePackage('Diagnostic électronique')">
-Choisir
-</button>
-
-</div>
-
-<div class="package">
-
-<h4>
-Réparation électronique
-</h4>
-
-<ul>
-<li>Diagnostic préalable</li>
-<li>Réparation ou remplacement de composants</li>
-<li>Tests de fonctionnement</li>
-<li>Compte rendu</li>
-</ul>
-
-<button
-class="btn"
-onclick="choosePackage('Réparation électronique')">
-Choisir
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- TECHNOLOGIE -->
-
-<div class="card">
-
-<div class="icon">💻</div>
-
-<h3 data-i18n="service.technology">
-Technologie
-</h3>
-
-<p data-i18n="service.technology.desc">
-Assistance informatique et solutions numériques.
-</p>
-
-<button
-class="btn"
-onclick="openPackage('technologiePackages')">
-Voir les détails
-</button>
-
-<div
-id="technologiePackages"
-class="service-details">
-
-<div class="package">
-
-<h4>
-Assistance technologique
-</h4>
-
-<ul>
-<li>Analyse</li>
-<li>Configuration</li>
-<li>Assistance utilisateur</li>
-<li>Tests</li>
-</ul>
-
-<button
-class="btn"
-onclick="choosePackage('Assistance technologique')">
-Choisir
-</button>
-
-</div>
-
-<div class="package">
-
-<h4>
-Solution numérique
-</h4>
-
-<ul>
-<li>Analyse du besoin</li>
-<li>Choix de solution</li>
-<li>Configuration</li>
-<li>Accompagnement</li>
-</ul>
-
-<button
-class="btn"
-onclick="choosePackage('Solution numérique')">
-Choisir
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- MAINTENANCE -->
-
-<div class="card">
-
-<div class="icon">🛠️</div>
-
-<h3 data-i18n="service.maintenance">
-Maintenance
-</h3>
-
-<p data-i18n="service.maintenance.desc">
-Entretien, diagnostic et suivi des équipements.
-</p>
-
-<button
-class="btn"
-onclick="openPackage('maintenancePackages')">
-Voir les détails
-</button>
-
-<div
-id="maintenancePackages"
-class="service-details">
-
-<div class="package">
-
-<h4>
-Maintenance préventive
-</h4>
-
-<ul>
-<li>Inspection</li>
-<li>Nettoyage technique selon équipement</li>
-<li>Contrôle</li>
-<li>Recommandations</li>
-</ul>
-
-<button
-class="btn"
-onclick="choosePackage('Maintenance préventive')">
-Choisir
-</button>
-
-</div>
-
-<div class="package">
-
-<h4>
-Maintenance complète
-</h4>
-
-<ul>
-<li>Diagnostic</li>
-<li>Entretien</li>
-<li>Contrôle général</li>
-<li>Tests</li>
-<li>Rapport</li>
-</ul>
-
-<button
-class="btn"
-onclick="choosePackage('Maintenance complète')">
-Choisir
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =====================================================
-     PRODUITS
-===================================================== -->
 
-<section id="produits">
+<section>
 
-<div class="section-title">
+    <div class="sectionTitle">
 
-<h2 data-i18n="products.title">
-Produits & solutions
-</h2>
+        <h2>Actualités technologiques</h2>
 
-<p data-i18n="products.subtitle">
-Solutions et équipements selon les besoins et disponibilités.
-</p>
+        <p>
+            Découvrez quelques domaines qui inspirent
+            l'évolution technologique.
+        </p>
 
-</div>
+    </div>
 
-<div class="grid">
+    <div class="blogGrid">
 
-<div class="card">
+        <article class="blogCard">
 
-<div class="icon">🔋</div>
+            <img
+                src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80"
+                alt="Smartphone">
 
-<h3>Solutions d'alimentation</h3>
+            <div class="blogCardContent">
 
-<p>
-Batteries, alimentation, solutions de secours et équipements selon disponibilité.
-</p>
+                <h3>Smartphones</h3>
 
-<button
-class="btn"
-onclick="choosePackage('Solution d alimentation')">
-Demander
-</button>
+                <p>
+                    Évolution des appareils mobiles,
+                    connectivité et services numériques.
+                </p>
 
-</div>
+            </div>
 
-<div class="card">
+        </article>
 
-<div class="icon">💡</div>
 
-<h3>Éclairage</h3>
+        <article class="blogCard">
 
-<p>
-Solutions d'éclairage pour différents besoins.
-</p>
+            <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80"
+                alt="Audio">
 
-<button
-class="btn"
-onclick="choosePackage('Solution éclairage')">
-Demander
-</button>
+            <div class="blogCardContent">
 
-</div>
+                <h3>Audio</h3>
 
-<div class="card">
+                <p>
+                    Équipements audio, haut-parleurs,
+                    accessoires et réparation.
+                </p>
 
-<div class="icon">📱</div>
+            </div>
 
-<h3>Technologie</h3>
+        </article>
 
-<p>
-Produits et équipements technologiques selon disponibilité.
-</p>
 
-<button
-class="btn"
-onclick="choosePackage('Produit technologique')">
-Demander
-</button>
+        <article class="blogCard">
 
-</div>
+            <img
+                src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?auto=format&fit=crop&w=900&q=80"
+                alt="Ordinateur">
 
-<div class="card">
+            <div class="blogCardContent">
 
-<div class="icon">⚙️</div>
+                <h3>Informatique</h3>
 
-<h3>Composants</h3>
+                <p>
+                    Ordinateurs, accessoires, maintenance
+                    et solutions numériques.
+                </p>
 
-<p>
-Composants et accessoires électroniques.
-</p>
+            </div>
 
-<button
-class="btn"
-onclick="choosePackage('Composants / accessoires')">
-Demander
-</button>
+        </article>
 
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =====================================================
-     RÉALISATIONS
-===================================================== -->
 
-<section id="realisations">
+<section id="shop">
 
-<div class="section-title">
+    <div class="sectionTitle">
 
-<h2 data-i18n="projects.title">
-Réalisations
-</h2>
+        <h2>🛒 Boutique AHCElectron</h2>
 
-<p data-i18n="projects.subtitle">
-Des exemples de travaux permettant au client de comprendre le type d'intervention proposé.
-</p>
+        <p>
+            Produits disponibles selon le stock enregistré
+            dans notre système.
+        </p>
 
-</div>
+    </div>
 
-<div class="grid">
 
-<div class="card">
+    <div class="shopContainer">
 
-<div class="icon">📺</div>
+        <div class="categories">
 
-<h3>Réparation électronique</h3>
+            <button
+                class="categoryButton active"
+                onclick="filterCategory('all',this)">
+                Tous
+            </button>
 
-<p>
-Exemple de démarche pour un équipement électronique.
-</p>
+            <button
+                class="categoryButton"
+                onclick="filterCategory('smartphones',this)">
+                Smartphones
+            </button>
 
-<button
-class="btn"
-onclick="toggleProject('project1')">
-Voir la réalisation
-</button>
+            <button
+                class="categoryButton"
+                onclick="filterCategory('audio',this)">
+                Audio
+            </button>
 
-<div
-id="project1"
-class="project-details">
+            <button
+                class="categoryButton"
+                onclick="filterCategory('informatique',this)">
+                Informatique
+            </button>
 
-<strong>Processus :</strong>
+            <button
+                class="categoryButton"
+                onclick="filterCategory('composants',this)">
+                Composants
+            </button>
 
-<p>
-Diagnostic → identification de panne → contrôle des composants → réparation → test final.
-</p>
+            <button
+                class="categoryButton"
+                onclick="filterCategory('energie',this)">
+                Énergie
+            </button>
 
-</div>
+            <button
+                class="categoryButton"
+                onclick="filterCategory('securite',this)">
+                Sécurité
+            </button>
 
-</div>
+        </div>
 
-<div class="card">
 
-<div class="icon">🔊</div>
+        <div
+            class="loading"
+            id="loading">
+            Chargement de la boutique...
+        </div>
 
-<h3>Audio & équipements</h3>
 
-<p>
-Exemple de diagnostic audio et électronique.
-</p>
+        <div
+            class="errorBox"
+            id="shopError">
+        </div>
 
-<button
-class="btn"
-onclick="toggleProject('project2')">
-Voir la réalisation
-</button>
 
-<div
-id="project2"
-class="project-details">
+        <div
+            class="productGrid"
+            id="productGrid">
+        </div>
 
-<strong>Processus :</strong>
-
-<p>
-Recherche de parasites → contrôle du câblage → vérification des composants → réparation → test audio.
-</p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="icon">⚡</div>
-
-<h3>Installation électrique</h3>
-
-<p>
-Exemple d'intervention électrique.
-</p>
-
-<button
-class="btn"
-onclick="toggleProject('project3')">
-Voir la réalisation
-</button>
-
-<div
-id="project3"
-class="project-details">
-
-<strong>Processus :</strong>
-
-<p>
-Évaluation → préparation → installation → contrôle → remise au client.
-</p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="icon">💻</div>
-
-<h3>Solution technologique</h3>
-
-<p>
-Exemple de mise en place d'une solution numérique.
-</p>
-
-<button
-class="btn"
-onclick="toggleProject('project4')">
-Voir la réalisation
-</button>
-
-<div
-id="project4"
-class="project-details">
-
-<strong>Processus :</strong>
-
-<p>
-Analyse du besoin → configuration → tests → explication au client.
-</p>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =====================================================
-     ZONE
-===================================================== -->
 
-<section id="zone" class="coverage">
+<section>
 
-<div class="coverage-inner">
+    <div class="sectionTitle">
 
-<div class="section-title">
+        <h2>Les pionniers de la technologie</h2>
 
-<h2 data-i18n="zone.title">
-🇭🇹 Haïti + 🌎 International
-</h2>
+        <p>
+            Quelques figures historiques ayant contribué
+            à l'évolution des sciences et technologies.
+        </p>
 
-<p data-i18n="zone.subtitle">
-Sélectionnez votre zone pour afficher les possibilités correspondantes.
-</p>
+    </div>
 
-</div>
 
-<div class="zone-selector">
+    <div class="experts">
 
-<div class="form-group">
+        <div class="expert">
 
-<label for="zoneSelect">
-🌍 <span data-i18n="zone.question">
-Où se trouve le client ?
-</span>
-</label>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Michael_Faraday_1842.jpg"
+                alt="Michael Faraday">
 
-<select
-id="zoneSelect"
-onchange="changeZone()">
+            <h3>Michael Faraday</h3>
 
-<option value="">
--- Sélectionner --
-</option>
+            <p>
+                Travaux fondamentaux sur
+                l'électromagnétisme.
+            </p>
 
-<option value="haiti">
-🇭🇹 Haïti
-</option>
+        </div>
 
-<option value="international">
-🌎 International
-</option>
 
-</select>
+        <div class="expert">
 
-</div>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Thomas_Edison2.jpg"
+                alt="Thomas Edison">
 
-<!-- DÉPARTEMENTS -->
+            <h3>Thomas Edison</h3>
 
-<div id="haitiDepartments">
+            <p>
+                Contributions majeures à
+                l'électricité et aux inventions.
+            </p>
 
-<h3>🇭🇹 Les 10 départements d'Haïti</h3>
+        </div>
 
-<div class="department-grid">
 
-<div class="department"
-onclick="selectLocation('Ouest')">
-Ouest
-</div>
+        <div class="expert">
 
-<div class="department"
-onclick="selectLocation('Nord')">
-Nord
-</div>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/79/Tesla_circa_1890.jpeg"
+                alt="Nikola Tesla">
 
-<div class="department"
-onclick="selectLocation('Nord-Est')">
-Nord-Est
-</div>
+            <h3>Nikola Tesla</h3>
 
-<div class="department"
-onclick="selectLocation('Nord-Ouest')">
-Nord-Ouest
-</div>
+            <p>
+                Travaux importants sur les systèmes
+                électriques et le courant alternatif.
+            </p>
 
-<div class="department"
-onclick="selectLocation('Artibonite')">
-Artibonite
-</div>
+        </div>
 
-<div class="department"
-onclick="selectLocation('Centre')">
-Centre
-</div>
 
-<div class="department"
-onclick="selectLocation('Sud')">
-Sud
-</div>
+        <div class="expert">
 
-<div class="department"
-onclick="selectLocation('Sud-Est')">
-Sud-Est
-</div>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/1/14/Alexander_Graham_Bell.jpg"
+                alt="Alexander Graham Bell">
 
-<div class="department"
-onclick="selectLocation('Grand’Anse')">
-Grand’Anse
-</div>
+            <h3>Alexander Graham Bell</h3>
 
-<div class="department"
-onclick="selectLocation('Nippes')">
-Nippes
-</div>
+            <p>
+                Contributions historiques aux
+                télécommunications.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
-<!-- INTERNATIONAL -->
+</section>
 
-<div id="internationalCountries">
 
-<div class="international-box">
+<section>
 
-<h3>
-🌎 Client international
-</h3>
+    <div class="sectionTitle">
 
-<p>
-Sélectionnez le pays afin de préparer correctement votre demande.
-</p>
+        <h2>👤 Espace client</h2>
 
-<div class="form-group">
+        <p>
+            Votre compte permet de retrouver vos commandes
+            et votre identité de connexion.
+        </p>
 
-<label for="countrySelect">
-Pays
-</label>
+    </div>
 
-<select
-id="countrySelect"
-onchange="selectLocation(this.value)">
 
-<option value="">
--- Sélectionner un pays --
-</option>
+    <div class="accountBox">
 
-</select>
+        <p id="accountStatus">
+            Vous n'êtes pas connecté.
+        </p>
 
-</div>
+        <button
+            class="primaryButton"
+            onclick="openAccount()">
+            Gérer mon compte
+        </button>
 
-</div>
+    </div>
 
-</div>
 
-<!-- LOCALISATION -->
+    <div
+        class="profileInfo"
+        id="profileInfo"
+        style="display:none;">
 
-<div class="location-panel">
+        <p>
+            <strong>Email :</strong>
+            <span id="profileEmail">—</span>
+        </p>
 
-<h3>
-📍 Identification géographique de la demande
-</h3>
+        <p>
+            <strong>ID utilisateur :</strong>
+            <span id="profileUserId">—</span>
+        </p>
 
-<p>
-Vous pouvez vérifier volontairement votre position actuelle ou rechercher
-manuellement une adresse.
-</p>
+        <div class="modalActions">
 
-<div class="location-buttons">
+            <button
+                onclick="openOrders()">
+                📦 Mes commandes
+            </button>
 
-<button
-class="btn"
-type="button"
-onclick="getCurrentLocation()">
-🛰️ Vérifier ma position actuelle
-</button>
+            <button
+                onclick="logoutAccount()">
+                Déconnexion
+            </button>
 
-<button
-class="btn secondary"
-type="button"
-onclick="useManualLocation()">
-🔎 Rechercher une adresse
-</button>
+        </div>
 
-</div>
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- PRODUCT MODAL -->
 
 <div
-id="manualLocation"
-class="manual-location">
+    class="modal"
+    id="productModal">
 
-<div class="form-group">
+    <div class="modalContent">
 
-<label for="manualAddress">
-Adresse à rechercher
-</label>
+        <button
+            class="closeModal"
+            onclick="closeModal('productModal')">
+            ×
+        </button>
 
-<input
-id="manualAddress"
-type="text"
-placeholder="Rue, ruelle, zone, ville, département, code postal...">
+        <div id="productDetails"></div>
+
+        <div class="formGroup">
+
+            <label for="productQuantity">
+                Quantité
+            </label>
+
+            <input
+                id="productQuantity"
+                type="number"
+                min="1"
+                value="1">
+
+        </div>
+
+        <div class="modalActions">
+
+            <button
+                class="primary"
+                onclick="addSelectedProductToCart()">
+                🛒 Ajouter au panier
+            </button>
+
+        </div>
+
+    </div>
 
 </div>
 
-<button
-class="btn"
-type="button"
-onclick="searchManualLocation()">
-🔎 Vérifier cette adresse
-</button>
 
-</div>
+<!-- CART MODAL -->
 
 <div
-id="locationStatus"
-class="location-status">
+    class="modal"
+    id="cartModal">
 
-<div class="location-line">
-<strong>Statut :</strong>
-<span id="locStatusText"></span>
-</div>
+    <div class="modalContent">
 
-<div class="location-line">
-<strong>Adresse reconnue :</strong>
-<span id="locAddress">—</span>
-</div>
+        <button
+            class="closeModal"
+            onclick="closeModal('cartModal')">
+            ×
+        </button>
 
-<div class="location-line">
-<strong>Rue / voie :</strong>
-<span id="locRoad">—</span>
-</div>
+        <h2>🛒 Votre panier</h2>
 
-<div class="location-line">
-<strong>Quartier / zone :</strong>
-<span id="locNeighborhood">—</span>
-</div>
+        <div id="cartItems"></div>
 
-<div class="location-line">
-<strong>Ville :</strong>
-<span id="locCity">—</span>
-</div>
+        <div
+            class="cartTotal"
+            id="cartTotal">
+            Total : 0 HTG
+        </div>
 
-<div class="location-line">
-<strong>Commune :</strong>
-<span id="locMunicipality">—</span>
-</div>
+        <div class="securityNotice">
 
-<div class="location-line">
-<strong>Département / région :</strong>
-<span id="locRegion">—</span>
-</div>
+            🔐 <strong>Sécurité de la commande :</strong>
+            le prix affiché ici est un aperçu.
+            Le stock et le montant final sont recalculés
+            côté serveur au moment de la commande.
 
-<div class="location-line">
-<strong>Pays :</strong>
-<span id="locCountry">—</span>
-</div>
+        </div>
 
-<div class="location-line">
-<strong>Code postal :</strong>
-<span id="locPostcode">—</span>
-</div>
 
-<div class="location-line">
-<strong>Latitude :</strong>
-<span id="locLatitude">—</span>
-</div>
+        <div class="formGroup">
 
-<div class="location-line">
-<strong>Longitude :</strong>
-<span id="locLongitude">—</span>
-</div>
+            <label for="customerName">
+                Nom complet
+            </label>
 
-<div class="location-line">
-<strong>Date / heure de vérification :</strong>
-<span id="locTime">—</span>
-</div>
+            <input
+                id="customerName"
+                type="text"
+                autocomplete="name"
+                placeholder="Votre nom complet">
 
-<a
-id="locationMap"
-class="location-map"
-href="#"
-target="_blank"
-rel="noopener">
-🗺️ Voir la position sur OpenStreetMap
-</a>
+        </div>
 
-</div>
 
-<div class="location-history">
+        <div class="formGroup">
 
-<h4>
-🕘 Ancienne adresse / ancienne localisation
-</h4>
+            <label for="customerPhone">
+                Téléphone
+            </label>
 
-<p>
-Cette information reste séparée de la localisation actuelle.
-</p>
+            <input
+                id="customerPhone"
+                type="tel"
+                autocomplete="tel"
+                placeholder="Votre numéro de téléphone">
 
-<div class="form-group">
+        </div>
 
-<textarea
-id="oldAddress"
-rows="3"
-placeholder="Ancienne adresse, ancienne ville, ancienne zone ou autre information utile...">
-</textarea>
 
-</div>
+        <h3 style="margin:20px 0 10px;">
+            📍 Adresse de livraison
+        </h3>
 
-</div>
 
-<div class="location-privacy">
+        <div class="formGroup">
 
-🔐 La localisation GPS n'est jamais demandée automatiquement.
-Le navigateur doit recevoir votre autorisation. Une localisation vérifiée
-reste dans la page jusqu'à ce que vous choisissiez volontairement de
-l'envoyer dans votre demande. Ne fournissez pas une adresse privée si elle
-n'est pas nécessaire au service demandé.
+            <label for="deliveryCity">
+                Ville
+            </label>
 
-</div>
+            <input
+                id="deliveryCity"
+                type="text"
+                placeholder="Ex. Port-au-Prince">
 
-</div>
+        </div>
 
-<div class="international-box">
 
-<h3>
-🌎 Informations internationales
-</h3>
+        <div class="formGroup">
 
-<p>
-Les clients situés hors d'Haïti peuvent indiquer leur pays, leur ville,
-leur besoin et, lorsque nécessaire, leur adresse de service. Les clients
-en Haïti peuvent sélectionner leur département.
-</p>
+            <label for="deliveryZone">
+                Zone / quartier
+            </label>
 
-</div>
+            <input
+                id="deliveryZone"
+                type="text"
+                placeholder="Zone ou quartier">
 
-</div>
+        </div>
 
-</section>
 
-<!-- =====================================================
-     DEMANDE
-===================================================== -->
+        <div class="formGroup">
 
-<section id="demande">
+            <label for="deliveryStreet">
+                Rue / ruelle
+            </label>
 
-<div class="section-title">
+            <input
+                id="deliveryStreet"
+                type="text"
+                placeholder="Rue ou ruelle">
 
-<h2 data-i18n="request.title">
-📋 Préparer une demande
-</h2>
+        </div>
 
-<p data-i18n="request.subtitle">
-Les informations permettent de préparer la demande avant tout contact.
-</p>
 
-</div>
+        <div class="formGroup">
 
-<div class="contact-form">
+            <label for="deliveryPostalCode">
+                Code postal
+            </label>
 
-<div class="form-group">
+            <input
+                id="deliveryPostalCode"
+                type="text"
+                placeholder="Code postal si disponible">
 
-<label for="clientName">
-Nom / entreprise
-</label>
+        </div>
 
-<input
-id="clientName"
-type="text"
-placeholder="Votre nom ou nom de l'entreprise">
 
-</div>
+        <div class="formGroup">
 
-<div class="form-group">
+            <label for="deliveryLandmark">
+                Point de repère
+            </label>
 
-<label for="clientPhone">
-Téléphone / WhatsApp
-</label>
+            <input
+                id="deliveryLandmark"
+                type="text"
+                placeholder="Point de repère">
 
-<input
-id="clientPhone"
-type="tel"
-placeholder="+509 ...">
+        </div>
 
-</div>
 
-<div class="form-group">
+        <div class="formGroup">
 
-<label for="clientCity">
-Ville / zone déclarée
-</label>
+            <label for="deliveryAddress">
+                Informations supplémentaires
+            </label>
 
-<input
-id="clientCity"
-type="text"
-placeholder="Ville, commune, zone...">
+            <textarea
+                id="deliveryAddress"
+                placeholder="Appartement, étage, précision ou autre information utile"></textarea>
 
-</div>
+        </div>
 
-<div class="form-group">
 
-<label for="selectedPackage">
-Service / produit sélectionné
-</label>
+        <div class="formGroup">
 
-<input
-id="selectedPackage"
-type="text"
-readonly
-placeholder="Sélectionnez un service, produit ou moyen de paiement">
+            <label for="paymentMethod">
+                Mode de paiement
+            </label>
+
+            <select id="paymentMethod">
+
+                <option value="">
+                    Sélectionner
+                </option>
+
+                <option value="moncash">
+                    MonCash
+                </option>
+
+                <option value="natcash">
+                    NatCash
+                </option>
+
+                <option value="confirmation">
+                    Paiement à confirmer
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="modalActions">
+
+            <button
+                class="primary"
+                onclick="submitOrder()">
+                ✅ Confirmer la commande
+            </button>
+
+        </div>
+
+    </div>
 
 </div>
 
-<div class="form-group">
 
-<label for="quantity">
-Quantité
-</label>
-
-<input
-id="quantity"
-type="number"
-min="1"
-value="1">
-
-</div>
-
-<div class="form-group">
-
-<label for="clientBudget">
-Budget indicatif — facultatif
-</label>
-
-<input
-id="clientBudget"
-type="text"
-placeholder="Montant ou intervalle souhaité">
-
-</div>
-
-<div class="form-group">
-
-<label for="clientDescription">
-Description du besoin
-</label>
-
-<textarea
-id="clientDescription"
-rows="6"
-placeholder="Décrivez le problème, le produit recherché ou le service souhaité...">
-</textarea>
-
-</div>
-
-<div class="summary">
-
-<h3>
-Résumé de la demande
-</h3>
-
-<div class="summary-line">
-<strong>Zone :</strong>
-<span id="summaryZone">—</span>
-</div>
-
-<div class="summary-line">
-<strong>Nom :</strong>
-<span id="summaryName">—</span>
-</div>
-
-<div class="summary-line">
-<strong>Service / produit :</strong>
-<span id="summaryPackage">—</span>
-</div>
-
-<div class="summary-line">
-<strong>Quantité :</strong>
-<span id="summaryQuantity">1</span>
-</div>
-
-<div class="summary-line">
-<strong>Budget :</strong>
-<span id="summaryBudget">—</span>
-</div>
-
-<div class="summary-line">
-<strong>Localisation vérifiée :</strong>
-<span id="summaryVerifiedLocation">Non vérifiée</span>
-</div>
-
-<div class="summary-line">
-<strong>Ancienne adresse :</strong>
-<span id="summaryOldAddress">—</span>
-</div>
-
-<div class="summary-line">
-<strong>Heure de vérification :</strong>
-<span id="summaryLocationTime">—</span>
-</div>
-
-<p class="small" style="margin-top:15px;">
-⚠️ Le prix final doit être confirmé avec AHCElectronSRS.
-La préparation de cette demande ne constitue pas une confirmation
-automatique du prix ou de la disponibilité.
-</p>
-
-<button
-class="btn whatsapp"
-type="button"
-onclick="sendRequest()">
-📱 Envoyer la demande par WhatsApp
-</button>
+<!-- ACCOUNT MODAL -->
 
 <div
-id="requestMessage"
-class="message">
-</div>
+    class="modal"
+    id="accountModal">
+
+    <div class="modalContent">
+
+        <button
+            class="closeModal"
+            onclick="closeModal('accountModal')">
+            ×
+        </button>
+
+        <h2>👤 Compte AHCElectron</h2>
+
+        <div class="formGroup">
+
+            <label for="accountEmail">
+                Email
+            </label>
+
+            <input
+                id="accountEmail"
+                type="email"
+                autocomplete="email"
+                placeholder="votre@email.com">
+
+        </div>
+
+
+        <div class="formGroup">
+
+            <label for="accountPassword">
+                Mot de passe
+            </label>
+
+            <input
+                id="accountPassword"
+                type="password"
+                autocomplete="current-password"
+                placeholder="Votre mot de passe">
+
+        </div>
+
+
+        <div class="modalActions">
+
+            <button
+                class="primary"
+                onclick="loginAccount()">
+                Connexion
+            </button>
+
+            <button
+                onclick="createAccount()">
+                Créer un compte
+            </button>
+
+            <button
+                onclick="resetPassword()">
+                Mot de passe oublié
+            </button>
+
+        </div>
+
+    </div>
 
 </div>
 
-</div>
 
-</section>
+<!-- ORDERS MODAL -->
 
-<!-- =====================================================
-     PAIEMENT
-===================================================== -->
+<div
+    class="modal"
+    id="ordersModal">
 
-<section id="paiement">
+    <div class="modalContent">
 
-<div class="section-title">
+        <button
+            class="closeModal"
+            onclick="closeModal('ordersModal')">
+            ×
+        </button>
 
-<h2 data-i18n="payment.title">
-💳 Moyens de paiement
-</h2>
+        <h2>📦 Mes commandes</h2>
 
-<p data-i18n="payment.subtitle">
-Les options préparent le moyen de paiement. Une connexion officielle à
-un service de paiement est nécessaire pour réaliser automatiquement
-une transaction en ligne.
-</p>
+        <div id="ordersList">
+            Chargement...
+        </div>
 
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<div class="icon">📱</div>
-
-<h3>
-MonCash
-</h3>
-
-<p>
-Haïti — préparation d'une demande de paiement MonCash.
-</p>
-
-<button
-class="btn"
-onclick="choosePackage('Paiement MonCash')">
-Choisir
-</button>
+    </div>
 
 </div>
 
-<div class="card">
 
-<div class="icon">💳</div>
-
-<h3>
-NatCash
-</h3>
-
-<p>
-Haïti — préparation d'une demande de paiement NatCash.
-</p>
-
-<button
-class="btn"
-onclick="choosePackage('Paiement NatCash')">
-Choisir
-</button>
-
+<div
+    class="notification"
+    id="notification">
 </div>
 
-<div class="card">
-
-<div class="icon">🌎💳</div>
-
-<h3>
-Carte bancaire
-</h3>
-
-<p>
-International — préparation d'un paiement par carte bancaire.
-</p>
-
-<button
-class="btn"
-onclick="choosePackage('Paiement par carte bancaire')">
-Choisir
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="icon">🧾</div>
-
-<h3>
-Autre moyen
-</h3>
-
-<p>
-Autre méthode de paiement à déterminer avec le client.
-</p>
-
-<button
-class="btn"
-onclick="choosePackage('Autre moyen de paiement')">
-Choisir
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section id="contact">
-
-<div class="section-title">
-
-<h2 data-i18n="contact.title">
-📞 Contact
-</h2>
-
-<p>
-AHCElectronSRS — AHCElectron Sales and Repairs Services
-</p>
-
-</div>
-
-<div class="contact-box">
-
-<a
-class="phone"
-href="tel:+50938106763">
-+509 3810 6763
-</a>
-
-<div>
-
-<a
-class="btn whatsapp"
-href="https://wa.me/50938106763"
-target="_blank"
-rel="noopener">
-📱 WhatsApp
-</a>
-
-<a
-class="btn secondary"
-href="tel:+50938106763">
-📞 Appeler
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
 
 <footer>
 
-<div class="footer-logo">
-AHCElectronSRS
-</div>
+    <p>
+        <strong>AHCElectron Sales and Repairs Services</strong>
+    </p>
 
-<div>
-AHCElectron Sales and Repairs Services
-</div>
+    <p>
+        Électricité • Réparation • Électronique •
+        Maintenance • Technologie
+    </p>
 
-<div class="small">
-Électricité • Réparation • Électronique • Maintenance • Technologie
-</div>
-
-<div class="small" style="margin-top:8px;">
-🇭🇹 Les 10 départements d'Haïti • 🌎 International
-</div>
-
-<a
-class="phone"
-href="tel:+50938106763">
-+509 3810 6763
-</a>
-
-<div class="small">
-© 2026 AHCElectronSRS — Tous droits réservés.
-</div>
+    <p>
+        © <span id="year"></span> AHCElectronSRS
+    </p>
 
 </footer>
 
-<!-- MESSAGE DES OUTILS -->
 
-<div
-id="taskResult"
-class="task-result">
-<strong>AHCElectronSRS</strong>
-<span id="taskResultText"></span>
-</div>
+<!-- SUPABASE -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 
 <script>
 
 /* =========================================================
-   LISTE DES PAYS
-========================================================= */
+   CONFIGURATION SUPABASE
+   ========================================================= */
 
-const countries = [
+const SUPABASE_URL =
+"REMPLACER_PAR_URL_SUPABASE";
 
-"Afghanistan",
-"Afrique du Sud",
-"Albanie",
-"Algérie",
-"Allemagne",
-"Andorre",
-"Angola",
-"Antigua-et-Barbuda",
-"Arabie saoudite",
-"Argentine",
-"Arménie",
-"Australie",
-"Autriche",
-"Azerbaïdjan",
-"Bahamas",
-"Bahreïn",
-"Bangladesh",
-"Barbade",
-"Belgique",
-"Belize",
-"Bénin",
-"Bhoutan",
-"Biélorussie",
-"Bolivie",
-"Bosnie-Herzégovine",
-"Botswana",
-"Brésil",
-"Brunei",
-"Bulgarie",
-"Burkina Faso",
-"Burundi",
-"Cabo Verde",
-"Canada",
-"Cameroun",
-"Chili",
-"Chine",
-"Chypre",
-"Colombie",
-"Comores",
-"Congo",
-"Costa Rica",
-"Côte d'Ivoire",
-"Croatie",
-"Cuba",
-"Danemark",
-"Djibouti",
-"Dominique",
-"Égypte",
-"Émirats arabes unis",
-"Équateur",
-"Érythrée",
-"Espagne",
-"Estonie",
-"Eswatini",
-"États-Unis",
-"Éthiopie",
-"Fidji",
-"Finlande",
-"France",
-"Gabon",
-"Gambie",
-"Géorgie",
-"Ghana",
-"Grèce",
-"Grenade",
-"Guatemala",
-"Guinée",
-"Guinée-Bissau",
-"Guinée équatoriale",
-"Guyana",
-"Haïti",
-"Honduras",
-"Hongrie",
-"Inde",
-"Indonésie",
-"Irlande",
-"Islande",
-"Israël",
-"Italie",
-"Jamaïque",
-"Japon",
-"Jordanie",
-"Kenya",
-"Kiribati",
-"Koweït",
-"Laos",
-"Lettonie",
-"Liban",
-"Lesotho",
-"Libéria",
-"Libye",
-"Liechtenstein",
-"Lituanie",
-"Luxembourg",
-"Madagascar",
-"Malaisie",
-"Malawi",
-"Maldives",
-"Mali",
-"Malte",
-"Maroc",
-"Maurice",
-"Mauritanie",
-"Mexique",
-"Micronésie",
-"Monaco",
-"Mongolie",
-"Monténégro",
-"Mozambique",
-"Myanmar",
-"Namibie",
-"Nauru",
-"Népal",
-"Nicaragua",
-"Niger",
-"Nigeria",
-"Norvège",
-"Nouvelle-Zélande",
-"Oman",
-"Ouganda",
-"Ouzbékistan",
-"Pakistan",
-"Palau",
-"Panama",
-"Papouasie-Nouvelle-Guinée",
-"Paraguay",
-"Pays-Bas",
-"Pérou",
-"Philippines",
-"Pologne",
-"Portugal",
-"Qatar",
-"République centrafricaine",
-"République démocratique du Congo",
-"République dominicaine",
-"République tchèque",
-"Roumanie",
-"Royaume-Uni",
-"Russie",
-"Rwanda",
-"Saint-Christophe-et-Niévès",
-"Sainte-Lucie",
-"Saint-Marin",
-"Saint-Vincent-et-les-Grenadines",
-"Salomon",
-"Salvador",
-"Samoa",
-"Sao Tomé-et-Principe",
-"Sénégal",
-"Serbie",
-"Seychelles",
-"Sierra Leone",
-"Singapour",
-"Slovaquie",
-"Slovénie",
-"Somalie",
-"Soudan",
-"Soudan du Sud",
-"Suriname",
-"Suède",
-"Suisse",
-"Syrie",
-"Taïwan",
-"Tadjikistan",
-"Tanzanie",
-"Tchad",
-"Thaïlande",
-"Timor oriental",
-"Togo",
-"Tonga",
-"Trinité-et-Tobago",
-"Tunisie",
-"Turkménistan",
-"Tuvalu",
-"Türkiye",
-"Ukraine",
-"Uruguay",
-"Vanuatu",
-"Vatican",
-"Venezuela",
-"Vietnam",
-"Yémen",
-"Zambie",
-"Zimbabwe"
+const SUPABASE_PUBLISHABLE_KEY =
+"REMPLACER_PAR_CLE_PUBLIABLE_SUPABASE";
+
+
+let supabaseClient = null;
+
+if(
+    SUPABASE_URL &&
+    SUPABASE_PUBLISHABLE_KEY &&
+    !SUPABASE_URL.includes("REMPLACER_PAR") &&
+    !SUPABASE_PUBLISHABLE_KEY.includes("REMPLACER_PAR")
+){
+    supabaseClient =
+        window.supabase.createClient(
+            SUPABASE_URL,
+            SUPABASE_PUBLISHABLE_KEY
+        );
+}
+
+
+/* =========================================================
+   ÉTAT DU SITE
+   ========================================================= */
+
+let products = [];
+
+let cart = [];
+
+let selectedProduct = null;
+
+let currentCategory = "all";
+
+let currentUser = null;
+
+
+/* =========================================================
+   PRODUITS DE SECOURS
+   ========================================================= */
+
+const localProducts = [
+
+    {
+        id:"demo-smartphone",
+        name:"Smartphone",
+        reference:"DEMO-SP",
+        brand:"AHCElectron",
+        category:"smartphones",
+        description:"Produit de démonstration.",
+        price_htg:0,
+        price_usd:0,
+        stock:0,
+        image_url:"",
+        active:true
+    },
+
+    {
+        id:"demo-audio",
+        name:"Équipement audio",
+        reference:"DEMO-AUDIO",
+        brand:"AHCElectron",
+        category:"audio",
+        description:"Produit de démonstration.",
+        price_htg:0,
+        price_usd:0,
+        stock:0,
+        image_url:"",
+        active:true
+    },
+
+    {
+        id:"demo-computer",
+        name:"Ordinateur",
+        reference:"DEMO-PC",
+        brand:"AHCElectron",
+        category:"informatique",
+        description:"Produit de démonstration.",
+        price_htg:0,
+        price_usd:0,
+        stock:0,
+        image_url:"",
+        active:true
+    },
+
+    {
+        id:"demo-component",
+        name:"Composant électronique",
+        reference:"DEMO-COMP",
+        brand:"AHCElectron",
+        category:"composants",
+        description:"Produit de démonstration.",
+        price_htg:0,
+        price_usd:0,
+        stock:0,
+        image_url:"",
+        active:true
+    },
+
+    {
+        id:"demo-energy",
+        name:"Équipement énergétique",
+        reference:"DEMO-ENERGY",
+        brand:"AHCElectron",
+        category:"energie",
+        description:"Produit de démonstration.",
+        price_htg:0,
+        price_usd:0,
+        stock:0,
+        image_url:"",
+        active:true
+    },
+
+    {
+        id:"demo-security",
+        name:"Équipement de sécurité",
+        reference:"DEMO-SEC",
+        brand:"AHCElectron",
+        category:"securite",
+        description:"Produit de démonstration.",
+        price_htg:0,
+        price_usd:0,
+        stock:0,
+        image_url:"",
+        active:true
+    }
 
 ];
 
-countries.sort((a,b)=>a.localeCompare(b,"fr"));
-
-const countrySelect=document.getElementById("countrySelect");
-
-countries.forEach(country=>{
-
-    const option=document.createElement("option");
-
-    option.value=country;
-    option.textContent=country;
-
-    countrySelect.appendChild(option);
-
-});
-
-/* =========================================================
-   ÉTAT DE L'APPLICATION
-========================================================= */
-
-let selectedLocation="";
-let verifiedLocationData=null;
-let locationVerificationTime="";
-let locationCoordinates=null;
 
 /* =========================================================
    UTILITAIRES
-========================================================= */
-
-function showTaskMessage(message){
-
-    const box=document.getElementById("taskResult");
-    const text=document.getElementById("taskResultText");
-
-    text.textContent=" — "+message;
-
-    box.classList.add("active");
-
-    setTimeout(()=>{
-        box.classList.remove("active");
-    },4500);
-}
+   ========================================================= */
 
 function escapeHTML(value){
 
@@ -2791,1724 +1729,1727 @@ function escapeHTML(value){
         .replace(/>/g,"&gt;")
         .replace(/"/g,"&quot;")
         .replace(/'/g,"&#039;");
+
 }
+
+
+function escapeJS(value){
+
+    return String(value ?? "")
+        .replace(/\\/g,"\\\\")
+        .replace(/'/g,"\\'")
+        .replace(/\n/g,"\\n")
+        .replace(/\r/g,"\\r");
+
+}
+
+
+function formatMoney(value){
+
+    return Number(value || 0)
+        .toLocaleString("fr-FR",{
+            maximumFractionDigits:2
+        });
+
+}
+
+
+function showNotification(message){
+
+    const box =
+        document.getElementById("notification");
+
+    box.textContent = message;
+
+    box.style.display = "block";
+
+    setTimeout(() => {
+
+        box.style.display = "none";
+
+    },4500);
+
+}
+
 
 /* =========================================================
-   BARRE D'OUTILS
-========================================================= */
+   CHARGEMENT DES PRODUITS
+   ========================================================= */
 
-function focusSearch(){
+async function loadProducts(){
 
-    const input=document.getElementById("siteSearch");
+    const loading =
+        document.getElementById("loading");
 
-    document.getElementById("accueil")
-        .scrollIntoView({behavior:"smooth"});
+    const errorBox =
+        document.getElementById("shopError");
 
-    setTimeout(()=>{
-        input.focus();
-    },500);
+    loading.style.display = "block";
 
-}
+    errorBox.style.display = "none";
 
-async function shareSite(){
 
-    const shareData={
-        title:"AHCElectronSRS",
-        text:"AHCElectron Sales and Repairs Services",
-        url:window.location.href
-    };
+    if(!supabaseClient){
 
-    if(navigator.share){
+        products = localProducts;
 
-        try{
+        loading.style.display = "none";
 
-            await navigator.share(shareData);
+        showProducts();
 
-            showTaskMessage("Partage effectué.");
+        return;
 
-        }catch(error){
+    }
 
-            if(error.name!=="AbortError"){
-                showTaskMessage("Le partage n'a pas pu être effectué.");
-            }
+
+    try{
+
+        const {
+            data,
+            error
+        } = await supabaseClient
+
+            .from("products")
+
+            .select(
+                "id,name,reference,brand,category,description,price_htg,price_usd,stock,image_url,active"
+            )
+
+            .eq("active",true)
+
+            .order("name");
+
+
+        if(error){
+
+            throw error;
 
         }
 
-    }else{
 
-        try{
+        products = data || [];
 
-            await navigator.clipboard.writeText(window.location.href);
+        loading.style.display = "none";
 
-            showTaskMessage("Lien de la page copié.");
+        showProducts();
 
-        }catch(error){
+    }
+    catch(error){
 
-            showTaskMessage("Copiez le lien de la page depuis votre navigateur.");
+        console.error(error);
 
-        }
+        products = [];
+
+        loading.style.display = "none";
+
+        errorBox.textContent =
+            "Impossible de charger la boutique pour le moment.";
+
+        errorBox.style.display = "block";
 
     }
 
 }
 
-/* =========================================================
-   LANGUES
-========================================================= */
-
-function toggleLanguagePanel(){
-
-    document
-        .getElementById("languagePanel")
-        .classList.toggle("active");
-
-}
-
-const translations={
-
-fr:{
-
-"nav.home":"Accueil",
-"nav.services":"Services",
-"nav.products":"Produits",
-"nav.projects":"Réalisations",
-"nav.zone":"Zone",
-"nav.request":"Demande",
-"nav.payment":"Paiement",
-"nav.contact":"Contact",
-
-"task.search":"Recherche",
-"task.web":"Internet",
-"task.language":"Langue",
-"task.services":"Services",
-"task.location":"Localisation",
-"task.gps":"GPS",
-"task.request":"Demande",
-"task.payment":"Paiement",
-"task.print":"Imprimer",
-"task.share":"Partager",
-"task.contact":"Contact",
-
-"language.title":"Langue de l'interface",
-
-"hero.welcome":"Bienvenue chez AHCElectronSRS",
-"hero.description":"Électricité, réparation électronique, technologie, maintenance et solutions techniques pour les particuliers, entreprises et partenaires en Haïti et à l'international.",
-"hero.services":"Découvrir les services",
-"hero.request":"Préparer ma demande",
-
-"search.title":"Recherche intelligente AHCElectronSRS",
-"search.placeholder":"Service, produit, réparation, pays, département...",
-"search.button":"Rechercher",
-"search.internal":"Dans AHCElectronSRS",
-"search.internet":"Sur Internet",
-"search.everywhere":"Partout",
-"search.note":"La recherche interne consulte les informations intégrées au site. La recherche Internet utilise un moteur externe.",
-
-"services.title":"Nos services",
-"services.subtitle":"Chaque service peut être consulté avant de préparer une demande.",
-
-"service.electricity":"Électricité",
-"service.electricity.desc":"Installation, diagnostic et maintenance électrique.",
-"service.repair":"Réparation électronique",
-"service.repair.desc":"Diagnostic et réparation d'équipements électroniques.",
-"service.technology":"Technologie",
-"service.technology.desc":"Assistance informatique et solutions numériques.",
-"service.maintenance":"Maintenance",
-"service.maintenance.desc":"Entretien, diagnostic et suivi des équipements.",
-
-"products.title":"Produits & solutions",
-"products.subtitle":"Solutions et équipements selon les besoins et disponibilités.",
-
-"projects.title":"Réalisations",
-"projects.subtitle":"Des exemples de travaux permettant au client de comprendre le type d'intervention proposé.",
-
-"zone.title":"🇭🇹 Haïti + 🌎 International",
-"zone.subtitle":"Sélectionnez votre zone pour afficher les possibilités correspondantes.",
-"zone.question":"Où se trouve le client ?",
-
-"request.title":"📋 Préparer une demande",
-"request.subtitle":"Les informations permettent de préparer la demande avant tout contact.",
-
-"payment.title":"💳 Moyens de paiement",
-"payment.subtitle":"Les options préparent le moyen de paiement. Une connexion officielle à un service de paiement est nécessaire pour réaliser automatiquement une transaction en ligne.",
-
-"contact.title":"📞 Contact"
-
-},
-
-en:{
-
-"nav.home":"Home",
-"nav.services":"Services",
-"nav.products":"Products",
-"nav.projects":"Projects",
-"nav.zone":"Area",
-"nav.request":"Request",
-"nav.payment":"Payment",
-"nav.contact":"Contact",
-
-"task.search":"Search",
-"task.web":"Internet",
-"task.language":"Language",
-"task.services":"Services",
-"task.location":"Location",
-"task.gps":"GPS",
-"task.request":"Request",
-"task.payment":"Payment",
-"task.print":"Print",
-"task.share":"Share",
-"task.contact":"Contact",
-
-"language.title":"Interface language",
-
-"hero.welcome":"Welcome to AHCElectronSRS",
-"hero.description":"Electrical services, electronic repair, technology, maintenance and technical solutions for individuals, businesses and partners in Haiti and internationally.",
-"hero.services":"Discover services",
-"hero.request":"Prepare my request",
-
-"search.title":"AHCElectronSRS intelligent search",
-"search.placeholder":"Service, product, repair, country, department...",
-"search.button":"Search",
-"search.internal":"Inside AHCElectronSRS",
-"search.internet":"On the Internet",
-"search.everywhere":"Everywhere",
-"search.note":"Internal search checks information integrated into the website. Internet search uses an external search engine.",
-
-"services.title":"Our services",
-"services.subtitle":"Each service can be reviewed before preparing a request.",
-
-"service.electricity":"Electrical services",
-"service.electricity.desc":"Electrical installation, diagnosis and maintenance.",
-"service.repair":"Electronic repair",
-"service.repair.desc":"Diagnosis and repair of electronic equipment.",
-"service.technology":"Technology",
-"service.technology.desc":"Computer assistance and digital solutions.",
-"service.maintenance":"Maintenance",
-"service.maintenance.desc":"Equipment maintenance, diagnosis and monitoring.",
-
-"products.title":"Products & solutions",
-"products.subtitle":"Solutions and equipment according to needs and availability.",
-
-"projects.title":"Projects",
-"projects.subtitle":"Examples of work showing the type of intervention offered.",
-
-"zone.title":"🇭🇹 Haiti + 🌎 International",
-"zone.subtitle":"Select your area to display the corresponding options.",
-"zone.question":"Where is the client located?",
-
-"request.title":"📋 Prepare a request",
-"request.subtitle":"The information helps prepare the request before contact.",
-
-"payment.title":"💳 Payment methods",
-"payment.subtitle":"These options prepare a payment method. An official payment service connection is required for automatic online transactions.",
-
-"contact.title":"📞 Contact"
-
-},
-
-ht:{
-
-"nav.home":"Akèy",
-"nav.services":"Sèvis",
-"nav.products":"Pwodwi",
-"nav.projects":"Travay nou fè",
-"nav.zone":"Zòn",
-"nav.request":"Demann",
-"nav.payment":"Peman",
-"nav.contact":"Kontak",
-
-"task.search":"Chèche",
-"task.web":"Entènèt",
-"task.language":"Lang",
-"task.services":"Sèvis",
-"task.location":"Lokalizasyon",
-"task.gps":"GPS",
-"task.request":"Demann",
-"task.payment":"Peman",
-"task.print":"Enprime",
-"task.share":"Pataje",
-"task.contact":"Kontak",
-
-"language.title":"Lang koòdone a",
-
-"hero.welcome":"Byenveni nan AHCElectronSRS",
-"hero.description":"Elektrisite, reparasyon elektwonik, teknoloji, antretyen ak solisyon teknik pou moun, antrepriz ak patnè ann Ayiti ak aletranje.",
-"hero.services":"Dekouvri sèvis yo",
-"hero.request":"Prepare demann mwen",
-
-"search.title":"Rechèch entèlijan AHCElectronSRS",
-"search.placeholder":"Sèvis, pwodwi, reparasyon, peyi, depatman...",
-"search.button":"Chèche",
-"search.internal":"Nan AHCElectronSRS",
-"search.internet":"Sou Entènèt",
-"search.everywhere":"Tout kote",
-"search.note":"Rechèch entèn nan konsilte enfòmasyon ki nan sit la. Rechèch Entènèt la sèvi ak yon motè ekstèn.",
-
-"services.title":"Sèvis nou yo",
-"services.subtitle":"Ou ka konsilte chak sèvis anvan ou prepare yon demann.",
-
-"service.electricity":"Elektrisite",
-"service.electricity.desc":"Enstalasyon, dyagnostik ak antretyen elektrik.",
-"service.repair":"Reparasyon elektwonik",
-"service.repair.desc":"Dyagnostik ak reparasyon ekipman elektwonik.",
-"service.technology":"Teknoloji",
-"service.technology.desc":"Asistans enfòmatik ak solisyon dijital.",
-"service.maintenance":"Antretyen",
-"service.maintenance.desc":"Antretyen, dyagnostik ak swivi ekipman yo.",
-
-"products.title":"Pwodwi ak solisyon",
-"products.subtitle":"Solisyon ak ekipman selon bezwen ak disponiblite.",
-
-"projects.title":"Travay nou fè",
-"projects.subtitle":"Egzanp travay ki ede kliyan konprann kalite entèvansyon yo pwopoze.",
-
-"zone.title":"🇭🇹 Ayiti + 🌎 Entènasyonal",
-"zone.subtitle":"Chwazi zòn ou pou wè opsyon ki koresponn yo.",
-"zone.question":"Ki kote kliyan an ye?",
-
-"request.title":"📋 Prepare yon demann",
-"request.subtitle":"Enfòmasyon yo ede prepare demann lan anvan kontak.",
-
-"payment.title":"💳 Mwayen peman",
-"payment.subtitle":"Opsyon yo prepare mwayen peman an. Yon koneksyon ofisyèl ak sèvis peman an nesesè pou yon tranzaksyon otomatik sou entènèt.",
-
-"contact.title":"📞 Kontak"
-
-},
-
-kea:{
-
-"nav.home":"Inisio",
-"nav.services":"Servisus",
-"nav.products":"Produtus",
-"nav.projects":"Trabadjus",
-"nav.zone":"Zona",
-"nav.request":"Pididu",
-"nav.payment":"Pagamentu",
-"nav.contact":"Kontatu",
-
-"task.search":"Buska",
-"task.web":"Internet",
-"task.language":"Lingua",
-"task.services":"Servisus",
-"task.location":"Lugar",
-"task.gps":"GPS",
-"task.request":"Pididu",
-"task.payment":"Pagamentu",
-"task.print":"Imprimi",
-"task.share":"Partilha",
-"task.contact":"Kontatu",
-
-"language.title":"Lingua di interfaz",
-
-"hero.welcome":"Bon binda na AHCElectronSRS",
-"hero.description":"Servisus eletriku, reparason elektroniku, teknologia, manutenson y soluson tekniku na Ayiti y na exterior.",
-"hero.services":"Konxe servisus",
-"hero.request":"Prepara nha pididu",
-
-"search.title":"Buska inteligenti AHCElectronSRS",
-"search.placeholder":"Servisu, produtus, reparason, pais, departamentu...",
-"search.button":"Buska",
-"search.internal":"Na AHCElectronSRS",
-"search.internet":"Na Internet",
-"search.everywhere":"Tudu lugar",
-"search.note":"Buska internu ta konsulta informason ki sta na site. Buska na Internet ta uza un motor externu.",
-
-"services.title":"Nos servisus",
-"services.subtitle":"Bu pode konsulta kada servisu antis di prepara un pididu.",
-
-"service.electricity":"Eletrisidadi",
-"service.electricity.desc":"Instalason, diagnostiku y manutenson eletriku.",
-"service.repair":"Reparason elektroniku",
-"service.repair.desc":"Diagnostiku y reparason di ekipamentu elektroniku.",
-"service.technology":"Teknologia",
-"service.technology.desc":"Asistensia informatik y soluson dijital.",
-"service.maintenance":"Manutenson",
-"service.maintenance.desc":"Manutenson, diagnostiku y kontrolu di ekipamentu.",
-
-"products.title":"Produtus y soluson",
-"products.subtitle":"Produtus y ekipamentu sigundu nesesidadi y disponibilidá.",
-
-"projects.title":"Trabadjus",
-"projects.subtitle":"Izemplu di trabadju pa mostra tipu di intervenson ki ta oferese.",
-
-"zone.title":"🇭🇹 Ayiti + 🌎 Internasional",
-"zone.subtitle":"Skodji bu zona pa odja opson ki ta korresponde.",
-"zone.question":"Undi ki klienti sta?",
-
-"request.title":"📋 Prepara un pididu",
-"request.subtitle":"Informason ta djuda prepara pididu antis di kontaktu.",
-
-"payment.title":"💳 Metodu di pagamentu",
-"payment.subtitle":"Opson ta prepara metodu di pagamentu. Un ligason ofisial ku servisu di pagamentu é nesesariu pa tranzason online automatiku.",
-
-"contact.title":"📞 Kontatu"
-
-},
-
-mfe:{
-
-"nav.home":"Lakaz",
-"nav.services":"Servis",
-"nav.products":"Prodwi",
-"nav.projects":"Travay",
-"nav.zone":"Lazòn",
-"nav.request":"Demann",
-"nav.payment":"Peman",
-"nav.contact":"Kontak",
-
-"task.search":"Rod",
-"task.web":"Internet",
-"task.language":"Lang",
-"task.services":"Servis",
-"task.location":"Lokalizasyon",
-"task.gps":"GPS",
-"task.request":"Demann",
-"task.payment":"Peman",
-"task.print":"Inprim",
-"task.share":"Partaz",
-"task.contact":"Kontak",
-
-"language.title":"Lang koze interfeys",
-
-"hero.welcome":"Byenveni kot AHCElectronSRS",
-"hero.description":"Servis elektrik, reparasyon elektronik, teknoloji, mentenans ek solisyon teknik an Ayiti ek aletranze.",
-"hero.services":"Dekouver bann servis",
-"hero.request":"Prepar mo demann",
-
-"search.title":"Recherse entelizan AHCElectronSRS",
-"search.placeholder":"Servis, prodwi, reparasyon, pei, departman...",
-"search.button":"Rod",
-"search.internal":"Dan AHCElectronSRS",
-"search.internet":"Lor Internet",
-"search.everywhere":"Partou",
-"search.note":"Recherse intern servi bann linformasyon dan sit-la. Recherse Internet servi enn moter extern.",
-
-"services.title":"Nou bann servis",
-"services.subtitle":"Ou kapav get sak servis avan prepar enn demann.",
-
-"service.electricity":"Elektrisite",
-"service.electricity.desc":"Instalasyon, diagnostik ek mentenans elektrik.",
-"service.repair":"Reparasyon elektronik",
-"service.repair.desc":"Diagnostik ek reparasyon lekipman elektronik.",
-"service.technology":"Teknoloji",
-"service.technology.desc":"Asistans informatik ek solisyon nimerik.",
-"service.maintenance":"Mentenans",
-"service.maintenance.desc":"Mentenans, diagnostik ek swivi lekipman.",
-
-"products.title":"Prodwi ek solisyon",
-"products.subtitle":"Solusyon ek lekipman dapre bezwen ek disponiblite.",
-
-"projects.title":"Travay",
-"projects.subtitle":"Legzanp travay pou konpran kalite intervansyon ki propozé.",
-
-"zone.title":"🇭🇹 Ayiti + 🌎 Internasyonal",
-"zone.subtitle":"Swazir ou zòn pou trouv bann opsion ki koresponn.",
-"zone.question":"Kot kliyan-la ete?",
-
-"request.title":"📋 Prepar enn demann",
-"request.subtitle":"Bann informasyon-la ed prepar demann avan kontakt.",
-
-"payment.title":"💳 Mwayin peman",
-"payment.subtitle":"Bann opsion-la prepar mwayin peman. Enn koneksyon ofisyel avek servis peman neseser pou enn tranzaksyon online otomatik.",
-
-"contact.title":"📞 Kontak"
-
-}
-
-};
-
-function changeLanguage(language){
-
-    const dictionary=translations[language] || translations.fr;
-
-    document.documentElement.lang=language;
-
-    document.querySelectorAll("[data-i18n]").forEach(element=>{
-
-        const key=element.getAttribute("data-i18n");
-
-        if(dictionary[key]){
-            element.textContent=dictionary[key];
-        }
-
-    });
-
-    document.querySelectorAll("[data-i18n-placeholder]").forEach(element=>{
-
-        const key=element.getAttribute("data-i18n-placeholder");
-
-        if(dictionary[key]){
-            element.placeholder=dictionary[key];
-        }
-
-    });
-
-    localStorage.setItem("ahcelectron_language",language);
-
-    showTaskMessage("Langue changée.");
-
-}
 
 /* =========================================================
-   ZONE
-========================================================= */
+   AFFICHAGE DES PRODUITS
+   ========================================================= */
 
-function changeZone(){
+function showProducts(){
 
-    const value=document.getElementById("zoneSelect").value;
+    const grid =
+        document.getElementById("productGrid");
 
-    document
-        .getElementById("haitiDepartments")
-        .classList.remove("active");
+    const search =
+        document.getElementById("searchInput")
+        .value
+        .trim()
+        .toLowerCase();
 
-    document
-        .getElementById("internationalCountries")
-        .classList.remove("active");
 
-    if(value==="haiti"){
+    const filtered =
+        products.filter(product => {
 
-        document
-            .getElementById("haitiDepartments")
-            .classList.add("active");
+            const categoryMatch =
+                currentCategory === "all" ||
+                String(product.category).toLowerCase() ===
+                currentCategory.toLowerCase();
 
-        selectedLocation="Haïti";
+            const searchable =
+                [
+                    product.name,
+                    product.reference,
+                    product.brand,
+                    product.category,
+                    product.description
+                ]
+                .filter(Boolean)
+                .join(" ")
+                .toLowerCase();
+
+
+            const searchMatch =
+                !search ||
+                searchable.includes(search);
+
+
+            return categoryMatch && searchMatch;
+
+        });
+
+
+    if(filtered.length === 0){
+
+        grid.innerHTML = `
+            <div style="
+                grid-column:1/-1;
+                text-align:center;
+                padding:30px;
+                color:#aebdcd;">
+                Aucun produit trouvé.
+            </div>
+        `;
+
+        return;
 
     }
 
-    else if(value==="international"){
 
-        document
-            .getElementById("internationalCountries")
-            .classList.add("active");
+    grid.innerHTML =
+        filtered.map(product => {
 
-        selectedLocation="International";
+            const stock =
+                Number(product.stock || 0);
+
+            const available =
+                stock > 0;
+
+
+            const image =
+                product.image_url
+                ? `
+                    <img
+                        class="productImage"
+                        src="${escapeHTML(product.image_url)}"
+                        alt="${escapeHTML(product.name)}"
+                        loading="lazy">
+                  `
+                : `
+                    <div
+                        class="productImagePlaceholder">
+                        📦
+                    </div>
+                  `;
+
+
+            const usd =
+                Number(product.price_usd || 0) > 0
+                ? `
+                    <div class="usdPrice">
+                        ≈ ${formatMoney(product.price_usd)} USD
+                    </div>
+                  `
+                : "";
+
+
+            return `
+
+                <article class="productCard">
+
+                    ${image}
+
+                    <div class="productInfo">
+
+                        <h3>
+                            ${escapeHTML(product.name)}
+                        </h3>
+
+                        <div class="reference">
+                            Réf. :
+                            ${escapeHTML(product.reference || "—")}
+                        </div>
+
+                        <div class="brand">
+                            Marque :
+                            ${escapeHTML(product.brand || "—")}
+                        </div>
+
+                        <div class="description">
+                            ${escapeHTML(product.description || "")}
+                        </div>
+
+                        <div class="price">
+                            ${formatMoney(product.price_htg)} HTG
+                        </div>
+
+                        ${usd}
+
+                        <div class="stock ${
+                            available
+                            ? "available"
+                            : "unavailable"
+                        }">
+
+                            ${
+                                available
+                                ? "✓ Stock : " + stock
+                                : "✕ Rupture de stock"
+                            }
+
+                        </div>
+
+                        <div class="productActions">
+
+                            <button
+                                onclick="openProduct('${escapeJS(product.id)}')">
+                                Guide
+                            </button>
+
+                            <button
+                                class="addButton"
+                                ${
+                                    !available
+                                    ? "disabled"
+                                    : ""
+                                }
+                                onclick="quickAdd('${escapeJS(product.id)}')">
+                                Ajouter
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            `;
+
+        }).join("");
+
+}
+
+
+/* =========================================================
+   CATÉGORIES
+   ========================================================= */
+
+function filterCategory(category,button){
+
+    currentCategory = category;
+
+
+    document
+        .querySelectorAll(".categoryButton")
+        .forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+
+    if(button){
+
+        button.classList.add("active");
 
     }
 
+
+    showProducts();
+
+}
+
+
+/* =========================================================
+   PRODUIT
+   ========================================================= */
+
+function openProduct(id){
+
+    const product =
+        products.find(item =>
+            String(item.id) === String(id)
+        );
+
+
+    if(!product){
+
+        showNotification(
+            "Produit introuvable."
+        );
+
+        return;
+
+    }
+
+
+    selectedProduct = product;
+
+
+    document.getElementById("productQuantity")
+        .value = 1;
+
+
+    document.getElementById("productDetails")
+        .innerHTML = `
+
+            <h2>
+                ${escapeHTML(product.name)}
+            </h2>
+
+            <p style="color:#9fb0c2;">
+                Référence :
+                ${escapeHTML(product.reference || "—")}
+            </p>
+
+            <p style="margin-top:10px;">
+                ${escapeHTML(product.description || "")}
+            </p>
+
+            <p style="
+                color:#ffb13b;
+                font-size:20px;
+                font-weight:bold;
+                margin-top:12px;">
+                ${formatMoney(product.price_htg)} HTG
+            </p>
+
+            <p style="margin-top:8px;">
+                Stock :
+                ${Number(product.stock || 0)}
+            </p>
+
+        `;
+
+
+    document.getElementById("productModal")
+        .style.display = "block";
+
+}
+
+
+function quickAdd(id){
+
+    const product =
+        products.find(item =>
+            String(item.id) === String(id)
+        );
+
+
+    if(!product){
+
+        showNotification(
+            "Produit introuvable."
+        );
+
+        return;
+
+    }
+
+
+    if(Number(product.stock || 0) <= 0){
+
+        showNotification(
+            "Ce produit n'est pas disponible."
+        );
+
+        return;
+
+    }
+
+
+    addToCart(product,1);
+
+}
+
+
+function addSelectedProductToCart(){
+
+    if(!selectedProduct){
+
+        return;
+
+    }
+
+
+    const quantity =
+        Math.max(
+            1,
+            Number(
+                document.getElementById(
+                    "productQuantity"
+                ).value
+            ) || 1
+        );
+
+
+    const stock =
+        Number(selectedProduct.stock || 0);
+
+
+    if(quantity > stock){
+
+        showNotification(
+            "La quantité demandée dépasse le stock disponible."
+        );
+
+        return;
+
+    }
+
+
+    addToCart(
+        selectedProduct,
+        quantity
+    );
+
+
+    closeModal("productModal");
+
+}
+
+
+/* =========================================================
+   PANIER
+   ========================================================= */
+
+function addToCart(product,quantity){
+
+    const existing =
+        cart.find(item =>
+            String(item.id) === String(product.id)
+        );
+
+
+    if(existing){
+
+        existing.quantity += quantity;
+
+    }
     else{
 
-        selectedLocation="";
+        cart.push({
 
-    }
+            id:product.id,
+            name:product.name,
+            reference:product.reference,
+            price_htg:Number(product.price_htg || 0),
+            quantity:quantity
 
-    updateSummary();
-
-}
-
-/* =========================================================
-   SÉLECTION LOCALISATION
-========================================================= */
-
-function selectLocation(location){
-
-    selectedLocation=location;
-
-    updateSummary();
-
-    document
-        .getElementById("demande")
-        .scrollIntoView({
-            behavior:"smooth"
         });
 
-}
-
-/* =========================================================
-   STATUT LOCALISATION
-========================================================= */
-
-function showLocationStatus(type,message){
-
-    const box=document.getElementById("locationStatus");
-
-    box.className="location-status active";
-
-    if(type==="success"){
-        box.classList.add("location-success");
     }
 
-    if(type==="warning"){
-        box.classList.add("location-warning");
-    }
 
-    if(type==="error"){
-        box.classList.add("location-error");
-    }
+    saveLocalCart();
 
-    document.getElementById("locStatusText").textContent=message;
+    updateCart();
+
+    showNotification(
+        "Produit ajouté au panier."
+    );
 
 }
 
+
+function updateCart(){
+
+    const count =
+        cart.reduce(
+            (total,item) =>
+                total + Number(item.quantity || 0),
+            0
+        );
+
+
+    document.getElementById("cartCount")
+        .textContent = count;
+
+
+    renderCart();
+
+}
+
+
+function renderCart(){
+
+    const container =
+        document.getElementById("cartItems");
+
+    const totalBox =
+        document.getElementById("cartTotal");
+
+
+    if(cart.length === 0){
+
+        container.innerHTML = `
+            <p style="
+                text-align:center;
+                padding:20px;
+                color:#9fb0c2;">
+                Votre panier est vide.
+            </p>
+        `;
+
+        totalBox.textContent =
+            "Total : 0 HTG";
+
+        return;
+
+    }
+
+
+    let total = 0;
+
+
+    container.innerHTML =
+        cart.map((item,index) => {
+
+            const itemTotal =
+                Number(item.price_htg || 0) *
+                Number(item.quantity || 0);
+
+
+            total += itemTotal;
+
+
+            return `
+
+                <div class="cartItem">
+
+                    <div>
+
+                        <h4>
+                            ${escapeHTML(item.name)}
+                        </h4>
+
+                        <small>
+                            Réf. :
+                            ${escapeHTML(item.reference || "—")}
+                        </small>
+
+                        <div style="margin-top:5px;">
+                            ${formatMoney(item.price_htg)}
+                            HTG ×
+                            ${item.quantity}
+                        </div>
+
+                    </div>
+
+
+                    <div class="cartControls">
+
+                        <button
+                            onclick="changeCartQuantity(${index},-1)">
+                            −
+                        </button>
+
+                        <strong>
+                            ${item.quantity}
+                        </strong>
+
+                        <button
+                            onclick="changeCartQuantity(${index},1)">
+                            +
+                        </button>
+
+                        <button
+                            class="removeButton"
+                            onclick="removeCartItem(${index})">
+                            ×
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        }).join("");
+
+
+    totalBox.textContent =
+        "Total aperçu : " +
+        formatMoney(total) +
+        " HTG";
+
+}
+
+
+function changeCartQuantity(index,delta){
+
+    if(!cart[index]){
+
+        return;
+
+    }
+
+
+    cart[index].quantity += delta;
+
+
+    if(cart[index].quantity <= 0){
+
+        cart.splice(index,1);
+
+    }
+
+
+    saveLocalCart();
+
+    updateCart();
+
+}
+
+
+function removeCartItem(index){
+
+    cart.splice(index,1);
+
+    saveLocalCart();
+
+    updateCart();
+
+}
+
+
+function openCart(){
+
+    updateCart();
+
+    document.getElementById("cartModal")
+        .style.display = "block";
+
+}
+
+
+function buildDeliveryAddress(){
+
+    const city =
+        document.getElementById("deliveryCity")
+        .value.trim();
+
+    const zone =
+        document.getElementById("deliveryZone")
+        .value.trim();
+
+    const street =
+        document.getElementById("deliveryStreet")
+        .value.trim();
+
+    const postal =
+        document.getElementById("deliveryPostalCode")
+        .value.trim();
+
+    const landmark =
+        document.getElementById("deliveryLandmark")
+        .value.trim();
+
+    const extra =
+        document.getElementById("deliveryAddress")
+        .value.trim();
+
+
+    const parts = [];
+
+
+    if(city) parts.push("Ville : " + city);
+
+    if(zone) parts.push("Zone : " + zone);
+
+    if(street) parts.push("Rue/Ruelle : " + street);
+
+    if(postal) parts.push("Code postal : " + postal);
+
+    if(landmark) parts.push("Repère : " + landmark);
+
+    if(extra) parts.push("Précisions : " + extra);
+
+
+    return parts.join(" | ");
+
+}
+
+
 /* =========================================================
-   GPS
-========================================================= */
+   COMMANDE SÉCURISÉE
+   ========================================================= */
 
-function getCurrentLocation(){
+async function submitOrder(){
 
-    if(!navigator.geolocation){
+    if(!supabaseClient){
 
-        showLocationStatus(
-            "error",
-            "La géolocalisation n'est pas disponible sur cet appareil."
+        showNotification(
+            "Supabase n'est pas encore configuré."
         );
 
         return;
+
     }
 
-    showLocationStatus(
-        "warning",
-        "Demande volontaire de permission GPS en cours..."
-    );
 
-    navigator.geolocation.getCurrentPosition(
+    if(!currentUser){
 
-        position=>{
+        showNotification(
+            "Connectez-vous à votre compte avant de commander."
+        );
 
-            const latitude=position.coords.latitude;
-            const longitude=position.coords.longitude;
+        openAccount();
 
-            locationCoordinates={
-                latitude,
-                longitude
-            };
+        return;
 
-            reverseGeocode(latitude,longitude);
+    }
 
-        },
 
-        error=>{
+    if(cart.length === 0){
 
-            if(error.code===1){
+        showNotification(
+            "Votre panier est vide."
+        );
 
-                showLocationStatus(
-                    "error",
-                    "Permission de localisation refusée."
-                );
+        return;
 
-            }else if(error.code===2){
+    }
 
-                showLocationStatus(
-                    "error",
-                    "Position actuellement indisponible."
-                );
 
-            }else if(error.code===3){
+    const customerName =
+        document.getElementById("customerName")
+        .value.trim();
 
-                showLocationStatus(
-                    "error",
-                    "La vérification GPS a dépassé le délai prévu."
-                );
 
-            }else{
+    const customerPhone =
+        document.getElementById("customerPhone")
+        .value.trim();
 
-                showLocationStatus(
-                    "error",
-                    "Impossible de vérifier la position."
-                );
+
+    const deliveryAddress =
+        buildDeliveryAddress();
+
+
+    const paymentMethod =
+        document.getElementById("paymentMethod")
+        .value;
+
+
+    if(!customerName){
+
+        showNotification(
+            "Veuillez indiquer votre nom."
+        );
+
+        return;
+
+    }
+
+
+    if(!customerPhone){
+
+        showNotification(
+            "Veuillez indiquer votre numéro de téléphone."
+        );
+
+        return;
+
+    }
+
+
+    if(!deliveryAddress){
+
+        showNotification(
+            "Veuillez indiquer votre adresse de livraison."
+        );
+
+        return;
+
+    }
+
+
+    if(!paymentMethod){
+
+        showNotification(
+            "Veuillez choisir un mode de paiement."
+        );
+
+        return;
+
+    }
+
+
+    /*
+       IMPORTANT :
+
+       Le navigateur n'envoie PAS le prix.
+       Le serveur reçoit seulement :
+       - l'identifiant du produit
+       - la quantité
+
+       Le serveur doit vérifier le produit,
+       le stock et le prix puis calculer le total.
+    */
+
+    const items =
+        cart.map(item => ({
+
+            product_id:item.id,
+
+            quantity:Number(item.quantity)
+
+        }));
+
+
+    try{
+
+        showNotification(
+            "Validation sécurisée de la commande..."
+        );
+
+
+        const {
+            data,
+            error
+        } = await supabaseClient.rpc(
+
+            "create_ahcelectron_order",
+
+            {
+
+                p_customer_name:
+                    customerName,
+
+                p_customer_phone:
+                    customerPhone,
+
+                p_delivery_address:
+                    deliveryAddress,
+
+                p_payment_method:
+                    paymentMethod,
+
+                p_items:
+                    items
 
             }
 
-        },
-
-        {
-            enableHighAccuracy:true,
-            timeout:15000,
-            maximumAge:60000
-        }
-
-    );
-
-}
-
-/* =========================================================
-   ADRESSE MANUELLE
-========================================================= */
-
-function useManualLocation(){
-
-    document
-        .getElementById("manualLocation")
-        .classList.toggle("active");
-
-}
-
-async function searchManualLocation(){
-
-    const address=
-        document
-        .getElementById("manualAddress")
-        .value
-        .trim();
-
-    if(!address){
-
-        showLocationStatus(
-            "warning",
-            "Veuillez saisir une adresse à rechercher."
         );
 
-        return;
-    }
 
-    showLocationStatus(
-        "warning",
-        "Recherche de l'adresse en cours..."
-    );
+        if(error){
 
-    try{
+            console.error(error);
 
-        const url=
-        "https://nominatim.openstreetmap.org/search"+
-        "?format=jsonv2"+
-        "&addressdetails=1"+
-        "&limit=1"+
-        "&accept-language=fr"+
-        "&q="+encodeURIComponent(address);
+            throw error;
 
-        const response=await fetch(url);
-
-        if(!response.ok){
-            throw new Error("Erreur réseau");
         }
 
-        const results=await response.json();
 
-        if(!results.length){
+        const result =
+            Array.isArray(data)
+            ? data[0]
+            : data;
 
-            showLocationStatus(
-                "warning",
-                "Aucune adresse correspondante n'a été trouvée."
+
+        if(!result){
+
+            throw new Error(
+                "Réponse de commande vide."
             );
 
-            return;
         }
 
-        const result=results[0];
 
-        locationCoordinates={
-            latitude:result.lat,
-            longitude:result.lon
-        };
+        const orderId =
+            result.order_id || result.id || "—";
 
-        processGeocodedAddress(
-            result,
-            "Adresse recherchée manuellement"
+
+        const total =
+            Number(
+                result.total_htg || 0
+            );
+
+
+        const status =
+            result.status || "pending";
+
+
+        cart = [];
+
+        saveLocalCart();
+
+        updateCart();
+
+
+        document.getElementById("cartModal")
+            .style.display = "none";
+
+
+        showNotification(
+            "Commande enregistrée : " +
+            orderId
         );
 
-    }catch(error){
 
-        showLocationStatus(
-            "error",
-            "La recherche de l'adresse n'a pas pu aboutir."
+        alert(
+            "Commande enregistrée.\n\n" +
+            "Numéro : " + orderId + "\n" +
+            "Total : " + formatMoney(total) + " HTG\n" +
+            "Statut : " + status
+        );
+
+
+        loadOrderHistory();
+
+    }
+    catch(error){
+
+        console.error(
+            "Erreur commande :",
+            error
+        );
+
+
+        showNotification(
+            "La commande n'a pas pu être validée."
+        );
+
+
+        alert(
+            "Commande non validée.\n\n" +
+            "Vérifiez votre connexion, votre compte, " +
+            "le stock disponible et la configuration du serveur."
         );
 
     }
 
 }
 
+
 /* =========================================================
-   REVERSE GEOCODAGE
-========================================================= */
+   COMPTE UTILISATEUR
+   ========================================================= */
 
-async function reverseGeocode(latitude,longitude){
+function openAccount(){
 
-    showLocationStatus(
-        "warning",
-        "Position GPS obtenue. Identification de l'adresse en cours..."
-    );
+    document.getElementById("accountModal")
+        .style.display = "block";
+
+
+    if(currentUser){
+
+        document.getElementById("accountEmail")
+            .value =
+            currentUser.email || "";
+
+    }
+
+}
+
+
+async function createAccount(){
+
+    if(!supabaseClient){
+
+        showNotification(
+            "Supabase n'est pas configuré."
+        );
+
+        return;
+
+    }
+
+
+    const email =
+        document.getElementById("accountEmail")
+        .value.trim();
+
+
+    const password =
+        document.getElementById("accountPassword")
+        .value;
+
+
+    if(!email || !password){
+
+        showNotification(
+            "Email et mot de passe requis."
+        );
+
+        return;
+
+    }
+
+
+    if(password.length < 6){
+
+        showNotification(
+            "Le mot de passe doit contenir au moins 6 caractères."
+        );
+
+        return;
+
+    }
+
 
     try{
 
-        const url=
-        "https://nominatim.openstreetmap.org/reverse"+
-        "?format=jsonv2"+
-        "&addressdetails=1"+
-        "&zoom=18"+
-        "&accept-language=fr"+
-        "&lat="+encodeURIComponent(latitude)+
-        "&lon="+encodeURIComponent(longitude);
+        const {
+            data,
+            error
+        } = await supabaseClient.auth.signUp({
 
-        const response=await fetch(url);
+            email:email,
 
-        if(!response.ok){
-            throw new Error("Erreur reverse geocoding");
-        }
-
-        const result=await response.json();
-
-        processGeocodedAddress(
-            result,
-            "Position GPS actuelle vérifiée"
-        );
-
-    }catch(error){
-
-        const now=new Date();
-
-        locationVerificationTime=now.toLocaleString("fr-FR");
-
-        verifiedLocationData={
-            display_name:"Position GPS obtenue, adresse non identifiée",
-            lat:latitude,
-            lon:longitude
-        };
-
-        document.getElementById("locAddress").textContent=
-            "Adresse non identifiée";
-
-        document.getElementById("locLatitude").textContent=
-            latitude;
-
-        document.getElementById("locLongitude").textContent=
-            longitude;
-
-        document.getElementById("locTime").textContent=
-            locationVerificationTime;
-
-        document.getElementById("locationMap").href=
-            "https://www.openstreetmap.org/?mlat="+
-            latitude+
-            "&mlon="+
-            longitude+
-            "#map=18/"+latitude+"/"+longitude;
-
-        showLocationStatus(
-            "warning",
-            "Position GPS obtenue, mais l'adresse détaillée n'a pas pu être identifiée."
-        );
-
-        updateSummary();
-
-    }
-
-}
-
-/* =========================================================
-   TRAITEMENT ADRESSE
-========================================================= */
-
-function processGeocodedAddress(result,source){
-
-    const address=result.address || {};
-
-    const road=
-        address.road ||
-        address.pedestrian ||
-        address.footway ||
-        address.path ||
-        address.cycleway ||
-        "";
-
-    const neighborhood=
-        address.neighbourhood ||
-        address.suburb ||
-        address.quarter ||
-        address.hamlet ||
-        "";
-
-    const city=
-        address.city ||
-        address.town ||
-        address.village ||
-        address.municipality ||
-        "";
-
-    const municipality=
-        address.municipality ||
-        address.city_district ||
-        address.county ||
-        "";
-
-    const region=
-        address.state ||
-        address.region ||
-        address.province ||
-        "";
-
-    const country=
-        address.country ||
-        "";
-
-    const postcode=
-        address.postcode ||
-        "";
-
-    const latitude=result.lat || "";
-    const longitude=result.lon || "";
-
-    const displayName=
-        result.display_name ||
-        "Adresse reconnue";
-
-    const now=new Date();
-
-    locationVerificationTime=
-        now.toLocaleString("fr-FR");
-
-    locationCoordinates={
-        latitude,
-        longitude
-    };
-
-    verifiedLocationData={
-
-        source:source,
-
-        display_name:displayName,
-
-        road:road,
-        neighborhood:neighborhood,
-        city:city,
-        municipality:municipality,
-        region:region,
-        country:country,
-        postcode:postcode,
-
-        lat:latitude,
-        lon:longitude,
-
-        verified_at:locationVerificationTime
-
-    };
-
-    document.getElementById("locAddress").textContent=
-        displayName;
-
-    document.getElementById("locRoad").textContent=
-        road || "Non identifié";
-
-    document.getElementById("locNeighborhood").textContent=
-        neighborhood || "Non identifié";
-
-    document.getElementById("locCity").textContent=
-        city || "Non identifié";
-
-    document.getElementById("locMunicipality").textContent=
-        municipality || "Non identifié";
-
-    document.getElementById("locRegion").textContent=
-        region || "Non identifié";
-
-    document.getElementById("locCountry").textContent=
-        country || "Non identifié";
-
-    document.getElementById("locPostcode").textContent=
-        postcode || "Non identifié";
-
-    document.getElementById("locLatitude").textContent=
-        latitude || "—";
-
-    document.getElementById("locLongitude").textContent=
-        longitude || "—";
-
-    document.getElementById("locTime").textContent=
-        locationVerificationTime;
-
-    document.getElementById("locationMap").href=
-        "https://www.openstreetmap.org/?mlat="+
-        latitude+
-        "&mlon="+
-        longitude+
-        "#map=18/"+latitude+"/"+longitude;
-
-    showLocationStatus(
-        "success",
-        source+" — localisation identifiée."
-    );
-
-    updateSummary();
-
-}
-
-/* =========================================================
-   RÉSUMÉ LOCALISATION
-========================================================= */
-
-function getLocationSummary(){
-
-    if(verifiedLocationData){
-
-        return verifiedLocationData.display_name ||
-            "Localisation vérifiée";
-
-    }
-
-    return "Non vérifiée";
-
-}
-
-/* =========================================================
-   PACKAGES
-========================================================= */
-
-function openPackage(id){
-
-    document
-        .getElementById(id)
-        .classList.toggle("active");
-
-}
-
-function choosePackage(packageName){
-
-    document
-        .getElementById("selectedPackage")
-        .value=packageName;
-
-    updateSummary();
-
-    document
-        .getElementById("demande")
-        .scrollIntoView({
-            behavior:"smooth"
-        });
-
-}
-
-/* =========================================================
-   RÉALISATIONS
-========================================================= */
-
-function toggleProject(id){
-
-    document
-        .getElementById(id)
-        .classList.toggle("active");
-
-}
-
-/* =========================================================
-   RÉSUMÉ
-========================================================= */
-
-function updateSummary(){
-
-    const name=
-        document
-        .getElementById("clientName")
-        .value
-        .trim();
-
-    const packageName=
-        document
-        .getElementById("selectedPackage")
-        .value
-        .trim();
-
-    const quantity=
-        document
-        .getElementById("quantity")
-        .value || "1";
-
-    const budget=
-        document
-        .getElementById("clientBudget")
-        .value
-        .trim();
-
-    const oldAddress=
-        document
-        .getElementById("oldAddress")
-        .value
-        .trim();
-
-    document.getElementById("summaryZone").textContent=
-        selectedLocation || "—";
-
-    document.getElementById("summaryName").textContent=
-        name || "—";
-
-    document.getElementById("summaryPackage").textContent=
-        packageName || "—";
-
-    document.getElementById("summaryQuantity").textContent=
-        quantity;
-
-    document.getElementById("summaryBudget").textContent=
-        budget || "—";
-
-    document.getElementById("summaryVerifiedLocation").textContent=
-        getLocationSummary();
-
-    document.getElementById("summaryOldAddress").textContent=
-        oldAddress || "—";
-
-    document.getElementById("summaryLocationTime").textContent=
-        locationVerificationTime || "—";
-
-}
-
-/* =========================================================
-   ÉCOUTE DES CHAMPS
-========================================================= */
-
-[
-    "clientName",
-    "clientPhone",
-    "clientCity",
-    "quantity",
-    "clientBudget",
-    "clientDescription",
-    "oldAddress"
-].forEach(id=>{
-
-    const element=document.getElementById(id);
-
-    if(element){
-
-        element.addEventListener(
-            "input",
-            updateSummary
-        );
-
-    }
-
-});
-
-/* =========================================================
-   ENVOI WHATSAPP
-========================================================= */
-
-function sendRequest(){
-
-    const name=
-        document.getElementById("clientName")
-        .value.trim();
-
-    const phone=
-        document.getElementById("clientPhone")
-        .value.trim();
-
-    const city=
-        document.getElementById("clientCity")
-        .value.trim();
-
-    const packageName=
-        document.getElementById("selectedPackage")
-        .value.trim();
-
-    const quantity=
-        document.getElementById("quantity")
-        .value || "1";
-
-    const budget=
-        document.getElementById("clientBudget")
-        .value.trim();
-
-    const description=
-        document.getElementById("clientDescription")
-        .value.trim();
-
-    const oldAddress=
-        document.getElementById("oldAddress")
-        .value.trim();
-
-    const messageBox=
-        document.getElementById("requestMessage");
-
-    if(!name || !phone || !city || !packageName){
-
-        messageBox.style.display="block";
-
-        messageBox.textContent=
-            "Veuillez remplir le nom, le téléphone, la ville et le service/produit.";
-
-        return;
-    }
-
-    let message=
-
-`AHCElectronSRS — NOUVELLE DEMANDE
-
-Nom / entreprise : ${name}
-
-Téléphone / WhatsApp : ${phone}
-
-Zone sélectionnée : ${selectedLocation || "Non précisée"}
-
-Ville / zone déclarée : ${city}
-
-Service / produit : ${packageName}
-
-Quantité : ${quantity}
-
-Budget indicatif : ${budget || "Non précisé"}
-
-Description :
-${description || "Aucune description fournie."}
-`;
-
-    if(verifiedLocationData){
-
-        message+=`
-
-LOCALISATION VÉRIFIÉE VOLONTAIREMENT
-
-Adresse reconnue :
-${verifiedLocationData.display_name || "Non identifiée"}
-
-Rue / voie :
-${verifiedLocationData.road || "Non identifiée"}
-
-Quartier / zone :
-${verifiedLocationData.neighborhood || "Non identifié"}
-
-Ville :
-${verifiedLocationData.city || "Non identifiée"}
-
-Commune :
-${verifiedLocationData.municipality || "Non identifiée"}
-
-Département / région :
-${verifiedLocationData.region || "Non identifié"}
-
-Pays :
-${verifiedLocationData.country || "Non identifié"}
-
-Code postal :
-${verifiedLocationData.postcode || "Non identifié"}
-
-Latitude :
-${verifiedLocationData.lat || "Non disponible"}
-
-Longitude :
-${verifiedLocationData.lon || "Non disponible"}
-
-Date / heure :
-${verifiedLocationData.verified_at || "Non disponible"}
-`;
-
-    }
-
-    if(oldAddress){
-
-        message+=`
-
-ANCIENNE ADRESSE / LOCALISATION
-
-${oldAddress}
-`;
-
-    }
-
-    message+=`
-
-Note :
-La localisation GPS et les informations d'adresse ci-dessus sont incluses
-uniquement parce qu'une vérification/localisation a été effectuée ou déclarée
-dans la présente demande.
-
-Le prix et la disponibilité doivent être confirmés par AHCElectronSRS.`;
-
-    const url=
-        "https://wa.me/50938106763?text="+
-        encodeURIComponent(message);
-
-    messageBox.style.display="block";
-
-    messageBox.textContent=
-        "La demande est prête. Ouverture de WhatsApp...";
-
-    window.open(
-        url,
-        "_blank",
-        "noopener"
-    );
-
-}
-
-/* =========================================================
-   INDEX DE RECHERCHE INTERNE
-========================================================= */
-
-const searchIndex=[
-
-{
-title:"Électricité",
-description:"Installation, diagnostic et maintenance électrique.",
-keywords:"electricite électricité installation diagnostic panne maintenance",
-target:"services"
-},
-
-{
-title:"Diagnostic électrique",
-description:"Inspection, recherche de panne, connexions et rapport.",
-keywords:"diagnostic électrique panne connexion",
-target:"services"
-},
-
-{
-title:"Installation / Maintenance électrique",
-description:"Évaluation, installation, entretien et contrôle final.",
-keywords:"installation maintenance electricité",
-target:"services"
-},
-
-{
-title:"Réparation électronique",
-description:"Diagnostic et réparation d'équipements électroniques.",
-keywords:"réparation électronique appareil composants panne",
-target:"services"
-},
-
-{
-title:"Diagnostic électronique",
-description:"Examen, alimentation et identification des composants.",
-keywords:"diagnostic electronique composants alimentation",
-target:"services"
-},
-
-{
-title:"Technologie",
-description:"Assistance informatique et solutions numériques.",
-keywords:"technologie informatique numérique ordinateur",
-target:"services"
-},
-
-{
-title:"Maintenance",
-description:"Entretien, diagnostic et suivi des équipements.",
-keywords:"maintenance entretien équipement",
-target:"services"
-},
-
-{
-title:"Solutions d'alimentation",
-description:"Solutions et équipements d'alimentation.",
-keywords:"batterie alimentation secours énergie",
-target:"produits"
-},
-
-{
-title:"Éclairage",
-description:"Solutions d'éclairage.",
-keywords:"éclairage lampe lumière",
-target:"produits"
-},
-
-{
-title:"Produit technologique",
-description:"Produits et équipements technologiques.",
-keywords:"technologie téléphone informatique appareil",
-target:"produits"
-},
-
-{
-title:"Composants / accessoires",
-description:"Composants et accessoires électroniques.",
-keywords:"composants accessoires électronique",
-target:"produits"
-},
-
-{
-title:"Réparation électronique — Réalisation",
-description:"Diagnostic, identification de panne, contrôle, réparation et test.",
-keywords:"realisation réparation télévision électronique",
-target:"realisations"
-},
-
-{
-title:"Audio & équipements — Réalisation",
-description:"Parasites, câblage, composants et test audio.",
-keywords:"audio haut-parleur enceinte son parasites",
-target:"realisations"
-},
-
-{
-title:"Installation électrique — Réalisation",
-description:"Évaluation, préparation, installation et contrôle.",
-keywords:"installation électrique réalisation",
-target:"realisations"
-},
-
-{
-title:"Solution technologique — Réalisation",
-description:"Analyse du besoin, configuration, tests et explication.",
-keywords:"solution numérique informatique technologie",
-target:"realisations"
-},
-
-{
-title:"Haïti",
-description:"Les dix départements d'Haïti.",
-keywords:"haiti ayiti ouest nord sud centre",
-target:"zone"
-},
-
-{
-title:"International",
-description:"Services et demandes pour les clients internationaux.",
-keywords:"international pays étranger monde",
-target:"zone"
-},
-
-{
-title:"Localisation actuelle",
-description:"Vérification volontaire de la position actuelle.",
-keywords:"gps localisation position actuelle adresse",
-target:"zone"
-},
-
-{
-title:"Ancienne adresse",
-description:"Information séparée concernant une ancienne localisation.",
-keywords:"ancienne adresse ancienne ville ancien zone",
-target:"zone"
-},
-
-{
-title:"Demande",
-description:"Préparation d'une demande de service ou de produit.",
-keywords:"demande formulaire client service quantité budget",
-target:"demande"
-},
-
-{
-title:"Paiement MonCash",
-description:"Préparation d'un paiement MonCash.",
-keywords:"moncash paiement haiti",
-target:"paiement"
-},
-
-{
-title:"Paiement NatCash",
-description:"Préparation d'un paiement NatCash.",
-keywords:"natcash paiement haiti",
-target:"paiement"
-},
-
-{
-title:"Paiement par carte bancaire",
-description:"Préparation d'un paiement international par carte.",
-keywords:"carte bancaire visa mastercard paiement international",
-target:"paiement"
-},
-
-{
-title:"Contact",
-description:"Contact téléphonique et WhatsApp AHCElectronSRS.",
-keywords:"contact téléphone whatsapp appel",
-target:"contact"
-}
-
-];
-
-[
-"Ouest",
-"Nord",
-"Nord-Est",
-"Nord-Ouest",
-"Artibonite",
-"Centre",
-"Sud",
-"Sud-Est",
-"Grand’Anse",
-"Nippes"
-].forEach(department=>{
-
-    searchIndex.push({
-
-        title:department,
-        description:"Département d'Haïti.",
-        keywords:"haiti département "+department,
-        target:"zone"
-
-    });
-
-});
-
-/* =========================================================
-   NORMALISATION
-========================================================= */
-
-function normalizeSearch(text){
-
-    return String(text || "")
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g,"");
-
-}
-
-/* =========================================================
-   RECHERCHE INTERNE
-========================================================= */
-
-function searchInternal(){
-
-    const query=
-        document
-        .getElementById("siteSearch")
-        .value
-        .trim();
-
-    const results=
-        document
-        .getElementById("searchResults");
-
-    results.innerHTML="";
-
-    if(!query){
-
-        results.classList.remove("active");
-
-        return;
-
-    }
-
-    const normalized=
-        normalizeSearch(query);
-
-    const matches=
-        searchIndex.filter(item=>{
-
-            const text=
-                normalizeSearch(
-                    item.title+" "+
-                    item.description+" "+
-                    item.keywords
-                );
-
-            return text.includes(normalized);
+            password:password
 
         });
 
-    if(!matches.length){
 
-        results.innerHTML=
-        `<div class="search-empty">
-            Aucun résultat interne trouvé pour :
-            <strong>${escapeHTML(query)}</strong>
-        </div>`;
+        if(error){
 
-        results.classList.add("active");
-
-        return;
-
-    }
-
-    matches.forEach(item=>{
-
-        const div=document.createElement("div");
-
-        div.className="search-result";
-
-        div.innerHTML=
-        `<strong>${escapeHTML(item.title)}</strong>
-         <small>${escapeHTML(item.description)}</small>`;
-
-        div.onclick=()=>{
-
-            openSearchResult(item);
-
-        };
-
-        results.appendChild(div);
-
-    });
-
-    const external=document.createElement("div");
-
-    external.className="search-external";
-
-    external.innerHTML=
-    `<button class="btn secondary"
-        type="button"
-        onclick="searchInternet()">
-        🌐 Rechercher aussi sur Internet
-    </button>`;
-
-    results.appendChild(external);
-
-    results.classList.add("active");
-
-}
-
-/* =========================================================
-   RECHERCHE PRINCIPALE
-========================================================= */
-
-function searchAHCElectron(){
-
-    searchInternal();
-
-}
-
-/* =========================================================
-   RECHERCHE INTERNET
-========================================================= */
-
-function searchInternet(){
-
-    const query=
-        document
-        .getElementById("siteSearch")
-        .value
-        .trim();
-
-    if(!query){
-
-        focusSearch();
-
-        showTaskMessage(
-            "Saisissez d'abord un terme à rechercher."
-        );
-
-        return;
-
-    }
-
-    const url=
-        "https://www.google.com/search?q="+
-        encodeURIComponent(
-            "AHCElectronSRS "+query
-        );
-
-    window.open(
-        url,
-        "_blank",
-        "noopener"
-    );
-
-}
-
-/* =========================================================
-   RECHERCHE PARTOUT
-========================================================= */
-
-function searchEverywhere(){
-
-    searchInternal();
-
-    setTimeout(()=>{
-
-        searchInternet();
-
-    },150);
-
-}
-
-/* =========================================================
-   OUVERTURE RÉSULTAT
-========================================================= */
-
-function openSearchResult(item){
-
-    if(item.target==="services"){
-
-        document
-            .getElementById("services")
-            .scrollIntoView({
-                behavior:"smooth"
-            });
-
-    }
-
-    else if(item.target==="produits"){
-
-        document
-            .getElementById("produits")
-            .scrollIntoView({
-                behavior:"smooth"
-            });
-
-    }
-
-    else if(item.target==="realisations"){
-
-        document
-            .getElementById("realisations")
-            .scrollIntoView({
-                behavior:"smooth"
-            });
-
-    }
-
-    else if(item.target==="zone"){
-
-        document
-            .getElementById("zone")
-            .scrollIntoView({
-                behavior:"smooth"
-            });
-
-    }
-
-    else if(item.target==="demande"){
-
-        document
-            .getElementById("demande")
-            .scrollIntoView({
-                behavior:"smooth"
-            });
-
-    }
-
-    else if(item.target==="paiement"){
-
-        document
-            .getElementById("paiement")
-            .scrollIntoView({
-                behavior:"smooth"
-            });
-
-    }
-
-    else if(item.target==="contact"){
-
-        document
-            .getElementById("contact")
-            .scrollIntoView({
-                behavior:"smooth"
-            });
-
-    }
-
-}
-
-/* =========================================================
-   ENTRÉE CLAVIER POUR RECHERCHE
-========================================================= */
-
-document
-    .getElementById("siteSearch")
-    .addEventListener("keydown",event=>{
-
-        if(event.key==="Enter"){
-
-            searchAHCElectron();
+            throw error;
 
         }
 
-    });
 
-/* =========================================================
-   LANGUE MÉMORISÉE
-========================================================= */
+        if(data.session){
 
-(function(){
+            showNotification(
+                "Compte créé et connecté."
+            );
 
-    const savedLanguage=
-        localStorage.getItem("ahcelectron_language");
+        }
+        else{
 
-    if(savedLanguage &&
-       translations[savedLanguage]){
+            showNotification(
+                "Compte créé. Vérifiez votre email si une confirmation est demandée."
+            );
 
-        document.getElementById("languageSelect")
-            .value=savedLanguage;
+        }
 
-        changeLanguage(savedLanguage);
+    }
+    catch(error){
+
+        console.error(error);
+
+        showNotification(
+            error.message ||
+            "Impossible de créer le compte."
+        );
 
     }
 
-})();
+}
+
+
+async function loginAccount(){
+
+    if(!supabaseClient){
+
+        showNotification(
+            "Supabase n'est pas configuré."
+        );
+
+        return;
+
+    }
+
+
+    const email =
+        document.getElementById("accountEmail")
+        .value.trim();
+
+
+    const password =
+        document.getElementById("accountPassword")
+        .value;
+
+
+    if(!email || !password){
+
+        showNotification(
+            "Email et mot de passe requis."
+        );
+
+        return;
+
+    }
+
+
+    try{
+
+        const {
+            data,
+            error
+        } = await supabaseClient.auth.signInWithPassword({
+
+            email:email,
+
+            password:password
+
+        });
+
+
+        if(error){
+
+            throw error;
+
+        }
+
+
+        currentUser =
+            data.user || null;
+
+
+        updateAccountUI();
+
+
+        closeModal("accountModal");
+
+
+        showNotification(
+            "Connexion réussie."
+        );
+
+    }
+    catch(error){
+
+        console.error(error);
+
+        showNotification(
+            error.message ||
+            "Connexion impossible."
+        );
+
+    }
+
+}
+
+
+async function resetPassword(){
+
+    if(!supabaseClient){
+
+        showNotification(
+            "Supabase n'est pas configuré."
+        );
+
+        return;
+
+    }
+
+
+    const email =
+        document.getElementById("accountEmail")
+        .value.trim();
+
+
+    if(!email){
+
+        showNotification(
+            "Indiquez d'abord votre email."
+        );
+
+        return;
+
+    }
+
+
+    try{
+
+        const {
+            error
+        } =
+        await supabaseClient.auth
+            .resetPasswordForEmail(
+                email,
+                {
+                    redirectTo:
+                        window.location.origin +
+                        window.location.pathname
+                }
+            );
+
+
+        if(error){
+
+            throw error;
+
+        }
+
+
+        showNotification(
+            "Un email de récupération a été demandé."
+        );
+
+    }
+    catch(error){
+
+        console.error(error);
+
+        showNotification(
+            error.message ||
+            "Impossible d'envoyer la récupération."
+        );
+
+    }
+
+}
+
+
+async function logoutAccount(){
+
+    if(!supabaseClient){
+
+        return;
+
+    }
+
+
+    try{
+
+        await supabaseClient.auth.signOut();
+
+        currentUser = null;
+
+        updateAccountUI();
+
+        showNotification(
+            "Vous êtes déconnecté."
+        );
+
+    }
+    catch(error){
+
+        console.error(error);
+
+    }
+
+}
+
 
 /* =========================================================
-   INITIALISATION
-========================================================= */
+   INTERFACE COMPTE
+   ========================================================= */
 
-updateSummary();
+function updateAccountUI(){
+
+    const status =
+        document.getElementById("accountStatus");
+
+    const profileInfo =
+        document.getElementById("profileInfo");
+
+
+    if(currentUser){
+
+        status.textContent =
+            "Connecté : " +
+            (currentUser.email || "Compte client");
+
+
+        document.getElementById("profileEmail")
+            .textContent =
+            currentUser.email || "—";
+
+
+        document.getElementById("profileUserId")
+            .textContent =
+            currentUser.id || "—";
+
+
+        profileInfo.style.display =
+            "block";
+
+    }
+    else{
+
+        status.textContent =
+            "Vous n'êtes pas connecté.";
+
+
+        profileInfo.style.display =
+            "none";
+
+    }
+
+}
+
+
+async function initializeAccount(){
+
+    if(!supabaseClient){
+
+        updateAccountUI();
+
+        return;
+
+    }
+
+
+    try{
+
+        const {
+            data
+        } =
+        await supabaseClient.auth.getSession();
+
+
+        currentUser =
+            data.session
+            ? data.session.user
+            : null;
+
+
+        updateAccountUI();
+
+
+        supabaseClient.auth
+            .onAuthStateChange(
+                (_event,session) => {
+
+                    currentUser =
+                        session
+                        ? session.user
+                        : null;
+
+                    updateAccountUI();
+
+                }
+            );
+
+    }
+    catch(error){
+
+        console.error(
+            "Initialisation compte :",
+            error
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   HISTORIQUE DES COMMANDES
+   ========================================================= */
+
+async function openOrders(){
+
+    if(!currentUser){
+
+        showNotification(
+            "Connectez-vous pour consulter vos commandes."
+        );
+
+        openAccount();
+
+        return;
+
+    }
+
+
+    document.getElementById("ordersModal")
+        .style.display = "block";
+
+
+    await loadOrderHistory();
+
+}
+
+
+async function loadOrderHistory(){
+
+    const list =
+        document.getElementById("ordersList");
+
+
+    if(!list){
+
+        return;
+
+    }
+
+
+    if(!currentUser){
+
+        list.innerHTML = `
+            <p style="color:#aebdcd;">
+                Connectez-vous pour voir vos commandes.
+            </p>
+        `;
+
+        return;
+
+    }
+
+
+    if(!supabaseClient){
+
+        list.innerHTML = `
+            <p style="color:#aebdcd;">
+                Service de compte non configuré.
+            </p>
+        `;
+
+        return;
+
+    }
+
+
+    list.innerHTML =
+        "Chargement des commandes...";
+
+
+    try{
+
+        const {
+            data,
+            error
+        } =
+        await supabaseClient
+
+            .from("orders")
+
+            .select(
+                "id,created_at,status,payment_method,total_htg"
+            )
+
+            .eq(
+                "user_id",
+                currentUser.id
+            )
+
+            .order(
+                "created_at",
+                {
+                    ascending:false
+                }
+            );
+
+
+        if(error){
+
+            throw error;
+
+        }
+
+
+        if(!data || data.length === 0){
+
+            list.innerHTML = `
+                <p style="
+                    color:#aebdcd;
+                    text-align:center;
+                    padding:20px;">
+                    Aucune commande enregistrée.
+                </p>
+            `;
+
+            return;
+
+        }
+
+
+        list.innerHTML =
+            data.map(order => {
+
+                const date =
+                    order.created_at
+                    ? new Date(
+                        order.created_at
+                      ).toLocaleString(
+                        "fr-FR"
+                      )
+                    : "—";
+
+
+                return `
+
+                    <div class="orderCard">
+
+                        <strong>
+                            Commande :
+                            ${escapeHTML(order.id)}
+                        </strong>
+
+                        <p>
+                            Date :
+                            ${escapeHTML(date)}
+                        </p>
+
+                        <p>
+                            Paiement :
+                            ${escapeHTML(
+                                order.payment_method || "—"
+                            )}
+                        </p>
+
+                        <p>
+                            Total :
+                            ${formatMoney(
+                                order.total_htg
+                            )} HTG
+                        </p>
+
+                        <span class="orderStatus">
+                            ${escapeHTML(
+                                order.status || "pending"
+                            )}
+                        </span>
+
+                    </div>
+
+                `;
+
+            }).join("");
+
+    }
+    catch(error){
+
+        console.error(error);
+
+        list.innerHTML = `
+            <p style="color:#ff9b9b;">
+                Impossible de charger vos commandes.
+            </p>
+        `;
+
+    }
+
+}
+
+
+/* =========================================================
+   MODALES
+   ========================================================= */
+
+function closeModal(id){
+
+    const modal =
+        document.getElementById(id);
+
+
+    if(modal){
+
+        modal.style.display = "none";
+
+    }
+
+}
+
+
+window.addEventListener(
+    "click",
+    function(event){
+
+        document
+            .querySelectorAll(".modal")
+            .forEach(modal => {
+
+                if(event.target === modal){
+
+                    modal.style.display =
+                        "none";
+
+                }
+
+            });
+
+    }
+);
+
+
+/* =========================================================
+   PANIER LOCAL
+   ========================================================= */
+
+function saveLocalCart(){
+
+    try{
+
+        localStorage.setItem(
+            "ahcelectron_cart",
+            JSON.stringify(cart)
+        );
+
+    }
+    catch(error){
+
+        console.warn(
+            "Impossible de sauvegarder le panier.",
+            error
+        );
+
+    }
+
+}
+
+
+function loadLocalCart(){
+
+    try{
+
+        const saved =
+            localStorage.getItem(
+                "ahcelectron_cart"
+            );
+
+
+        if(saved){
+
+            const parsed =
+                JSON.parse(saved);
+
+
+            if(Array.isArray(parsed)){
+
+                cart = parsed;
+
+            }
+
+        }
+
+    }
+    catch(error){
+
+        cart = [];
+
+    }
+
+}
+
+
+/* =========================================================
+   RECHERCHE
+   ========================================================= */
+
+document.getElementById("searchInput")
+    .addEventListener(
+        "input",
+        showProducts
+    );
+
+
+/* =========================================================
+   ANNÉE
+   ========================================================= */
+
+document.getElementById("year")
+    .textContent =
+    new Date().getFullYear();
+
+
+/* =========================================================
+   DÉMARRAGE
+   ========================================================= */
+
+loadLocalCart();
+
+updateCart();
+
+initializeAccount();
+
+loadProducts();
 
 </script>
 
