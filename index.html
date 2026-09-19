@@ -5,22 +5,28 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+      content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="AHCElectron Sales and Repairs Services — AHCElectronSRS. Électricité, réparation, électronique, maintenance et technologie en Haïti et à l'international.">
+      content="AHCElectron Sales and Repairs Services — Électricité, réparation, électronique, maintenance, technologie et boutique en Haïti et à l'international.">
 
-<meta name="theme-color" content="#07111f">
+<meta name="theme-color"
+      content="#07111f">
 
 <meta property="og:title"
-content="AHCElectron — Sales and Repairs Services">
+      content="AHCElectron — Électricité • Électronique • Technologie">
 
 <meta property="og:description"
-content="Électricité, réparation, électronique, maintenance, technologie et vente de produits.">
+      content="AHCElectron Sales and Repairs Services — Boutique, réparation, électronique, technologie et services.">
 
-<title>AHCElectron — Sales • Repairs • Technology</title>
+<title>AHCElectron — Sales & Repairs Services</title>
+
 
 <style>
+
+/* =========================================================
+   AHCELECTRON — STYLE GLOBAL
+   ========================================================= */
 
 *{
     box-sizing:border-box;
@@ -55,666 +61,844 @@ a{
     text-decoration:none;
 }
 
-/* TOPBAR */
+
+/* =========================================================
+   BARRE PRINCIPALE
+   ========================================================= */
 
 .topbar{
     position:sticky;
     top:0;
-    z-index:1000;
+    z-index:5000;
+
     display:flex;
     align-items:center;
-    gap:12px;
-    padding:12px 16px;
-    background:#091827;
-    border-bottom:1px solid #20344d;
-    box-shadow:0 4px 20px rgba(0,0,0,.25);
+    gap:10px;
+
+    padding:10px 14px;
+
+    background:#0a1727;
+    border-bottom:1px solid #203850;
+
+    box-shadow:0 5px 25px rgba(0,0,0,.35);
 }
 
 .logo{
-    font-size:22px;
-    font-weight:900;
     white-space:nowrap;
+
+    font-size:21px;
+    font-weight:bold;
 }
 
-.logo span,
-.hero h1 span{
+.logo span{
     color:#ff9f1c;
 }
 
 .searchBox{
     flex:1;
-    min-width:100px;
 }
 
 .searchBox input{
     width:100%;
+
     padding:11px 14px;
-    border:1px solid #304761;
+
+    border:1px solid #38516d;
     border-radius:10px;
-    background:#101f31;
-    color:white;
+
     outline:none;
+
+    background:#101f32;
+    color:#fff;
 }
 
 .searchBox input:focus{
     border-color:#ff9f1c;
 }
 
-.topButton{
-    border:1px solid #304761;
-    background:#102238;
-    color:white;
-    padding:10px 13px;
-    border-radius:10px;
-}
-
-.topButton:hover{
-    background:#17304d;
-}
-
+.accountTopButton,
 .cartButton{
     position:relative;
+
+    padding:11px 14px;
+
+    border:0;
+    border-radius:10px;
+
+    background:#ff9f1c;
+    color:#07111f;
+
+    font-weight:bold;
+}
+
+.accountTopButton{
+    background:#18324d;
+    color:#fff;
 }
 
 .cartCount{
     position:absolute;
-    top:-8px;
-    right:-8px;
+
+    top:-7px;
+    right:-7px;
+
     min-width:21px;
     height:21px;
-    padding:2px 5px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
     border-radius:50%;
-    background:#ff9f1c;
-    color:#07111f;
+
+    background:#e63946;
+    color:white;
+
     font-size:12px;
-    font-weight:bold;
 }
 
-/* HERO */
+
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .hero{
+    min-height:520px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    padding:70px 20px;
+
     text-align:center;
-    padding:80px 20px;
+
     background:
-        radial-gradient(circle at top,#173453 0%,#07111f 65%);
+        radial-gradient(circle at top,
+        #173b60 0,
+        #07111f 58%);
 }
 
 .hero h1{
-    font-size:clamp(34px,7vw,64px);
-    margin-bottom:12px;
+    font-size:clamp(40px,9vw,75px);
+}
+
+.hero h1 span{
+    color:#ff9f1c;
 }
 
 .hero h2{
+    margin-top:5px;
+
+    color:#b7c7d8;
+
     font-size:clamp(18px,4vw,28px);
-    color:#c7d4e3;
-    margin-bottom:15px;
 }
 
 .hero p{
-    max-width:760px;
-    margin:0 auto 25px;
-    color:#b9c6d5;
+    max-width:850px;
+
+    margin-top:15px;
+
+    color:#a9bacd;
 }
 
-.heroButtons{
+.heroActions{
     display:flex;
-    justify-content:center;
-    gap:12px;
     flex-wrap:wrap;
+    justify-content:center;
+
+    gap:12px;
+
+    margin-top:25px;
 }
 
 .primaryButton,
 .secondaryButton{
-    border:none;
-    padding:13px 20px;
+    display:inline-block;
+
+    padding:12px 18px;
+
     border-radius:10px;
+
     font-weight:bold;
 }
 
 .primaryButton{
+    border:0;
+
     background:#ff9f1c;
     color:#07111f;
 }
 
 .secondaryButton{
-    background:#172b42;
-    color:white;
-    border:1px solid #34506c;
+    border:1px solid #38516d;
+
+    background:#0c1b2c;
+    color:#fff;
 }
 
-.primaryButton:hover{
-    background:#ffb64d;
-}
 
-/* SECTIONS */
+/* =========================================================
+   SECTIONS
+   ========================================================= */
 
-section{
+.section{
+    max-width:1200px;
+
+    margin:auto;
+
     padding:55px 18px;
 }
 
 .sectionTitle{
     text-align:center;
-    margin-bottom:28px;
+
+    margin-bottom:30px;
 }
 
 .sectionTitle h2{
     font-size:30px;
-    margin-bottom:7px;
 }
 
 .sectionTitle p{
-    color:#aebdce;
+    margin-top:6px;
+
+    color:#9db0c5;
 }
 
-/* SERVICES */
 
-.services{
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.serviceGrid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
     gap:18px;
-    max-width:1200px;
-    margin:auto;
 }
 
-.service{
-    background:#0d1d2f;
-    border:1px solid #213951;
-    border-radius:15px;
+.serviceCard{
     padding:25px;
-    text-align:center;
+
+    border:1px solid #203852;
+    border-radius:15px;
+
+    background:#0c1b2c;
+
+    transition:.2s;
+}
+
+.serviceCard:hover{
+    transform:translateY(-3px);
+
+    border-color:#ff9f1c;
 }
 
 .serviceIcon{
-    font-size:38px;
-    margin-bottom:12px;
+    margin-bottom:10px;
+
+    font-size:42px;
 }
 
-.service h3{
-    margin-bottom:8px;
+.serviceCard h3{
+    margin-bottom:7px;
 }
 
-.service p{
-    color:#afbdcd;
-    font-size:14px;
+.serviceCard p{
+    color:#9eb0c4;
 }
 
-/* BLOG */
+
+/* =========================================================
+   BLOG
+   ========================================================= */
 
 .blogGrid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    max-width:1200px;
-    margin:auto;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+
+    gap:18px;
 }
 
 .blogCard{
     overflow:hidden;
+
+    border:1px solid #203852;
     border-radius:15px;
-    background:#0d1d2f;
-    border:1px solid #213951;
+
+    background:#0c1b2c;
 }
 
-.blogCard img{
+.blogImage{
     width:100%;
-    height:210px;
+    height:180px;
+
     object-fit:cover;
 }
 
-.blogCardContent{
+.blogBody{
     padding:18px;
 }
 
-.blogCard p{
-    color:#b5c3d2;
-    margin-top:7px;
+.blogBody h3{
+    margin-bottom:8px;
 }
 
-/* CATEGORIES */
+.blogBody p{
+    color:#a3b3c5;
+}
+
+
+/* =========================================================
+   CATEGORIES
+   ========================================================= */
 
 .categories{
     display:flex;
-    justify-content:center;
     flex-wrap:wrap;
-    gap:9px;
-    margin-bottom:28px;
+    justify-content:center;
+
+    gap:10px;
+
+    margin-bottom:30px;
 }
 
 .categoryButton{
-    padding:9px 14px;
-    border-radius:20px;
-    border:1px solid #304961;
-    background:#102238;
-    color:#dbe7f3;
+    padding:10px 15px;
+
+    border:1px solid #304a66;
+    border-radius:30px;
+
+    background:#0d1b2d;
+    color:#dce8f5;
 }
 
 .categoryButton.active,
 .categoryButton:hover{
     background:#ff9f1c;
     color:#07111f;
-    border-color:#ff9f1c;
 }
 
-/* SHOP */
 
-.shopContainer{
-    max-width:1250px;
-    margin:auto;
-}
+/* =========================================================
+   PRODUITS
+   ========================================================= */
 
 .productGrid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
     gap:18px;
 }
 
 .productCard{
-    display:flex;
-    flex-direction:column;
     overflow:hidden;
-    background:#0d1d2f;
-    border:1px solid #213951;
+
+    border:1px solid #203852;
     border-radius:15px;
+
+    background:#0c1b2c;
+
+    transition:.2s;
+}
+
+.productCard:hover{
+    transform:translateY(-3px);
+
+    border-color:#ff9f1c;
 }
 
 .productImage{
     width:100%;
-    height:210px;
-    object-fit:cover;
-    background:#12243a;
-}
+    height:175px;
 
-.productImagePlaceholder{
     display:flex;
     align-items:center;
     justify-content:center;
-    height:210px;
-    font-size:50px;
-    background:#12243a;
+
+    background:#13263c;
+
+    font-size:65px;
 }
 
-.productInfo{
-    display:flex;
-    flex-direction:column;
-    flex:1;
-    padding:16px;
+.productImage img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
 }
 
-.productInfo h3{
+.productBody{
+    padding:18px;
+}
+
+.productBody h3{
     margin-bottom:4px;
 }
 
 .reference{
-    color:#8295aa;
+    color:#8199b2;
+
     font-size:12px;
 }
 
 .brand{
-    color:#c0ccda;
-    font-size:13px;
-    margin:5px 0;
-}
+    margin-top:4px;
 
-.description{
-    color:#aebdcd;
+    color:#ffb84d;
+
     font-size:13px;
-    margin:7px 0 12px;
 }
 
 .price{
-    font-size:18px;
-    font-weight:bold;
-    color:#ffb13b;
-}
+    margin-top:12px;
 
-.usdPrice{
-    color:#aebdcd;
-    font-size:13px;
+    font-size:20px;
+    font-weight:bold;
 }
 
 .stock{
-    margin:8px 0;
+    margin-top:5px;
+
     font-size:13px;
 }
 
-.stock.available{
-    color:#63d98b;
+.available{
+    color:#59d98e;
 }
 
-.stock.unavailable{
-    color:#ff7474;
+.low{
+    color:#ffc857;
+}
+
+.out{
+    color:#ff6b6b;
 }
 
 .productActions{
-    display:grid;
-    grid-template-columns:1fr 1fr;
+    display:flex;
+
     gap:8px;
-    margin-top:auto;
+
+    margin-top:15px;
 }
 
 .productActions button{
-    padding:9px;
-    border-radius:8px;
-    border:1px solid #38536c;
-    background:#13283f;
-    color:white;
+    flex:1;
+
+    padding:10px;
+
+    border-radius:9px;
 }
 
-.productActions .addButton{
+.viewButton{
+    border:1px solid #38516d;
+
+    background:#101f32;
+    color:#fff;
+}
+
+.buyButton{
+    border:0;
+
     background:#ff9f1c;
     color:#07111f;
-    border-color:#ff9f1c;
+
     font-weight:bold;
 }
 
-.productActions button:disabled{
-    opacity:.45;
+.buyButton:disabled{
+    opacity:.4;
     cursor:not-allowed;
 }
 
-.loading,
-.errorBox{
-    max-width:700px;
-    margin:20px auto;
-    padding:15px;
-    border-radius:10px;
-    text-align:center;
-}
+
+/* =========================================================
+   CHARGEMENT / ERREUR
+   ========================================================= */
 
 .loading{
-    background:#102238;
-    color:#bdcbd9;
+    padding:40px;
+
+    text-align:center;
+
+    color:#9fb2c7;
 }
 
 .errorBox{
-    background:#321c20;
-    border:1px solid #704049;
-    color:#ffb8bd;
     display:none;
+
+    margin:20px 0;
+    padding:15px;
+
+    border:1px solid #8d3042;
+    border-radius:10px;
+
+    background:#3b1720;
+    color:#ffb6c0;
 }
 
-/* EXPERTS */
 
-.experts{
+/* =========================================================
+   EXPERTS
+   ========================================================= */
+
+.expertGrid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(200px,1fr));
+
     gap:18px;
-    max-width:1200px;
-    margin:auto;
 }
 
 .expert{
-    text-align:center;
-    background:#0d1d2f;
-    border:1px solid #213951;
+    padding:15px;
+
+    border:1px solid #203852;
     border-radius:15px;
-    padding:18px;
+
+    background:#0c1b2c;
+
+    text-align:center;
 }
 
 .expert img{
     width:100%;
-    height:190px;
+    height:220px;
+
     object-fit:cover;
+
     border-radius:10px;
+
     margin-bottom:10px;
 }
 
 .expert p{
-    color:#aebdcd;
-    font-size:13px;
+    color:#9fb1c4;
 }
 
-/* ACCOUNT */
+
+/* =========================================================
+   COMPTE
+   ========================================================= */
 
 .accountBox{
-    max-width:700px;
+    max-width:800px;
+
     margin:auto;
+
     padding:25px;
-    border-radius:15px;
-    background:#0d1d2f;
-    border:1px solid #213951;
+
+    border:1px solid #203852;
+    border-radius:16px;
+
+    background:#0c1b2c;
+
     text-align:center;
 }
 
-.accountBox p{
-    color:#b9c7d5;
+.accountStatus{
     margin-bottom:15px;
+
+    color:#a3b4c7;
 }
 
 .profileInfo{
-    max-width:700px;
-    margin:20px auto 0;
-    padding:20px;
-    background:#0b1929;
-    border:1px solid #213951;
+    display:none;
+
+    margin-top:18px;
+
+    padding:15px;
+
+    border:1px solid #29445f;
     border-radius:12px;
+
+    background:#101f32;
+
+    text-align:left;
 }
 
 .profileInfo p{
-    margin:7px 0;
-    color:#c6d2df;
+    margin:5px 0;
+
+    color:#b7c7d8;
 }
 
-/* MODALS */
+.accountActions{
+    display:flex;
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:15px;
+}
+
+.ordersBox{
+    display:none;
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border:1px solid #29445f;
+    border-radius:12px;
+
+    background:#101f32;
+
+    text-align:left;
+}
+
+.orderRow{
+    padding:12px 0;
+
+    border-bottom:1px solid #29445f;
+}
+
+.orderRow:last-child{
+    border-bottom:0;
+}
+
+.orderStatus{
+    color:#ffc857;
+}
+
+
+/* =========================================================
+   MODALES
+   ========================================================= */
 
 .modal{
     display:none;
+
     position:fixed;
     inset:0;
-    z-index:3000;
+
+    z-index:9000;
+
     padding:20px;
-    background:rgba(0,0,0,.78);
+
+    background:rgba(0,0,0,.80);
+
     overflow:auto;
 }
 
 .modalContent{
-    position:relative;
-    width:min(700px,100%);
-    margin:40px auto;
-    background:#0c1b2b;
-    border:1px solid #304961;
-    border-radius:16px;
-    padding:25px;
-    box-shadow:0 20px 70px rgba(0,0,0,.5);
+    max-width:650px;
+
+    margin:45px auto;
+
+    padding:22px;
+
+    border:1px solid #304a66;
+    border-radius:18px;
+
+    background:#0b1829;
+
+    box-shadow:0 20px 70px rgba(0,0,0,.6);
 }
 
-.closeModal{
-    position:absolute;
-    top:10px;
-    right:14px;
-    border:none;
+.close{
+    float:right;
+
+    border:0;
+
     background:transparent;
-    color:white;
+
+    color:#fff;
+
     font-size:28px;
 }
 
-.modal h2{
-    margin-bottom:18px;
-}
-
 .formGroup{
-    margin-bottom:13px;
+    margin-top:14px;
 }
 
 .formGroup label{
     display:block;
+
     margin-bottom:5px;
-    color:#c7d3df;
-    font-size:13px;
+
+    color:#b9c7d8;
 }
 
 .formGroup input,
 .formGroup select,
 .formGroup textarea{
     width:100%;
+
     padding:11px;
+
+    border:1px solid #38516d;
     border-radius:9px;
-    border:1px solid #344d65;
-    background:#101f31;
-    color:white;
+
     outline:none;
+
+    background:#101f32;
+    color:#fff;
 }
 
 .formGroup textarea{
-    min-height:90px;
+    min-height:100px;
+
     resize:vertical;
 }
 
-.formGroup input:focus,
-.formGroup select:focus,
-.formGroup textarea:focus{
-    border-color:#ff9f1c;
-}
+.modalButton{
+    width:100%;
 
-.modalActions{
-    display:flex;
-    gap:9px;
-    flex-wrap:wrap;
-    margin-top:15px;
-}
+    margin-top:18px;
 
-.modalActions button{
-    padding:10px 14px;
-    border-radius:9px;
-    border:1px solid #38536c;
-    background:#142a42;
-    color:white;
-}
+    padding:13px;
 
-.modalActions .primary{
+    border:0;
+    border-radius:10px;
+
     background:#ff9f1c;
     color:#07111f;
-    border-color:#ff9f1c;
+
     font-weight:bold;
 }
 
-/* CART */
+.secondaryModalButton{
+    width:100%;
 
-.cartItem{
-    display:grid;
-    grid-template-columns:1fr auto;
-    gap:10px;
-    padding:12px 0;
-    border-bottom:1px solid #263c52;
+    margin-top:10px;
+
+    padding:13px;
+
+    border:1px solid #38516d;
+    border-radius:10px;
+
+    background:#101f32;
+    color:#fff;
+
+    font-weight:bold;
 }
 
-.cartItem h4{
-    margin-bottom:3px;
+
+/* =========================================================
+   PANIER
+   ========================================================= */
+
+.cartItem{
+    display:flex;
+    justify-content:space-between;
+
+    gap:12px;
+
+    padding:13px 0;
+
+    border-bottom:1px solid #243a53;
 }
 
 .cartItem small{
-    color:#93a5b8;
+    color:#8ea4bb;
 }
 
-.cartControls{
-    display:flex;
-    align-items:center;
-    gap:7px;
-}
+.cartEmpty{
+    padding:25px;
 
-.cartControls button{
-    border:1px solid #3a536b;
-    background:#12263d;
-    color:white;
-    border-radius:6px;
-    padding:5px 9px;
-}
+    text-align:center;
 
-.removeButton{
-    color:#ff8d8d !important;
+    color:#91a5ba;
 }
 
 .cartTotal{
-    text-align:right;
-    font-size:20px;
+    margin-top:20px;
+
+    font-size:21px;
     font-weight:bold;
-    margin-top:18px;
-    color:#ffb13b;
 }
 
-.securityNotice{
-    margin:15px 0;
-    padding:12px;
-    border-radius:9px;
-    background:#102238;
-    border:1px solid #2a4660;
-    color:#bdcbd8;
-    font-size:13px;
+.quantityControls{
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+
+    margin-top:8px;
 }
 
-/* ORDERS */
-
-.orderCard{
-    padding:15px;
-    margin-bottom:12px;
-    border:1px solid #29435b;
-    border-radius:10px;
-    background:#102238;
-}
-
-.orderCard p{
-    margin:4px 0;
-    color:#bdcad7;
-}
-
-.orderStatus{
-    display:inline-block;
-    margin-top:5px;
+.quantityControls button{
     padding:4px 9px;
-    border-radius:15px;
-    background:#17344c;
-    color:#ffd08a;
-    font-size:12px;
+
+    border:1px solid #38516d;
+    border-radius:6px;
+
+    background:#101f32;
+    color:#fff;
 }
 
-/* NOTIFICATION */
 
-.notification{
-    display:none;
+/* =========================================================
+   NOTIFICATION
+   ========================================================= */
+
+#notification{
     position:fixed;
-    right:15px;
-    bottom:15px;
-    z-index:5000;
-    max-width:350px;
-    padding:14px 17px;
+
+    left:50%;
+    bottom:20px;
+
+    z-index:12000;
+
+    display:none;
+
+    max-width:90%;
+
+    transform:translateX(-50%);
+
+    padding:13px 18px;
+
     border-radius:10px;
-    background:#10283e;
-    border:1px solid #38536c;
-    box-shadow:0 10px 30px rgba(0,0,0,.4);
+
+    background:#13263c;
+    color:#fff;
+
+    border:1px solid #38516d;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.45);
+
+    text-align:center;
 }
 
-/* FOOTER */
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer{
-    padding:35px 18px;
-    text-align:center;
-    background:#050d17;
+    padding:40px 18px;
+
     border-top:1px solid #20344d;
-    color:#8fa1b4;
+
+    background:#050d17;
+
+    text-align:center;
+
+    color:#8fa2b8;
 }
 
 footer strong{
-    color:#dce7f2;
+    color:#ff9f1c;
 }
 
-/* MOBILE */
 
-@media(max-width:900px){
-
-    .services,
-    .experts{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .blogGrid{
-        grid-template-columns:1fr;
-    }
-
-    .productGrid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media(max-width:650px){
 
@@ -723,39 +907,37 @@ footer strong{
     }
 
     .logo{
-        width:auto;
+        width:100%;
+
+        text-align:center;
     }
 
     .searchBox{
-        order:5;
-        flex-basis:100%;
+        width:100%;
     }
 
-    .services,
-    .experts,
-    .productGrid{
-        grid-template-columns:1fr;
-    }
-
-    section{
-        padding:42px 14px;
+    .accountTopButton,
+    .cartButton{
+        flex:1;
     }
 
     .hero{
-        padding:60px 16px;
-    }
-
-    .productImage,
-    .productImagePlaceholder{
-        height:220px;
+        padding:55px 15px;
     }
 
 }
 
 </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =========================================================
+     BARRE AHCELECTRON
+     ========================================================= -->
 
 <header class="topbar">
 
@@ -764,32 +946,45 @@ footer strong{
     </div>
 
     <div class="searchBox">
+
         <input
-            type="search"
             id="searchInput"
+            type="search"
             placeholder="Rechercher produit, marque ou référence..."
             autocomplete="off">
+
     </div>
 
     <button
-        class="topButton"
+        class="accountTopButton"
         onclick="openAccount()">
+
         👤 Compte
+
     </button>
 
     <button
-        class="topButton cartButton"
+        class="cartButton"
         onclick="openCart()">
+
         🛒 Panier
+
         <span
-            class="cartCount"
-            id="cartCount">0</span>
+            id="cartCount"
+            class="cartCount">
+
+            0
+
+        </span>
+
     </button>
 
 </header>
 
 
-<main>
+<!-- =========================================================
+     ACCUEIL
+     ========================================================= -->
 
 <section class="hero">
 
@@ -802,22 +997,31 @@ footer strong{
     </h2>
 
     <p>
-        Électricité • Réparation • Électronique • Maintenance •
-        Informatique • Technologie • Vente de produits
+        Électricité • Électronique • Réparation •
+        Maintenance • Technologie • Boutique
     </p>
 
-    <div class="heroButtons">
+    <p>
+        Solutions technologiques pour Haïti
+        et l'international.
+    </p>
+
+    <div class="heroActions">
 
         <a
-            class="primaryButton"
-            href="#shop">
-            🛒 Voir la boutique
+            href="#shop"
+            class="primaryButton">
+
+            🛍️ Visiter la boutique
+
         </a>
 
         <a
-            class="secondaryButton"
-            href="#services">
-            🔧 Nos services
+            href="#services"
+            class="secondaryButton">
+
+            ⚙️ Nos services
+
         </a>
 
     </div>
@@ -825,109 +1029,144 @@ footer strong{
 </section>
 
 
-<section id="services">
+<!-- =========================================================
+     SERVICES
+     ========================================================= -->
+
+<section
+    id="services"
+    class="section">
 
     <div class="sectionTitle">
 
-        <h2>Nos services</h2>
+        <h2>
+            Nos services
+        </h2>
 
         <p>
-            Solutions techniques pour particuliers,
-            entreprises et professionnels.
+            Assistance technique et solutions électroniques.
         </p>
 
     </div>
 
-    <div class="services">
 
-        <div class="service">
+    <div class="serviceGrid">
 
-            <div class="serviceIcon">🔧</div>
+        <article class="serviceCard">
 
-            <h3>Réparation</h3>
+            <div class="serviceIcon">
+                🔧
+            </div>
 
-            <p>
-                Diagnostic et réparation de matériels
-                électroniques et technologiques.
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="serviceIcon">⚡</div>
-
-            <h3>Électricité</h3>
+            <h3>
+                Réparation électronique
+            </h3>
 
             <p>
-                Installation, maintenance et dépannage
-                électrique.
+                Diagnostic, réparation et maintenance
+                d'équipements électroniques.
             </p>
 
-        </div>
+        </article>
 
 
-        <div class="service">
+        <article class="serviceCard">
 
-            <div class="serviceIcon">💻</div>
+            <div class="serviceIcon">
+                ⚡
+            </div>
 
-            <h3>Informatique</h3>
+            <h3>
+                Électricité
+            </h3>
 
             <p>
-                Assistance informatique, maintenance,
-                configuration et dépannage.
+                Assistance et solutions électriques
+                adaptées aux besoins du client.
             </p>
 
-        </div>
+        </article>
 
 
-        <div class="service">
+        <article class="serviceCard">
 
-            <div class="serviceIcon">📡</div>
+            <div class="serviceIcon">
+                💻
+            </div>
 
-            <h3>Technologie</h3>
+            <h3>
+                Informatique
+            </h3>
 
             <p>
-                Solutions technologiques, équipements,
-                composants et systèmes.
+                Matériel informatique, accessoires
+                et assistance technologique.
             </p>
 
-        </div>
+        </article>
+
+
+        <article class="serviceCard">
+
+            <div class="serviceIcon">
+                📡
+            </div>
+
+            <h3>
+                Technologie
+            </h3>
+
+            <p>
+                Solutions numériques, équipements
+                connectés et assistance.
+            </p>
+
+        </article>
 
     </div>
 
 </section>
 
 
-<section>
+<!-- =========================================================
+     BLOG
+     ========================================================= -->
+
+<section
+    id="blog"
+    class="section">
 
     <div class="sectionTitle">
 
-        <h2>Actualités technologiques</h2>
+        <h2>
+            Blog AHCElectron
+        </h2>
 
         <p>
-            Découvrez quelques domaines qui inspirent
-            l'évolution technologique.
+            Gadgets, électronique et culture technologique.
         </p>
 
     </div>
+
 
     <div class="blogGrid">
 
         <article class="blogCard">
 
             <img
+                class="blogImage"
                 src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80"
                 alt="Smartphone">
 
-            <div class="blogCardContent">
+            <div class="blogBody">
 
-                <h3>Smartphones</h3>
+                <h3>
+                    Smartphones
+                </h3>
 
                 <p>
-                    Évolution des appareils mobiles,
-                    connectivité et services numériques.
+                    Comprendre les caractéristiques
+                    importantes avant l'achat.
                 </p>
 
             </div>
@@ -938,16 +1177,19 @@ footer strong{
         <article class="blogCard">
 
             <img
+                class="blogImage"
                 src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80"
-                alt="Audio">
+                alt="Casque audio">
 
-            <div class="blogCardContent">
+            <div class="blogBody">
 
-                <h3>Audio</h3>
+                <h3>
+                    Audio & Bluetooth
+                </h3>
 
                 <p>
-                    Équipements audio, haut-parleurs,
-                    accessoires et réparation.
+                    Haut-parleurs, écouteurs et
+                    équipements audio.
                 </p>
 
             </div>
@@ -958,16 +1200,19 @@ footer strong{
         <article class="blogCard">
 
             <img
+                class="blogImage"
                 src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?auto=format&fit=crop&w=900&q=80"
                 alt="Ordinateur">
 
-            <div class="blogCardContent">
+            <div class="blogBody">
 
-                <h3>Informatique</h3>
+                <h3>
+                    Informatique
+                </h3>
 
                 <p>
-                    Ordinateurs, accessoires, maintenance
-                    et solutions numériques.
+                    Matériel, accessoires et
+                    nouvelles technologies.
                 </p>
 
             </div>
@@ -979,185 +1224,210 @@ footer strong{
 </section>
 
 
-<section id="shop">
+<!-- =========================================================
+     BOUTIQUE
+     ========================================================= -->
+
+<section
+    id="shop"
+    class="section">
 
     <div class="sectionTitle">
 
-        <h2>🛒 Boutique AHCElectron</h2>
+        <h2>
+            🛍️ Boutique AHCElectron
+        </h2>
 
         <p>
-            Produits disponibles selon le stock enregistré
-            dans notre système.
+            Catalogue organisé par catégories.
         </p>
 
     </div>
 
 
-    <div class="shopContainer">
+    <div class="categories">
 
-        <div class="categories">
+        <button
+            class="categoryButton active"
+            onclick="filterCategory('all',this)">
+            Tous
+        </button>
 
-            <button
-                class="categoryButton active"
-                onclick="filterCategory('all',this)">
-                Tous
-            </button>
+        <button
+            class="categoryButton"
+            onclick="filterCategory('smartphones',this)">
+            📱 Smartphones
+        </button>
 
-            <button
-                class="categoryButton"
-                onclick="filterCategory('smartphones',this)">
-                Smartphones
-            </button>
+        <button
+            class="categoryButton"
+            onclick="filterCategory('audio',this)">
+            🔊 Audio & Bluetooth
+        </button>
 
-            <button
-                class="categoryButton"
-                onclick="filterCategory('audio',this)">
-                Audio
-            </button>
+        <button
+            class="categoryButton"
+            onclick="filterCategory('informatique',this)">
+            💻 Informatique
+        </button>
 
-            <button
-                class="categoryButton"
-                onclick="filterCategory('informatique',this)">
-                Informatique
-            </button>
+        <button
+            class="categoryButton"
+            onclick="filterCategory('composants',this)">
+            🔧 Composants
+        </button>
 
-            <button
-                class="categoryButton"
-                onclick="filterCategory('composants',this)">
-                Composants
-            </button>
+        <button
+            class="categoryButton"
+            onclick="filterCategory('energie',this)">
+            ⚡ Énergie
+        </button>
 
-            <button
-                class="categoryButton"
-                onclick="filterCategory('energie',this)">
-                Énergie
-            </button>
+        <button
+            class="categoryButton"
+            onclick="filterCategory('securite',this)">
+            📹 Sécurité
+        </button>
 
-            <button
-                class="categoryButton"
-                onclick="filterCategory('securite',this)">
-                Sécurité
-            </button>
-
-        </div>
+    </div>
 
 
-        <div
-            class="loading"
-            id="loading">
-            Chargement de la boutique...
-        </div>
+    <div
+        id="shopError"
+        class="errorBox">
+    </div>
 
 
-        <div
-            class="errorBox"
-            id="shopError">
-        </div>
+    <div
+        id="loading"
+        class="loading">
+
+        Chargement du catalogue...
+
+    </div>
 
 
-        <div
-            class="productGrid"
-            id="productGrid">
-        </div>
-
+    <div
+        id="productGrid"
+        class="productGrid">
     </div>
 
 </section>
 
 
-<section>
+<!-- =========================================================
+     PIONNIERS
+     ========================================================= -->
+
+<section
+    id="experts"
+    class="section">
 
     <div class="sectionTitle">
 
-        <h2>Les pionniers de la technologie</h2>
+        <h2>
+            Pionniers de l'électricité et de la technologie
+        </h2>
 
         <p>
             Quelques figures historiques ayant contribué
-            à l'évolution des sciences et technologies.
+            à l'évolution de la technologie.
         </p>
 
     </div>
 
 
-    <div class="experts">
+    <div class="expertGrid">
 
-        <div class="expert">
+        <article class="expert">
 
             <img
                 src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Michael_Faraday_1842.jpg"
                 alt="Michael Faraday">
 
-            <h3>Michael Faraday</h3>
+            <h3>
+                Michael Faraday
+            </h3>
 
             <p>
-                Travaux fondamentaux sur
-                l'électromagnétisme.
+                Électromagnétisme
             </p>
 
-        </div>
+        </article>
 
 
-        <div class="expert">
+        <article class="expert">
 
             <img
                 src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Thomas_Edison2.jpg"
                 alt="Thomas Edison">
 
-            <h3>Thomas Edison</h3>
+            <h3>
+                Thomas Edison
+            </h3>
 
             <p>
-                Contributions majeures à
-                l'électricité et aux inventions.
+                Électricité et invention
             </p>
 
-        </div>
+        </article>
 
 
-        <div class="expert">
+        <article class="expert">
 
             <img
                 src="https://upload.wikimedia.org/wikipedia/commons/7/79/Tesla_circa_1890.jpeg"
                 alt="Nikola Tesla">
 
-            <h3>Nikola Tesla</h3>
+            <h3>
+                Nikola Tesla
+            </h3>
 
             <p>
-                Travaux importants sur les systèmes
-                électriques et le courant alternatif.
+                Électricité et courant alternatif
             </p>
 
-        </div>
+        </article>
 
 
-        <div class="expert">
+        <article class="expert">
 
             <img
                 src="https://upload.wikimedia.org/wikipedia/commons/1/14/Alexander_Graham_Bell.jpg"
                 alt="Alexander Graham Bell">
 
-            <h3>Alexander Graham Bell</h3>
+            <h3>
+                Alexander Graham Bell
+            </h3>
 
             <p>
-                Contributions historiques aux
-                télécommunications.
+                Télécommunications
             </p>
 
-        </div>
+        </article>
 
     </div>
 
 </section>
 
 
-<section>
+<!-- =========================================================
+     COMPTE CLIENT
+     ========================================================= -->
+
+<section
+    id="account"
+    class="section">
 
     <div class="sectionTitle">
 
-        <h2>👤 Espace client</h2>
+        <h2>
+            👤 Mon compte AHCElectron
+        </h2>
 
         <p>
-            Votre compte permet de retrouver vos commandes
-            et votre identité de connexion.
+            Votre profil et vos commandes sont associés
+            à votre compte personnel.
         </p>
 
     </div>
@@ -1165,44 +1435,69 @@ footer strong{
 
     <div class="accountBox">
 
-        <p id="accountStatus">
-            Vous n'êtes pas connecté.
-        </p>
+        <div
+            id="accountStatus"
+            class="accountStatus">
 
-        <button
-            class="primaryButton"
-            onclick="openAccount()">
-            Gérer mon compte
-        </button>
+            Vous naviguez actuellement comme visiteur.
 
-    </div>
+        </div>
 
 
-    <div
-        class="profileInfo"
-        id="profileInfo"
-        style="display:none;">
+        <div
+            id="profileInfo"
+            class="profileInfo">
 
-        <p>
-            <strong>Email :</strong>
-            <span id="profileEmail">—</span>
-        </p>
+            <p>
+                <strong>E-mail :</strong>
+                <span id="profileEmail">—</span>
+            </p>
 
-        <p>
-            <strong>ID utilisateur :</strong>
-            <span id="profileUserId">—</span>
-        </p>
+            <p>
+                <strong>Identifiant :</strong>
+                <span id="profileUserId">—</span>
+            </p>
 
-        <div class="modalActions">
+        </div>
+
+
+        <div
+            id="ordersBox"
+            class="ordersBox">
+
+            <h3>
+                📦 Mes commandes
+            </h3>
+
+            <div
+                id="ordersList"
+                style="margin-top:10px">
+
+                Chargement...
+
+            </div>
+
+        </div>
+
+
+        <div class="accountActions">
 
             <button
-                onclick="openOrders()">
-                📦 Mes commandes
+                class="primaryButton"
+                onclick="openAccount()">
+
+                Créer un compte / Se connecter
+
             </button>
 
             <button
+                id="logoutButton"
+                class="secondaryButton"
+                style="display:none"
                 onclick="logoutAccount()">
-                Déconnexion
+
+                Se déconnecter
+
             </button>
 
         </div>
@@ -1211,28 +1506,33 @@ footer strong{
 
 </section>
 
-</main>
 
-
-<!-- PRODUCT MODAL -->
+<!-- =========================================================
+     MODALE PRODUIT
+     ========================================================= -->
 
 <div
-    class="modal"
-    id="productModal">
+    id="productModal"
+    class="modal">
 
     <div class="modalContent">
 
         <button
-            class="closeModal"
+            class="close"
             onclick="closeModal('productModal')">
+
             ×
+
         </button>
 
-        <div id="productDetails"></div>
+
+        <div id="productDetails">
+        </div>
+
 
         <div class="formGroup">
 
-            <label for="productQuantity">
+            <label>
                 Quantité
             </label>
 
@@ -1244,108 +1544,106 @@ footer strong{
 
         </div>
 
-        <div class="modalActions">
 
-            <button
-                class="primary"
-                onclick="addSelectedProductToCart()">
-                🛒 Ajouter au panier
-            </button>
+        <button
+            class="modalButton"
+            onclick="addSelectedProductToCart()">
 
-        </div>
+            🛒 Ajouter au panier
+
+        </button>
 
     </div>
 
 </div>
 
 
-<!-- CART MODAL -->
+<!-- =========================================================
+     MODALE PANIER / COMMANDE
+     ========================================================= -->
 
 <div
-    class="modal"
-    id="cartModal">
+    id="cartModal"
+    class="modal">
 
     <div class="modalContent">
 
         <button
-            class="closeModal"
+            class="close"
             onclick="closeModal('cartModal')">
+
             ×
+
         </button>
 
-        <h2>🛒 Votre panier</h2>
 
-        <div id="cartItems"></div>
+        <h2>
+            🛒 Votre panier
+        </h2>
+
 
         <div
-            class="cartTotal"
-            id="cartTotal">
-            Total : 0 HTG
+            id="cartItems">
         </div>
 
-        <div class="securityNotice">
 
-            🔐 <strong>Sécurité de la commande :</strong>
-            le prix affiché ici est un aperçu.
-            Le stock et le montant final sont recalculés
-            côté serveur au moment de la commande.
+        <div
+            id="cartTotal"
+            class="cartTotal">
+
+            Total : 0 HTG
 
         </div>
 
 
         <div class="formGroup">
 
-            <label for="customerName">
+            <label>
                 Nom complet
             </label>
 
             <input
                 id="customerName"
                 type="text"
-                autocomplete="name"
-                placeholder="Votre nom complet">
+                placeholder="Votre nom complet"
+                autocomplete="name">
 
         </div>
 
 
         <div class="formGroup">
 
-            <label for="customerPhone">
+            <label>
                 Téléphone
             </label>
 
             <input
                 id="customerPhone"
                 type="tel"
-                autocomplete="tel"
-                placeholder="Votre numéro de téléphone">
+                placeholder="Votre numéro de téléphone"
+                autocomplete="tel">
 
         </div>
 
 
-        <h3 style="margin:20px 0 10px;">
-            📍 Adresse de livraison
-        </h3>
-
-
         <div class="formGroup">
 
-            <label for="deliveryCity">
+            <label>
                 Ville
             </label>
 
             <input
                 id="deliveryCity"
                 type="text"
-                placeholder="Ex. Port-au-Prince">
+                placeholder="Ex. Pétion-Ville">
 
         </div>
 
 
         <div class="formGroup">
 
-            <label for="deliveryZone">
-                Zone / quartier
+            <label>
+                Zone / Quartier
             </label>
 
             <input
@@ -1358,21 +1656,21 @@ footer strong{
 
         <div class="formGroup">
 
-            <label for="deliveryStreet">
-                Rue / ruelle
+            <label>
+                Rue / Ruelle
             </label>
 
             <input
                 id="deliveryStreet"
                 type="text"
-                placeholder="Rue ou ruelle">
+                placeholder="Rue, ruelle, numéro si disponible">
 
         </div>
 
 
         <div class="formGroup">
 
-            <label for="deliveryPostalCode">
+            <label>
                 Code postal
             </label>
 
@@ -1386,41 +1684,41 @@ footer strong{
 
         <div class="formGroup">
 
-            <label for="deliveryLandmark">
+            <label>
                 Point de repère
             </label>
 
             <input
                 id="deliveryLandmark"
                 type="text"
-                placeholder="Point de repère">
+                placeholder="Point de repère pour la livraison">
 
         </div>
 
 
         <div class="formGroup">
 
-            <label for="deliveryAddress">
-                Informations supplémentaires
+            <label>
+                Informations complémentaires
             </label>
 
             <textarea
                 id="deliveryAddress"
-                placeholder="Appartement, étage, précision ou autre information utile"></textarea>
+                placeholder="Informations supplémentaires concernant la livraison..."></textarea>
 
         </div>
 
 
         <div class="formGroup">
 
-            <label for="paymentMethod">
-                Mode de paiement
+            <label>
+                Méthode de paiement
             </label>
 
             <select id="paymentMethod">
 
                 <option value="">
-                    Sélectionner
+                    Choisir une méthode
                 </option>
 
                 <option value="moncash">
@@ -1440,142 +1738,171 @@ footer strong{
         </div>
 
 
-        <div class="modalActions">
+        <div
+            style="
+            margin-top:15px;
+            padding:12px;
+            border:1px solid #29445f;
+            border-radius:10px;
+            color:#a9bacd;
+            font-size:13px;">
 
-            <button
-                class="primary"
-                onclick="submitOrder()">
-                ✅ Confirmer la commande
-            </button>
+            🔐 Le navigateur ne contient aucun secret
+            de paiement. La vérification du prix, du stock
+            et de la commande doit être effectuée côté serveur.
 
         </div>
+
+
+        <button
+            class="modalButton"
+            onclick="submitOrder()">
+
+            Continuer la commande
+
+        </button>
 
     </div>
 
 </div>
 
 
-<!-- ACCOUNT MODAL -->
+<!-- =========================================================
+     MODALE COMPTE
+     ========================================================= -->
 
 <div
-    class="modal"
-    id="accountModal">
+    id="accountModal"
+    class="modal">
 
     <div class="modalContent">
 
         <button
-            class="closeModal"
+            class="close"
             onclick="closeModal('accountModal')">
+
             ×
+
         </button>
 
-        <h2>👤 Compte AHCElectron</h2>
+
+        <h2>
+            👤 Compte AHCElectron
+        </h2>
+
+
+        <p
+            style="
+            margin-top:8px;
+            color:#9fb2c7;">
+
+            Créez votre compte ou connectez-vous
+            pour retrouver votre profil et associer
+            vos commandes.
+
+        </p>
+
 
         <div class="formGroup">
 
-            <label for="accountEmail">
-                Email
+            <label>
+                Adresse e-mail
             </label>
 
             <input
                 id="accountEmail"
                 type="email"
-                autocomplete="email"
-                placeholder="votre@email.com">
+                placeholder="vous@example.com"
+                autocomplete="email">
 
         </div>
 
 
         <div class="formGroup">
 
-            <label for="accountPassword">
+            <label>
                 Mot de passe
             </label>
 
             <input
                 id="accountPassword"
                 type="password"
-                autocomplete="current-password"
-                placeholder="Votre mot de passe">
+                placeholder="Mot de passe"
+                autocomplete="current-password">
 
         </div>
 
-
-        <div class="modalActions">
-
-            <button
-                class="primary"
-                onclick="loginAccount()">
-                Connexion
-            </button>
-
-            <button
-                onclick="createAccount()">
-                Créer un compte
-            </button>
-
-            <button
-                onclick="resetPassword()">
-                Mot de passe oublié
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- ORDERS MODAL -->
-
-<div
-    class="modal"
-    id="ordersModal">
-
-    <div class="modalContent">
 
         <button
-            class="closeModal"
-            onclick="closeModal('ordersModal')">
-            ×
+            class="modalButton"
+            onclick="loginAccount()">
+
+            🔐 Se connecter
+
         </button>
 
-        <h2>📦 Mes commandes</h2>
 
-        <div id="ordersList">
-            Chargement...
-        </div>
+        <button
+            class="secondaryModalButton"
+            onclick="createAccount()">
+
+            ✨ Créer un nouveau compte
+
+        </button>
+
+
+        <button
+            class="secondaryModalButton"
+            onclick="resetPassword()">
+
+            🔑 Mot de passe oublié
+
+        </button>
 
     </div>
 
 </div>
 
 
-<div
-    class="notification"
-    id="notification">
+<!-- =========================================================
+     NOTIFICATION
+     ========================================================= -->
+
+<div id="notification">
 </div>
 
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
 
 <footer>
 
-    <p>
-        <strong>AHCElectron Sales and Repairs Services</strong>
-    </p>
+    <strong>AHCElectron</strong>
 
-    <p>
-        Électricité • Réparation • Électronique •
-        Maintenance • Technologie
-    </p>
+    <br>
 
-    <p>
-        © <span id="year"></span> AHCElectronSRS
-    </p>
+    Sales and Repairs Services
+
+    <br><br>
+
+    Électricité • Réparation • Électronique •
+    Maintenance • Technologie • Boutique
+
+    <br><br>
+
+    Haïti • International
+
+    <br><br>
+
+    © <span id="year"></span> AHCElectron
 
 </footer>
 
 
-<!-- SUPABASE -->
+<!-- =========================================================
+     SUPABASE
+     ========================================================= -->
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -1595,22 +1922,25 @@ const SUPABASE_PUBLISHABLE_KEY =
 
 let supabaseClient = null;
 
+
 if(
-    SUPABASE_URL &&
+    SUPABASE_URL.startsWith("http") &&
+    !SUPABASE_URL.includes("REMPLACER") &&
     SUPABASE_PUBLISHABLE_KEY &&
-    !SUPABASE_URL.includes("REMPLACER_PAR") &&
-    !SUPABASE_PUBLISHABLE_KEY.includes("REMPLACER_PAR")
+    !SUPABASE_PUBLISHABLE_KEY.includes("REMPLACER")
 ){
+
     supabaseClient =
         window.supabase.createClient(
             SUPABASE_URL,
             SUPABASE_PUBLISHABLE_KEY
         );
+
 }
 
 
 /* =========================================================
-   ÉTAT DU SITE
+   VARIABLES
    ========================================================= */
 
 let products = [];
@@ -1625,155 +1955,165 @@ let currentUser = null;
 
 
 /* =========================================================
-   PRODUITS DE SECOURS
+   PANIER LOCAL
+   ========================================================= */
+
+function loadLocalCart(){
+
+    try{
+
+        const saved =
+            localStorage.getItem(
+                "ahcelectron_cart"
+            );
+
+        if(saved){
+
+            const parsed =
+                JSON.parse(saved);
+
+            if(Array.isArray(parsed)){
+
+                cart = parsed;
+
+            }
+
+        }
+
+    }
+    catch(error){
+
+        console.error(
+            "Erreur panier local :",
+            error
+        );
+
+        cart = [];
+
+    }
+
+    updateCart();
+
+}
+
+
+function saveLocalCart(){
+
+    try{
+
+        localStorage.setItem(
+            "ahcelectron_cart",
+            JSON.stringify(cart)
+        );
+
+    }
+    catch(error){
+
+        console.error(
+            "Impossible de sauvegarder le panier.",
+            error
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   PRODUITS DE DÉMONSTRATION
    ========================================================= */
 
 const localProducts = [
 
     {
-        id:"demo-smartphone",
-        name:"Smartphone",
-        reference:"DEMO-SP",
+        id:"demo-phone-001",
+        name:"Smartphone Android",
+        reference:"DEMO-PH-001",
         brand:"AHCElectron",
         category:"smartphones",
-        description:"Produit de démonstration.",
+        description:
+        "Produit de démonstration. Stock réel à configurer.",
         price_htg:0,
         price_usd:0,
         stock:0,
-        image_url:"",
-        active:true
+        icon:"📱"
     },
 
     {
-        id:"demo-audio",
-        name:"Équipement audio",
-        reference:"DEMO-AUDIO",
+        id:"demo-audio-001",
+        name:"Haut-parleur Bluetooth",
+        reference:"DEMO-AU-001",
         brand:"AHCElectron",
         category:"audio",
-        description:"Produit de démonstration.",
+        description:
+        "Produit de démonstration. Stock réel à configurer.",
         price_htg:0,
         price_usd:0,
         stock:0,
-        image_url:"",
-        active:true
+        icon:"🔊"
     },
 
     {
-        id:"demo-computer",
-        name:"Ordinateur",
-        reference:"DEMO-PC",
+        id:"demo-computer-001",
+        name:"Accessoire informatique",
+        reference:"DEMO-PC-001",
         brand:"AHCElectron",
         category:"informatique",
-        description:"Produit de démonstration.",
+        description:
+        "Produit de démonstration. Stock réel à configurer.",
         price_htg:0,
         price_usd:0,
         stock:0,
-        image_url:"",
-        active:true
+        icon:"💻"
     },
 
     {
-        id:"demo-component",
+        id:"demo-component-001",
         name:"Composant électronique",
-        reference:"DEMO-COMP",
+        reference:"DEMO-CP-001",
         brand:"AHCElectron",
         category:"composants",
-        description:"Produit de démonstration.",
+        description:
+        "Produit de démonstration. Stock réel à configurer.",
         price_htg:0,
         price_usd:0,
         stock:0,
-        image_url:"",
-        active:true
+        icon:"🔧"
     },
 
     {
-        id:"demo-energy",
-        name:"Équipement énergétique",
-        reference:"DEMO-ENERGY",
+        id:"demo-energy-001",
+        name:"Équipement énergie",
+        reference:"DEMO-EN-001",
         brand:"AHCElectron",
         category:"energie",
-        description:"Produit de démonstration.",
+        description:
+        "Produit de démonstration. Stock réel à configurer.",
         price_htg:0,
         price_usd:0,
         stock:0,
-        image_url:"",
-        active:true
+        icon:"⚡"
     },
 
     {
-        id:"demo-security",
-        name:"Équipement de sécurité",
-        reference:"DEMO-SEC",
+        id:"demo-security-001",
+        name:"Caméra de surveillance",
+        reference:"DEMO-SC-001",
         brand:"AHCElectron",
         category:"securite",
-        description:"Produit de démonstration.",
+        description:
+        "Produit de démonstration. Stock réel à configurer.",
         price_htg:0,
         price_usd:0,
         stock:0,
-        image_url:"",
-        active:true
+        icon:"📹"
     }
 
 ];
 
 
 /* =========================================================
-   UTILITAIRES
-   ========================================================= */
-
-function escapeHTML(value){
-
-    return String(value ?? "")
-        .replace(/&/g,"&amp;")
-        .replace(/</g,"&lt;")
-        .replace(/>/g,"&gt;")
-        .replace(/"/g,"&quot;")
-        .replace(/'/g,"&#039;");
-
-}
-
-
-function escapeJS(value){
-
-    return String(value ?? "")
-        .replace(/\\/g,"\\\\")
-        .replace(/'/g,"\\'")
-        .replace(/\n/g,"\\n")
-        .replace(/\r/g,"\\r");
-
-}
-
-
-function formatMoney(value){
-
-    return Number(value || 0)
-        .toLocaleString("fr-FR",{
-            maximumFractionDigits:2
-        });
-
-}
-
-
-function showNotification(message){
-
-    const box =
-        document.getElementById("notification");
-
-    box.textContent = message;
-
-    box.style.display = "block";
-
-    setTimeout(() => {
-
-        box.style.display = "none";
-
-    },4500);
-
-}
-
-
-/* =========================================================
-   CHARGEMENT DES PRODUITS
+   CHARGEMENT DU CATALOGUE
    ========================================================= */
 
 async function loadProducts(){
@@ -1797,63 +2137,67 @@ async function loadProducts(){
 
         showProducts();
 
+        errorBox.style.display = "block";
+
+        errorBox.textContent =
+        "Mode préparation : la base AHCElectron n'est pas encore connectée. Le catalogue affiché est une démonstration.";
+
         return;
-
     }
 
 
-    try{
-
-        const {
-            data,
-            error
-        } = await supabaseClient
-
-            .from("products")
-
-            .select(
-                "id,name,reference,brand,category,description,price_htg,price_usd,stock,image_url,active"
-            )
-
-            .eq("active",true)
-
-            .order("name");
-
-
-        if(error){
-
-            throw error;
-
-        }
+    const {
+        data,
+        error
+    } =
+    await supabaseClient
+        .from("products")
+        .select(`
+            id,
+            name,
+            reference,
+            brand,
+            category,
+            description,
+            price_htg,
+            price_usd,
+            stock,
+            image_url,
+            active
+        `)
+        .eq("active",true)
+        .order("name");
 
 
-        products = data || [];
+    loading.style.display = "none";
 
-        loading.style.display = "none";
 
-        showProducts();
-
-    }
-    catch(error){
+    if(error){
 
         console.error(error);
 
         products = [];
 
-        loading.style.display = "none";
-
-        errorBox.textContent =
-            "Impossible de charger la boutique pour le moment.";
+        showProducts();
 
         errorBox.style.display = "block";
 
+        errorBox.textContent =
+        "Impossible de charger le catalogue.";
+
+        return;
     }
+
+
+    products = data || [];
+
+    showProducts();
 
 }
 
 
 /* =========================================================
-   AFFICHAGE DES PRODUITS
+   AFFICHAGE PRODUITS
    ========================================================= */
 
 function showProducts(){
@@ -1862,7 +2206,8 @@ function showProducts(){
         document.getElementById("productGrid");
 
     const search =
-        document.getElementById("searchInput")
+        document
+        .getElementById("searchInput")
         .value
         .trim()
         .toLowerCase();
@@ -1871,290 +2216,295 @@ function showProducts(){
     const filtered =
         products.filter(product => {
 
-            const categoryMatch =
+            const categoryOK =
                 currentCategory === "all" ||
-                String(product.category).toLowerCase() ===
-                currentCategory.toLowerCase();
-
-            const searchable =
-                [
-                    product.name,
-                    product.reference,
-                    product.brand,
-                    product.category,
-                    product.description
-                ]
-                .filter(Boolean)
-                .join(" ")
-                .toLowerCase();
+                product.category === currentCategory;
 
 
-            const searchMatch =
+            const text =
+                (product.name || "") + " " +
+                (product.brand || "") + " " +
+                (product.reference || "") + " " +
+                (product.description || "");
+
+
+            const searchOK =
                 !search ||
-                searchable.includes(search);
+                text.toLowerCase().includes(search);
 
 
-            return categoryMatch && searchMatch;
+            return categoryOK && searchOK;
 
         });
+
+
+    grid.innerHTML = "";
 
 
     if(filtered.length === 0){
 
-        grid.innerHTML = `
-            <div style="
-                grid-column:1/-1;
-                text-align:center;
-                padding:30px;
-                color:#aebdcd;">
-                Aucun produit trouvé.
-            </div>
-        `;
+        grid.innerHTML =
+        `<div class="loading">
+            Aucun produit trouvé.
+         </div>`;
 
         return;
-
     }
 
 
-    grid.innerHTML =
-        filtered.map(product => {
+    filtered.forEach(product => {
 
-            const stock =
-                Number(product.stock || 0);
+        const card =
+            document.createElement("article");
 
-            const available =
-                stock > 0;
-
-
-            const image =
-                product.image_url
-                ? `
-                    <img
-                        class="productImage"
-                        src="${escapeHTML(product.image_url)}"
-                        alt="${escapeHTML(product.name)}"
-                        loading="lazy">
-                  `
-                : `
-                    <div
-                        class="productImagePlaceholder">
-                        📦
-                    </div>
-                  `;
+        card.className =
+            "productCard";
 
 
-            const usd =
-                Number(product.price_usd || 0) > 0
-                ? `
-                    <div class="usdPrice">
-                        ≈ ${formatMoney(product.price_usd)} USD
-                    </div>
-                  `
-                : "";
+        const stock =
+            Number(product.stock) || 0;
 
 
-            return `
+        let stockText;
 
-                <article class="productCard">
+        let stockClass;
 
-                    ${image}
 
-                    <div class="productInfo">
+        if(stock > 5){
 
-                        <h3>
-                            ${escapeHTML(product.name)}
-                        </h3>
+            stockText =
+                "Disponible : " +
+                stock +
+                " unité(s)";
 
-                        <div class="reference">
-                            Réf. :
-                            ${escapeHTML(product.reference || "—")}
-                        </div>
+            stockClass =
+                "available";
 
-                        <div class="brand">
-                            Marque :
-                            ${escapeHTML(product.brand || "—")}
-                        </div>
+        }
+        else if(stock > 0){
 
-                        <div class="description">
-                            ${escapeHTML(product.description || "")}
-                        </div>
+            stockText =
+                "Stock limité : " +
+                stock +
+                " unité(s)";
 
-                        <div class="price">
-                            ${formatMoney(product.price_htg)} HTG
-                        </div>
+            stockClass =
+                "low";
 
-                        ${usd}
+        }
+        else{
 
-                        <div class="stock ${
-                            available
-                            ? "available"
-                            : "unavailable"
-                        }">
+            stockText =
+                "Rupture de stock";
 
-                            ${
-                                available
-                                ? "✓ Stock : " + stock
-                                : "✕ Rupture de stock"
-                            }
+            stockClass =
+                "out";
 
-                        </div>
+        }
 
-                        <div class="productActions">
 
-                            <button
-                                onclick="openProduct('${escapeJS(product.id)}')">
-                                Guide
-                            </button>
+        let visual;
 
-                            <button
-                                class="addButton"
-                                ${
-                                    !available
-                                    ? "disabled"
-                                    : ""
-                                }
-                                onclick="quickAdd('${escapeJS(product.id)}')">
-                                Ajouter
-                            </button>
 
-                        </div>
+        if(product.image_url){
 
-                    </div>
+            visual =
+            `<div class="productImage">
+                <img
+                    src="${escapeHTML(product.image_url)}"
+                    alt="${escapeHTML(product.name)}">
+             </div>`;
 
-                </article>
+        }
+        else{
 
-            `;
+            visual =
+            `<div class="productImage">
+                ${escapeHTML(product.icon || "📦")}
+             </div>`;
 
-        }).join("");
+        }
+
+
+        card.innerHTML = `
+
+            ${visual}
+
+            <div class="productBody">
+
+                <h3>
+                    ${escapeHTML(product.name)}
+                </h3>
+
+                <div class="reference">
+                    Réf. :
+                    ${escapeHTML(product.reference || "—")}
+                </div>
+
+                <div class="brand">
+                    ${escapeHTML(product.brand || "Marque à confirmer")}
+                </div>
+
+                <div class="price">
+                    ${formatMoney(product.price_htg)}
+                    HTG
+                </div>
+
+                ${
+                    Number(product.price_usd) > 0
+                    ?
+                    `<div class="reference">
+                        ${formatMoney(product.price_usd)}
+                        USD
+                     </div>`
+                    :
+                    ""
+                }
+
+                <div class="stock ${stockClass}">
+                    ${stockText}
+                </div>
+
+                <div class="productActions">
+
+                    <button
+                        class="viewButton"
+                        onclick="openProduct('${escapeJS(product.id)}')">
+
+                        Guide
+
+                    </button>
+
+                    <button
+                        class="buyButton"
+                        ${stock <= 0 ? "disabled" : ""}
+                        onclick="quickAdd('${escapeJS(product.id)}')">
+
+                        Ajouter
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        grid.appendChild(card);
+
+    });
 
 }
 
 
 /* =========================================================
-   CATÉGORIES
-   ========================================================= */
-
-function filterCategory(category,button){
-
-    currentCategory = category;
-
-
-    document
-        .querySelectorAll(".categoryButton")
-        .forEach(btn => {
-
-            btn.classList.remove("active");
-
-        });
-
-
-    if(button){
-
-        button.classList.add("active");
-
-    }
-
-
-    showProducts();
-
-}
-
-
-/* =========================================================
-   PRODUIT
+   FICHE PRODUIT
    ========================================================= */
 
 function openProduct(id){
 
     const product =
-        products.find(item =>
-            String(item.id) === String(id)
+        products.find(
+            p => String(p.id) === String(id)
         );
 
 
-    if(!product){
+    if(!product) return;
 
-        showNotification(
-            "Produit introuvable."
+
+    selectedProduct =
+        product;
+
+
+    const details =
+        document.getElementById(
+            "productDetails"
         );
 
-        return;
 
-    }
+    details.innerHTML = `
+
+        <h2>
+            ${escapeHTML(product.name)}
+        </h2>
+
+        <p class="reference">
+            Référence :
+            ${escapeHTML(product.reference || "—")}
+        </p>
+
+        <p style="margin-top:8px">
+            <strong>Marque :</strong>
+            ${escapeHTML(product.brand || "À confirmer")}
+        </p>
+
+        <p style="margin-top:12px">
+            ${escapeHTML(product.description || "")}
+        </p>
+
+        <p class="price">
+            ${formatMoney(product.price_htg)}
+            HTG
+        </p>
+
+        ${
+            Number(product.price_usd) > 0
+            ?
+            `<p class="reference">
+                ${formatMoney(product.price_usd)} USD
+             </p>`
+            :
+            ""
+        }
+
+        <p class="stock">
+            Stock :
+            ${Number(product.stock) || 0}
+        </p>
+
+    `;
 
 
-    selectedProduct = product;
+    const quantityInput =
+        document.getElementById(
+            "productQuantity"
+        );
 
 
-    document.getElementById("productQuantity")
-        .value = 1;
+    quantityInput.value = 1;
+
+    quantityInput.max =
+        Number(product.stock) || 1;
 
 
-    document.getElementById("productDetails")
-        .innerHTML = `
-
-            <h2>
-                ${escapeHTML(product.name)}
-            </h2>
-
-            <p style="color:#9fb0c2;">
-                Référence :
-                ${escapeHTML(product.reference || "—")}
-            </p>
-
-            <p style="margin-top:10px;">
-                ${escapeHTML(product.description || "")}
-            </p>
-
-            <p style="
-                color:#ffb13b;
-                font-size:20px;
-                font-weight:bold;
-                margin-top:12px;">
-                ${formatMoney(product.price_htg)} HTG
-            </p>
-
-            <p style="margin-top:8px;">
-                Stock :
-                ${Number(product.stock || 0)}
-            </p>
-
-        `;
-
-
-    document.getElementById("productModal")
-        .style.display = "block";
+    openModal("productModal");
 
 }
 
 
+/* =========================================================
+   AJOUT RAPIDE
+   ========================================================= */
+
 function quickAdd(id){
 
     const product =
-        products.find(item =>
-            String(item.id) === String(id)
+        products.find(
+            p => String(p.id) === String(id)
         );
 
 
-    if(!product){
+    if(!product) return;
+
+
+    if(Number(product.stock) <= 0){
 
         showNotification(
-            "Produit introuvable."
+            "Ce produit est actuellement indisponible."
         );
 
         return;
-
-    }
-
-
-    if(Number(product.stock || 0) <= 0){
-
-        showNotification(
-            "Ce produit n'est pas disponible."
-        );
-
-        return;
-
     }
 
 
@@ -2163,38 +2513,45 @@ function quickAdd(id){
 }
 
 
+/* =========================================================
+   AJOUT DEPUIS FICHE
+   ========================================================= */
+
 function addSelectedProductToCart(){
 
-    if(!selectedProduct){
-
+    if(!selectedProduct)
         return;
-
-    }
 
 
     const quantity =
-        Math.max(
-            1,
-            Number(
-                document.getElementById(
-                    "productQuantity"
-                ).value
-            ) || 1
+        Number(
+            document.getElementById(
+                "productQuantity"
+            ).value
         );
 
 
-    const stock =
-        Number(selectedProduct.stock || 0);
+    if(!Number.isInteger(quantity) ||
+       quantity < 1){
+
+        showNotification(
+            "Quantité incorrecte."
+        );
+
+        return;
+    }
 
 
-    if(quantity > stock){
+    if(
+        quantity >
+        Number(selectedProduct.stock)
+    ){
 
         showNotification(
             "La quantité demandée dépasse le stock disponible."
         );
 
         return;
-
     }
 
 
@@ -2204,36 +2561,78 @@ function addSelectedProductToCart(){
     );
 
 
-    closeModal("productModal");
+    closeModal(
+        "productModal"
+    );
 
 }
 
 
 /* =========================================================
-   PANIER
+   AJOUT AU PANIER
    ========================================================= */
 
-function addToCart(product,quantity){
+function addToCart(
+    product,
+    quantity
+){
 
     const existing =
-        cart.find(item =>
+        cart.find(
+            item =>
             String(item.id) === String(product.id)
         );
 
 
     if(existing){
 
-        existing.quantity += quantity;
+        const newQuantity =
+            existing.quantity +
+            quantity;
+
+
+        if(
+            newQuantity >
+            Number(product.stock)
+        ){
+
+            showNotification(
+                "La quantité totale dépasse le stock disponible."
+            );
+
+            return;
+        }
+
+
+        existing.quantity =
+            newQuantity;
 
     }
     else{
 
+        /*
+           IMPORTANT :
+
+           Le prix conservé ici sert seulement
+           à l'affichage du panier.
+
+           Lors de la vraie commande,
+           le serveur ne fera PAS confiance
+           à ce prix.
+        */
+
         cart.push({
 
             id:product.id,
+
             name:product.name,
-            reference:product.reference,
-            price_htg:Number(product.price_htg || 0),
+
+            reference:
+                product.reference,
+
+            price_htg:
+                Number(product.price_htg) || 0,
+
             quantity:quantity
 
         });
@@ -2245,6 +2644,7 @@ function addToCart(product,quantity){
 
     updateCart();
 
+
     showNotification(
         "Produit ajouté au panier."
     );
@@ -2252,18 +2652,24 @@ function addToCart(product,quantity){
 }
 
 
+/* =========================================================
+   MISE À JOUR PANIER
+   ========================================================= */
+
 function updateCart(){
 
     const count =
         cart.reduce(
-            (total,item) =>
-                total + Number(item.quantity || 0),
+            (sum,item) =>
+            sum + Number(item.quantity || 0),
             0
         );
 
 
-    document.getElementById("cartCount")
-        .textContent = count;
+    document.getElementById(
+        "cartCount"
+    ).textContent =
+        count;
 
 
     renderCart();
@@ -2271,128 +2677,184 @@ function updateCart(){
 }
 
 
+/* =========================================================
+   AFFICHAGE PANIER
+   ========================================================= */
+
 function renderCart(){
 
     const container =
-        document.getElementById("cartItems");
+        document.getElementById(
+            "cartItems"
+        );
 
-    const totalBox =
-        document.getElementById("cartTotal");
+
+    const totalElement =
+        document.getElementById(
+            "cartTotal"
+        );
 
 
     if(cart.length === 0){
 
-        container.innerHTML = `
-            <p style="
-                text-align:center;
-                padding:20px;
-                color:#9fb0c2;">
-                Votre panier est vide.
-            </p>
-        `;
+        container.innerHTML =
+        `<div class="cartEmpty">
+            Votre panier est vide.
+         </div>`;
 
-        totalBox.textContent =
+        totalElement.textContent =
             "Total : 0 HTG";
 
         return;
-
     }
 
 
     let total = 0;
 
 
-    container.innerHTML =
-        cart.map((item,index) => {
-
-            const itemTotal =
-                Number(item.price_htg || 0) *
-                Number(item.quantity || 0);
+    container.innerHTML = "";
 
 
-            total += itemTotal;
+    cart.forEach(
+        (item,index) => {
+
+            const line =
+                Number(item.price_htg) *
+                Number(item.quantity);
 
 
-            return `
-
-                <div class="cartItem">
-
-                    <div>
-
-                        <h4>
-                            ${escapeHTML(item.name)}
-                        </h4>
-
-                        <small>
-                            Réf. :
-                            ${escapeHTML(item.reference || "—")}
-                        </small>
-
-                        <div style="margin-top:5px;">
-                            ${formatMoney(item.price_htg)}
-                            HTG ×
-                            ${item.quantity}
-                        </div>
-
-                    </div>
+            total += line;
 
 
-                    <div class="cartControls">
+            const row =
+                document.createElement(
+                    "div"
+                );
+
+
+            row.className =
+                "cartItem";
+
+
+            row.innerHTML = `
+
+                <div>
+
+                    <strong>
+                        ${escapeHTML(item.name)}
+                    </strong>
+
+                    <br>
+
+                    <small>
+                        Réf. :
+                        ${escapeHTML(item.reference || "—")}
+                    </small>
+
+                    <br>
+
+                    <small>
+                        ${item.quantity} ×
+                        ${formatMoney(item.price_htg)}
+                        HTG
+                    </small>
+
+                    <div class="quantityControls">
 
                         <button
                             onclick="changeCartQuantity(${index},-1)">
                             −
                         </button>
 
-                        <strong>
+                        <span>
                             ${item.quantity}
-                        </strong>
+                        </span>
 
                         <button
                             onclick="changeCartQuantity(${index},1)">
                             +
                         </button>
 
-                        <button
-                            class="removeButton"
-                            onclick="removeCartItem(${index})">
-                            ×
-                        </button>
-
                     </div>
 
                 </div>
 
+                <button
+                    class="viewButton"
+                    onclick="removeCartItem(${index})">
+
+                    Retirer
+
+                </button>
+
             `;
 
-        }).join("");
+
+            container.appendChild(row);
+
+        }
+    );
 
 
-    totalBox.textContent =
-        "Total aperçu : " +
+    totalElement.textContent =
+        "Total : " +
         formatMoney(total) +
         " HTG";
 
 }
 
 
-function changeCartQuantity(index,delta){
+/* =========================================================
+   CHANGER QUANTITÉ
+   ========================================================= */
 
-    if(!cart[index]){
+function changeCartQuantity(
+    index,
+    change
+){
+
+    const item =
+        cart[index];
+
+
+    if(!item) return;
+
+
+    const product =
+        products.find(
+            p => String(p.id) === String(item.id)
+        );
+
+
+    const newQuantity =
+        Number(item.quantity) +
+        Number(change);
+
+
+    if(newQuantity < 1){
+
+        removeCartItem(index);
 
         return;
-
     }
 
 
-    cart[index].quantity += delta;
+    if(
+        product &&
+        newQuantity >
+        Number(product.stock)
+    ){
 
+        showNotification(
+            "Stock disponible insuffisant."
+        );
 
-    if(cart[index].quantity <= 0){
-
-        cart.splice(index,1);
-
+        return;
     }
+
+
+    item.quantity =
+        newQuantity;
 
 
     saveLocalCart();
@@ -2401,10 +2863,17 @@ function changeCartQuantity(index,delta){
 
 }
 
+
+/* =========================================================
+   SUPPRIMER ARTICLE
+   ========================================================= */
 
 function removeCartItem(index){
 
-    cart.splice(index,1);
+    cart.splice(
+        index,
+        1
+    );
 
     saveLocalCart();
 
@@ -2413,78 +2882,170 @@ function removeCartItem(index){
 }
 
 
+/* =========================================================
+   OUVRIR PANIER
+   ========================================================= */
+
 function openCart(){
 
-    updateCart();
+    renderCart();
 
-    document.getElementById("cartModal")
-        .style.display = "block";
+    openModal(
+        "cartModal"
+    );
+
+    prefillCustomerData();
 
 }
 
+
+/* =========================================================
+   PRÉREMPLIR CLIENT
+   ========================================================= */
+
+async function prefillCustomerData(){
+
+    if(!currentUser)
+        return;
+
+
+    const email =
+        currentUser.email || "";
+
+
+    const nameInput =
+        document.getElementById(
+            "customerName"
+        );
+
+
+    if(
+        nameInput &&
+        !nameInput.value
+    ){
+
+        nameInput.value =
+            email.split("@")[0];
+
+    }
+
+}
+
+
+/* =========================================================
+   CONSTRUCTION ADRESSE
+   ========================================================= */
 
 function buildDeliveryAddress(){
 
     const city =
-        document.getElementById("deliveryCity")
-        .value.trim();
+        document.getElementById(
+            "deliveryCity"
+        ).value.trim();
+
 
     const zone =
-        document.getElementById("deliveryZone")
-        .value.trim();
+        document.getElementById(
+            "deliveryZone"
+        ).value.trim();
+
 
     const street =
-        document.getElementById("deliveryStreet")
-        .value.trim();
+        document.getElementById(
+            "deliveryStreet"
+        ).value.trim();
+
 
     const postal =
-        document.getElementById("deliveryPostalCode")
-        .value.trim();
+        document.getElementById(
+            "deliveryPostalCode"
+        ).value.trim();
+
 
     const landmark =
-        document.getElementById("deliveryLandmark")
-        .value.trim();
+        document.getElementById(
+            "deliveryLandmark"
+        ).value.trim();
+
 
     const extra =
-        document.getElementById("deliveryAddress")
-        .value.trim();
+        document.getElementById(
+            "deliveryAddress"
+        ).value.trim();
 
 
-    const parts = [];
+    return [
 
+        city
+            ? "Ville : " + city
+            : "",
 
-    if(city) parts.push("Ville : " + city);
+        zone
+            ? "Zone : " + zone
+            : "",
 
-    if(zone) parts.push("Zone : " + zone);
+        street
+            ? "Rue/Ruelle : " + street
+            : "",
 
-    if(street) parts.push("Rue/Ruelle : " + street);
+        postal
+            ? "Code postal : " + postal
+            : "",
 
-    if(postal) parts.push("Code postal : " + postal);
+        landmark
+            ? "Point de repère : " + landmark
+            : "",
 
-    if(landmark) parts.push("Repère : " + landmark);
+        extra
+            ? "Informations : " + extra
+            : ""
 
-    if(extra) parts.push("Précisions : " + extra);
-
-
-    return parts.join(" | ");
+    ]
+    .filter(Boolean)
+    .join(" | ");
 
 }
 
 
 /* =========================================================
    COMMANDE SÉCURISÉE
+   =========================================================
+
+   Le navigateur envoie uniquement :
+
+   - identité client
+   - téléphone
+   - adresse
+   - méthode de paiement
+   - identifiants produits
+   - quantités
+
+   Le prix et le stock doivent être vérifiés
+   par la fonction Supabase :
+
+   create_ahcelectron_order
+
    ========================================================= */
 
 async function submitOrder(){
 
-    if(!supabaseClient){
+    if(cart.length === 0){
 
         showNotification(
-            "Supabase n'est pas encore configuré."
+            "Votre panier est vide."
         );
 
         return;
+    }
 
+
+    if(!supabaseClient){
+
+        showNotification(
+            "La base de données n'est pas encore connectée."
+        );
+
+        return;
     }
 
 
@@ -2494,31 +3055,27 @@ async function submitOrder(){
             "Connectez-vous à votre compte avant de commander."
         );
 
+        closeModal("cartModal");
+
         openAccount();
 
         return;
-
-    }
-
-
-    if(cart.length === 0){
-
-        showNotification(
-            "Votre panier est vide."
-        );
-
-        return;
-
     }
 
 
     const customerName =
-        document.getElementById("customerName")
+        document
+        .getElementById(
+            "customerName"
+        )
         .value.trim();
 
 
     const customerPhone =
-        document.getElementById("customerPhone")
+        document
+        .getElementById(
+            "customerPhone"
+        )
         .value.trim();
 
 
@@ -2527,120 +3084,123 @@ async function submitOrder(){
 
 
     const paymentMethod =
-        document.getElementById("paymentMethod")
+        document
+        .getElementById(
+            "paymentMethod"
+        )
         .value;
 
 
-    if(!customerName){
+    if(
+        !customerName ||
+        !customerPhone ||
+        !deliveryAddress ||
+        !paymentMethod
+    ){
 
         showNotification(
-            "Veuillez indiquer votre nom."
+            "Veuillez remplir les informations nécessaires."
         );
 
         return;
-
     }
 
 
-    if(!customerPhone){
+    if(
+        ![
+            "moncash",
+            "natcash",
+            "confirmation"
+        ].includes(paymentMethod)
+    ){
 
         showNotification(
-            "Veuillez indiquer votre numéro de téléphone."
+            "Méthode de paiement invalide."
         );
 
         return;
-
-    }
-
-
-    if(!deliveryAddress){
-
-        showNotification(
-            "Veuillez indiquer votre adresse de livraison."
-        );
-
-        return;
-
-    }
-
-
-    if(!paymentMethod){
-
-        showNotification(
-            "Veuillez choisir un mode de paiement."
-        );
-
-        return;
-
     }
 
 
     /*
-       IMPORTANT :
+       Le prix n'est volontairement PAS envoyé
+       comme donnée fiable.
 
-       Le navigateur n'envoie PAS le prix.
-       Le serveur reçoit seulement :
-       - l'identifiant du produit
-       - la quantité
-
-       Le serveur doit vérifier le produit,
-       le stock et le prix puis calculer le total.
+       Le serveur doit le récupérer depuis products.
     */
 
     const items =
-        cart.map(item => ({
+        cart.map(
+            item => ({
 
-            product_id:item.id,
+                product_id:
+                    item.id,
 
-            quantity:Number(item.quantity)
+                quantity:
+                    Number(item.quantity)
 
-        }));
+            })
+        );
 
 
     try{
 
         showNotification(
-            "Validation sécurisée de la commande..."
+            "Vérification du stock et préparation de la commande..."
         );
 
 
         const {
             data,
             error
-        } = await supabaseClient.rpc(
+        } =
+        await supabaseClient
+            .rpc(
+                "create_ahcelectron_order",
+                {
+                    p_customer_name:
+                        customerName,
 
-            "create_ahcelectron_order",
+                    p_customer_phone:
+                        customerPhone,
 
-            {
+                    p_delivery_address:
+                        deliveryAddress,
 
-                p_customer_name:
-                    customerName,
+                    p_payment_method:
+                        paymentMethod,
 
-                p_customer_phone:
-                    customerPhone,
-
-                p_delivery_address:
-                    deliveryAddress,
-
-                p_payment_method:
-                    paymentMethod,
-
-                p_items:
-                    items
-
-            }
-
-        );
+                    p_items:
+                        items
+                }
+            );
 
 
         if(error){
 
-            console.error(error);
+            console.error(
+                "Erreur commande sécurisée :",
+                error
+            );
 
-            throw error;
+            showNotification(
+                error.message ||
+                "La commande n'a pas pu être enregistrée."
+            );
 
+            return;
         }
 
+
+        /*
+           Le serveur renvoie normalement :
+
+           {
+             order_id,
+             total_htg,
+             status
+           }
+        */
 
         const result =
             Array.isArray(data)
@@ -2648,27 +3208,66 @@ async function submitOrder(){
             : data;
 
 
-        if(!result){
-
-            throw new Error(
-                "Réponse de commande vide."
-            );
-
-        }
-
-
         const orderId =
-            result.order_id || result.id || "—";
+            result &&
+            result.order_id
+            ?
+            result.order_id
+            :
+            "créée";
 
 
-        const total =
-            Number(
-                result.total_htg || 0
-            );
+        const serverTotal =
+            result &&
+            result.total_htg !== undefined
+            ?
+            Number(result.total_htg)
+            :
+            null;
 
 
         const status =
-            result.status || "pending";
+            result &&
+            result.status
+            ?
+            result.status
+            :
+            "pending";
+
+
+        showNotification(
+            "Commande enregistrée avec succès."
+        );
+
+
+        alert(
+
+            "Commande AHCElectron enregistrée.\n\n" +
+
+            "Numéro : " +
+            orderId +
+
+            "\n\n" +
+
+            (
+                serverTotal !== null
+                ?
+                "Total vérifié : " +
+                formatMoney(serverTotal) +
+                " HTG\n\n"
+                :
+                ""
+            ) +
+
+            "Statut : " +
+            status +
+
+            "\n\n" +
+
+            "Méthode : " +
+            paymentMethod
+
+        );
 
 
         cart = [];
@@ -2677,45 +3276,29 @@ async function submitOrder(){
 
         updateCart();
 
-
-        document.getElementById("cartModal")
-            .style.display = "none";
-
-
-        showNotification(
-            "Commande enregistrée : " +
-            orderId
+        closeModal(
+            "cartModal"
         );
 
 
-        alert(
-            "Commande enregistrée.\n\n" +
-            "Numéro : " + orderId + "\n" +
-            "Total : " + formatMoney(total) + " HTG\n" +
-            "Statut : " + status
-        );
+        /*
+           Recharge le catalogue afin d'afficher
+           le stock après la commande.
+        */
 
+        await loadProducts();
 
-        loadOrderHistory();
+        await loadOrderHistory();
 
     }
     catch(error){
 
         console.error(
-            "Erreur commande :",
             error
         );
 
-
         showNotification(
-            "La commande n'a pas pu être validée."
-        );
-
-
-        alert(
-            "Commande non validée.\n\n" +
-            "Vérifiez votre connexion, votre compte, " +
-            "le stock disponible et la configuration du serveur."
+            "Une erreur inattendue est survenue."
         );
 
     }
@@ -2724,77 +3307,79 @@ async function submitOrder(){
 
 
 /* =========================================================
-   COMPTE UTILISATEUR
+   COMPTE
    ========================================================= */
 
 function openAccount(){
 
-    document.getElementById("accountModal")
-        .style.display = "block";
-
-
-    if(currentUser){
-
-        document.getElementById("accountEmail")
-            .value =
-            currentUser.email || "";
-
-    }
+    openModal(
+        "accountModal"
+    );
 
 }
 
+
+/* =========================================================
+   CRÉATION COMPTE
+   ========================================================= */
 
 async function createAccount(){
 
     if(!supabaseClient){
 
         showNotification(
-            "Supabase n'est pas configuré."
+            "La base de données n'est pas encore connectée."
         );
 
         return;
-
     }
 
 
     const email =
-        document.getElementById("accountEmail")
+        document
+        .getElementById(
+            "accountEmail"
+        )
         .value.trim();
 
 
     const password =
-        document.getElementById("accountPassword")
+        document
+        .getElementById(
+            "accountPassword"
+        )
         .value;
 
 
-    if(!email || !password){
+    if(
+        !email ||
+        !password
+    ){
 
         showNotification(
-            "Email et mot de passe requis."
+            "Veuillez entrer votre e-mail et votre mot de passe."
         );
 
         return;
-
     }
 
 
     if(password.length < 6){
 
         showNotification(
-            "Le mot de passe doit contenir au moins 6 caractères."
+            "Utilisez un mot de passe d'au moins 6 caractères."
         );
 
         return;
-
     }
 
 
-    try{
-
-        const {
-            data,
-            error
-        } = await supabaseClient.auth.signUp({
+    const {
+        data,
+        error
+    } =
+    await supabaseClient.auth
+        .signUp({
 
             email:email,
 
@@ -2803,83 +3388,78 @@ async function createAccount(){
         });
 
 
-        if(error){
-
-            throw error;
-
-        }
-
-
-        if(data.session){
-
-            showNotification(
-                "Compte créé et connecté."
-            );
-
-        }
-        else{
-
-            showNotification(
-                "Compte créé. Vérifiez votre email si une confirmation est demandée."
-            );
-
-        }
-
-    }
-    catch(error){
-
-        console.error(error);
+    if(error){
 
         showNotification(
-            error.message ||
-            "Impossible de créer le compte."
+            error.message
+        );
+
+        return;
+    }
+
+
+    if(data.user){
+
+        showNotification(
+            "Compte créé. Vérifiez votre e-mail si la confirmation est activée."
         );
 
     }
 
 }
 
+
+/* =========================================================
+   CONNEXION
+   ========================================================= */
 
 async function loginAccount(){
 
     if(!supabaseClient){
 
         showNotification(
-            "Supabase n'est pas configuré."
+            "La base de données n'est pas encore connectée."
         );
 
         return;
-
     }
 
 
     const email =
-        document.getElementById("accountEmail")
+        document
+        .getElementById(
+            "accountEmail"
+        )
         .value.trim();
 
 
     const password =
-        document.getElementById("accountPassword")
+        document
+        .getElementById(
+            "accountPassword"
+        )
         .value;
 
 
-    if(!email || !password){
+    if(
+        !email ||
+        !password
+    ){
 
         showNotification(
-            "Email et mot de passe requis."
+            "Veuillez entrer votre e-mail et votre mot de passe."
         );
 
         return;
-
     }
 
 
-    try{
-
-        const {
-            data,
-            error
-        } = await supabaseClient.auth.signInWithPassword({
+    const {
+        data,
+        error
+    } =
+    await supabaseClient.auth
+        .signInWithPassword({
 
             email:email,
 
@@ -2888,140 +3468,143 @@ async function loginAccount(){
         });
 
 
-        if(error){
-
-            throw error;
-
-        }
-
-
-        currentUser =
-            data.user || null;
-
-
-        updateAccountUI();
-
-
-        closeModal("accountModal");
-
+    if(error){
 
         showNotification(
-            "Connexion réussie."
+            error.message
         );
 
+        return;
     }
-    catch(error){
 
-        console.error(error);
 
-        showNotification(
-            error.message ||
-            "Connexion impossible."
-        );
+    currentUser =
+        data.user;
 
-    }
+
+    updateAccountInterface();
+
+    closeModal(
+        "accountModal"
+    );
+
+
+    showNotification(
+        "Connexion réussie."
+    );
+
+
+    loadOrderHistory();
 
 }
 
+
+/* =========================================================
+   MOT DE PASSE OUBLIÉ
+   ========================================================= */
 
 async function resetPassword(){
 
     if(!supabaseClient){
 
         showNotification(
-            "Supabase n'est pas configuré."
+            "La base de données n'est pas encore connectée."
         );
 
         return;
-
     }
 
 
     const email =
-        document.getElementById("accountEmail")
+        document
+        .getElementById(
+            "accountEmail"
+        )
         .value.trim();
 
 
     if(!email){
 
         showNotification(
-            "Indiquez d'abord votre email."
+            "Entrez d'abord votre adresse e-mail."
         );
 
         return;
-
     }
 
 
-    try{
+    const {
+        error
+    } =
+    await supabaseClient.auth
+        .resetPasswordForEmail(
+            email,
+            {
+                redirectTo:
+                    window.location.origin +
+                    window.location.pathname
+            }
+        );
+
+
+    if(error){
+
+        showNotification(
+            error.message
+        );
+
+        return;
+    }
+
+
+    showNotification(
+        "Un lien de récupération a été demandé."
+    );
+
+}
+
+
+/* =========================================================
+   DÉCONNEXION
+   ========================================================= */
+
+async function logoutAccount(){
+
+    if(
+        supabaseClient
+    ){
 
         const {
             error
         } =
         await supabaseClient.auth
-            .resetPasswordForEmail(
-                email,
-                {
-                    redirectTo:
-                        window.location.origin +
-                        window.location.pathname
-                }
-            );
+            .signOut();
 
 
         if(error){
 
-            throw error;
+            console.error(error);
 
+            showNotification(
+                "La déconnexion n'a pas pu être terminée."
+            );
+
+            return;
         }
 
-
-        showNotification(
-            "Un email de récupération a été demandé."
-        );
-
-    }
-    catch(error){
-
-        console.error(error);
-
-        showNotification(
-            error.message ||
-            "Impossible d'envoyer la récupération."
-        );
-
-    }
-
-}
-
-
-async function logoutAccount(){
-
-    if(!supabaseClient){
-
-        return;
-
     }
 
 
-    try{
+    currentUser =
+        null;
 
-        await supabaseClient.auth.signOut();
 
-        currentUser = null;
+    updateAccountInterface();
 
-        updateAccountUI();
 
-        showNotification(
-            "Vous êtes déconnecté."
-        );
-
-    }
-    catch(error){
-
-        console.error(error);
-
-    }
+    showNotification(
+        "Vous êtes maintenant déconnecté."
+    );
 
 }
 
@@ -3030,99 +3613,86 @@ async function logoutAccount(){
    INTERFACE COMPTE
    ========================================================= */
 
-function updateAccountUI(){
+function updateAccountInterface(){
 
     const status =
-        document.getElementById("accountStatus");
+        document.getElementById(
+            "accountStatus"
+        );
 
-    const profileInfo =
-        document.getElementById("profileInfo");
+
+    const profile =
+        document.getElementById(
+            "profileInfo"
+        );
+
+
+    const logoutButton =
+        document.getElementById(
+            "logoutButton"
+        );
+
+
+    const ordersBox =
+        document.getElementById(
+            "ordersBox"
+        );
+
+
+    const profileEmail =
+        document.getElementById(
+            "profileEmail"
+        );
+
+
+    const profileUserId =
+        document.getElementById(
+            "profileUserId"
+        );
 
 
     if(currentUser){
 
         status.textContent =
-            "Connecté : " +
-            (currentUser.email || "Compte client");
+            "Vous êtes connecté à votre compte AHCElectron.";
 
 
-        document.getElementById("profileEmail")
-            .textContent =
+        profile.style.display =
+            "block";
+
+
+        logoutButton.style.display =
+            "inline-block";
+
+
+        ordersBox.style.display =
+            "block";
+
+
+        profileEmail.textContent =
             currentUser.email || "—";
 
 
-        document.getElementById("profileUserId")
-            .textContent =
+        profileUserId.textContent =
             currentUser.id || "—";
-
-
-        profileInfo.style.display =
-            "block";
 
     }
     else{
 
         status.textContent =
-            "Vous n'êtes pas connecté.";
+            "Vous naviguez actuellement comme visiteur.";
 
 
-        profileInfo.style.display =
+        profile.style.display =
             "none";
 
-    }
 
-}
-
-
-async function initializeAccount(){
-
-    if(!supabaseClient){
-
-        updateAccountUI();
-
-        return;
-
-    }
+        logoutButton.style.display =
+            "none";
 
 
-    try{
-
-        const {
-            data
-        } =
-        await supabaseClient.auth.getSession();
-
-
-        currentUser =
-            data.session
-            ? data.session.user
-            : null;
-
-
-        updateAccountUI();
-
-
-        supabaseClient.auth
-            .onAuthStateChange(
-                (_event,session) => {
-
-                    currentUser =
-                        session
-                        ? session.user
-                        : null;
-
-                    updateAccountUI();
-
-                }
-            );
-
-    }
-    catch(error){
-
-        console.error(
-            "Initialisation compte :",
-            error
-        );
+        ordersBox.style.display =
+            "none";
 
     }
 
@@ -3133,66 +3703,27 @@ async function initializeAccount(){
    HISTORIQUE DES COMMANDES
    ========================================================= */
 
-async function openOrders(){
-
-    if(!currentUser){
-
-        showNotification(
-            "Connectez-vous pour consulter vos commandes."
-        );
-
-        openAccount();
-
-        return;
-
-    }
-
-
-    document.getElementById("ordersModal")
-        .style.display = "block";
-
-
-    await loadOrderHistory();
-
-}
-
-
 async function loadOrderHistory(){
 
     const list =
-        document.getElementById("ordersList");
+        document.getElementById(
+            "ordersList"
+        );
 
 
-    if(!list){
-
+    if(!list)
         return;
 
-    }
 
+    if(
+        !supabaseClient ||
+        !currentUser
+    ){
 
-    if(!currentUser){
-
-        list.innerHTML = `
-            <p style="color:#aebdcd;">
-                Connectez-vous pour voir vos commandes.
-            </p>
-        `;
+        list.innerHTML =
+        "Connectez-vous pour voir vos commandes.";
 
         return;
-
-    }
-
-
-    if(!supabaseClient){
-
-        list.innerHTML = `
-            <p style="color:#aebdcd;">
-                Service de compte non configuré.
-            </p>
-        `;
-
-        return;
-
     }
 
 
@@ -3200,121 +3731,258 @@ async function loadOrderHistory(){
         "Chargement des commandes...";
 
 
-    try{
+    const {
+        data,
+        error
+    } =
+    await supabaseClient
+        .from("orders")
+        .select(`
+            id,
+            total_htg,
+            status,
+            payment_method,
+            created_at
+        `)
+        .eq(
+            "user_id",
+            currentUser.id
+        )
+        .order(
+            "created_at",
+            {
+                ascending:false
+            }
+        )
+        .limit(20);
 
-        const {
-            data,
+
+    if(error){
+
+        console.error(
             error
-        } =
-        await supabaseClient
+        );
 
-            .from("orders")
+        list.innerHTML =
+        "Impossible de charger l'historique.";
 
-            .select(
-                "id,created_at,status,payment_method,total_htg"
-            )
+        return;
+    }
 
-            .eq(
-                "user_id",
-                currentUser.id
-            )
 
-            .order(
-                "created_at",
-                {
-                    ascending:false
-                }
+    if(
+        !data ||
+        data.length === 0
+    ){
+
+        list.innerHTML =
+        "Aucune commande enregistrée.";
+
+        return;
+    }
+
+
+    list.innerHTML = "";
+
+
+    data.forEach(order => {
+
+        const row =
+            document.createElement(
+                "div"
             );
 
 
-        if(error){
-
-            throw error;
-
-        }
+        row.className =
+            "orderRow";
 
 
-        if(!data || data.length === 0){
-
-            list.innerHTML = `
-                <p style="
-                    color:#aebdcd;
-                    text-align:center;
-                    padding:20px;">
-                    Aucune commande enregistrée.
-                </p>
-            `;
-
-            return;
-
-        }
+        const date =
+            order.created_at
+            ?
+            new Date(
+                order.created_at
+            ).toLocaleString(
+                "fr-FR"
+            )
+            :
+            "Date inconnue";
 
 
-        list.innerHTML =
-            data.map(order => {
+        row.innerHTML = `
 
-                const date =
-                    order.created_at
-                    ? new Date(
-                        order.created_at
-                      ).toLocaleString(
-                        "fr-FR"
-                      )
-                    : "—";
+            <strong>
+                Commande #${escapeHTML(order.id)}
+            </strong>
 
+            <br>
 
-                return `
+            <span>
+                Total :
+                ${formatMoney(order.total_htg)}
+                HTG
+            </span>
 
-                    <div class="orderCard">
+            <br>
 
-                        <strong>
-                            Commande :
-                            ${escapeHTML(order.id)}
-                        </strong>
+            <small>
+                Paiement :
+                ${escapeHTML(order.payment_method || "—")}
+            </small>
 
-                        <p>
-                            Date :
-                            ${escapeHTML(date)}
-                        </p>
+            <br>
 
-                        <p>
-                            Paiement :
-                            ${escapeHTML(
-                                order.payment_method || "—"
-                            )}
-                        </p>
+            <small>
+                Date :
+                ${escapeHTML(date)}
+            </small>
 
-                        <p>
-                            Total :
-                            ${formatMoney(
-                                order.total_htg
-                            )} HTG
-                        </p>
+            <br>
 
-                        <span class="orderStatus">
-                            ${escapeHTML(
-                                order.status || "pending"
-                            )}
-                        </span>
+            <span class="orderStatus">
+                Statut :
+                ${escapeHTML(order.status || "—")}
+            </span>
 
-                    </div>
-
-                `;
-
-            }).join("");
-
-    }
-    catch(error){
-
-        console.error(error);
-
-        list.innerHTML = `
-            <p style="color:#ff9b9b;">
-                Impossible de charger vos commandes.
-            </p>
         `;
 
+
+        list.appendChild(row);
+
+    });
+
+}
+
+
+/* =========================================================
+   SESSION
+   ========================================================= */
+
+async function initializeAccount(){
+
+    if(!supabaseClient){
+
+        updateAccountInterface();
+
+        return;
     }
+
+
+    const {
+        data,
+        error
+    } =
+    await supabaseClient.auth
+        .getSession();
+
+
+    if(error){
+
+        console.error(
+            error
+        );
+
+        return;
+    }
+
+
+    currentUser =
+        data.session
+        ?
+        data.session.user
+        :
+        null;
+
+
+    updateAccountInterface();
+
+
+    if(currentUser){
+
+        loadOrderHistory();
+
+    }
+
+
+    supabaseClient.auth
+        .onAuthStateChange(
+            (
+                event,
+                session
+            ) => {
+
+                currentUser =
+                    session
+                    ?
+                    session.user
+                    :
+                    null;
+
+
+                updateAccountInterface();
+
+
+                if(currentUser){
+
+                    loadOrderHistory();
+
+                }
+
+            }
+        );
+
+}
+
+
+/* =========================================================
+   RECHERCHE
+   ========================================================= */
+
+document
+.getElementById(
+    "searchInput"
+)
+.addEventListener(
+    "input",
+    showProducts
+);
+
+
+/* =========================================================
+   FILTRE CATÉGORIE
+   ========================================================= */
+
+function filterCategory(
+    category,
+    button
+){
+
+    currentCategory =
+        category;
+
+
+    document
+    .querySelectorAll(
+        ".categoryButton"
+    )
+    .forEach(
+        element =>
+        element.classList.remove(
+            "active"
+        )
+    );
+
+
+    if(button){
+
+        button.classList.add(
+            "active"
+        );
+
+    }
+
+
+    showProducts();
 
 }
 
@@ -3323,15 +3991,32 @@ async function loadOrderHistory(){
    MODALES
    ========================================================= */
 
-function closeModal(id){
+function openModal(id){
 
-    const modal =
+    const element =
         document.getElementById(id);
 
 
-    if(modal){
+    if(element){
 
-        modal.style.display = "none";
+        element.style.display =
+            "block";
+
+    }
+
+}
+
+
+function closeModal(id){
+
+    const element =
+        document.getElementById(id);
+
+
+    if(element){
+
+        element.style.display =
+            "none";
 
     }
 
@@ -3343,99 +4028,140 @@ window.addEventListener(
     function(event){
 
         document
-            .querySelectorAll(".modal")
-            .forEach(modal => {
+        .querySelectorAll(
+            ".modal"
+        )
+        .forEach(
+            modal => {
 
-                if(event.target === modal){
+                if(
+                    event.target ===
+                    modal
+                ){
 
                     modal.style.display =
                         "none";
 
                 }
 
-            });
+            }
+        );
 
     }
 );
 
 
 /* =========================================================
-   PANIER LOCAL
+   NOTIFICATION
    ========================================================= */
 
-function saveLocalCart(){
+function showNotification(message){
 
-    try{
-
-        localStorage.setItem(
-            "ahcelectron_cart",
-            JSON.stringify(cart)
+    const notification =
+        document.getElementById(
+            "notification"
         );
 
-    }
-    catch(error){
 
-        console.warn(
-            "Impossible de sauvegarder le panier.",
-            error
+    notification.textContent =
+        message;
+
+
+    notification.style.display =
+        "block";
+
+
+    clearTimeout(
+        window.ahcNotificationTimer
+    );
+
+
+    window.ahcNotificationTimer =
+        setTimeout(
+            () => {
+
+                notification.style.display =
+                    "none";
+
+            },
+            4000
         );
-
-    }
-
-}
-
-
-function loadLocalCart(){
-
-    try{
-
-        const saved =
-            localStorage.getItem(
-                "ahcelectron_cart"
-            );
-
-
-        if(saved){
-
-            const parsed =
-                JSON.parse(saved);
-
-
-            if(Array.isArray(parsed)){
-
-                cart = parsed;
-
-            }
-
-        }
-
-    }
-    catch(error){
-
-        cart = [];
-
-    }
 
 }
 
 
 /* =========================================================
-   RECHERCHE
+   SÉCURITÉ AFFICHAGE
    ========================================================= */
 
-document.getElementById("searchInput")
-    .addEventListener(
-        "input",
-        showProducts
+function escapeHTML(value){
+
+    return String(
+        value ?? ""
+    )
+    .replace(
+        /&/g,
+        "&amp;"
+    )
+    .replace(
+        /</g,
+        "&lt;"
+    )
+    .replace(
+        />/g,
+        "&gt;"
+    )
+    .replace(
+        /"/g,
+        "&quot;"
+    )
+    .replace(
+        /'/g,
+        "&#039;"
     );
+
+}
+
+
+function escapeJS(value){
+
+    return String(
+        value ?? ""
+    )
+    .replace(
+        /\\/g,
+        "\\\\"
+    )
+    .replace(
+        /'/g,
+        "\\'"
+    );
+
+}
+
+
+/* =========================================================
+   FORMAT MONÉTAIRE
+   ========================================================= */
+
+function formatMoney(value){
+
+    return new Intl.NumberFormat(
+        "fr-FR"
+    ).format(
+        Number(value) || 0
+    );
+
+}
 
 
 /* =========================================================
    ANNÉE
    ========================================================= */
 
-document.getElementById("year")
-    .textContent =
+document.getElementById(
+    "year"
+).textContent =
     new Date().getFullYear();
 
 
@@ -3444,8 +4170,6 @@ document.getElementById("year")
    ========================================================= */
 
 loadLocalCart();
-
-updateCart();
 
 initializeAccount();
 
