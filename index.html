@@ -1,61 +1,3971 @@
 <!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<html lang="fr"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AHCElectronSRS — AHCElectron Sales and Repairs Services</title>
 
-<meta name="description" content="AHCElectron Sales and Repairs Services — Électricité, réparation, électronique, maintenance, technologie et services numériques.">
+<meta name="description"
+content="AHCElectronSRS — AHCElectron Sales and Repairs Services. Électricité, réparation électronique, maintenance, technologie, énergie et services en Haïti et à l'international.">
 
 <meta name="theme-color" content="#07111f">
 
-<title>AHCElectron — Espace personnel</title>
+<style>
+/* =========================================================
+   AHCELECTRONSRS — STYLE PRINCIPAL
+   ========================================================= */
 
-<!-- ===================================================== SUPABASE La bibliothèque est chargée directement dans ce HTML. ===================================================== -->
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+html{
+  scroll-behavior:smooth;
+}
 
-<style> *{ box-sizing:border-box; margin:0; padding:0; } body{ font-family:Arial,Helvetica,sans-serif; background:#07111f; color:#f5f7fa; min-height:100vh; } header{ position:sticky; top:0; z-index:1000; background:#0b1b2d; border-bottom:1px solid #29445c; padding:13px; } .header{ max-width:1100px; margin:auto; display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; } .logo{ font-size:22px; font-weight:bold; } .logo span{ color:#ff9f1c; } nav{ display:flex; gap:7px; flex-wrap:wrap; } button{ border:none; border-radius:8px; padding:11px 15px; font-weight:bold; cursor:pointer; } button:active{ transform:scale(.98); } .btn{ background:#17344d; color:white; } .btn:hover{ background:#24506f; } .primary{ background:#ff9f1c; color:#07111f; } .logout{ background:#a92e39; color:white; } main{ width:min(1050px,94%); margin:auto; } .hero{ text-align:center; padding:45px 10px 25px; } .hero h1{ font-size:clamp(30px,7vw,50px); margin-bottom:12px; } .hero h1 span{ color:#ff9f1c; } .hero p{ color:#b9c8d7; line-height:1.7; } .card{ background:#0d2033; border:1px solid #29445c; border-radius:16px; padding:22px; margin:20px 0; box-shadow:0 8px 30px rgba(0,0,0,.25); } .card h2{ margin-bottom:16px; } .form{ margin-bottom:15px; } label{ display:block; font-weight:bold; margin-bottom:7px; } input, textarea{ width:100%; padding:12px; border-radius:8px; border:1px solid #49647a; background:#071522; color:white; font-size:15px; } input:focus, textarea:focus{ outline:none; border-color:#ff9f1c; } textarea{ min-height:120px; resize:vertical; } .actions{ display:flex; flex-wrap:wrap; gap:10px; margin-top:15px; } .message{ display:none; margin-top:15px; padding:12px; border-radius:8px; line-height:1.5; } .success{ display:block; background:#123c29; border:1px solid #287c51; } .error{ display:block; background:#421c22; border:1px solid #a74854; } .info{ display:block; background:#12324c; border:1px solid #326889; } .status{ padding:13px; background:#071522; border-left:4px solid #ff9f1c; border-radius:7px; margin-bottom:18px; } .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:15px; } .small{ color:#9db0c1; font-size:13px; line-height:1.6; } .hidden{ display:none !important; } .config{ background:#301f08; border:1px solid #9a6719; color:#ffe0a0; } footer{ margin-top:50px; padding:25px 10px; text-align:center; border-top:1px solid #243b50; color:#8fa3b5; } .badge{ display:inline-block; padding:5px 9px; border-radius:20px; background:#17344d; color:#dceaf5; font-size:12px; } </style>
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#07111f;
+  color:#eef7ff;
+  line-height:1.6;
+}
 
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input,
+select,
+textarea{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,17,31,.96);
+  border-bottom:1px solid rgba(0,220,255,.25);
+  backdrop-filter:blur(12px);
+}
+
+.header-main{
+  max-width:1200px;
+  margin:auto;
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo{
+  font-size:26px;
+  font-weight:900;
+  letter-spacing:1px;
+  background:linear-gradient(
+    90deg,
+    #159cff,
+    #ffffff,
+    #ff2e3f
+  );
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:logoPulse 3s infinite;
+}
+
+.logo-subtitle{
+  font-size:11px;
+  color:#8edfff;
+}
+
+@keyframes logoPulse{
+  0%,100%{filter:brightness(1)}
+  50%{filter:brightness(1.35)}
+}
+
+nav{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+nav a{
+  padding:8px 10px;
+  border-radius:8px;
+  font-size:13px;
+  color:#d7edf8;
+}
+
+nav a:hover{
+  background:#102b43;
+  color:#00e5ff;
+}
+
+/* ACCOUNT BUTTON */
+
+.account-button{
+  border:1px solid #00d9ff;
+  background:linear-gradient(135deg,#073e5a,#09253a);
+  color:white;
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:bold;
+  box-shadow:0 0 15px rgba(0,217,255,.18);
+}
+
+.account-button:hover{
+  background:#0b4968;
+}
+
+.account-connected{
+  border-color:#39e58c;
+  color:#baffd7;
+}
+
+/* TASK BAR */
+
+.taskbar{
+  max-width:1200px;
+  margin:auto;
+  padding:7px 15px;
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  border-top:1px solid rgba(255,255,255,.04);
+}
+
+.taskbar button{
+  flex:0 0 auto;
+  border:1px solid #193b55;
+  background:#0b1d2d;
+  color:#d9f7ff;
+  border-radius:8px;
+  padding:6px 10px;
+  font-size:12px;
+}
+
+.taskbar button:hover{
+  border-color:#00d9ff;
+  color:#00e5ff;
+}
+
+/* HERO */
+
+.hero{
+  min-height:570px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 20px;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(0,174,255,.15),transparent 30%),
+    radial-gradient(circle at 80% 70%,rgba(255,38,62,.12),transparent 30%),
+    #07111f;
+}
+
+.hero-content{
+  max-width:900px;
+}
+
+.hero h1{
+  font-size:clamp(38px,8vw,82px);
+  line-height:1;
+  margin-bottom:18px;
+  background:linear-gradient(
+    90deg,
+    #168fff,
+    #ffffff,
+    #ff3346
+  );
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero h2{
+  font-size:clamp(20px,4vw,34px);
+  color:#dff8ff;
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:760px;
+  margin:0 auto 25px;
+  color:#b6ccda;
+}
+
+.badges{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+  margin:20px 0;
+}
+
+.badge{
+  padding:7px 12px;
+  border-radius:999px;
+  border:1px solid #1d536d;
+  background:#0b2031;
+  color:#bcefff;
+  font-size:13px;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin-top:25px;
+}
+
+.btn{
+  display:inline-block;
+  border:none;
+  border-radius:10px;
+  padding:12px 18px;
+  font-weight:bold;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,#00a8ff,#006dff);
+  color:white;
+}
+
+.btn-secondary{
+  background:#13283b;
+  border:1px solid #31516a;
+  color:#e8f8ff;
+}
+
+/* SECTIONS */
+
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 18px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.section-title h2{
+  font-size:32px;
+  color:#00dfff;
+}
+
+.section-title p{
+  color:#9db4c4;
+  max-width:720px;
+  margin:8px auto;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px;
+}
+
+.card{
+  background:linear-gradient(
+    145deg,
+    rgba(16,43,65,.95),
+    rgba(8,23,37,.95)
+  );
+  border:1px solid #193c55;
+  border-radius:15px;
+  padding:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+
+.card:hover{
+  border-color:#00cfff;
+}
+
+.card h3{
+  color:#62e9ff;
+  margin-bottom:9px;
+}
+
+.card p{
+  color:#aec0cb;
+}
+
+.card-icon{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+/* SERVICES */
+
+.service-card{
+  cursor:pointer;
+}
+
+.service-detail{
+  display:none;
+  margin-top:14px;
+  padding-top:14px;
+  border-top:1px solid #1e4057;
+  color:#c9dbe5;
+}
+
+.service-detail.active{
+  display:block;
+}
+
+/* PRODUCTS */
+
+.catalogue-search{
+  max-width:700px;
+  margin:0 auto 30px;
+}
+
+.catalogue-search input{
+  width:100%;
+  padding:14px;
+  border-radius:10px;
+  border:1px solid #28506a;
+  background:#091b2b;
+  color:white;
+  outline:none;
+}
+
+.rayon{
+  margin-bottom:38px;
+}
+
+.rayon-title{
+  color:#ffb64d;
+  margin-bottom:15px;
+  border-left:4px solid #ff8a00;
+  padding-left:10px;
+}
+
+.product{
+  display:flex;
+  flex-direction:column;
+}
+
+.product-image{
+  min-height:100px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  background:#091a2a;
+  font-size:52px;
+  margin-bottom:15px;
+}
+
+.product-ref{
+  color:#7ea3b7;
+  font-size:12px;
+}
+
+.product-price{
+  color:#57e2ff;
+  font-weight:bold;
+  margin:8px 0;
+}
+
+.product-stock{
+  font-size:13px;
+  color:#8ef0b8;
+}
+
+.product-button{
+  margin-top:auto;
+  width:100%;
+}
+
+/* BLOG */
+
+.blog-image{
+  height:130px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    linear-gradient(135deg,#0d3e58,#182238);
+  font-size:48px;
+  margin-bottom:15px;
+}
+
+/* COVERAGE */
+
+.departments{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  justify-content:center;
+  margin-top:20px;
+}
+
+.department{
+  background:#0d2435;
+  border:1px solid #21485e;
+  padding:7px 10px;
+  border-radius:8px;
+  color:#c9f4ff;
+}
+
+/* PAYMENT */
+
+.payment-box{
+  background:#091b2a;
+  border:1px solid #20445b;
+  border-radius:15px;
+  padding:20px;
+}
+
+.payment-box h3{
+  color:#ffbd55;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:14px;
+}
+
+.form-group{
+  margin-bottom:14px;
+}
+
+.form-group label{
+  display:block;
+  margin-bottom:6px;
+  color:#c7dce8;
+  font-size:14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  padding:11px;
+  border-radius:8px;
+  border:1px solid #294d65;
+  background:#061522;
+  color:#fff;
+  outline:none;
+}
+
+.form-group textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color:#00d9ff;
+}
+
+/* CONTACT */
+
+.contact-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+
+.contact-item{
+  background:#0a1c2c;
+  border:1px solid #1d4259;
+  border-radius:12px;
+  padding:18px;
+}
+
+/* EXPERTS */
+
+.expert-card{
+  text-align:center;
+}
+
+.expert-icon{
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+/* FOOTER */
+
+footer{
+  padding:35px 18px;
+  text-align:center;
+  background:#040c15;
+  border-top:1px solid #18354a;
+  color:#8199a8;
+}
+
+footer strong{
+  color:#5be7ff;
+}
+
+/* MODALS */
+
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:3000;
+  background:rgba(0,0,0,.78);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+
+.modal.active{
+  display:flex;
+}
+
+.modal-content{
+  width:min(600px,100%);
+  max-height:92vh;
+  overflow-y:auto;
+  background:#081a2a;
+  border:1px solid #24627f;
+  border-radius:16px;
+  padding:24px;
+  position:relative;
+  box-shadow:0 25px 80px rgba(0,0,0,.6);
+}
+
+.modal-close{
+  position:absolute;
+  top:10px;
+  right:12px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:1px solid #31556b;
+  background:#0c2639;
+  color:white;
+  font-size:22px;
+}
+
+.modal-close:hover{
+  border-color:#ff5364;
+}
+
+.modal-title{
+  color:#00dcff;
+  margin-bottom:18px;
+}
+
+.auth-tabs{
+  display:flex;
+  gap:8px;
+  margin-bottom:20px;
+}
+
+.auth-tab{
+  flex:1;
+  padding:10px;
+  border:1px solid #28506a;
+  border-radius:8px;
+  background:#0b2132;
+  color:#cfeaf4;
+}
+
+.auth-tab.active{
+  background:#075477;
+  border-color:#00d9ff;
+  color:white;
+}
+
+.auth-panel{
+  display:none;
+}
+
+.auth-panel.active{
+  display:block;
+}
+
+.auth-help{
+  font-size:13px;
+  color:#94afbd;
+  margin:8px 0 15px;
+}
+
+.auth-link{
+  color:#55e4ff;
+  background:none;
+  border:none;
+  padding:4px 0;
+}
+
+.auth-link:hover{
+  text-decoration:underline;
+}
+
+.status{
+  margin-top:14px;
+  padding:11px;
+  border-radius:8px;
+  display:none;
+}
+
+.status.show{
+  display:block;
+}
+
+.status.success{
+  background:rgba(36,180,103,.13);
+  border:1px solid #2bbd72;
+  color:#8df2b7;
+}
+
+.status.error{
+  background:rgba(255,50,70,.12);
+  border:1px solid #ff5364;
+  color:#ffabb4;
+}
+
+.status.info{
+  background:rgba(0,180,255,.12);
+  border:1px solid #00b8ff;
+  color:#8ee7ff;
+}
+
+/* CART */
+
+.cart-button{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:1500;
+  border:1px solid #00d9ff;
+  background:#092c42;
+  color:white;
+  border-radius:50px;
+  padding:12px 16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.cart-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.cart-item{
+  background:#0b2132;
+  border:1px solid #21465c;
+  padding:12px;
+  border-radius:9px;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.remove-item{
+  background:#35151a;
+  color:#ffadb6;
+  border:1px solid #71323b;
+  border-radius:7px;
+  padding:5px 8px;
+}
+
+.hidden{
+  display:none!important;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .header-main{
+    justify-content:center;
+  }
+
+  .logo-area{
+    width:100%;
+    justify-content:center;
+    text-align:center;
+  }
+
+  nav{
+    width:100%;
+  }
+
+  nav a{
+    font-size:12px;
+  }
+
+  .hero{
+    min-height:500px;
+    padding:50px 15px;
+  }
+
+  section{
+    padding:50px 14px;
+  }
+
+  .modal-content{
+    padding:19px;
+  }
+}
+</style>
 </head>
 
 <body>
 
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
 <header>
 
-<div class="header">
+  <div class="header-main">
 
-<div class="logo"> AHC<span>Electron</span> </div> <nav> <button class="btn" onclick="showPage('home')"> Accueil </button> <button class="btn" onclick="showPage('account')"> Mon compte </button> <button id="logoutButton" class="logout hidden" onclick="logout()"> Déconnexion </button> </nav>
+    <div class="logo-area">
+      <div>
+        <div class="logo">AHCElectronSRS</div>
+        <div class="logo-subtitle">
+          AHCElectron Sales and Repairs Services
+        </div>
+      </div>
+    </div>
 
-</div>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#produits">Produits</a>
+      <a href="#blog">Blog</a>
+      <a href="#zone">Haïti + International</a>
+      <a href="#paiement">Paiement</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button
+      id="accountButton"
+      class="account-button"
+      onclick="openAccountModal()">
+      👤 Mon compte
+    </button>
+
+  </div>
+
+  <div class="taskbar">
+    <button onclick="scrollToSection('services')">⚡ Services</button>
+    <button onclick="scrollToSection('produits')">🛒 Boutique</button>
+    <button onclick="scrollToSection('demande')">📝 Demande</button>
+    <button onclick="scrollToSection('paiement')">💰 Paiement</button>
+    <button onclick="openCart()">🛍️ Panier</button>
+    <button onclick="openAccountModal()">👤 Compte</button>
+  </div>
 
 </header>
 
-<main>
 
-<!-- ===================================================== ACCUEIL ===================================================== -->
+<!-- =========================================================
+     ACCUEIL
+     ========================================================= -->
 
-<section id="home">
+<section id="accueil" class="hero">
 
-<div class="hero"> <h1> Bienvenue sur <span>AHCElectron</span> </h1> <p> Électricité • Réparation • Électronique • Maintenance • Technologie • Services numériques </p> </div> <div class="card"> <h2>Votre espace personnel</h2> <p style="line-height:1.8;color:#c6d4df;"> Créez votre compte AHCElectron pour disposer d'un espace personnel permettant de conserver les informations que vous choisissez d'enregistrer. </p> <div class="actions"> <button class="primary" onclick="showPage('account')"> Créer un compte / Se connecter </button> </div> </div> <!-- Etat de configuration --> <div id="configurationNotice" class="card config hidden"> <h2>Configuration Supabase nécessaire</h2> <p style="line-height:1.7;"> Le site est prêt, mais les identifiants publics de votre projet Supabase n'ont pas encore été renseignés dans le code. </p> </div>
+  <div class="hero-content">
+
+    <h1>AHCElectronSRS</h1>
+
+    <h2>
+      AHCElectron Sales and Repairs Services
+    </h2>
+
+    <p>
+      Électricité, réparation électronique, maintenance,
+      technologie, énergie et solutions techniques en Haïti
+      et à l'international.
+    </p>
+
+    <div class="badges">
+      <span class="badge">🇭🇹 Haïti</span>
+      <span class="badge">🌎 International</span>
+      <span class="badge">⚡ Électricité</span>
+      <span class="badge">🔧 Réparation</span>
+      <span class="badge">💻 Technologie</span>
+      <span class="badge">☀️ Énergie</span>
+    </div>
+
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="#services">
+        Découvrir les services
+      </a>
+
+      <a class="btn btn-secondary" href="#produits">
+        Voir les produits
+      </a>
+
+      <button class="btn btn-secondary" onclick="openAccountModal()">
+        👤 Créer un compte
+      </button>
+    </div>
+
+  </div>
 
 </section>
 
-<!-- ===================================================== COMPTE ===================================================== -->
 
-<section id="account" class="hidden">
+<!-- =========================================================
+     SERVICES
+     ========================================================= -->
 
-<!-- AUTHENTIFICATION --> <div id="authBox" class="card"> <span class="badge"> Espace sécurisé </span> <h2 id="authTitle" style="margin-top:12px;"> Créer votre compte </h2> <div class="form"> <label for="email"> Adresse e-mail </label> <input id="email" type="email" autocomplete="email" placeholder="votre@email.com"> </div> <div class="form"> <label for="password"> Mot de passe </label> <input id="password" type="password" autocomplete="new-password" placeholder="Minimum 6 caractères"> </div> <div id="confirmBox" class="form"> <label for="confirmPassword"> Confirmer le mot de passe </label> <input id="confirmPassword" type="password" autocomplete="new-password" placeholder="Retapez votre mot de passe"> </div> <div class="actions"> <button id="authButton" class="primary" onclick="authenticate()"> Créer mon compte </button> <button id="modeButton" class="btn" onclick="changeAuthMode()"> J'ai déjà un compte </button> </div> <div id="authMessage" class="message"> </div> <p class="small" style="margin-top:15px;"> Ne partagez jamais votre mot de passe. Le mot de passe est géré par le système d'authentification Supabase. </p> </div> <!-- PROFIL --> <div id="profileBox" class="card hidden"> <div class="status"> <strong>Compte connecté</strong> <div id="userEmail" class="small" style="margin-top:5px;"> </div> </div> <h2>Mon profil personnel</h2> <div class="grid"> <div class="form"> <label for="firstName"> Prénom </label> <input id="firstName" type="text" autocomplete="given-name" placeholder="Votre prénom"> </div> <div class="form"> <label for="lastName"> Nom </label> <input id="lastName" type="text" autocomplete="family-name" placeholder="Votre nom"> </div> <div class="form"> <label for="phone"> Téléphone </label> <input id="phone" type="tel" autocomplete="tel" placeholder="Votre numéro"> </div> <div class="form"> <label for="city"> Ville / Zone </label> <input id="city" type="text" autocomplete="address-level2" placeholder="Ville ou zone"> </div> </div> <div class="form"> <label for="notes"> Mes informations à conserver </label> <textarea id="notes" placeholder="Écrivez ici les informations que vous souhaitez conserver dans votre profil."></textarea> </div> <div class="actions"> <button class="primary" onclick="saveProfile()"> 💾 Sauvegarder </button> <button class="btn" onclick="loadProfile()"> ↻ Recharger </button> <button class="logout" onclick="logout()"> Déconnexion </button> </div> <div id="profileMessage" class="message"> </div> <p class="small" style="margin-top:15px;"> Pour votre sécurité, ne sauvegardez pas ici de mot de passe, code bancaire, numéro de carte ou autre secret d'authentification. </p> </div>
+<section id="services">
+
+  <div class="section-title">
+    <h2>Nos services</h2>
+    <p>
+      Des solutions techniques adaptées aux particuliers,
+      entreprises et projets en Haïti et ailleurs.
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card service-card"
+         onclick="toggleService('serviceElectricite')">
+
+      <div class="card-icon">⚡</div>
+      <h3>Électricité</h3>
+      <p>
+        Installations, diagnostic, dépannage et maintenance.
+      </p>
+
+      <div id="serviceElectricite" class="service-detail">
+        Installation électrique, dépannage, diagnostic,
+        éclairage, alimentation et solutions énergétiques.
+      </div>
+
+    </div>
+
+
+    <div class="card service-card"
+         onclick="toggleService('serviceReparation')">
+
+      <div class="card-icon">🔧</div>
+      <h3>Réparation électronique</h3>
+      <p>
+        Diagnostic et réparation d'équipements électroniques.
+      </p>
+
+      <div id="serviceReparation" class="service-detail">
+        Téléviseurs, appareils audio, petits appareils,
+        téléphones, alimentations et équipements électroniques.
+      </div>
+
+    </div>
+
+
+    <div class="card service-card"
+         onclick="toggleService('serviceTechnologie')">
+
+      <div class="card-icon">💻</div>
+      <h3>Technologie</h3>
+      <p>
+        Assistance technologique et solutions numériques.
+      </p>
+
+      <div id="serviceTechnologie" class="service-detail">
+        Assistance informatique, configuration,
+        équipements, connectivité et solutions technologiques.
+      </div>
+
+    </div>
+
+
+    <div class="card service-card"
+         onclick="toggleService('serviceMaintenance')">
+
+      <div class="card-icon">🛠️</div>
+      <h3>Maintenance</h3>
+      <p>
+        Entretien préventif et correctif.
+      </p>
+
+      <div id="serviceMaintenance" class="service-detail">
+        Maintenance des équipements électriques,
+        électroniques et technologiques.
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
-</main>
+
+<!-- =========================================================
+     PRODUITS / CATALOGUE
+     ========================================================= -->
+
+<section id="produits">
+
+  <div class="section-title">
+    <h2>Produits & solutions</h2>
+    <p>
+      Catalogue AHCElectronSRS — produits, accessoires,
+      outils, énergie et électronique.
+    </p>
+  </div>
+
+  <div class="catalogue-search">
+    <input
+      id="productSearch"
+      type="search"
+      placeholder="🔎 Rechercher un produit..."
+      oninput="searchProducts()">
+  </div>
+
+
+  <!-- SMARTPHONES -->
+
+  <div class="rayon">
+
+    <h3 class="rayon-title">
+      📱 Smartphones & Téléphones
+    </h3>
+
+    <div class="grid">
+
+      <div class="card product"
+           data-product="smartphone android ahc mob 001">
+
+        <div class="product-image">📱</div>
+
+        <h3>Smartphone Android</h3>
+
+        <div class="product-ref">AHC-MOB-001</div>
+
+        <p>
+          Smartphone Android pour communication et applications.
+        </p>
+
+        <div class="product-price">
+          Prix sur demande
+        </div>
+
+        <div class="product-stock">
+          Stock : à confirmer
+        </div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Smartphone Android',
+            'AHC-MOB-001',
+            'Smartphone Android pour communication et applications.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="telephone entree gamme ahc mob 002">
+
+        <div class="product-image">📞</div>
+
+        <h3>Téléphone entrée de gamme</h3>
+
+        <div class="product-ref">AHC-MOB-002</div>
+
+        <p>
+          Téléphone simple pour communication quotidienne.
+        </p>
+
+        <div class="product-price">
+          Prix sur demande
+        </div>
+
+        <div class="product-stock">
+          Stock : à confirmer
+        </div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Téléphone entrée de gamme',
+            'AHC-MOB-002',
+            'Téléphone simple pour communication quotidienne.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="batterie smartphone ahc bat 001">
+
+        <div class="product-image">🔋</div>
+
+        <h3>Batterie smartphone</h3>
+
+        <div class="product-ref">AHC-BAT-001</div>
+
+        <p>
+          Batterie de remplacement selon modèle.
+        </p>
+
+        <div class="product-price">
+          Prix sur demande
+        </div>
+
+        <div class="product-stock">
+          Stock : à confirmer
+        </div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Batterie smartphone',
+            'AHC-BAT-001',
+            'Batterie de remplacement selon modèle.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="protection telephone ahc acc 001">
+
+        <div class="product-image">🛡️</div>
+
+        <h3>Protection téléphone</h3>
+
+        <div class="product-ref">AHC-ACC-001</div>
+
+        <p>
+          Protection et accessoires pour téléphone.
+        </p>
+
+        <div class="product-price">
+          Prix sur demande
+        </div>
+
+        <div class="product-stock">
+          Stock : à confirmer
+        </div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Protection téléphone',
+            'AHC-ACC-001',
+            'Protection et accessoires pour téléphone.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- AUDIO -->
+
+  <div class="rayon">
+
+    <h3 class="rayon-title">
+      🎧 Audio & Bluetooth
+    </h3>
+
+    <div class="grid">
+
+      <div class="card product"
+           data-product="ecouteurs bluetooth ahc aud 001">
+
+        <div class="product-image">🎧</div>
+        <h3>Écouteurs Bluetooth</h3>
+        <div class="product-ref">AHC-AUD-001</div>
+        <p>Écouteurs sans fil.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Écouteurs Bluetooth',
+            'AHC-AUD-001',
+            'Écouteurs sans fil.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="haut parleur bluetooth ahc aud 002">
+
+        <div class="product-image">🔊</div>
+        <h3>Haut-parleur Bluetooth</h3>
+        <div class="product-ref">AHC-AUD-002</div>
+        <p>Audio portable Bluetooth.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Haut-parleur Bluetooth',
+            'AHC-AUD-002',
+            'Audio portable Bluetooth.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="microphone ahc aud 003">
+
+        <div class="product-image">🎤</div>
+        <h3>Microphone</h3>
+        <div class="product-ref">AHC-AUD-003</div>
+        <p>Microphone pour audio et communication.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Microphone',
+            'AHC-AUD-003',
+            'Microphone pour audio et communication.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="amplificateur audio ahc aud 004">
+
+        <div class="product-image">📻</div>
+        <h3>Amplificateur audio</h3>
+        <div class="product-ref">AHC-AUD-004</div>
+        <p>Solution d'amplification audio.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Amplificateur audio',
+            'AHC-AUD-004',
+            'Solution d’amplification audio.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- INFORMATIQUE -->
+
+  <div class="rayon">
+
+    <h3 class="rayon-title">
+      💻 Informatique
+    </h3>
+
+    <div class="grid">
+
+      <div class="card product"
+           data-product="ordinateur portable ahc pc 001">
+
+        <div class="product-image">💻</div>
+        <h3>Ordinateur portable</h3>
+        <div class="product-ref">AHC-PC-001</div>
+        <p>Ordinateur portable selon disponibilité.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Ordinateur portable',
+            'AHC-PC-001',
+            'Ordinateur portable selon disponibilité.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="souris usb bluetooth ahc pc 002">
+
+        <div class="product-image">🖱️</div>
+        <h3>Souris USB / Bluetooth</h3>
+        <div class="product-ref">AHC-PC-002</div>
+        <p>Souris pour ordinateur.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Souris USB / Bluetooth',
+            'AHC-PC-002',
+            'Souris pour ordinateur.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="clavier ahc pc 003">
+
+        <div class="product-image">⌨️</div>
+        <h3>Clavier</h3>
+        <div class="product-ref">AHC-PC-003</div>
+        <p>Clavier informatique.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Clavier',
+            'AHC-PC-003',
+            'Clavier informatique.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="stockage usb ahc sto 001">
+
+        <div class="product-image">💾</div>
+        <h3>Stockage USB</h3>
+        <div class="product-ref">AHC-STO-001</div>
+        <p>Stockage USB selon capacité.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Stockage USB',
+            'AHC-STO-001',
+            'Stockage USB selon capacité.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- OUTILS -->
+
+  <div class="rayon">
+
+    <h3 class="rayon-title">
+      🔧 Outils & réparation
+    </h3>
+
+    <div class="grid">
+
+      <div class="card product"
+           data-product="fer a souder ahc rep 001">
+
+        <div class="product-image">🔥</div>
+        <h3>Fer à souder</h3>
+        <div class="product-ref">AHC-REP-001</div>
+        <p>Outil pour travaux de soudure électronique.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Fer à souder',
+            'AHC-REP-001',
+            'Outil pour travaux de soudure électronique.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="multimetre ahc rep 002">
+
+        <div class="product-image">📟</div>
+        <h3>Multimètre</h3>
+        <div class="product-ref">AHC-REP-002</div>
+        <p>Mesure électrique et électronique.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Multimètre',
+            'AHC-REP-002',
+            'Instrument de mesure électrique et électronique.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="composants electroniques ahc cmp 001">
+
+        <div class="product-image">🔩</div>
+        <h3>Composants électroniques</h3>
+        <div class="product-ref">AHC-CMP-001</div>
+        <p>Composants selon besoin du projet.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Composants électroniques',
+            'AHC-CMP-001',
+            'Composants selon besoin du projet.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="adaptateurs connecteurs ahc cmp 002">
+
+        <div class="product-image">🔌</div>
+        <h3>Adaptateurs & connecteurs</h3>
+        <div class="product-ref">AHC-CMP-002</div>
+        <p>Connectique et adaptateurs.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Adaptateurs & connecteurs',
+            'AHC-CMP-002',
+            'Connectique et adaptateurs.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ENERGIE -->
+
+  <div class="rayon">
+
+    <h3 class="rayon-title">
+      ☀️ Énergie & électricité
+    </h3>
+
+    <div class="grid">
+
+      <div class="card product"
+           data-product="panneau solaire ahc sol 001">
+
+        <div class="product-image">☀️</div>
+        <h3>Panneau solaire</h3>
+        <div class="product-ref">AHC-SOL-001</div>
+        <p>Solutions photovoltaïques selon projet.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Panneau solaire',
+            'AHC-SOL-001',
+            'Solutions photovoltaïques selon projet.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="batterie ahc sol 002">
+
+        <div class="product-image">🔋</div>
+        <h3>Batterie</h3>
+        <div class="product-ref">AHC-SOL-002</div>
+        <p>Batteries pour systèmes énergétiques.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Batterie',
+            'AHC-SOL-002',
+            'Batteries pour systèmes énergétiques.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="onduleur ahc sol 003">
+
+        <div class="product-image">⚡</div>
+        <h3>Onduleur</h3>
+        <div class="product-ref">AHC-SOL-003</div>
+        <p>Onduleurs et alimentation de secours.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Onduleur',
+            'AHC-SOL-003',
+            'Onduleurs et alimentation de secours.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="lampes led ahc sol 004">
+
+        <div class="product-image">💡</div>
+        <h3>Lampes LED</h3>
+        <div class="product-ref">AHC-SOL-004</div>
+        <p>Éclairage LED.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Lampes LED',
+            'AHC-SOL-004',
+            'Éclairage LED.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- SECURITE -->
+
+  <div class="rayon">
+
+    <h3 class="rayon-title">
+      🔐 Sécurité & surveillance
+    </h3>
+
+    <div class="grid">
+
+      <div class="card product"
+           data-product="camera surveillance ahc sec 001">
+
+        <div class="product-image">📹</div>
+        <h3>Caméra de surveillance</h3>
+        <div class="product-ref">AHC-SEC-001</div>
+        <p>Solutions de surveillance.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Caméra de surveillance',
+            'AHC-SEC-001',
+            'Solutions de surveillance.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="alarme electronique ahc sec 002">
+
+        <div class="product-image">🚨</div>
+        <h3>Alarme électronique</h3>
+        <div class="product-ref">AHC-SEC-002</div>
+        <p>Solutions d'alarme.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'Alarme électronique',
+            'AHC-SEC-002',
+            'Solutions d’alarme.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+
+      <div class="card product"
+           data-product="dvr nvr ahc sec 003">
+
+        <div class="product-image">🖥️</div>
+        <h3>DVR / NVR</h3>
+        <div class="product-ref">AHC-SEC-003</div>
+        <p>Enregistrement vidéo de surveillance.</p>
+        <div class="product-price">Prix sur demande</div>
+        <div class="product-stock">Stock : à confirmer</div>
+
+        <button class="btn btn-primary product-button"
+          onclick="openProduct(
+            'DVR / NVR',
+            'AHC-SEC-003',
+            'Enregistrement vidéo de surveillance.',
+            'Prix sur demande'
+          )">
+          Voir / commander
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     DEMANDE DE SERVICE
+     ========================================================= -->
+
+<section id="demande">
+
+  <div class="section-title">
+    <h2>Demander un service</h2>
+    <p>
+      Décrivez votre besoin et AHCElectronSRS pourra préparer
+      votre demande.
+    </p>
+  </div>
+
+  <div class="card">
+
+    <form onsubmit="sendRequest(event)">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Nom complet</label>
+          <input id="requestName" required>
+        </div>
+
+        <div class="form-group">
+          <label>Téléphone / WhatsApp</label>
+          <input id="requestPhone" required>
+        </div>
+
+        <div class="form-group">
+          <label>Ville</label>
+          <input id="requestCity" required>
+        </div>
+
+        <div class="form-group">
+          <label>Service</label>
+
+          <select id="requestService" required>
+            <option value="">Choisir</option>
+            <option>Diagnostic électrique</option>
+            <option>Installation électrique</option>
+            <option>Réparation électronique</option>
+            <option>Maintenance</option>
+            <option>Assistance technologique</option>
+            <option>Énergie solaire</option>
+            <option>Autre</option>
+          </select>
+
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label>Description du problème ou projet</label>
+
+        <textarea id="requestDescription"
+          placeholder="Décrivez votre besoin..."
+          required></textarea>
+
+      </div>
+
+      <button class="btn btn-primary" type="submit">
+        📲 Envoyer la demande
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     BLOG
+     ========================================================= -->
+
+<section id="blog">
+
+  <div class="section-title">
+    <h2>Blog technologique</h2>
+    <p>
+      Informations, conseils et découverte de la technologie.
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <article class="card">
+
+      <div class="blog-image">⚡</div>
+
+      <h3>Comprendre son installation électrique</h3>
+
+      <p>
+        Quelques notions de base pour mieux comprendre
+        l'électricité domestique et la sécurité.
+      </p>
+
+    </article>
+
+
+    <article class="card">
+
+      <div class="blog-image">🔧</div>
+
+      <h3>Pourquoi diagnostiquer avant de réparer ?</h3>
+
+      <p>
+        Un bon diagnostic permet d'identifier la panne
+        avant de remplacer inutilement des composants.
+      </p>
+
+    </article>
+
+
+    <article class="card">
+
+      <div class="blog-image">☀️</div>
+
+      <h3>Énergie solaire</h3>
+
+      <p>
+        Introduction aux panneaux solaires, batteries
+        et systèmes d'alimentation de secours.
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     HAITI + INTERNATIONAL
+     ========================================================= -->
+
+<section id="zone">
+
+  <div class="section-title">
+
+    <h2>Haïti + International</h2>
+
+    <p>
+      AHCElectronSRS développe ses services pour Haïti
+      et les besoins technologiques internationaux.
+    </p>
+
+  </div>
+
+  <div class="card">
+
+    <h3>🇭🇹 Les 10 départements d'Haïti</h3>
+
+    <div class="departments">
+
+      <span class="department">Artibonite</span>
+      <span class="department">Centre</span>
+      <span class="department">Grand'Anse</span>
+      <span class="department">Nippes</span>
+      <span class="department">Nord</span>
+      <span class="department">Nord-Est</span>
+      <span class="department">Nord-Ouest</span>
+      <span class="department">Ouest</span>
+      <span class="department">Sud</span>
+      <span class="department">Sud-Est</span>
+
+    </div>
+
+    <br>
+
+    <p>
+      🌎 International : assistance, conseil, solutions
+      technologiques et coordination de projets selon
+      les possibilités du service.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PAIEMENT
+     ========================================================= -->
+
+<section id="paiement">
+
+  <div class="section-title">
+
+    <h2>Paiement</h2>
+
+    <p>
+      Les moyens de paiement sont présentés comme options
+      de préparation de commande. La validation réelle devra
+      être reliée au prestataire correspondant.
+    </p>
+
+  </div>
+
+  <div class="grid">
+
+    <div class="payment-box">
+
+      <h3>📱 MonCash</h3>
+
+      <p>
+        Préparation d'une demande de paiement MonCash.
+      </p>
+
+      <br>
+
+      <button class="btn btn-primary"
+        onclick="showPayment('MonCash')">
+        Choisir MonCash
+      </button>
+
+    </div>
+
+
+    <div class="payment-box">
+
+      <h3>📱 NatCash</h3>
+
+      <p>
+        Préparation d'une demande de paiement NatCash.
+      </p>
+
+      <br>
+
+      <button class="btn btn-primary"
+        onclick="showPayment('NatCash')">
+        Choisir NatCash
+      </button>
+
+    </div>
+
+
+    <div class="payment-box">
+
+      <h3>💳 Carte internationale</h3>
+
+      <p>
+        Préparation d'un paiement international.
+      </p>
+
+      <br>
+
+      <button class="btn btn-primary"
+        onclick="showPayment('Carte internationale')">
+        Choisir
+      </button>
+
+    </div>
+
+
+    <div class="payment-box">
+
+      <h3>💰 Autre méthode</h3>
+
+      <p>
+        Indiquez la méthode souhaitée.
+      </p>
+
+      <br>
+
+      <button class="btn btn-primary"
+        onclick="showPayment('Autre')">
+        Choisir
+      </button>
+
+    </div>
+
+  </div>
+
+  <div id="paymentMessage"
+       class="status info"
+       style="margin-top:20px;">
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+
+<section id="contact">
+
+  <div class="section-title">
+
+    <h2>Contact</h2>
+
+    <p>
+      Pour une demande directe, utilisez WhatsApp,
+      le téléphone ou le formulaire.
+    </p>
+
+  </div>
+
+  <div class="contact-list">
+
+    <div class="contact-item">
+      <strong>📞 Téléphone / WhatsApp</strong>
+      <p>+509 3810 6763</p>
+    </div>
+
+    <div class="contact-item">
+      <strong>📧 Email</strong>
+      <p>claudesonhenri@outlook.com</p>
+    </div>
+
+    <div class="contact-item">
+      <strong>🌎 Zone</strong>
+      <p>Haïti + International</p>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="card">
+
+    <form onsubmit="submitContact(event)">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Nom</label>
+          <input id="contactName" required>
+        </div>
+
+        <div class="form-group">
+          <label>Téléphone</label>
+          <input id="contactPhone" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input id="contactEmail" type="email">
+        </div>
+
+        <div class="form-group">
+          <label>Ville / pays</label>
+          <input id="contactLocation">
+        </div>
+
+      </div>
+
+      <div class="form-group">
+
+        <label>Message</label>
+
+        <textarea id="contactMessage" required></textarea>
+
+      </div>
+
+      <button class="btn btn-primary">
+        Envoyer
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERTS / PIONNIERS
+     ========================================================= -->
+
+<section id="experts">
+
+  <div class="section-title">
+
+    <h2>Experts & pionniers</h2>
+
+    <p>
+      Quelques grandes figures historiques liées à
+      l'électricité, à l'électronique et aux communications.
+    </p>
+
+  </div>
+
+  <div class="grid">
+
+    <div class="card expert-card">
+      <div class="expert-icon">⚡</div>
+      <h3>Michael Faraday</h3>
+      <p>
+        Travaux majeurs sur l'électromagnétisme.
+      </p>
+    </div>
+
+
+    <div class="card expert-card">
+      <div class="expert-icon">💡</div>
+      <h3>Thomas Edison</h3>
+      <p>
+        Inventeur et industriel associé à de nombreuses
+        innovations électriques.
+      </p>
+    </div>
+
+
+    <div class="card expert-card">
+      <div class="expert-icon">🔌</div>
+      <h3>Nikola Tesla</h3>
+      <p>
+        Contributions importantes aux systèmes électriques
+        et à l'électromagnétisme.
+      </p>
+    </div>
+
+
+    <div class="card expert-card">
+      <div class="expert-icon">📞</div>
+      <h3>Alexander Graham Bell</h3>
+      <p>
+        Contributions historiques aux télécommunications.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     MODAL COMPTE
+     ========================================================= -->
+
+<div id="accountModal" class="modal">
+
+  <div class="modal-content">
+
+    <button class="modal-close"
+      onclick="closeModal('accountModal')">
+      ×
+    </button>
+
+    <h2 class="modal-title">
+      👤 Mon compte AHCElectronSRS
+    </h2>
+
+    <div id="accountStatus" class="status"></div>
+
+
+    <div class="auth-tabs">
+
+      <button id="tabRegister"
+        class="auth-tab active"
+        onclick="showAuthPanel('register')">
+        Créer un compte
+      </button>
+
+      <button id="tabLogin"
+        class="auth-tab"
+        onclick="showAuthPanel('login')">
+        Se connecter
+      </button>
+
+    </div>
+
+
+    <!-- CREATION -->
+
+    <div id="registerPanel" class="auth-panel active">
+
+      <p class="auth-help">
+        Créez votre compte AHCElectronSRS avec votre
+        adresse email et un mot de passe.
+      </p>
+
+      <form onsubmit="registerUser(event)">
+
+        <div class="form-group">
+
+          <label>Nom complet</label>
+
+          <input
+            id="registerName"
+            autocomplete="name"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Adresse email</label>
+
+          <input
+            id="registerEmail"
+            type="email"
+            autocomplete="email"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Mot de passe</label>
+
+          <input
+            id="registerPassword"
+            type="password"
+            minlength="6"
+            autocomplete="new-password"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Confirmer le mot de passe</label>
+
+          <input
+            id="registerPasswordConfirm"
+            type="password"
+            minlength="6"
+            autocomplete="new-password"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            <input
+              id="registerTerms"
+              type="checkbox"
+              required>
+
+            J'accepte les conditions d'utilisation.
+          </label>
+
+        </div>
+
+
+        <button
+          class="btn btn-primary"
+          style="width:100%;"
+          type="submit">
+
+          👤 Créer mon compte
+
+        </button>
+
+      </form>
+
+      <br>
+
+      <button
+        class="auth-link"
+        onclick="showAuthPanel('login')">
+
+        J'ai déjà un compte → Se connecter
+
+      </button>
+
+    </div>
+
+
+    <!-- CONNEXION -->
+
+    <div id="loginPanel" class="auth-panel">
+
+      <p class="auth-help">
+        Connectez-vous à votre compte AHCElectronSRS.
+      </p>
+
+      <form onsubmit="loginUser(event)">
+
+        <div class="form-group">
+
+          <label>Adresse email</label>
+
+          <input
+            id="loginEmail"
+            type="email"
+            autocomplete="email"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Mot de passe</label>
+
+          <input
+            id="loginPassword"
+            type="password"
+            autocomplete="current-password"
+            required>
+
+        </div>
+
+
+        <button
+          class="btn btn-primary"
+          style="width:100%;"
+          type="submit">
+
+          🔐 Se connecter
+
+        </button>
+
+      </form>
+
+      <br>
+
+      <button
+        class="auth-link"
+        onclick="showAuthPanel('reset')">
+
+        🔑 Mot de passe oublié ?
+
+      </button>
+
+      <br>
+
+      <button
+        class="auth-link"
+        onclick="showAuthPanel('register')">
+
+        Créer un nouveau compte
+
+      </button>
+
+    </div>
+
+
+    <!-- MOT DE PASSE OUBLIE -->
+
+    <div id="resetPanel" class="auth-panel">
+
+      <p class="auth-help">
+
+        Entrez votre adresse email. Supabase pourra
+        envoyer le message de récupération lorsque
+        l'authentification sera correctement configurée.
+
+      </p>
+
+      <form onsubmit="resetPassword(event)">
+
+        <div class="form-group">
+
+          <label>Adresse email</label>
+
+          <input
+            id="resetEmail"
+            type="email"
+            autocomplete="email"
+            required>
+
+        </div>
+
+
+        <button
+          class="btn btn-primary"
+          style="width:100%;"
+          type="submit">
+
+          📧 Envoyer le lien de récupération
+
+        </button>
+
+      </form>
+
+      <br>
+
+      <button
+        class="auth-link"
+        onclick="showAuthPanel('login')">
+
+        ← Retour à la connexion
+
+      </button>
+
+    </div>
+
+
+    <!-- COMPTE CONNECTE -->
+
+    <div id="connectedPanel" class="auth-panel">
+
+      <div class="card">
+
+        <h3>✅ Compte connecté</h3>
+
+        <p id="connectedEmail"></p>
+
+        <p id="connectedName"></p>
+
+        <br>
+
+        <button
+          class="btn btn-secondary"
+          onclick="logoutUser()">
+
+          🚪 Se déconnecter
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     MODAL PRODUIT
+     ========================================================= -->
+
+<div id="productModal" class="modal">
+
+  <div class="modal-content">
+
+    <button class="modal-close"
+      onclick="closeModal('productModal')">
+      ×
+    </button>
+
+    <h2 id="modalProductName"
+        class="modal-title">
+    </h2>
+
+    <p id="modalReference"
+       class="product-ref">
+    </p>
+
+    <br>
+
+    <p id="modalDescription"></p>
+
+    <br>
+
+    <strong id="modalPrice"
+            class="product-price">
+    </strong>
+
+    <form onsubmit="addProductToCart(event)"
+          style="margin-top:20px;">
+
+      <div class="form-group">
+
+        <label>Quantité</label>
+
+        <input
+          id="productQuantity"
+          type="number"
+          min="1"
+          value="1"
+          required>
+
+      </div>
+
+      <div class="form-group">
+
+        <label>Nom du client</label>
+
+        <input id="customerName">
+
+      </div>
+
+      <div class="form-group">
+
+        <label>Adresse de livraison</label>
+
+        <textarea id="deliveryAddress"></textarea>
+
+      </div>
+
+      <div class="form-group">
+
+        <label>Méthode de paiement</label>
+
+        <select id="paymentMethod">
+
+          <option value="À confirmer">
+            À confirmer
+          </option>
+
+          <option value="MonCash">
+            MonCash
+          </option>
+
+          <option value="NatCash">
+            NatCash
+          </option>
+
+          <option value="Carte internationale">
+            Carte internationale
+          </option>
+
+          <option value="Autre">
+            Autre
+          </option>
+
+        </select>
+
+      </div>
+
+      <button
+        class="btn btn-primary"
+        style="width:100%;">
+
+        🛒 Ajouter au panier
+
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     MODAL PANIER
+     ========================================================= -->
+
+<div id="cartModal" class="modal">
+
+  <div class="modal-content">
+
+    <button class="modal-close"
+      onclick="closeModal('cartModal')">
+      ×
+    </button>
+
+    <h2 class="modal-title">
+      🛒 Mon panier
+    </h2>
+
+    <div id="cartList" class="cart-list"></div>
+
+    <div id="cartTotal"
+         style="margin-top:20px;font-weight:bold;">
+    </div>
+
+    <br>
+
+    <form onsubmit="confirmOrder(event)">
+
+      <div class="form-group">
+        <label>Nom</label>
+        <input id="orderName" required>
+      </div>
+
+      <div class="form-group">
+        <label>Téléphone</label>
+        <input id="orderPhone" required>
+      </div>
+
+      <div class="form-group">
+        <label>Adresse</label>
+        <textarea id="orderAddress" required></textarea>
+      </div>
+
+      <div class="form-group">
+
+        <label>Paiement</label>
+
+        <select id="orderPayment">
+
+          <option>À confirmer</option>
+          <option>MonCash</option>
+          <option>NatCash</option>
+          <option>Carte internationale</option>
+          <option>Autre</option>
+
+        </select>
+
+      </div>
+
+      <div class="form-group">
+
+        <label>Message</label>
+
+        <textarea id="orderMessage"></textarea>
+
+      </div>
+
+      <button class="btn btn-primary"
+              style="width:100%;">
+
+        📲 Envoyer la commande
+
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- PANIER FLOTTANT -->
+
+<button class="cart-button"
+        onclick="openCart()">
+
+  🛒 Panier
+  <span id="cartCount">0</span>
+
+</button>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
 
 <footer>
 
-© <span id="year"></span>
-AHCElectron Sales and Repairs Services
+  <p>
+    © <span id="siteYear"></span>
+    <strong>AHCElectronSRS</strong>
+  </p>
+
+  <p>
+    AHCElectron Sales and Repairs Services
+  </p>
+
+  <p>
+    Électricité • Réparation • Technologie • Maintenance
+  </p>
 
 </footer>
 
-<script> /* ========================================================= 1. CONFIGURATION SUPABASE ========================================================= APRÈS CRÉATION DE VOTRE PROJET SUPABASE : Remplacez les deux valeurs ci-dessous. Exemple : const SUPABASE_URL = "https://xxxxxxxx.supabase.co"; const SUPABASE_ANON_KEY = "votre-cle-publique-anon"; IMPORTANT : utilisez UNIQUEMENT la clé publique ANON/PUBLISHABLE. NE METTEZ JAMAIS : - service_role - secret key - mot de passe de base de données ========================================================= */ const SUPABASE_URL = "VOTRE_SUPABASE_URL"; const SUPABASE_ANON_KEY = "VOTRE_SUPABASE_ANON_KEY"; /* ========================================================= 2. INITIALISATION ========================================================= */ let supabaseClient = null; const supabaseConfigured = SUPABASE_URL !== "VOTRE_SUPABASE_URL" && SUPABASE_ANON_KEY !== "VOTRE_SUPABASE_ANON_KEY"; if(supabaseConfigured){ supabaseClient = window.supabase.createClient( SUPABASE_URL, SUPABASE_ANON_KEY ); }else{ document .getElementById("configurationNotice") .classList.remove("hidden"); } /* ========================================================= 3. VARIABLES ========================================================= */ let loginMode = false; /* ========================================================= 4. ANNÉE ========================================================= */ document .getElementById("year") .textContent = new Date().getFullYear(); /* ========================================================= 5. MESSAGES ========================================================= */ function message(id,text,type){ const box = document.getElementById(id); box.textContent = text; box.className = "message " + type; } function clearMessage(id){ const box = document.getElementById(id); box.textContent = ""; box.className = "message"; } /* ========================================================= 6. NAVIGATION ========================================================= */ function showPage(page){ document .getElementById("home") .classList.add("hidden"); document .getElementById("account") .classList.add("hidden"); document .getElementById(page) .classList.remove("hidden"); } /* ========================================================= 7. CHANGEMENT CRÉATION / CONNEXION ========================================================= */ function changeAuthMode(){ loginMode = !loginMode; clearMessage("authMessage"); if(loginMode){ document .getElementById("authTitle") .textContent = "Se connecter"; document .getElementById("authButton") .textContent = "Me connecter"; document .getElementById("modeButton") .textContent = "Créer un nouveau compte"; document .getElementById("confirmBox") .classList.add("hidden"); }else{ document .getElementById("authTitle") .textContent = "Créer votre compte"; document .getElementById("authButton") .textContent = "Créer mon compte"; document .getElementById("modeButton") .textContent = "J'ai déjà un compte"; document .getElementById("confirmBox") .classList.remove("hidden"); } } /* ========================================================= 8. VÉRIFICATION SUPABASE ========================================================= */ function requireSupabase(){ if(!supabaseClient){ message( "authMessage", "Supabase n'est pas encore configurée. " + "Ajoutez l'URL du projet et la clé publique " + "dans la section CONFIGURATION SUPABASE du HTML.", "error" ); return false; } return true; } /* ========================================================= 9. CRÉATION / CONNEXION ========================================================= */ async function authenticate(){ if(!requireSupabase()){ return; } const email = document .getElementById("email") .value .trim(); const password = document .getElementById("password") .value; if(!email || !password){ message( "authMessage", "Veuillez remplir votre adresse e-mail et votre mot de passe.", "error" ); return; } if(password.length < 6){ message( "authMessage", "Le mot de passe doit contenir au moins 6 caractères.", "error" ); return; } /* =============================== CONNEXION =============================== */ if(loginMode){ message( "authMessage", "Connexion en cours...", "info" ); const result = await supabaseClient.auth .signInWithPassword({ email:email, password:password }); if(result.error){ message( "authMessage", "Connexion impossible : " + result.error.message, "error" ); return; } message( "authMessage", "Connexion réussie.", "success" ); await updateInterface( result.data.session ); return; } /* =============================== CRÉATION DU COMPTE =============================== */ const confirmation = document .getElementById("confirmPassword") .value; if(password !== confirmation){ message( "authMessage", "Les deux mots de passe ne correspondent pas.", "error" ); return; } message( "authMessage", "Création du compte en cours...", "info" ); const result = await supabaseClient.auth .signUp({ email:email, password:password }); if(result.error){ message( "authMessage", "Création impossible : " + result.error.message, "error" ); return; } /* Selon les paramètres de confirmation d'e-mail de votre projet Supabase, session peut être présente ou non. */ if(result.data.session){ message( "authMessage", "Votre compte a été créé et vous êtes connecté.", "success" ); await updateInterface( result.data.session ); }else{ message( "authMessage", "Votre compte a été créé. Vérifiez votre adresse e-mail si une confirmation est demandée par Supabase.", "success" ); } } /* ========================================================= 10. INTERFACE SELON LA SESSION ========================================================= */ async function updateInterface(session){ const authBox = document.getElementById("authBox"); const profileBox = document.getElementById("profileBox"); const logoutButton = document.getElementById("logoutButton"); if(session){ authBox .classList .add("hidden"); profileBox .classList .remove("hidden"); logoutButton .classList .remove("hidden"); document .getElementById("userEmail") .textContent = "E-mail : " + (session.user.email || ""); await loadProfile(); }else{ authBox .classList .remove("hidden"); profileBox .classList .add("hidden"); logoutButton .classList .add("hidden"); } } /* ========================================================= 11. CHARGER LE PROFIL ========================================================= */ async function loadProfile(){ if(!supabaseClient){ return; } const result = await supabaseClient.auth.getUser(); const user = result.data.user; if(!user){ return; } document .getElementById("userEmail") .textContent = "E-mail : " + (user.email || ""); const profile = await supabaseClient .from("profiles") .select("*") .eq("id",user.id) .maybeSingle(); if(profile.error){ message( "profileMessage", "Impossible de charger le profil : " + profile.error.message, "error" ); return; } if(!profile.data){ document .getElementById("firstName") .value = ""; document .getElementById("lastName") .value = ""; document .getElementById("phone") .value = ""; document .getElementById("city") .value = ""; document .getElementById("notes") .value = ""; return; } document .getElementById("firstName") .value = profile.data.first_name || ""; document .getElementById("lastName") .value = profile.data.last_name || ""; document .getElementById("phone") .value = profile.data.phone || ""; document .getElementById("city") .value = profile.data.city || ""; document .getElementById("notes") .value = profile.data.notes || ""; } /* ========================================================= 12. SAUVEGARDER LE PROFIL ========================================================= */ async function saveProfile(){ if(!supabaseClient){ message( "profileMessage", "Supabase n'est pas configurée.", "error" ); return; } const result = await supabaseClient.auth.getUser(); const user = result.data.user; if(!user){ message( "profileMessage", "Vous devez être connecté.", "error" ); return; } const profile = { id:user.id, first_name: document .getElementById("firstName") .value .trim(), last_name: document .getElementById("lastName") .value .trim(), phone: document .getElementById("phone") .value .trim(), city: document .getElementById("city") .value .trim(), notes: document .getElementById("notes") .value .trim(), updated_at: new Date().toISOString() }; message( "profileMessage", "Sauvegarde en cours...", "info" ); const save = await supabaseClient .from("profiles") .upsert( profile, { onConflict:"id" } ); if(save.error){ message( "profileMessage", "Sauvegarde impossible : " + save.error.message, "error" ); return; } message( "profileMessage", "Profil sauvegardé avec succès.", "success" ); } /* ========================================================= 13. DÉCONNEXION ========================================================= */ async function logout(){ if(!supabaseClient){ return; } const result = await supabaseClient.auth.signOut(); if(result.error){ message( "authMessage", "Déconnexion impossible : " + result.error.message, "error" ); return; } document .getElementById("email") .value = ""; document .getElementById("password") .value = ""; document .getElementById("confirmPassword") .value = ""; showPage("account"); await updateInterface(null); message( "authMessage", "Vous êtes maintenant déconnecté.", "success" ); } /* ========================================================= 14. INITIALISATION ========================================================= */ async function initialize(){ if(!supabaseClient){ return; } const result = await supabaseClient.auth.getSession(); await updateInterface( result.data.session ); supabaseClient.auth.onAuthStateChange( async function(_event,session){ await updateInterface(session); } ); } initialize(); </script>
 
-</body> </html>
+<!-- =========================================================
+     SUPABASE
+     ========================================================= -->
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+
+/* =========================================================
+   CONFIGURATION SUPABASE
+   =========================================================
+
+   IMPORTANT :
+   Remplacer uniquement les deux valeurs ci-dessous
+   par les valeurs affichées dans votre projet Supabase.
+
+   NE JAMAIS mettre ici :
+   - service_role
+   - secret key
+   - clé privée
+*/
+
+const SUPABASE_URL =
+  "VOTRE_PROJECT_URL";
+
+const SUPABASE_ANON_KEY =
+  "VOTRE_CLE_PUBLISHABLE_OU_ANON";
+
+
+let supabaseClient = null;
+
+
+/* =========================================================
+   INITIALISATION SUPABASE
+   ========================================================= */
+
+function initSupabase(){
+
+  if(
+    SUPABASE_URL === "VOTRE_PROJECT_URL" ||
+    SUPABASE_ANON_KEY === "VOTRE_CLE_PUBLISHABLE_OU_ANON"
+  ){
+
+    console.warn(
+      "Supabase n'est pas encore configurée : URL ou clé manquante."
+    );
+
+    return false;
+  }
+
+  try{
+
+    supabaseClient =
+      window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY,
+        {
+          auth:{
+            persistSession:true,
+            autoRefreshToken:true,
+            detectSessionInUrl:true
+          }
+        }
+      );
+
+    return true;
+
+  }catch(error){
+
+    console.error(
+      "Erreur initialisation Supabase :",
+      error
+    );
+
+    return false;
+  }
+}
+
+
+/* =========================================================
+   ETAT AUTHENTIFICATION
+   ========================================================= */
+
+async function initializeAuth(){
+
+  if(!supabaseClient){
+    updateAccountButton(null);
+    return;
+  }
+
+  const {
+    data,
+    error
+  } = await supabaseClient.auth.getSession();
+
+  if(error){
+
+    console.error(error);
+
+    updateAccountButton(null);
+
+    return;
+  }
+
+  updateAccountButton(data.session);
+
+  if(data.session){
+
+    updateConnectedPanel(
+      data.session.user
+    );
+  }
+
+
+  supabaseClient.auth.onAuthStateChange(
+    async function(event, session){
+
+      console.log(
+        "Auth event :",
+        event
+      );
+
+      updateAccountButton(session);
+
+      if(session){
+
+        updateConnectedPanel(
+          session.user
+        );
+
+      }
+
+    }
+  );
+}
+
+
+/* =========================================================
+   BOUTON COMPTE
+   ========================================================= */
+
+function updateAccountButton(session){
+
+  const button =
+    document.getElementById(
+      "accountButton"
+    );
+
+  if(!button) return;
+
+
+  if(session && session.user){
+
+    button.innerHTML =
+      "👤 Mon compte ✓";
+
+    button.classList.add(
+      "account-connected"
+    );
+
+  }else{
+
+    button.innerHTML =
+      "👤 Mon compte";
+
+    button.classList.remove(
+      "account-connected"
+    );
+  }
+}
+
+
+/* =========================================================
+   OUVRIR COMPTE
+   ========================================================= */
+
+async function openAccountModal(){
+
+  const modal =
+    document.getElementById(
+      "accountModal"
+    );
+
+  modal.classList.add("active");
+
+  if(
+    supabaseClient
+  ){
+
+    const {
+      data
+    } =
+      await supabaseClient.auth.getSession();
+
+    if(
+      data.session &&
+      data.session.user
+    ){
+
+      updateConnectedPanel(
+        data.session.user
+      );
+
+      showAuthPanel(
+        "connected"
+      );
+
+      return;
+    }
+  }
+
+  showAuthPanel(
+    "register"
+  );
+}
+
+
+/* =========================================================
+   PANNEAUX AUTH
+   ========================================================= */
+
+function showAuthPanel(panel){
+
+  const panels = [
+    "register",
+    "login",
+    "reset",
+    "connected"
+  ];
+
+  panels.forEach(function(name){
+
+    const element =
+      document.getElementById(
+        name + "Panel"
+      );
+
+    if(element){
+
+      element.classList.toggle(
+        "active",
+        name === panel
+      );
+    }
+  });
+
+
+  const registerTab =
+    document.getElementById(
+      "tabRegister"
+    );
+
+  const loginTab =
+    document.getElementById(
+      "tabLogin"
+    );
+
+
+  if(registerTab){
+
+    registerTab.classList.toggle(
+      "active",
+      panel === "register"
+    );
+  }
+
+
+  if(loginTab){
+
+    loginTab.classList.toggle(
+      "active",
+      panel === "login"
+    );
+  }
+
+
+  clearAuthStatus();
+}
+
+
+/* =========================================================
+   STATUS AUTH
+   ========================================================= */
+
+function showAuthStatus(
+  message,
+  type="info"
+){
+
+  const box =
+    document.getElementById(
+      "accountStatus"
+    );
+
+  if(!box) return;
+
+  box.textContent =
+    message;
+
+  box.className =
+    "status show " + type;
+}
+
+
+function clearAuthStatus(){
+
+  const box =
+    document.getElementById(
+      "accountStatus"
+    );
+
+  if(!box) return;
+
+  box.textContent =
+    "";
+
+  box.className =
+    "status";
+}
+
+
+/* =========================================================
+   CREATION COMPTE
+   ========================================================= */
+
+async function registerUser(event){
+
+  event.preventDefault();
+
+  if(!supabaseClient){
+
+    showAuthStatus(
+      "Supabase n'est pas encore configurée. Il faut d'abord renseigner l'URL du projet et la clé publique.",
+      "error"
+    );
+
+    return;
+  }
+
+
+  const name =
+    document.getElementById(
+      "registerName"
+    ).value.trim();
+
+
+  const email =
+    document.getElementById(
+      "registerEmail"
+    ).value.trim();
+
+
+  const password =
+    document.getElementById(
+      "registerPassword"
+    ).value;
+
+
+  const confirmation =
+    document.getElementById(
+      "registerPasswordConfirm"
+    ).value;
+
+
+  if(password !== confirmation){
+
+    showAuthStatus(
+      "Les deux mots de passe ne correspondent pas.",
+      "error"
+    );
+
+    return;
+  }
+
+
+  if(password.length < 6){
+
+    showAuthStatus(
+      "Le mot de passe doit contenir au moins 6 caractères.",
+      "error"
+    );
+
+    return;
+  }
+
+
+  showAuthStatus(
+    "Création de votre compte...",
+    "info"
+  );
+
+
+  const {
+    data,
+    error
+  } =
+    await supabaseClient.auth.signUp({
+
+      email:email,
+
+      password:password,
+
+      options:{
+        data:{
+          full_name:name
+        },
+
+        emailRedirectTo:
+          window.location.origin +
+          window.location.pathname
+      }
+    });
+
+
+  if(error){
+
+    console.error(error);
+
+    showAuthStatus(
+      error.message,
+      "error"
+    );
+
+    return;
+  }
+
+
+  if(
+    data &&
+    data.session
+  ){
+
+    showAuthStatus(
+      "Compte créé et connecté avec succès.",
+      "success"
+    );
+
+    updateConnectedPanel(
+      data.user
+    );
+
+    showAuthPanel(
+      "connected"
+    );
+
+  }else{
+
+    showAuthStatus(
+      "Compte créé. Vérifiez votre adresse email pour confirmer votre compte avant de vous connecter.",
+      "success"
+    );
+
+    document.getElementById(
+      "loginEmail"
+    ).value = email;
+
+    showAuthPanel(
+      "login"
+    );
+  }
+}
+
+
+/* =========================================================
+   CONNEXION
+   ========================================================= */
+
+async function loginUser(event){
+
+  event.preventDefault();
+
+
+  if(!supabaseClient){
+
+    showAuthStatus(
+      "Supabase n'est pas encore configurée.",
+      "error"
+    );
+
+    return;
+  }
+
+
+  const email =
+    document.getElementById(
+      "loginEmail"
+    ).value.trim();
+
+
+  const password =
+    document.getElementById(
+      "loginPassword"
+    ).value;
+
+
+  showAuthStatus(
+    "Connexion en cours...",
+    "info"
+  );
+
+
+  const {
+    data,
+    error
+  } =
+    await supabaseClient.auth.signInWithPassword({
+
+      email:email,
+
+      password:password
+    });
+
+
+  if(error){
+
+    console.error(error);
+
+    showAuthStatus(
+      error.message,
+      "error"
+    );
+
+    return;
+  }
+
+
+  showAuthStatus(
+    "Connexion réussie.",
+    "success"
+  );
+
+
+  updateConnectedPanel(
+    data.user
+  );
+
+
+  updateAccountButton(
+    data.session
+  );
+
+
+  setTimeout(
+    function(){
+
+      showAuthPanel(
+        "connected"
+      );
+
+    },
+    600
+  );
+}
+
+
+/* =========================================================
+   MOT DE PASSE OUBLIE
+   ========================================================= */
+
+async function resetPassword(event){
+
+  event.preventDefault();
+
+
+  if(!supabaseClient){
+
+    showAuthStatus(
+      "Supabase n'est pas encore configurée.",
+      "error"
+    );
+
+    return;
+  }
+
+
+  const email =
+    document.getElementById(
+      "resetEmail"
+    ).value.trim();
+
+
+  if(!email){
+
+    showAuthStatus(
+      "Veuillez saisir votre adresse email.",
+      "error"
+    );
+
+    return;
+  }
+
+
+  showAuthStatus(
+    "Envoi du lien de récupération...",
+    "info"
+  );
+
+
+  const {
+    error
+  } =
+    await supabaseClient.auth.resetPasswordForEmail(
+      email,
+      {
+        redirectTo:
+          window.location.origin +
+          window.location.pathname
+      }
+    );
+
+
+  if(error){
+
+    console.error(error);
+
+    showAuthStatus(
+      error.message,
+      "error"
+    );
+
+    return;
+  }
+
+
+  showAuthStatus(
+    "Si l'adresse est enregistrée, un message de récupération sera envoyé.",
+    "success"
+  );
+}
+
+
+/* =========================================================
+   COMPTE CONNECTE
+   ========================================================= */
+
+function updateConnectedPanel(user){
+
+  if(!user) return;
+
+
+  const email =
+    document.getElementById(
+      "connectedEmail"
+    );
+
+  const name =
+    document.getElementById(
+      "connectedName"
+    );
+
+
+  if(email){
+
+    email.textContent =
+      "Email : " +
+      (user.email || "non disponible");
+  }
+
+
+  if(name){
+
+    const fullName =
+      user.user_metadata &&
+      user.user_metadata.full_name
+        ? user.user_metadata.full_name
+        : "Nom non renseigné";
+
+    name.textContent =
+      "Nom : " +
+      fullName;
+  }
+}
+
+
+/* =========================================================
+   DECONNEXION
+   ========================================================= */
+
+async function logoutUser(){
+
+  if(!supabaseClient){
+
+    return;
+  }
+
+
+  const {
+    error
+  } =
+    await supabaseClient.auth.signOut();
+
+
+  if(error){
+
+    showAuthStatus(
+      error.message,
+      "error"
+    );
+
+    return;
+  }
+
+
+  updateAccountButton(
+    null
+  );
+
+  showAuthStatus(
+    "Vous êtes déconnecté.",
+    "success"
+  );
+
+
+  setTimeout(
+    function(){
+
+      closeModal(
+        "accountModal"
+      );
+
+    },
+    700
+  );
+}
+
+
+/* =========================================================
+   OUTILS GENERAUX
+   ========================================================= */
+
+function scrollToSection(id){
+
+  const element =
+    document.getElementById(id);
+
+  if(element){
+
+    element.scrollIntoView({
+      behavior:"smooth"
+    });
+  }
+}
+
+
+function closeModal(id){
+
+  const modal =
+    document.getElementById(id);
+
+  if(modal){
+
+    modal.classList.remove(
+      "active"
+    );
+  }
+}
+
+
+document.querySelectorAll(".modal")
+.forEach(function(modal){
+
+  modal.addEventListener(
+    "click",
+    function(event){
+
+      if(event.target === modal){
+
+        modal.classList.remove(
+          "active"
+        );
+      }
+    }
+  );
+
+});
+
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+function toggleService(id){
+
+  const element =
+    document.getElementById(id);
+
+  if(element){
+
+    element.classList.toggle(
+      "active"
+    );
+  }
+}
+
+
+/* =========================================================
+   RECHERCHE PRODUITS
+   ========================================================= */
+
+function searchProducts(){
+
+  const input =
+    document.getElementById(
+      "productSearch"
+    );
+
+  const term =
+    input.value
+      .toLowerCase()
+      .trim();
+
+
+  const products =
+    document.querySelectorAll(
+      ".product"
+    );
+
+
+  products.forEach(function(product){
+
+    const text =
+      product.innerText.toLowerCase();
+
+    if(
+      !term ||
+      text.includes(term)
+    ){
+
+      product.style.display =
+        "";
+
+    }else{
+
+      product.style.display =
+        "none";
+    }
+
+  });
+}
+
+
+/* =========================================================
+   PRODUIT SELECTIONNE
+   ========================================================= */
+
+let selectedProduct = null;
+
+
+function openProduct(
+  name,
+  reference,
+  description,
+  price
+){
+
+  selectedProduct = {
+
+    name:name,
+
+    reference:reference,
+
+    description:description,
+
+    price:price
+
+  };
+
+
+  document.getElementById(
+    "modalProductName"
+  ).textContent =
+    name;
+
+
+  document.getElementById(
+    "modalReference"
+  ).textContent =
+    reference;
+
+
+  document.getElementById(
+    "modalDescription"
+  ).textContent =
+    description;
+
+
+  document.getElementById(
+    "modalPrice"
+  ).textContent =
+    price;
+
+
+  document.getElementById(
+    "productModal"
+  ).classList.add(
+    "active"
+  );
+}
+
+
+/* =========================================================
+   PANIER
+   ========================================================= */
+
+let cart = [];
+
+
+function addProductToCart(event){
+
+  event.preventDefault();
+
+
+  if(!selectedProduct){
+
+    return;
+  }
+
+
+  const quantity =
+    parseInt(
+      document.getElementById(
+        "productQuantity"
+      ).value,
+      10
+    ) || 1;
+
+
+  cart.push({
+
+    name:selectedProduct.name,
+
+    reference:selectedProduct.reference,
+
+    price:selectedProduct.price,
+
+    quantity:quantity,
+
+    customer:
+      document.getElementById(
+        "customerName"
+      ).value,
+
+    address:
+      document.getElementById(
+        "deliveryAddress"
+      ).value,
+
+    payment:
+      document.getElementById(
+        "paymentMethod"
+      ).value
+
+  });
+
+
+  updateCartCount();
+
+  closeModal(
+    "productModal"
+  );
+
+
+  alert(
+    "Produit ajouté au panier."
+  );
+}
+
+
+function updateCartCount(){
+
+  const count =
+    cart.reduce(
+      function(total,item){
+
+        return total +
+          item.quantity;
+
+      },
+      0
+    );
+
+
+  const element =
+    document.getElementById(
+      "cartCount"
+    );
+
+
+  if(element){
+
+    element.textContent =
+      count;
+  }
+}
+
+
+function openCart(){
+
+  renderCart();
+
+  document.getElementById(
+    "cartModal"
+  ).classList.add(
+    "active"
+  );
+}
+
+
+function renderCart(){
+
+  const list =
+    document.getElementById(
+      "cartList"
+    );
+
+
+  const total =
+    document.getElementById(
+      "cartTotal"
+    );
+
+
+  if(!list || !total){
+
+    return;
+  }
+
+
+  if(cart.length === 0){
+
+    list.innerHTML =
+      "<p>Votre panier est vide.</p>";
+
+    total.textContent =
+      "";
+
+    return;
+  }
+
+
+  list.innerHTML = "";
+
+
+  cart.forEach(
+    function(item,index){
+
+      const row =
+        document.createElement(
+          "div"
+        );
+
+      row.className =
+        "cart-item";
+
+
+      row.innerHTML = `
+
+        <div>
+
+          <strong>
+            ${escapeHTML(item.name)}
+          </strong>
+
+          <br>
+
+          <small>
+            Réf. ${escapeHTML(item.reference)}
+          </small>
+
+          <br>
+
+          Quantité :
+          ${item.quantity}
+
+        </div>
+
+        <button
+          class="remove-item"
+          onclick="removeCartItem(${index})">
+
+          Supprimer
+
+        </button>
+
+      `;
+
+
+      list.appendChild(
+        row
+      );
+    }
+  );
+
+
+  total.textContent =
+    "Total : prix à confirmer";
+}
+
+
+function removeCartItem(index){
+
+  cart.splice(
+    index,
+    1
+  );
+
+  updateCartCount();
+
+  renderCart();
+}
+
+
+/* =========================================================
+   COMMANDE WHATSAPP
+   ========================================================= */
+
+function confirmOrder(event){
+
+  event.preventDefault();
+
+
+  if(cart.length === 0){
+
+    alert(
+      "Votre panier est vide."
+    );
+
+    return;
+  }
+
+
+  const name =
+    document.getElementById(
+      "orderName"
+    ).value;
+
+
+  const phone =
+    document.getElementById(
+      "orderPhone"
+    ).value;
+
+
+  const address =
+    document.getElementById(
+      "orderAddress"
+    ).value;
+
+
+  const payment =
+    document.getElementById(
+      "orderPayment"
+    ).value;
+
+
+  const message =
+    document.getElementById(
+      "orderMessage"
+    ).value;
+
+
+  let products = "";
+
+
+  cart.forEach(
+    function(item){
+
+      products +=
+        "\n- " +
+        item.name +
+        " (" +
+        item.reference +
+        ") x" +
+        item.quantity;
+    }
+  );
+
+
+  const text =
+
+    "Bonjour AHCElectronSRS,%0A%0A" +
+
+    "Nouvelle commande :%0A" +
+
+    products +
+
+    "%0A%0A" +
+
+    "Nom : " +
+    encodeURIComponent(name) +
+
+    "%0ATéléphone : " +
+    encodeURIComponent(phone) +
+
+    "%0AAdresse : " +
+    encodeURIComponent(address) +
+
+    "%0APaiement : " +
+    encodeURIComponent(payment) +
+
+    "%0AMessage : " +
+    encodeURIComponent(message);
+
+
+  window.open(
+    "https://wa.me/50938106763?text=" +
+    text,
+    "_blank"
+  );
+}
+
+
+/* =========================================================
+   DEMANDE DE SERVICE WHATSAPP
+   ========================================================= */
+
+function sendRequest(event){
+
+  event.preventDefault();
+
+
+  const name =
+    document.getElementById(
+      "requestName"
+    ).value.trim();
+
+
+  const phone =
+    document.getElementById(
+      "requestPhone"
+    ).value.trim();
+
+
+  const city =
+    document.getElementById(
+      "requestCity"
+    ).value.trim();
+
+
+  const service =
+    document.getElementById(
+      "requestService"
+    ).value;
+
+
+  const description =
+    document.getElementById(
+      "requestDescription"
+    ).value.trim();
+
+
+  const message =
+
+    "Bonjour AHCElectronSRS,%0A%0A" +
+
+    "DEMANDE DE SERVICE%0A" +
+
+    "Nom : " +
+    encodeURIComponent(name) +
+
+    "%0ATéléphone : " +
+    encodeURIComponent(phone) +
+
+    "%0AVille : " +
+    encodeURIComponent(city) +
+
+    "%0AService : " +
+    encodeURIComponent(service) +
+
+    "%0ADescription : " +
+    encodeURIComponent(description);
+
+
+  window.open(
+    "https://wa.me/50938106763?text=" +
+    message,
+    "_blank"
+  );
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+function submitContact(event){
+
+  event.preventDefault();
+
+
+  const name =
+    document.getElementById(
+      "contactName"
+    ).value;
+
+
+  const phone =
+    document.getElementById(
+      "contactPhone"
+    ).value;
+
+
+  const email =
+    document.getElementById(
+      "contactEmail"
+    ).value;
+
+
+  const location =
+    document.getElementById(
+      "contactLocation"
+    ).value;
+
+
+  const message =
+    document.getElementById(
+      "contactMessage"
+    ).value;
+
+
+  const text =
+
+    "Bonjour AHCElectronSRS,%0A%0A" +
+
+    "CONTACT%0A" +
+
+    "Nom : " +
+    encodeURIComponent(name) +
+
+    "%0ATéléphone : " +
+    encodeURIComponent(phone) +
+
+    "%0AEmail : " +
+    encodeURIComponent(email) +
+
+    "%0ALocalisation : " +
+    encodeURIComponent(location) +
+
+    "%0AMessage : " +
+    encodeURIComponent(message);
+
+
+  window.open(
+    "https://wa.me/50938106763?text=" +
+    text,
+    "_blank"
+  );
+}
+
+
+/* =========================================================
+   PAIEMENT
+   ========================================================= */
+
+function showPayment(method){
+
+  const box =
+    document.getElementById(
+      "paymentMessage"
+    );
+
+
+  box.textContent =
+    "Méthode sélectionnée : " +
+    method +
+    ". La validation du paiement devra être effectuée avec le prestataire correspondant.";
+
+
+  box.classList.add(
+    "show"
+  );
+}
+
+
+/* =========================================================
+   SECURITE AFFICHAGE
+   ========================================================= */
+
+function escapeHTML(value){
+
+  return String(value)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
+
+
+/* =========================================================
+   ANNEE
+   ========================================================= */
+
+document.getElementById(
+  "siteYear"
+).textContent =
+  new Date().getFullYear();
+
+
+/* =========================================================
+   DEMARRAGE
+   ========================================================= */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    initSupabase();
+
+    initializeAuth();
+
+    updateCartCount();
+
+  }
+);
+
+</script>
+
+</body>
+</html>
