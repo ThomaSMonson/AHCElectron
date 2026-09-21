@@ -774,8 +774,8 @@ footer strong{
       <a href="#contact">Contact</a>
     </nav>
 
-    <button
-      id="accountButton"
+    <button>
+  <id="accountButton"
       class="account-button"
       onclick="openAccountModal()">
       👤 Mon compte
@@ -2572,10 +2572,10 @@ footer strong{
 */
 
 const SUPABASE_URL =
-  "VOTRE_PROJECT_URL";
+  "https://qkidtzjvdscfzkdrmnlh.supabase.co";
 
 const SUPABASE_ANON_KEY =
-  "VOTRE_CLE_PUBLISHABLE_OU_ANON";
+  "sb_publishable_meQNEiErZTokkKh5R2newQ_7QUzcohl";
 
 
 let supabaseClient = null;
@@ -2588,8 +2588,11 @@ let supabaseClient = null;
 function initSupabase(){
 
   if(
-    SUPABASE_URL === "VOTRE_PROJECT_URL" ||
-    SUPABASE_ANON_KEY === "VOTRE_CLE_PUBLISHABLE_OU_ANON"
+    const SUPABASE_URL =
+  "https://qkidtzjvdscfzkdrmnlh.supabase.co";
+
+const SUPABASE_ANON_KEY =
+  "sb_publishable_meQNEiErZTokkKh5R2newQ_7QUzcohl";
   ){
 
     console.warn(
@@ -2845,7 +2848,7 @@ function showAuthStatus(
 
   if(!box) return;
 
-  box.textContent =
+  box.textContent =supabase
     message;
 
   box.className =
