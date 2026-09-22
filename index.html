@@ -2570,29 +2570,19 @@ footer strong{
    - secret key
    - clé privée
 */
-
 const SUPABASE_URL =
   "https://qkidtzjvdscfzkdrmnlh.supabase.co";
 
 const SUPABASE_ANON_KEY =
-  "sb_publishable_meQNEiErZTokkKh5R2newQ_7QUzcohl";
-
+  "VOTRE_CLE_PUBLIQUE_SUPABASE";
 
 let supabaseClient = null;
-
-
-/* =========================================================
-   INITIALISATION SUPABASE
-   ========================================================= */
 
 function initSupabase(){
 
   if(
-    const SUPABASE_URL =
-  "https://qkidtzjvdscfzkdrmnlh.supabase.co";
-
-const SUPABASE_ANON_KEY =
-  "sb_publishable_meQNEiErZTokkKh5R2newQ_7QUzcohl";
+    !SUPABASE_URL ||
+    !SUPABASE_ANON_KEY
   ){
 
     console.warn(
@@ -2602,20 +2592,32 @@ const SUPABASE_ANON_KEY =
     return false;
   }
 
+  if(!window.supabase){
+
+    console.error(
+      "La bibliothèque Supabase n'est pas chargée."
+    );
+
+    return false;
+  }
+
   try{
 
-    supabaseClient =
-      window.supabase.createClient(
-        SUPABASE_URL,
-        SUPABASE_ANON_KEY,
-        {
-          auth:{
-            persistSession:true,
-            autoRefreshToken:true,
-            detectSessionInUrl:true
+    if(!supabaseClient){
+
+      supabaseClient =
+        window.supabase.createClient(
+          SUPABASE_URL,
+          SUPABASE_ANON_KEY,
+          {
+            auth:{
+              persistSession:true,
+              autoRefreshToken:true,
+              detectSessionInUrl:true
+            }
           }
-        }
-      );
+        );
+    }
 
     return true;
 
@@ -2629,8 +2631,6 @@ const SUPABASE_ANON_KEY =
     return false;
   }
 }
-
-
 /* =========================================================
    ETAT AUTHENTIFICATION
    ========================================================= */
@@ -3971,4 +3971,4 @@ document.addEventListener(
 </script>
 
 </body>
-</html>
+</html>-
